@@ -9,7 +9,7 @@ export default {
   },
   hero: {
     headline: 'HQ Stones — Pierre Naturelle, Projets d\u2019Exception',
-    subline: 'Marbre, Granit, Calcaire et plus — Vénétie, Italie',
+    subline: 'Marbre, Granit, Calcaire et plus — Italie',
     cta: 'Découvrir le catalogue',
   },
   home: {
@@ -17,7 +17,7 @@ export default {
     categoriesSubtitle: 'Des aménagements extérieurs aux surfaces intérieures et aux dalles brutes pour professionnels.',
     materialsTitle: 'Un Patrimoine de Matériaux',
     materialsSubtitle: 'Sourcés dans des carrières en Italie et au-delà.',
-    aboutTitle: 'Conçu en Vénétie',
+    aboutTitle: 'Conçu en Italie',
     aboutBody: 'Depuis des décennies, HQ Stones accompagne architectes, designers et particuliers dans leurs projets en pierre naturelle — avec la rigueur des consultants et l\u2019œil des artisans.',
     aboutCta: 'Nous contacter',
   },
@@ -94,10 +94,10 @@ export default {
         author: 'Équipe HQ Stones',
         date: '2025-03-12',
       },
-      venetoQuarries: {
-        title: 'Carrières de Vénétie : un Patrimoine de Pierre',
-        excerpt: 'Des Préalpes aux Collines Berici, les pierres de Vénétie ont façonné l\u2019architecture italienne pendant des siècles.',
-        body: 'La Vénétie est un trésor géologique. De la Trachyte des Collines Euganéennes à la Pierre de Vicence, notre paysage a fourni palais, églises et villas modernes en matière qui définit l\u2019élégance italienne.\n\nTravailler directement avec les carrières régionales offre une traçabilité totale et une cohérence remarquable, même sur de grands projets. Cela maintient aussi vivant un artisanat séculaire.\n\nChoisir la pierre de Vénétie, c\u2019est inscrire ce patrimoine dans votre projet, avec sa texture, sa couleur et son autorité tranquille.',
+      italianQuarries: {
+        title: 'Carrières Italiennes : un Patrimoine de Pierre',
+        excerpt: 'Des Alpes à la Sicile, les carrières italiennes ont façonné l\u2019architecture pendant des siècles.',
+        body: 'L\u2019Italie est un trésor géologique. Du marbre de Carrare à la pierre de Trani, du granit sarde au porphyre du Trentin, notre péninsule a fourni palais, églises et villas modernes en matières qui définissent une élégance intemporelle.\n\nTravailler directement avec les carrières offre une traçabilité totale et une cohérence remarquable, même sur de grands projets. Cela maintient aussi vivant un artisanat séculaire.\n\nChoisir la pierre italienne, c\u2019est inscrire ce patrimoine dans votre projet, avec sa texture, sa couleur et son autorité tranquille.',
         author: 'Équipe HQ Stones',
         date: '2025-02-04',
       },
@@ -112,9 +112,9 @@ export default {
   },
   about: {
     title: 'À Propos de HQ Stones',
-    subtitle: 'Revendeur de pierre et consultant projet, ancré en Vénétie, Italie.',
+    subtitle: 'Revendeur de pierre et consultant projet, basé en Italie.',
     storyTitle: 'Notre Histoire',
-    storyBody: 'HQ Stones est née d\u2019une conviction : la pierre naturelle mérite d\u2019être spécifiée, sourcée et finie avec soin. Nous agissons comme revendeur et consultant, guidant architectes, designers et particuliers à chaque étape — du choix de la carrière à la livraison sur chantier.\n\nNos racines vénètes nous donnent un accès privilégié à certaines des plus belles pierres au monde, ainsi qu\u2019à des partenariats durables avec des carrières en Méditerranée et au-delà.',
+    storyBody: 'HQ Stones est née d\u2019une conviction : la pierre naturelle mérite d\u2019être spécifiée, sourcée et finie avec soin. Nous agissons comme revendeur et consultant, guidant architectes, designers et particuliers à chaque étape — du choix de la carrière à la livraison sur chantier.\n\nNos racines italiennes nous donnent un accès privilégié à certaines des plus belles pierres au monde, ainsi qu\u2019à des partenariats durables avec des carrières en Méditerranée et au-delà.',
     valuesTitle: 'Nos Valeurs',
     valueQuality: 'Qualité',
     valueQualityDesc: 'Chaque dalle inspectée, chaque finition vérifiée — sans compromis.',
@@ -139,7 +139,7 @@ export default {
     error: 'Une erreur est survenue. Réessayez ou écrivez-nous directement.',
     infoTitle: 'Société',
     infoCompany: 'HQ Stones',
-    infoLocation: 'Vénétie, Italie',
+    infoLocation: 'Italie',
     infoEmail: 'info@hqstones.example',
     findUs: 'Nous trouver',
     validation: {
@@ -158,7 +158,7 @@ export default {
     quoteSubtitle: 'Parlez-nous du produit qui vous intéresse.',
   },
   footer: {
-    tagline: 'Pierre naturelle, projets d\u2019exception — Vénétie, Italie.',
+    tagline: 'Pierre naturelle, projets d\u2019exception — Italie.',
     navigation: 'Navigation',
     language: 'Langue',
     follow: 'Nous suivre',

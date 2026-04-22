@@ -44,7 +44,7 @@ const Contact = () => {
           <div className="mt-4 aspect-[4/3] overflow-hidden rounded-sm border border-border/60">
             <iframe
               title="HQ Stones location"
-              src="https://www.google.com/maps?q=Veneto%20Italy&output=embed"
+              src="https://www.google.com/maps?q=Italy&output=embed"
               loading="lazy"
               className="h-full w-full border-0"
               referrerPolicy="no-referrer-when-downgrade"

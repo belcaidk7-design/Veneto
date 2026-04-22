@@ -9,7 +9,7 @@ export default {
   },
   hero: {
     headline: 'HQ Stones — Naturstein, außergewöhnliche Projekte',
-    subline: 'Marmor, Granit, Kalkstein und mehr — Venetien, Italien',
+    subline: 'Marmor, Granit, Kalkstein und mehr — Italien',
     cta: 'Katalog entdecken',
   },
   home: {
@@ -17,7 +17,7 @@ export default {
     categoriesSubtitle: 'Von Außenanlagen über Innenflächen bis zu Rohplatten für Profis.',
     materialsTitle: 'Ein Erbe an Materialien',
     materialsSubtitle: 'Aus Steinbrüchen in Italien und weltweit.',
-    aboutTitle: 'Gefertigt in Venetien',
+    aboutTitle: 'Gefertigt in Italien',
     aboutBody: 'Seit Jahrzehnten arbeitet HQ Stones mit Architekten, Designern und Bauherren zusammen, um Natursteinprojekte zum Leben zu erwecken — mit Beraterstrenge und Handwerkerblick.',
     aboutCta: 'Kontakt aufnehmen',
   },
@@ -94,10 +94,10 @@ export default {
         author: 'HQ Stones Team',
         date: '2025-03-12',
       },
-      venetoQuarries: {
-        title: 'Steinbrüche Venetiens: Ein Erbe des Steins',
-        excerpt: 'Von den Voralpen bis zu den Berici-Hügeln prägen die Steine Venetiens seit Jahrhunderten die italienische Architektur.',
-        body: 'Venetien ist ein geologischer Schatz. Vom Trachyt der Euganeischen Hügel bis zum Vicenza-Kalkstein hat unsere Landschaft Paläste, Kirchen und moderne Villen mit dem Material der italienischen Eleganz versorgt.\n\nDie direkte Zusammenarbeit mit regionalen Steinbrüchen schenkt uns volle Rückverfolgbarkeit und außergewöhnliche Konsistenz auch bei großen Projekten. Sie hält ein jahrhundertealtes Handwerk lebendig.\n\nWer Venetien-Stein wählt, bringt dieses Erbe ins Projekt — mit Textur, Farbe und stiller Autorität.',
+      italianQuarries: {
+        title: 'Italienische Steinbrüche: Ein Erbe des Steins',
+        excerpt: 'Von den Alpen bis Sizilien prägen italienische Steinbrüche seit Jahrhunderten die Architektur.',
+        body: 'Italien ist ein geologischer Schatz. Vom Carrara-Marmor über den Trani-Kalkstein bis zum sardischen Granit und dem Trentiner Porphyr hat unsere Halbinsel Paläste, Kirchen und moderne Villen mit den Materialien einer zeitlosen Eleganz versorgt.\n\nDie direkte Zusammenarbeit mit Steinbrüchen schenkt uns volle Rückverfolgbarkeit und außergewöhnliche Konsistenz auch bei großen Projekten. Sie hält ein jahrhundertealtes Handwerk lebendig.\n\nWer italienischen Stein wählt, bringt dieses Erbe ins Projekt — mit Textur, Farbe und stiller Autorität.',
         author: 'HQ Stones Team',
         date: '2025-02-04',
       },
@@ -112,9 +112,9 @@ export default {
   },
   about: {
     title: 'Über HQ Stones',
-    subtitle: 'Steinhändler und Projektberater mit Wurzeln in Venetien, Italien.',
+    subtitle: 'Steinhändler und Projektberater mit Sitz in Italien.',
     storyTitle: 'Unsere Geschichte',
-    storyBody: 'HQ Stones wurde mit einer Überzeugung gegründet: Naturstein verdient es, mit Sorgfalt spezifiziert, beschafft und verarbeitet zu werden. Wir agieren als Händler und Berater und begleiten Architekten, Designer und Privatkunden in jedem Schritt — von der Steinbruchwahl bis zur Lieferung auf der Baustelle.\n\nUnsere venetischen Wurzeln öffnen uns den Zugang zu einigen der edelsten Steine der Welt, ergänzt durch langjährige Partnerschaften mit Steinbrüchen rund ums Mittelmeer und darüber hinaus.',
+    storyBody: 'HQ Stones wurde mit einer Überzeugung gegründet: Naturstein verdient es, mit Sorgfalt spezifiziert, beschafft und verarbeitet zu werden. Wir agieren als Händler und Berater und begleiten Architekten, Designer und Privatkunden in jedem Schritt — von der Steinbruchwahl bis zur Lieferung auf der Baustelle.\n\nUnsere italienischen Wurzeln öffnen uns den Zugang zu einigen der edelsten Steine der Welt, ergänzt durch langjährige Partnerschaften mit Steinbrüchen rund ums Mittelmeer und darüber hinaus.',
     valuesTitle: 'Unsere Werte',
     valueQuality: 'Qualität',
     valueQualityDesc: 'Jede Platte geprüft, jede Oberfläche kontrolliert — keine Kompromisse.',
@@ -139,7 +139,7 @@ export default {
     error: 'Etwas ist schiefgelaufen. Bitte erneut versuchen oder direkt schreiben.',
     infoTitle: 'Unternehmen',
     infoCompany: 'HQ Stones',
-    infoLocation: 'Venetien, Italien',
+    infoLocation: 'Italien',
     infoEmail: 'info@hqstones.example',
     findUs: 'So finden Sie uns',
     validation: {
@@ -158,7 +158,7 @@ export default {
     quoteSubtitle: 'Erzählen Sie uns vom gewünschten Produkt.',
   },
   footer: {
-    tagline: 'Naturstein, außergewöhnliche Projekte — Venetien, Italien.',
+    tagline: 'Naturstein, außergewöhnliche Projekte — Italien.',
     navigation: 'Navigation',
     language: 'Sprache',
     follow: 'Folgen Sie uns',
