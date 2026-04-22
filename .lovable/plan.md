@@ -1,50 +1,60 @@
 
-# Update product catalog with PDF images & remove "Veneto" references
+# Améliorer les images produits & combler les 5 trous
 
-## Goals
-1. Extract product photos from your uploaded PDF (`greenova_light_rasterized.pdf`) and use them on each product card.
-2. Remove every reference to "Veneto / Vénétie / Veneto, Italia" across the site — keep "Italy" only where it makes sense, since Veneto is just where you're based, not where the stone comes from.
+## Problèmes constatés sur les images actuelles
+En inspectant chaque image, plusieurs ont des défauts visibles :
+- **external-paving** : on voit la base d'une autre photo (toit/maison) en bas
+- **columns** : c'est principalement une maison, les colonnes sont écrasées en bas
+- **balustrades** : bord noir + tranche d'image voisine à droite
+- **fountains** : bord noir à gauche
+- **flower-boxes** : c'est une vasque/fontaine en pierre, pas une jardinière
+- **bollards** : l'image est correcte mais cadrée trop large (cimetière)
+- **sculptures** : tranches d'autres photos visibles à gauche et droite
+- **external-cladding** : tranche d'image voisine à droite
+- **kitchen-countertops** : tranche d'image voisine à gauche
+- **sinks** : tranches d'images voisines à gauche
 
-## Step 1 — Extract images from the PDF
-Once in build mode, I will:
-- Copy the PDF to `/tmp/`
-- Use `pdfimages` (poppler) to extract every embedded image into `/tmp/pdf-out/`
-- Inspect the extracted images visually to identify which photo corresponds to which product (paving, fountains, columns, sinks, slabs, etc.)
-- Optimize them (resize to ~1600px max width, convert to JPG/WebP) and copy the matched ones into `src/assets/products/` with semantic names (e.g. `external-paving.jpg`, `fountains.jpg`, `kitchen-countertops.jpg`…)
+## Plan en 3 étapes
 
-If a product in the catalog has no matching photo in the PDF, I'll keep the existing stone-texture placeholder for that one and tell you which products still need imagery.
+### Étape 1 — Re-cadrer proprement les 12 images existantes
+Le PDF est déjà extrait (`/tmp/pdf-out/` 159 images brutes + `/tmp/pages/` 159 pages rendues). Je vais :
+1. Parcourir les pages rendues pour identifier la **bonne photo source** de chaque produit (en évitant les recadrages bricolés sur les pages multi-photos).
+2. Pour chaque produit, choisir l'image brute la plus nette/centrée dans `/tmp/pdf-out/img-XXX.jpg` (qui sont les photos individuelles déjà séparées).
+3. Recadrer carré/4:3 avec marge propre, retirer tout bord noir ou tranche voisine, et redimensionner à 1200px.
+4. Réécraser `src/assets/products/*.jpg` avec les versions corrigées.
 
-## Step 2 — Wire images into the catalog
-Update `src/data/catalog.ts`:
-- Add an `image` field to each `Product`
-- Import the new product images and assign them per product
+Si une image actuelle (ex : `flower-boxes.jpg`) ne représente pas le bon produit, je la remplace par une vraie photo de jardinière trouvée dans le PDF.
 
-Update `src/components/ProductCard.tsx`:
-- Use `product.image` instead of the single shared placeholder (fallback to placeholder if missing)
+### Étape 2 — Combler les 5 produits manquants
+Produits qui utilisent encore le placeholder générique :
+- **benches** (bancs en pierre)
+- **curbs** (bordures / cordoli)
+- **bathtubs** (baignoires)
+- **open-book-slabs** (dalles open book)
+- **block-slabs** (dalles brutes)
 
-## Step 3 — Remove "Veneto" everywhere
-Surgical edits across:
+Je chercherai dans les 159 images extraites du PDF les photos correspondantes :
+- bancs en pierre → généralement aux pages "Panchine" / aménagement extérieur
+- bordures → pages "Cordoli"
+- baignoires → pages salle de bain / Vasche
+- dalles → pages "Lastre" (open book et blocs)
 
-| File | Change |
-|---|---|
-| `index.html` | Title & meta description: drop "Veneto, Italy" → keep "Italy" only |
-| `src/pages/Index.tsx` | Hero eyebrow `Veneto · Italia` → `Italia` (or remove entirely) |
-| `src/pages/Contact.tsx` | Google Maps `q=Veneto%20Italy` → use a generic Italy location or your actual address (placeholder: `Italy`) |
-| `src/i18n/locales/en.ts` | `hero.subline`, `home.aboutTitle` ("Crafted in Veneto" → "Crafted in Italy"), `about.subtitle`, `about.storyBody` (rewrite the "Veneto roots" line as "Italian roots"), `contact.infoLocation` ("Veneto, Italy" → "Italy"), `footer.tagline` |
-| `src/i18n/locales/it.ts` | Same fields, Italian equivalents (Veneto → Italia) |
-| `src/i18n/locales/fr.ts` | Same fields (Vénétie → Italie) |
-| `src/i18n/locales/de.ts` | Same fields (Venetien → Italien) |
+Pour chaque produit où je trouve une photo claire, je l'enregistre sous `src/assets/products/<id>.jpg` et je l'ajoute au catalogue.
 
-### Blog post "Veneto Quarries: A Heritage of Stone"
-Two options — I'll go with **B** unless you say otherwise:
-- **A.** Delete the post entirely (and the `blog-quarry.jpg` asset).
-- **B.** Rewrite it as "**Italian Quarries: A Heritage of Stone**" — same structure, broadened to Italian stone heritage in general (no Veneto-specific claims). Keep the cover image. Update slug to `italian-quarries-heritage` and i18n key to `italianQuarries` in all 4 locales.
+**Pour les produits introuvables dans le PDF**, plutôt que de garder le placeholder en pierre, je génère une image AI photo-réaliste haute qualité (Nano Banana 2 / Gemini 3.1 Flash Image) cohérente avec le style sobre du site, par exemple :
+- une photo de baignoire en marbre massif si pas dans le PDF
+- une dalle open book de marbre symétrique sur fond neutre
 
-## Step 4 — QA
-- Verify all 17 products render with an image (real photo or placeholder)
-- Grep the repo for `Veneto|Vénétie|Venetien|Veneta|veneto` → should return zero matches
-- Check the site loads cleanly in EN / IT / FR / DE
+### Étape 3 — Câblage & QA
+- Mettre à jour `src/data/catalog.ts` pour pointer chaque produit vers sa nouvelle image (les 5 trous comblés).
+- Le `placeholder-stone.jpg` reste comme fallback.
+- QA visuel : ouvrir chaque image finale, vérifier qu'aucune n'a de bord noir, de tranche voisine, ou de mauvais cadrage. Vérifier que les 17 produits ont bien une vraie image.
 
-## Notes for you
-- I can't preview the PDF contents in plan mode (the parser failed on this rasterized file). Once approved, I'll extract and inspect the images, then map them to products as best they fit. If your PDF photos don't cover some products, I'll list them so you can send extra photos.
-- The Formspree placeholder endpoint stays untouched.
+## Ce que vous obtiendrez
+- Les 12 images existantes nettoyées (pas de bord noir, cadrage centré sur le produit, bonne représentativité).
+- Les 5 produits manquants illustrés (PDF en priorité, AI en complément si nécessaire).
+- Catalogue 100% illustré, prêt pour la prod.
+
+## Notes
+- Si une photo AI ne vous plaît pas, dites-le-moi et je relance avec un prompt ajusté.
+- Si vous avez de meilleures photos pour certains produits (ex : baignoires), envoyez-les et je les utiliserai à la place.
