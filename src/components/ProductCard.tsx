@@ -3,7 +3,6 @@ import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import QuoteModal from './QuoteModal';
 import { Product } from '@/data/catalog';
-import placeholder from '@/assets/placeholder-stone.jpg';
 
 interface Props {
   product: Product;
@@ -19,7 +18,7 @@ const ProductCard = ({ product }: Props) => {
       <article className="card-hover group flex flex-col overflow-hidden rounded-sm border border-border/60 bg-card">
         <div className="relative aspect-[4/3] overflow-hidden bg-secondary">
           <img
-            src={placeholder}
+            src={product.image}
             alt={name}
             loading="lazy"
             width={800}
