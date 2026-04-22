@@ -33,7 +33,7 @@ const Index = () => {
         <div className="container-prose py-24 md:py-32">
           <div className="max-w-2xl animate-fade-in">
             <p className="mb-4 text-xs font-medium uppercase tracking-[0.3em] text-accent">
-              Veneto · Italia
+              Italia
             </p>
             <h1 className="font-serif text-4xl leading-tight text-background sm:text-5xl md:text-6xl">
               {t('hero.headline')}

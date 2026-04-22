@@ -9,7 +9,7 @@ export default {
   },
   hero: {
     headline: 'HQ Stones — Natural Stone, Exceptional Projects',
-    subline: 'Marble, Granite, Limestone & more — Veneto, Italy',
+    subline: 'Marble, Granite, Limestone & more — Italy',
     cta: 'Discover our catalog',
   },
   home: {
@@ -17,7 +17,7 @@ export default {
     categoriesSubtitle: 'From garden landscapes to interior surfaces and raw slabs for professionals.',
     materialsTitle: 'A Heritage of Materials',
     materialsSubtitle: 'Sourced from quarries across Italy and beyond.',
-    aboutTitle: 'Crafted in Veneto',
+    aboutTitle: 'Crafted in Italy',
     aboutBody: 'For decades, HQ Stones has partnered with architects, designers and homeowners to bring natural stone projects to life — with the rigor of consultants and the eye of artisans.',
     aboutCta: 'Get in touch',
   },
@@ -94,10 +94,10 @@ export default {
         author: 'HQ Stones Team',
         date: '2025-03-12',
       },
-      venetoQuarries: {
-        title: 'Veneto Quarries: A Heritage of Stone',
-        excerpt: 'From the Pre-Alps to the Berici Hills, the stones of Veneto have shaped Italian architecture for centuries.',
-        body: 'The Veneto region is a geological treasure. From the Trachyte of the Euganean Hills to the Pietra di Vicenza limestone, our landscape has supplied palaces, churches and modern villas with material that defines Italian elegance.\n\nWorking directly with regional quarries gives us — and our clients — full traceability and exceptional consistency across large projects. It also keeps centuries-old craft alive: extraction, sawing and finishing techniques refined over generations.\n\nWhen you specify Veneto stone, you bring this heritage into your project, with all its texture, color and quiet authority.',
+      italianQuarries: {
+        title: 'Italian Quarries: A Heritage of Stone',
+        excerpt: 'From the Alps to Sicily, Italian quarries have shaped architecture for centuries.',
+        body: 'Italy is a geological treasure. From Carrara marble to Trani limestone, from Sardinian granite to Trentino porphyry, our peninsula has supplied palaces, churches and modern villas with the materials that define timeless elegance.\n\nWorking directly with quarries gives us — and our clients — full traceability and exceptional consistency across large projects. It also keeps centuries-old craft alive: extraction, sawing and finishing techniques refined over generations.\n\nWhen you specify Italian stone, you bring this heritage into your project, with all its texture, color and quiet authority.',
         author: 'HQ Stones Team',
         date: '2025-02-04',
       },
@@ -112,9 +112,9 @@ export default {
   },
   about: {
     title: 'About HQ Stones',
-    subtitle: 'A stone reseller and project consultant rooted in Veneto, Italy.',
+    subtitle: 'A stone reseller and project consultant based in Italy.',
     storyTitle: 'Our Story',
-    storyBody: 'HQ Stones was founded with a single conviction: that natural stone deserves to be specified, sourced and finished with care. We act as both reseller and consultant, guiding architects, designers and private clients through every step — from quarry selection to on-site delivery.\n\nOur Veneto roots give us privileged access to some of the world\u2019s most distinguished stone, alongside long-standing partnerships with quarries across the Mediterranean and beyond.',
+    storyBody: 'HQ Stones was founded with a single conviction: that natural stone deserves to be specified, sourced and finished with care. We act as both reseller and consultant, guiding architects, designers and private clients through every step — from quarry selection to on-site delivery.\n\nOur Italian roots give us privileged access to some of the world\u2019s most distinguished stone, alongside long-standing partnerships with quarries across the Mediterranean and beyond.',
     valuesTitle: 'Our Values',
     valueQuality: 'Quality',
     valueQualityDesc: 'Every slab inspected, every finish verified — no compromises.',
@@ -139,7 +139,7 @@ export default {
     error: 'Something went wrong. Please try again or email us directly.',
     infoTitle: 'Company',
     infoCompany: 'HQ Stones',
-    infoLocation: 'Veneto, Italy',
+    infoLocation: 'Italy',
     infoEmail: 'info@hqstones.example',
     findUs: 'Find us',
     validation: {
@@ -158,7 +158,7 @@ export default {
     quoteSubtitle: 'Tell us about the product you\u2019re interested in.',
   },
   footer: {
-    tagline: 'Natural stone, exceptional projects — Veneto, Italy.',
+    tagline: 'Natural stone, exceptional projects — Italy.',
     navigation: 'Navigation',
     language: 'Language',
     follow: 'Follow us',

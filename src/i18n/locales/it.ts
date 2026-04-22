@@ -9,7 +9,7 @@ export default {
   },
   hero: {
     headline: 'HQ Stones — Pietra Naturale, Progetti d\u2019Eccellenza',
-    subline: 'Marmo, Granito, Pietra Calcarea e altro — Veneto, Italia',
+    subline: 'Marmo, Granito, Pietra Calcarea e altro — Italia',
     cta: 'Scopri il catalogo',
   },
   home: {
@@ -17,7 +17,7 @@ export default {
     categoriesSubtitle: 'Dai paesaggi da giardino alle superfici interne fino alle lastre per professionisti.',
     materialsTitle: 'Un Patrimonio di Materiali',
     materialsSubtitle: 'Selezionati da cave in Italia e nel mondo.',
-    aboutTitle: 'Realizzato in Veneto',
+    aboutTitle: 'Realizzato in Italia',
     aboutBody: 'Da decenni HQ Stones collabora con architetti, designer e privati per dare vita a progetti in pietra naturale — con il rigore dei consulenti e l\u2019occhio degli artigiani.',
     aboutCta: 'Contattaci',
   },
@@ -94,10 +94,10 @@ export default {
         author: 'Team HQ Stones',
         date: '2025-03-12',
       },
-      venetoQuarries: {
-        title: 'Cave del Veneto: un Patrimonio di Pietra',
-        excerpt: 'Dalle Prealpi ai Colli Berici, le pietre del Veneto hanno plasmato l\u2019architettura italiana per secoli.',
-        body: 'Il Veneto è un tesoro geologico. Dal Trachite dei Colli Euganei alla Pietra di Vicenza, il nostro paesaggio ha fornito a palazzi, chiese e ville moderne il materiale che definisce l\u2019eleganza italiana.\n\nLavorare direttamente con le cave del territorio offre — a noi e ai clienti — piena tracciabilità e una coerenza eccezionale anche su grandi progetti. Mantiene anche viva un\u2019arte secolare: tecniche di estrazione, segagione e finitura raffinate da generazioni.\n\nQuando si sceglie la pietra del Veneto, si porta nel progetto questo patrimonio, con tutta la sua texture, colore e quieta autorevolezza.',
+      italianQuarries: {
+        title: 'Cave Italiane: un Patrimonio di Pietra',
+        excerpt: 'Dalle Alpi alla Sicilia, le cave italiane hanno plasmato l\u2019architettura per secoli.',
+        body: 'L\u2019Italia è un tesoro geologico. Dal marmo di Carrara alla pietra di Trani, dal granito sardo al porfido trentino, la nostra penisola ha fornito a palazzi, chiese e ville moderne i materiali che definiscono un\u2019eleganza senza tempo.\n\nLavorare direttamente con le cave offre — a noi e ai clienti — piena tracciabilità e una coerenza eccezionale anche su grandi progetti. Mantiene anche viva un\u2019arte secolare: tecniche di estrazione, segagione e finitura raffinate da generazioni.\n\nQuando si sceglie la pietra italiana, si porta nel progetto questo patrimonio, con tutta la sua texture, colore e quieta autorevolezza.',
         author: 'Team HQ Stones',
         date: '2025-02-04',
       },
@@ -112,9 +112,9 @@ export default {
   },
   about: {
     title: 'Chi Siamo',
-    subtitle: 'Rivenditore di pietra e consulente di progetto con radici in Veneto.',
+    subtitle: 'Rivenditore di pietra e consulente di progetto con sede in Italia.',
     storyTitle: 'La Nostra Storia',
-    storyBody: 'HQ Stones è nata da una convinzione: la pietra naturale merita di essere selezionata, fornita e finita con cura. Operiamo come rivenditori e consulenti, accompagnando architetti, designer e clienti privati in ogni passaggio — dalla scelta della cava alla consegna in cantiere.\n\nLe nostre radici venete ci offrono accesso privilegiato ad alcune delle pietre più nobili al mondo, oltre a partnership consolidate con cave del Mediterraneo e oltre.',
+    storyBody: 'HQ Stones è nata da una convinzione: la pietra naturale merita di essere selezionata, fornita e finita con cura. Operiamo come rivenditori e consulenti, accompagnando architetti, designer e clienti privati in ogni passaggio — dalla scelta della cava alla consegna in cantiere.\n\nLe nostre radici italiane ci offrono accesso privilegiato ad alcune delle pietre più nobili al mondo, oltre a partnership consolidate con cave del Mediterraneo e oltre.',
     valuesTitle: 'I Nostri Valori',
     valueQuality: 'Qualità',
     valueQualityDesc: 'Ogni lastra ispezionata, ogni finitura verificata — nessun compromesso.',
@@ -139,7 +139,7 @@ export default {
     error: 'Qualcosa è andato storto. Riprova o scrivici direttamente.',
     infoTitle: 'Azienda',
     infoCompany: 'HQ Stones',
-    infoLocation: 'Veneto, Italia',
+    infoLocation: 'Italia',
     infoEmail: 'info@hqstones.example',
     findUs: 'Dove siamo',
     validation: {
@@ -158,7 +158,7 @@ export default {
     quoteSubtitle: 'Raccontaci del prodotto che ti interessa.',
   },
   footer: {
-    tagline: 'Pietra naturale, progetti d\u2019eccellenza — Veneto, Italia.',
+    tagline: 'Pietra naturale, progetti d\u2019eccellenza — Italia.',
     navigation: 'Navigazione',
     language: 'Lingua',
     follow: 'Seguici',
