@@ -1,68 +1,50 @@
 
-# HQ Stones — Multilingual Stone Catalog Website
+# Update product catalog with PDF images & remove "Veneto" references
 
-A refined, luxury-feel catalog site for HQ Stones (Veneto, Italy) showcasing natural stone products across Exterior, Interior, and Raw Slabs categories. No e-commerce — visitors browse and request quotes via a contact form.
+## Goals
+1. Extract product photos from your uploaded PDF (`greenova_light_rasterized.pdf`) and use them on each product card.
+2. Remove every reference to "Veneto / Vénétie / Veneto, Italia" across the site — keep "Italy" only where it makes sense, since Veneto is just where you're based, not where the stone comes from.
 
-## Design system
-- **Palette**: off-white `#F8F5F0`, warm stone beige `#C9B99A`, dark charcoal `#1C1C1C`, gold accent `#B8972E`
-- **Typography**: Playfair Display (headings) · Inter (body)
-- **Feel**: Editorial, generous whitespace, large imagery, subtle hover lifts on cards, gold underline accents on links
-- **Fully responsive**, mobile-first
+## Step 1 — Extract images from the PDF
+Once in build mode, I will:
+- Copy the PDF to `/tmp/`
+- Use `pdfimages` (poppler) to extract every embedded image into `/tmp/pdf-out/`
+- Inspect the extracted images visually to identify which photo corresponds to which product (paving, fountains, columns, sinks, slabs, etc.)
+- Optimize them (resize to ~1600px max width, convert to JPG/WebP) and copy the matched ones into `src/assets/products/` with semantic names (e.g. `external-paving.jpg`, `fountains.jpg`, `kitchen-countertops.jpg`…)
 
-## Pages & sections
+If a product in the catalog has no matching photo in the PDF, I'll keep the existing stone-texture placeholder for that one and tell you which products still need imagery.
 
-### 1. Header (sticky, all pages)
-- "HQ Stones" wordmark logo (Playfair, gold accent)
-- Nav: Home · Products · Materials · Blog · About · Contact
-- Language switcher: EN / IT / FR / DE (dropdown with flags)
-- Mobile: hamburger drawer
+## Step 2 — Wire images into the catalog
+Update `src/data/catalog.ts`:
+- Add an `image` field to each `Product`
+- Import the new product images and assign them per product
 
-### 2. Home
-- **Hero**: AI-generated full-bleed marble texture, headline *"HQ Stones — Natural Stone, Exceptional Projects"*, subline *"Marble, Granite, Limestone & more — Veneto, Italy"*, gold CTA → catalog
-- **Featured categories** (3 large cards: Exterior · Interior · Raw Slabs) with AI hero imagery
-- **Materials strip** (Marble · Limestone · Granite · Porfido · Sandstone)
-- **About teaser** + CTA to contact
+Update `src/components/ProductCard.tsx`:
+- Use `product.image` instead of the single shared placeholder (fallback to placeholder if missing)
 
-### 3. Products page
-- Three category sections (Exterior, Interior, Raw Slabs) with all listed products
-- **Material filter bar** (cross-category): Marble · Limestone · Granite · Porfido · Sandstone (multi-select chips)
-- **Product cards**: stone-textured placeholder image, translated name, material badge, "Request a quote" button → opens contact modal pre-filled with product
+## Step 3 — Remove "Veneto" everywhere
+Surgical edits across:
 
-### 4. Materials page
-- One section per material with description, typical uses, and product examples
+| File | Change |
+|---|---|
+| `index.html` | Title & meta description: drop "Veneto, Italy" → keep "Italy" only |
+| `src/pages/Index.tsx` | Hero eyebrow `Veneto · Italia` → `Italia` (or remove entirely) |
+| `src/pages/Contact.tsx` | Google Maps `q=Veneto%20Italy` → use a generic Italy location or your actual address (placeholder: `Italy`) |
+| `src/i18n/locales/en.ts` | `hero.subline`, `home.aboutTitle` ("Crafted in Veneto" → "Crafted in Italy"), `about.subtitle`, `about.storyBody` (rewrite the "Veneto roots" line as "Italian roots"), `contact.infoLocation` ("Veneto, Italy" → "Italy"), `footer.tagline` |
+| `src/i18n/locales/it.ts` | Same fields, Italian equivalents (Veneto → Italia) |
+| `src/i18n/locales/fr.ts` | Same fields (Vénétie → Italie) |
+| `src/i18n/locales/de.ts` | Same fields (Venetien → Italien) |
 
-### 5. Blog
-- **Index**: card grid (cover, title, category tag, date, "Read more")
-- **Categories**: Stone Guide · Projects · Materials · Maintenance Tips · News
-- **3 sample posts** in English (e.g. "Choosing the Right Marble for Your Kitchen", "Veneto Quarries: A Heritage of Stone", "Caring for Outdoor Limestone")
-- **Article page**: hero image, title, content, author, date, related articles
+### Blog post "Veneto Quarries: A Heritage of Stone"
+Two options — I'll go with **B** unless you say otherwise:
+- **A.** Delete the post entirely (and the `blog-quarry.jpg` asset).
+- **B.** Rewrite it as "**Italian Quarries: A Heritage of Stone**" — same structure, broadened to Italian stone heritage in general (no Veneto-specific claims). Keep the cover image. Update slug to `italian-quarries-heritage` and i18n key to `italianQuarries` in all 4 locales.
 
-### 6. Contact
-- Form: Full Name · Email · Phone · Product interest (dropdown of all categories) · Message · Submit
-- Wired to Formspree with a clearly-marked placeholder endpoint (one-line swap later)
-- Zod validation, success/error toasts
-- Company info block (HQ Stones, Veneto, Italy) + Google Maps embed placeholder
+## Step 4 — QA
+- Verify all 17 products render with an image (real photo or placeholder)
+- Grep the repo for `Veneto|Vénétie|Venetien|Veneta|veneto` → should return zero matches
+- Check the site loads cleanly in EN / IT / FR / DE
 
-### 7. About
-- Company story, three values (Quality · Expertise · Custom Projects) with icons, team photo placeholder
-
-### 8. Footer
-- Logo, nav links, language switcher, social icon placeholders, © HQ Stones 2025
-
-## Internationalization
-- **react-i18next** with EN (default), IT, FR, DE
-- Full UI translations: navigation, buttons, form labels/validation, footer, blog UI chrome
-- **Product names translated** in all 4 languages (full catalog dictionary)
-- Category and material names translated
-- Language preference persisted in localStorage
-
-## Imagery
-- **AI-generated** for: Home hero, 3 category heroes, About, 3 blog covers
-- **Stone-texture placeholder tiles** for product cards (easy to swap with real photos later)
-
-## Tech
-- React + Tailwind, design tokens in `index.css` + `tailwind.config.ts`
-- react-i18next for translations
-- React Router for pages (Home, Products, Materials, Blog, Blog post, About, Contact)
-- Formspree placeholder endpoint, Zod-validated form
-- Clean component structure (Header, Footer, ProductCard, CategorySection, MaterialFilter, BlogCard, QuoteModal, LanguageSwitcher)
+## Notes for you
+- I can't preview the PDF contents in plan mode (the parser failed on this rasterized file). Once approved, I'll extract and inspect the images, then map them to products as best they fit. If your PDF photos don't cover some products, I'll list them so you can send extra photos.
+- The Formspree placeholder endpoint stays untouched.
