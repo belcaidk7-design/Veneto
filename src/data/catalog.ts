@@ -11,6 +11,11 @@ import imgInteriorFlooring from '@/assets/products/interior-flooring.jpg';
 import imgInteriorCladding from '@/assets/products/interior-cladding.jpg';
 import imgKitchenCountertops from '@/assets/products/kitchen-countertops.jpg';
 import imgSinks from '@/assets/products/sinks.jpg';
+import imgBenches from '@/assets/products/benches.jpg';
+import imgCurbs from '@/assets/products/curbs.jpg';
+import imgBathtubs from '@/assets/products/bathtubs.jpg';
+import imgOpenBookSlabs from '@/assets/products/open-book-slabs.jpg';
+import imgBlockSlabs from '@/assets/products/block-slabs.jpg';
 
 export type CategoryKey = 'exterior' | 'interior' | 'slabs';
 export type MaterialKey = 'marble' | 'limestone' | 'granite' | 'porfido' | 'sandstone';
@@ -34,9 +39,9 @@ export const PRODUCTS: Product[] = [
   { id: 'columns', i18nKey: 'columns', category: 'exterior', materials: ['marble', 'limestone', 'granite'], image: imgColumns },
   { id: 'balustrades', i18nKey: 'balustrades', category: 'exterior', materials: ['marble', 'limestone'], image: imgBalustrades },
   { id: 'flower-boxes', i18nKey: 'flowerBoxes', category: 'exterior', materials: ['limestone', 'sandstone'], image: imgFlowerBoxes },
-  { id: 'benches', i18nKey: 'benches', category: 'exterior', materials: ['granite', 'limestone'], image: placeholder },
+  { id: 'benches', i18nKey: 'benches', category: 'exterior', materials: ['granite', 'limestone'], image: imgBenches },
   { id: 'bollards', i18nKey: 'bollards', category: 'exterior', materials: ['granite', 'porfido'], image: imgBollards },
-  { id: 'curbs', i18nKey: 'curbs', category: 'exterior', materials: ['granite', 'porfido'], image: placeholder },
+  { id: 'curbs', i18nKey: 'curbs', category: 'exterior', materials: ['granite', 'porfido'], image: imgCurbs },
   { id: 'sculptures', i18nKey: 'sculptures', category: 'exterior', materials: ['marble', 'limestone'], image: imgSculptures },
   { id: 'external-cladding', i18nKey: 'externalCladding', category: 'exterior', materials: ['limestone', 'sandstone', 'porfido'], image: imgExternalCladding },
 
@@ -45,11 +50,11 @@ export const PRODUCTS: Product[] = [
   { id: 'interior-cladding', i18nKey: 'interiorCladding', category: 'interior', materials: ['marble', 'limestone'], image: imgInteriorCladding },
   { id: 'kitchen-countertops', i18nKey: 'kitchenCountertops', category: 'interior', materials: ['marble', 'granite'], image: imgKitchenCountertops },
   { id: 'sinks', i18nKey: 'sinks', category: 'interior', materials: ['marble', 'granite'], image: imgSinks },
-  { id: 'bathtubs', i18nKey: 'bathtubs', category: 'interior', materials: ['marble'], image: placeholder },
+  { id: 'bathtubs', i18nKey: 'bathtubs', category: 'interior', materials: ['marble'], image: imgBathtubs },
 
   // Slabs
-  { id: 'open-book-slabs', i18nKey: 'openBookSlabs', category: 'slabs', materials: ['marble', 'granite'], image: placeholder },
-  { id: 'block-slabs', i18nKey: 'blockSlabs', category: 'slabs', materials: ['marble', 'granite', 'limestone', 'sandstone'], image: placeholder },
+  { id: 'open-book-slabs', i18nKey: 'openBookSlabs', category: 'slabs', materials: ['marble', 'granite'], image: imgOpenBookSlabs },
+  { id: 'block-slabs', i18nKey: 'blockSlabs', category: 'slabs', materials: ['marble', 'granite', 'limestone', 'sandstone'], image: imgBlockSlabs },
 ];
 
 export const FORMSPREE_ENDPOINT = 'https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID';
