@@ -1,60 +1,67 @@
 
-# Améliorer les images produits & combler les 5 trous
 
-## Problèmes constatés sur les images actuelles
-En inspectant chaque image, plusieurs ont des défauts visibles :
-- **external-paving** : on voit la base d'une autre photo (toit/maison) en bas
-- **columns** : c'est principalement une maison, les colonnes sont écrasées en bas
-- **balustrades** : bord noir + tranche d'image voisine à droite
-- **fountains** : bord noir à gauche
-- **flower-boxes** : c'est une vasque/fontaine en pierre, pas une jardinière
-- **bollards** : l'image est correcte mais cadrée trop large (cimetière)
-- **sculptures** : tranches d'autres photos visibles à gauche et droite
-- **external-cladding** : tranche d'image voisine à droite
-- **kitchen-countertops** : tranche d'image voisine à gauche
-- **sinks** : tranches d'images voisines à gauche
+# Harmoniser la qualité visuelle des 17 images produits
 
-## Plan en 3 étapes
+## Constat
+Le site mélange aujourd'hui deux mondes incompatibles :
+- **bathtubs.jpg** : photo AI lookbook 1024×1024, lumière douce, fond minéral minimaliste → ton "luxe éditorial" du site.
+- **Les 16 autres** : scans de catalogue technique extraits du PDF, basse résolution (455–1199 px, tailles toutes différentes), avec bordures arrondies noires visibles, fonds parasites (briques rouges, atelier en chantier, vitrines de magasin, ciel surexposé, palettes en bois), couleurs ternes.
 
-### Étape 1 — Re-cadrer proprement les 12 images existantes
-Le PDF est déjà extrait (`/tmp/pdf-out/` 159 images brutes + `/tmp/pages/` 159 pages rendues). Je vais :
-1. Parcourir les pages rendues pour identifier la **bonne photo source** de chaque produit (en évitant les recadrages bricolés sur les pages multi-photos).
-2. Pour chaque produit, choisir l'image brute la plus nette/centrée dans `/tmp/pdf-out/img-XXX.jpg` (qui sont les photos individuelles déjà séparées).
-3. Recadrer carré/4:3 avec marge propre, retirer tout bord noir ou tranche voisine, et redimensionner à 1200px.
-4. Réécraser `src/assets/products/*.jpg` avec les versions corrigées.
+Résultat : la grille produits paraît hétérogène et amateur.
 
-Si une image actuelle (ex : `flower-boxes.jpg`) ne représente pas le bon produit, je la remplace par une vraie photo de jardinière trouvée dans le PDF.
+## Objectif
+**Toutes les 17 images en 1024×1024, même direction artistique que `bathtubs.jpg`** : photoréalistes, lumière naturelle douce, fond neutre/minéral, sujet centré, palette cohérente avec le site (off-white, beige pierre, charcoal).
 
-### Étape 2 — Combler les 5 produits manquants
-Produits qui utilisent encore le placeholder générique :
-- **benches** (bancs en pierre)
-- **curbs** (bordures / cordoli)
-- **bathtubs** (baignoires)
-- **open-book-slabs** (dalles open book)
-- **block-slabs** (dalles brutes)
+## Approche en 2 modes selon l'image source
 
-Je chercherai dans les 159 images extraites du PDF les photos correspondantes :
-- bancs en pierre → généralement aux pages "Panchine" / aménagement extérieur
-- bordures → pages "Cordoli"
-- baignoires → pages salle de bain / Vasche
-- dalles → pages "Lastre" (open book et blocs)
+### Mode A — Régénération AI complète (produits où la photo source est inutilisable ou bruitée)
+Pour ces produits, je génère de zéro avec **Nano Banana 2** (`google/gemini-3.1-flash-image-preview`) :
 
-Pour chaque produit où je trouve une photo claire, je l'enregistre sous `src/assets/products/<id>.jpg` et je l'ajoute au catalogue.
+| Produit | Pourquoi régénérer |
+|---|---|
+| bollards | Image basse résolution, sujet écrasé |
+| sinks | Fond parasite, photo catalogue ancienne |
+| benches | Mur de briques rouges agressif en fond |
+| sculptures | Statue + atelier de tailleur en arrière-plan (sacs, mur en parpaing) |
+| flower-boxes | Devanture de magasin avec affiche/personnage flou en reflet |
+| columns | Cadre intérieur banal (escalier domestique, mur rouge) |
+| balustrades | Idem — décor intérieur générique |
+| curbs | Photo de pavé de ville, peu lisible |
+| block-slabs | Palette industrielle, peu valorisant |
+| open-book-slabs | Image trop petite (559×541), pixelisée |
+| kitchen-countertops | Cuisine datée, faible qualité |
 
-**Pour les produits introuvables dans le PDF**, plutôt que de garder le placeholder en pierre, je génère une image AI photo-réaliste haute qualité (Nano Banana 2 / Gemini 3.1 Flash Image) cohérente avec le style sobre du site, par exemple :
-- une photo de baignoire en marbre massif si pas dans le PDF
-- une dalle open book de marbre symétrique sur fond neutre
+Prompt type : *"Editorial product photography of [produit] in natural [matériau], soft diffused daylight, minimalist neutral stone-textured background, shallow depth of field, luxury catalog aesthetic, off-white and warm beige palette, centered composition, photorealistic, square format"*.
 
-### Étape 3 — Câblage & QA
-- Mettre à jour `src/data/catalog.ts` pour pointer chaque produit vers sa nouvelle image (les 5 trous comblés).
-- Le `placeholder-stone.jpg` reste comme fallback.
-- QA visuel : ouvrir chaque image finale, vérifier qu'aucune n'a de bord noir, de tranche voisine, ou de mauvais cadrage. Vérifier que les 17 produits ont bien une vraie image.
+### Mode B — Édition AI à partir de la source (produits où la photo source est exploitable)
+Pour ces produits, j'utilise **Nano Banana 2 en mode edit-image** pour garder le sujet réel mais nettoyer/réharmoniser :
 
-## Ce que vous obtiendrez
-- Les 12 images existantes nettoyées (pas de bord noir, cadrage centré sur le produit, bonne représentativité).
-- Les 5 produits manquants illustrés (PDF en priorité, AI en complément si nécessaire).
-- Catalogue 100% illustré, prêt pour la prod.
+| Produit | Action sur l'image source |
+|---|---|
+| external-paving | Garder la terrasse pavée, retirer la chaise/parasol, harmoniser lumière |
+| fountains | Garder la fontaine, nettoyer fond et bords noirs |
+| external-cladding | Garder le bardage, neutraliser le fond |
+| interior-flooring | Garder le sol, recadrer/épurer |
+| interior-cladding | Garder le mur en pierre, nettoyer |
+
+Prompt type : *"Keep the same subject and material. Remove any black border, photo edges from neighboring images, distracting background elements. Replace background with soft neutral stone wall, natural diffused light, luxury editorial style. Output 1024×1024."*
+
+### Conservée telle quelle
+- **bathtubs.jpg** (déjà au standard cible — c'est la référence)
+
+## Pipeline technique
+1. Pour chaque produit : appel au gateway AI (`/tmp/lovable_ai.py --image` pour générer, `--edit-image` pour éditer la source).
+2. Sortie 1024×1024 PNG → conversion JPG qualité 88 → `src/assets/products/<id>.jpg` (écrase l'existant).
+3. **QA visuel obligatoire** : ouverture de chaque image finale, vérification qu'aucune n'a de bord noir, fond parasite, ou style discordant. Si une image rate, je relance avec un prompt ajusté (max 2 tentatives par image).
+4. Aucun changement à `catalog.ts` ni à `ProductCard.tsx` — les chemins restent identiques.
+
+## Ce que vous obtenez
+- Catalogue 100% homogène : 17 images en 1024×1024, même DA que la baignoire actuelle.
+- Style luxe éditorial cohérent du Home jusqu'au dernier produit.
+- Si une image AI ne vous plaît pas après livraison, on l'ajuste à l'unité.
 
 ## Notes
-- Si une photo AI ne vous plaît pas, dites-le-moi et je relance avec un prompt ajusté.
-- Si vous avez de meilleures photos pour certains produits (ex : baignoires), envoyez-les et je les utiliserai à la place.
+- Coût AI : ~17 appels image (Nano Banana 2). Rapide et abordable.
+- Les sources PDF restent dans `/tmp` — récupérables si vous voulez revenir en arrière sur un produit précis.
+- Si vous préférez **garder les vraies photos PDF** pour certains produits (ex : `external-paving` parce que c'est une vraie réalisation), dites-le-moi avant que je lance et je laisserai ces images intactes (juste recadrées proprement en 1024 carré).
+
