@@ -11,6 +11,11 @@ import imgInteriorFlooring from '@/assets/products/interior-flooring.jpg';
 import imgInteriorCladding from '@/assets/products/interior-cladding.jpg';
 import imgKitchenCountertops from '@/assets/products/kitchen-countertops.jpg';
 import imgSinks from '@/assets/products/sinks.jpg';
+import imgBenches from '@/assets/products/benches.jpg';
+import imgCurbs from '@/assets/products/curbs.jpg';
+import imgBathtubs from '@/assets/products/bathtubs.jpg';
+import imgOpenBookSlabs from '@/assets/products/open-book-slabs.jpg';
+import imgBlockSlabs from '@/assets/products/block-slabs.jpg';
 
 export type CategoryKey = 'exterior' | 'interior' | 'slabs';
 export type MaterialKey = 'marble' | 'limestone' | 'granite' | 'porfido' | 'sandstone';
