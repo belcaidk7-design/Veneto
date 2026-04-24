@@ -2,7 +2,8 @@ import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import Layout from '@/components/Layout';
-import { BLOG_POSTS } from '@/data/blog';
+import Seo from '@/components/Seo';
+import { BLOG_POSTS, getRelatedPosts } from '@/data/blog';
 
 const BlogPost = () => {
   const { slug } = useParams();
@@ -12,6 +13,7 @@ const BlogPost = () => {
   if (!post) {
     return (
       <Layout>
+        <Seo title={t('notFound.title')} description={t('notFound.body')} path={`/blog/${slug ?? ''}`} />
         <div className="container-prose py-32 text-center">
           <h1 className="font-serif text-3xl">404</h1>
           <Link to="/blog" className="mt-4 inline-block text-accent">
@@ -25,16 +27,34 @@ const BlogPost = () => {
   const fmt = (d: string) =>
     new Date(d).toLocaleDateString(i18n.language, { year: 'numeric', month: 'long', day: 'numeric' });
 
-  const related = BLOG_POSTS.filter((p) => p.slug !== post.slug).slice(0, 2);
+  const related = getRelatedPosts(post, 3);
+  const title = t(`blog.posts.${post.i18nKey}.title`);
+  const excerpt = t(`blog.posts.${post.i18nKey}.excerpt`);
   const body = t(`blog.posts.${post.i18nKey}.body`) as string;
 
   return (
     <Layout>
+      <Seo
+        title={title}
+        description={excerpt}
+        path={`/blog/${post.slug}`}
+        image={post.cover}
+        type="article"
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'Article',
+          headline: title,
+          description: excerpt,
+          datePublished: post.date,
+          author: { '@type': 'Organization', name: 'HQ Stones' },
+        }}
+      />
+
       <article>
         <div className="relative h-[55vh] min-h-[360px] w-full overflow-hidden">
           <img
             src={post.cover}
-            alt={t(`blog.posts.${post.i18nKey}.title`)}
+            alt={title}
             width={1280}
             height={832}
             className="absolute inset-0 h-full w-full object-cover"
@@ -51,7 +71,7 @@ const BlogPost = () => {
               {t(`blog.categories.${post.category}`)}
             </p>
             <h1 className="mt-3 max-w-3xl font-serif text-3xl text-background md:text-5xl">
-              {t(`blog.posts.${post.i18nKey}.title`)}
+              {title}
             </h1>
             <p className="mt-4 text-sm text-background/80">
               {t('blog.by')} {t(`blog.posts.${post.i18nKey}.author`)} · {fmt(post.date)}
@@ -68,39 +88,40 @@ const BlogPost = () => {
         </div>
       </article>
 
-      {/* Related */}
-      <section className="border-t border-border/60 bg-secondary/40 py-16">
-        <div className="container-prose">
-          <h2 className="mb-8 font-serif text-2xl">{t('blog.relatedTitle')}</h2>
-          <div className="grid gap-6 md:grid-cols-2">
-            {related.map((p) => (
-              <Link
-                key={p.slug}
-                to={`/blog/${p.slug}`}
-                className="card-hover group flex gap-4 overflow-hidden rounded-sm border border-border/60 bg-background p-3"
-              >
-                <div className="aspect-[4/3] w-32 shrink-0 overflow-hidden rounded-sm sm:w-40">
-                  <img
-                    src={p.cover}
-                    alt={t(`blog.posts.${p.i18nKey}.title`)}
-                    loading="lazy"
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-                <div className="flex flex-1 flex-col justify-center">
-                  <p className="text-xs uppercase tracking-widest text-accent">
-                    {t(`blog.categories.${p.category}`)}
-                  </p>
-                  <h3 className="mt-1.5 font-serif text-lg">{t(`blog.posts.${p.i18nKey}.title`)}</h3>
-                  <span className="mt-2 inline-flex items-center gap-1 text-xs uppercase tracking-wider text-foreground/70 group-hover:text-accent">
-                    {t('blog.readMore')} <ArrowRight className="h-3 w-3" />
-                  </span>
-                </div>
-              </Link>
-            ))}
+      {related.length > 0 && (
+        <section className="border-t border-border/60 bg-secondary/40 py-16">
+          <div className="container-prose">
+            <h2 className="mb-8 font-serif text-2xl">{t('blog.relatedTitle')}</h2>
+            <div className="grid gap-6 md:grid-cols-3">
+              {related.map((p) => (
+                <Link
+                  key={p.slug}
+                  to={`/blog/${p.slug}`}
+                  className="card-hover group flex gap-4 overflow-hidden rounded-sm border border-border/60 bg-background p-3"
+                >
+                  <div className="aspect-square w-28 shrink-0 overflow-hidden rounded-sm">
+                    <img
+                      src={p.cover}
+                      alt={t(`blog.posts.${p.i18nKey}.title`)}
+                      loading="lazy"
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="flex flex-1 flex-col justify-center">
+                    <p className="text-xs uppercase tracking-widest text-accent">
+                      {t(`blog.categories.${p.category}`)}
+                    </p>
+                    <h3 className="mt-1.5 font-serif text-base">{t(`blog.posts.${p.i18nKey}.title`)}</h3>
+                    <span className="mt-2 inline-flex items-center gap-1 text-xs uppercase tracking-wider text-foreground/70 group-hover:text-accent">
+                      {t('blog.readMore')} <ArrowRight className="h-3 w-3" />
+                    </span>
+                  </div>
+                </Link>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
     </Layout>
   );
 };

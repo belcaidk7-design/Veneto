@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Download } from 'lucide-react';
 import Layout from '@/components/Layout';
+import Seo from '@/components/Seo';
+import Testimonials from '@/components/Testimonials';
 import { Button } from '@/components/ui/button';
 import { CATEGORIES, MATERIALS } from '@/data/catalog';
 import heroMarble from '@/assets/hero-marble.jpg';
@@ -20,6 +22,21 @@ const Index = () => {
 
   return (
     <Layout>
+      <Seo
+        title={t('seo.home.title')}
+        description={t('seo.home.description')}
+        path="/"
+        image={heroMarble}
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'LocalBusiness',
+          name: 'HQ Stones',
+          description: t('seo.home.description'),
+          areaServed: 'Italy',
+          address: { '@type': 'PostalAddress', addressCountry: 'IT' },
+        }}
+      />
+
       {/* Hero */}
       <section className="relative isolate flex min-h-[80vh] items-center overflow-hidden">
         <img
@@ -39,16 +56,29 @@ const Index = () => {
               {t('hero.headline')}
             </h1>
             <p className="mt-6 text-lg text-background/85">{t('hero.subline')}</p>
-            <Button
-              asChild
-              size="lg"
-              className="mt-8 bg-accent text-accent-foreground hover:bg-accent/90"
-            >
-              <Link to="/products">
-                {t('hero.cta')}
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Button
+                asChild
+                size="lg"
+                className="bg-accent text-accent-foreground hover:bg-accent/90"
+              >
+                <Link to="/products">
+                  {t('hero.cta')}
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="border-background/40 bg-transparent text-background hover:bg-background hover:text-foreground"
+              >
+                <a href="/catalogue.pdf" target="_blank" rel="noopener noreferrer">
+                  <Download className="mr-2 h-4 w-4" />
+                  {t('hero.downloadCta')}
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -98,7 +128,7 @@ const Index = () => {
             {MATERIALS.map((m) => (
               <Link
                 key={m}
-                to="/materials"
+                to={`/products?material=${m}`}
                 className="rounded-sm border border-foreground/20 bg-background px-5 py-2.5 text-sm font-medium uppercase tracking-wider text-foreground transition-colors hover:border-accent hover:text-accent"
               >
                 {t(`materials.${m}`)}
@@ -108,8 +138,11 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Testimonials */}
+      <Testimonials />
+
       {/* About teaser */}
-      <section className="container-prose py-20 md:py-28">
+      <section className="container-prose pb-20 md:pb-28">
         <div className="grid items-center gap-12 md:grid-cols-2">
           <div>
             <h2 className="font-serif text-3xl md:text-4xl">{t('home.aboutTitle')}</h2>
