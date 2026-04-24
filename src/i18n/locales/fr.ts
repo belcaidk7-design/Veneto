@@ -3,14 +3,21 @@ export default {
     home: 'Accueil',
     products: 'Produits',
     materials: 'Matériaux',
-    blog: 'Blog',
+    projects: 'Réalisations',
+    blog: 'Magazine',
     about: 'À propos',
+    craft: 'Savoir-faire',
+    faq: 'FAQ',
     contact: 'Contact',
+  },
+  header: {
+    callAria: 'Nous appeler',
   },
   hero: {
     headline: 'HQ Stones — Pierre Naturelle, Projets d\u2019Exception',
     subline: 'Marbre, Granit, Calcaire et plus — Italie',
     cta: 'Découvrir le catalogue',
+    downloadCta: 'Télécharger le catalogue',
   },
   home: {
     categoriesTitle: 'Explorer le Catalogue',
@@ -44,6 +51,14 @@ export default {
     sandstoneDesc: 'Caractère terreux et facile à travailler — apprécié pour parements et ambiances rustiques.',
     typicalUses: 'Usages typiques',
     examples: 'Produits phares',
+    seeAll: 'Voir tous les produits dans ce matériau',
+  },
+  finishes: {
+    polished: 'Poli',
+    honed: 'Adouci',
+    flamed: 'Flammé',
+    brushed: 'Brossé',
+    aged: 'Vieilli',
   },
   products: {
     title: 'Produits',
@@ -72,6 +87,145 @@ export default {
       blockSlabs: 'Dalles de bloc',
     },
   },
+  productDetail: {
+    metaDescription: '{{name}} en pierre naturelle — disponible en plusieurs matériaux et finitions. Fabrication sur mesure.',
+    description: '{{name}} en pierre naturelle, fabriqué sur mesure et fini selon vos spécifications. Plusieurs matériaux et finitions disponibles. Parlons dimensions, finitions et délais.',
+    materials: 'Matériaux disponibles',
+    finishes: 'Finitions disponibles',
+    related: 'Vous aimerez aussi',
+    zoom: 'Voir en grand',
+  },
+  projects: {
+    title: 'Réalisations',
+    subtitle: 'Une sélection de projets résidentiels, publics et commerciaux.',
+    filterBy: 'Filtrer par type',
+    types: {
+      all: 'Tous',
+      residential: 'Résidentiel',
+      public: 'Public',
+      commercial: 'Commercial',
+    },
+    items: {
+      villaPrivate: {
+        title: 'Villa Méditerranéenne',
+        location: 'Toscane, Italie',
+        description: 'Dallage en travertin et parement calcaire pour une villa privée avec jardin méditerranéen.',
+      },
+      publicSquare: {
+        title: 'Rénovation de Place Historique',
+        location: 'Lombardie, Italie',
+        description: 'Pavage en porphyre et bornes en granit pour la restauration d\u2019une place publique historique.',
+      },
+      hotelLobby: {
+        title: 'Lobby d\u2019Hôtel Boutique',
+        location: 'Milan, Italie',
+        description: 'Sol en marbre Calacatta et parement en pierre de Trani pour la réception d\u2019un hôtel haut de gamme.',
+      },
+      luxuryKitchen: {
+        title: 'Cuisine Calacatta',
+        location: 'Côme, Italie',
+        description: 'Îlot et plans de travail en marbre Calacatta bookmatché pour une cuisine privée de luxe.',
+      },
+      spaBathroom: {
+        title: 'Salle de Bain Sculptée',
+        location: 'Côte d\u2019Azur',
+        description: 'Baignoire en marbre sculptée à la main et parement calcaire pour une salle de bain spa.',
+      },
+      residentialCourtyard: {
+        title: 'Cour en Pierre',
+        location: 'Pouilles, Italie',
+        description: 'Façade en grès et jardinières en calcaire récupéré pour une cour contemporaine.',
+      },
+    },
+  },
+  craft: {
+    title: 'Notre Savoir-faire',
+    subtitle: 'De la carrière au projet — chaque étape affinée par les générations.',
+    step: 'Étape',
+    steps: {
+      extraction: {
+        title: 'Extraction',
+        body: 'Nous travaillons en direct avec les carrières d\u2019Italie et de Méditerranée. Chaque bloc est sélectionné pour son grain, sa couleur et son intégrité avant de quitter la montagne.',
+      },
+      cutting: {
+        title: 'Découpe',
+        body: 'Fil diamanté et débitage transforment les blocs en dalles et pièces dimensionnées. Les tolérances de précision sont respectées tout au long du processus.',
+      },
+      finishing: {
+        title: 'Finition',
+        body: 'Poli, adouci, flammé, brossé, vieilli — la finition définit le caractère de la pierre. Nos artisans vous orientent vers la surface idéale pour votre projet.',
+      },
+      delivery: {
+        title: 'Livraison',
+        body: 'Emballée sur caisses sur mesure et suivie de l\u2019atelier au chantier. Logistique coordonnée à travers l\u2019Europe et au-delà.',
+      },
+    },
+  },
+  faq: {
+    title: 'Questions Fréquentes',
+    subtitle: 'Tout ce qu\u2019il faut savoir avant de spécifier la pierre naturelle.',
+    items: {
+      samples: {
+        q: 'Puis-je recevoir des échantillons physiques ?',
+        a: 'Oui. Nous envoyons gratuitement de petits échantillons pour les projets à l\u2019étude. Des pièces de référence plus grandes peuvent être organisées moyennant un frais symbolique.',
+      },
+      delivery: {
+        q: 'Où livrez-vous ?',
+        a: 'Nous livrons dans toute l\u2019Europe et sur demande dans le monde entier. La logistique est coordonnée par notre équipe et suivie de bout en bout.',
+      },
+      leadTime: {
+        q: 'Quels sont les délais habituels ?',
+        a: 'Les produits standard partent sous 2 à 3 semaines. Les pièces sur mesure ou grandes quantités demandent généralement 6 à 10 semaines selon la disponibilité en carrière.',
+      },
+      maintenance: {
+        q: 'Comment entretenir la pierre naturelle ?',
+        a: 'Utilisez des nettoyants à pH neutre, évitez les acides, et re-scellez les pierres poreuses tous les 2 à 3 ans. Un guide d\u2019entretien est fourni avec chaque commande.',
+      },
+      finishes: {
+        q: 'Quelles finitions sont disponibles ?',
+        a: 'Poli, adouci, flammé, brossé, sablé et vieilli. Toutes les finitions ne conviennent pas à toutes les pierres — nous vous conseillons la meilleure option.',
+      },
+      warranty: {
+        q: 'Proposez-vous une garantie ?',
+        a: 'Les défauts matériels sont couverts pendant 12 mois. La pose, lorsqu\u2019elle est réalisée par nos soins, est couverte 24 mois.',
+      },
+      minimumOrder: {
+        q: 'Y a-t-il une commande minimum ?',
+        a: 'Pas de minimum strict, mais les petites commandes ont un coût logistique unitaire plus élevé. Nous optimisons les regroupements quand c\u2019est possible.',
+      },
+      installation: {
+        q: 'Gérez-vous la pose ?',
+        a: 'En Italie et dans certaines villes européennes, oui. Ailleurs, nous travaillons avec des poseurs locaux qualifiés et supervisons à distance.',
+      },
+      pricing: {
+        q: 'Comment se calcule le prix ?',
+        a: 'Selon la pierre, la finition, les dimensions, la complexité et la quantité. Envoyez-nous votre brief : devis détaillé sous un jour ouvré.',
+      },
+      custom: {
+        q: 'Réalisez-vous des projets sur mesure ?',
+        a: 'Absolument. Des sculptures à la main aux plans de travail bookmatchés — la majorité de notre travail est sur mesure.',
+      },
+    },
+  },
+  testimonials: {
+    title: 'Ils Nous Font Confiance',
+    subtitle: 'Architectes, designers et particuliers à travers l\u2019Europe.',
+    architect: {
+      quote: 'HQ Stones a transformé une spécification de façade complexe en une livraison fluide et dans les délais. Leur connaissance des matériaux est rare.',
+      name: 'Studio Marini',
+      role: 'Cabinet d\u2019architecture, Milan',
+    },
+    homeowner: {
+      quote: 'Choisis pour la cuisine, ils ont fini par travailler avec nous sur toute la maison. Conseils honnêtes, belle pierre.',
+      name: 'Famille Laurent',
+      role: 'Client privé, Provence',
+    },
+    developer: {
+      quote: 'Un interlocuteur unique et fiable pour chaque élément en pierre de notre projet hôtelier. Des mois économisés.',
+      name: 'Lago Group',
+      role: 'Promoteur hôtelier, Côme',
+    },
+  },
   blog: {
     title: 'Magazine',
     subtitle: 'Histoires, guides et regards sur la pierre naturelle.',
@@ -79,6 +233,9 @@ export default {
     by: 'Par',
     relatedTitle: 'Articles liés',
     backToBlog: 'Retour au magazine',
+    filterBy: 'Filtrer par sujet',
+    allTags: 'Tous',
+    noResults: 'Aucun article pour ce sujet pour l\u2019instant.',
     categories: {
       stoneGuide: 'Guide de la Pierre',
       projects: 'Projets',
@@ -122,6 +279,7 @@ export default {
     valueExpertiseDesc: 'Des décennies de conseil sur projets résidentiels et commerciaux.',
     valueCustom: 'Projets Sur Mesure',
     valueCustomDesc: 'Fabrication et installation sur mesure, adaptées à votre vision.',
+    craftCta: 'Découvrir notre savoir-faire',
   },
   contact: {
     title: 'Contact',
@@ -157,12 +315,23 @@ export default {
     quoteTitle: 'Demander un devis',
     quoteSubtitle: 'Parlez-nous du produit qui vous intéresse.',
   },
+  whatsapp: {
+    aria: 'Discuter sur WhatsApp',
+    message: 'Bonjour HQ Stones, je souhaiterais échanger au sujet d\u2019un projet.',
+  },
+  cookie: {
+    title: 'Nous utilisons des cookies.',
+    body: 'Uniquement les cookies essentiels au fonctionnement du site et à la préférence de langue. Aucun tracking.',
+    accept: 'Accepter',
+    decline: 'Refuser',
+  },
   footer: {
     tagline: 'Pierre naturelle, projets d\u2019exception — Italie.',
     navigation: 'Navigation',
     language: 'Langue',
     follow: 'Nous suivre',
     rights: 'Tous droits réservés.',
+    downloadCatalog: 'Télécharger le catalogue',
   },
   language: {
     label: 'Langue',
@@ -173,7 +342,45 @@ export default {
   },
   notFound: {
     title: 'Page introuvable',
-    body: 'La page recherchée n\u2019existe pas.',
+    body: 'La page recherchée n\u2019existe pas ou a été déplacée.',
     cta: 'Retour à l\u2019accueil',
+  },
+  seo: {
+    home: {
+      title: 'HQ Stones — Pierre Naturelle, Projets d\u2019Exception | Italie',
+      description: 'HQ Stones — revendeur et consultant projet basé en Italie. Marbre, granit, calcaire, porphyre, grès pour extérieur, intérieur et dalles brutes.',
+    },
+    products: {
+      title: 'Produits en Pierre — Dallage, Parement, Plans de Travail',
+      description: 'Découvrez tout notre catalogue de produits en pierre naturelle : dallage, fontaines, parements, plans de travail, vasques, baignoires et dalles.',
+    },
+    materials: {
+      title: 'Matériaux — Marbre, Calcaire, Granit, Porphyre, Grès',
+      description: 'Explorez les pierres avec lesquelles nous travaillons — caractéristiques, usages et produits phares pour chaque matériau.',
+    },
+    projects: {
+      title: 'Réalisations — La Pierre dans l\u2019Architecture',
+      description: 'Une sélection de réalisations HQ Stones : projets résidentiels, publics et commerciaux.',
+    },
+    blog: {
+      title: 'Magazine — Guides, Histoires et Conseils d\u2019Entretien',
+      description: 'Articles, retours de chantier et conseils pratiques de nos spécialistes de la pierre naturelle.',
+    },
+    about: {
+      title: 'À Propos — Revendeur et Consultant Pierre',
+      description: 'Notre histoire, nos valeurs et notre engagement pour la pierre naturelle. Basés en Italie, intervention internationale.',
+    },
+    craft: {
+      title: 'Notre Savoir-faire — De la Carrière au Projet',
+      description: 'Extraction, découpe, finition, livraison — découvrez les quatre étapes qui amènent la pierre de la montagne à votre projet.',
+    },
+    faq: {
+      title: 'FAQ — Tout Savoir sur la Pierre Naturelle',
+      description: 'Échantillons, livraison, délais, entretien, finitions, garantie — réponses aux questions les plus fréquentes.',
+    },
+    contact: {
+      title: 'Contact HQ Stones — Demander un Devis',
+      description: 'Parlez-nous de votre projet. Téléphone, WhatsApp, email ou formulaire — réponse sous un jour ouvré.',
+    },
   },
 };
