@@ -1,67 +1,121 @@
 
 
-# Harmoniser la qualité visuelle des 17 images produits
+# Audit complet + nouvelles features (sans B2B)
 
-## Constat
-Le site mélange aujourd'hui deux mondes incompatibles :
-- **bathtubs.jpg** : photo AI lookbook 1024×1024, lumière douce, fond minéral minimaliste → ton "luxe éditorial" du site.
-- **Les 16 autres** : scans de catalogue technique extraits du PDF, basse résolution (455–1199 px, tailles toutes différentes), avec bordures arrondies noires visibles, fonds parasites (briques rouges, atelier en chantier, vitrines de magasin, ciel surexposé, palettes en bois), couleurs ternes.
+Fusion des deux plans précédents en une seule passe d'implémentation, **excluant la section Pro/B2B**.
 
-Résultat : la grille produits paraît hétérogène et amateur.
+## A. Corrections (audit)
 
-## Objectif
-**Toutes les 17 images en 1024×1024, même direction artistique que `bathtubs.jpg`** : photoréalistes, lumière naturelle douce, fond neutre/minéral, sujet centré, palette cohérente avec le site (off-white, beige pierre, charcoal).
+### A1. Bug scroll au changement de page
+Créer `src/components/ScrollToTop.tsx` qui écoute `useLocation()` et fait `window.scrollTo(0,0)` à chaque changement de pathname. Le monter dans `<BrowserRouter>` avant `<Routes>`.
 
-## Approche en 2 modes selon l'image source
+### A2. Page Matériaux visuelle
+Refondre `src/pages/Materials.tsx` :
+- Sections alternées image/texte (gauche/droite) pour chaque matériau
+- Image hero = première photo produit qui utilise ce matériau (réutilisation des assets existants, aucune génération)
+- Mini-galerie de 3-5 vignettes produits cliquables (au lieu des liens texte)
+- Cliquer une vignette → `/products?material=<key>` (filtre pré-appliqué)
 
-### Mode A — Régénération AI complète (produits où la photo source est inutilisable ou bruitée)
-Pour ces produits, je génère de zéro avec **Nano Banana 2** (`google/gemini-3.1-flash-image-preview`) :
+### A3. Filtre par query param dans Products
+`src/pages/Products.tsx` : lire `?material=marble` au montage et initialiser le state `active` avec ce filtre.
 
-| Produit | Pourquoi régénérer |
-|---|---|
-| bollards | Image basse résolution, sujet écrasé |
-| sinks | Fond parasite, photo catalogue ancienne |
-| benches | Mur de briques rouges agressif en fond |
-| sculptures | Statue + atelier de tailleur en arrière-plan (sacs, mur en parpaing) |
-| flower-boxes | Devanture de magasin avec affiche/personnage flou en reflet |
-| columns | Cadre intérieur banal (escalier domestique, mur rouge) |
-| balustrades | Idem — décor intérieur générique |
-| curbs | Photo de pavé de ville, peu lisible |
-| block-slabs | Palette industrielle, peu valorisant |
-| open-book-slabs | Image trop petite (559×541), pixelisée |
-| kitchen-countertops | Cuisine datée, faible qualité |
+### A4. Audit boutons & liens
+Lecture de `Header`, `Footer`, `Index`, `Blog`, `BlogPost`, `Contact` pour repérer tout `href="#"`, `onClick` vide, ou CTA non câblé. Correction systématique vers la bonne route ou suppression.
 
-Prompt type : *"Editorial product photography of [produit] in natural [matériau], soft diffused daylight, minimalist neutral stone-textured background, shallow depth of field, luxury catalog aesthetic, off-white and warm beige palette, centered composition, photorealistic, square format"*.
+## B. Nouvelles features
 
-### Mode B — Édition AI à partir de la source (produits où la photo source est exploitable)
-Pour ces produits, j'utilise **Nano Banana 2 en mode edit-image** pour garder le sujet réel mais nettoyer/réharmoniser :
+### B1. Conversion & contact
+- **WhatsApp flottant** : bouton fixe bas-droite, lien `wa.me/<numéro>` (numéro à confirmer — placeholder en attendant).
+- **Bouton "Appeler" mobile** dans le header (lien `tel:`).
+- **Téléchargement catalogue PDF** : bouton sur la home + footer, lien vers le PDF déjà uploadé (`greenova_light_rasterized.pdf` à servir depuis `/public`).
 
-| Produit | Action sur l'image source |
-|---|---|
-| external-paving | Garder la terrasse pavée, retirer la chaise/parasol, harmoniser lumière |
-| fountains | Garder la fontaine, nettoyer fond et bords noirs |
-| external-cladding | Garder le bardage, neutraliser le fond |
-| interior-flooring | Garder le sol, recadrer/épurer |
-| interior-cladding | Garder le mur en pierre, nettoyer |
+### B2. SEO & meta
+- Composant `<Seo>` réutilisable (title, description, og:image, og:url) basé sur `react-helmet-async`.
+- Meta uniques par page (Index, Products, Materials, Blog, BlogPost, About, Contact).
+- `public/sitemap.xml` généré statiquement avec toutes les routes.
+- `robots.txt` mis à jour pour pointer vers le sitemap.
+- Schema.org JSON-LD : `LocalBusiness` sur Home + Contact, `Article` sur BlogPost.
 
-Prompt type : *"Keep the same subject and material. Remove any black border, photo edges from neighboring images, distracting background elements. Replace background with soft neutral stone wall, natural diffused light, luxury editorial style. Output 1024×1024."*
+### B3. Pages produit individuelles
+Nouvelle route `/products/:slug` (`src/pages/ProductDetail.tsx`) :
+- Photo grande (lightbox au clic)
+- Nom, catégorie, description longue (i18n)
+- Liste des matériaux disponibles avec liens vers `/materials`
+- Finitions courantes (poli, flammé, brossé, vieilli) — texte
+- CTA "Demander un devis" qui ouvre `QuoteModal` pré-rempli avec le produit
+- Section "Produits similaires" (3 autres produits de la même catégorie)
+- `ProductCard` devient cliquable → `/products/<id>`
 
-### Conservée telle quelle
-- **bathtubs.jpg** (déjà au standard cible — c'est la référence)
+### B4. Lightbox galerie
+Composant `<Lightbox>` simple (overlay plein écran + close au clic/escape) utilisé sur `ProductDetail` et optionnellement sur `Materials`.
 
-## Pipeline technique
-1. Pour chaque produit : appel au gateway AI (`/tmp/lovable_ai.py --image` pour générer, `--edit-image` pour éditer la source).
-2. Sortie 1024×1024 PNG → conversion JPG qualité 88 → `src/assets/products/<id>.jpg` (écrase l'existant).
-3. **QA visuel obligatoire** : ouverture de chaque image finale, vérification qu'aucune n'a de bord noir, fond parasite, ou style discordant. Si une image rate, je relance avec un prompt ajusté (max 2 tentatives par image).
-4. Aucun changement à `catalog.ts` ni à `ProductCard.tsx` — les chemins restent identiques.
+### B5. Page Réalisations / Projets
+Nouvelle route `/projects` (`src/pages/Projects.tsx`) :
+- Grille de 6-8 projets fictifs (à remplacer plus tard par tes vraies réalisations)
+- Carte par projet : photo, lieu, type (résidentiel/public/commercial), matériaux utilisés
+- Données dans `src/data/projects.ts`
+- Photos AI générées (style cohérent avec le reste du site, ~6 images)
+- Lien ajouté dans header + footer
 
-## Ce que vous obtenez
-- Catalogue 100% homogène : 17 images en 1024×1024, même DA que la baignoire actuelle.
-- Style luxe éditorial cohérent du Home jusqu'au dernier produit.
-- Si une image AI ne vous plaît pas après livraison, on l'ajuste à l'unité.
+### B6. Témoignages sur la Home
+Section sur `Index.tsx` avec 3 quotes (architecte, particulier, entreprise) — données dans `src/data/testimonials.ts`, traductions i18n.
 
-## Notes
-- Coût AI : ~17 appels image (Nano Banana 2). Rapide et abordable.
-- Les sources PDF restent dans `/tmp` — récupérables si vous voulez revenir en arrière sur un produit précis.
-- Si vous préférez **garder les vraies photos PDF** pour certains produits (ex : `external-paving` parce que c'est une vraie réalisation), dites-le-moi avant que je lance et je laisserai ces images intactes (juste recadrées proprement en 1024 carré).
+### B7. FAQ
+Nouvelle route `/faq` (`src/pages/Faq.tsx`) :
+- Composant `Accordion` (déjà présent dans shadcn)
+- 8-10 questions/réponses : entretien, livraison, délais, échantillons, finitions, garanties
+- Lien depuis footer
+
+### B8. Page Process / Savoir-faire
+Nouvelle route `/savoir-faire` (`src/pages/Craft.tsx`) :
+- Storytelling en 4 étapes : extraction → coupe → finition → livraison
+- Photo + texte par étape (4 images AI cohérentes)
+- Lien depuis About et footer
+
+### B9. Polish UX
+- **Cookie consent** banner RGPD (composant simple, persistance localStorage)
+- **404 sur-mesure** : `src/pages/NotFound.tsx` enrichi avec photo de pierre + lien retour
+- **Skeleton loaders** sur images produits (utilisation de `Skeleton` shadcn déjà présent)
+- **Animations fade-in au scroll** : hook `useInView` simple appliqué aux sections clés
+
+### B10. Blog enrichi
+- Tags / catégories d'articles (`src/data/blog.ts` enrichi)
+- Filtre par tag sur la page Blog
+- Section "Articles liés" en bas de chaque BlogPost (3 articles même tag)
+
+## C. i18n
+
+Toutes les nouvelles strings ajoutées dans les 4 locales : `en.ts`, `fr.ts`, `it.ts`, `de.ts`.
+
+## D. Fichiers impactés
+
+**Créés** :
+- `src/components/ScrollToTop.tsx`, `src/components/Seo.tsx`, `src/components/WhatsAppButton.tsx`, `src/components/Lightbox.tsx`, `src/components/CookieConsent.tsx`, `src/components/Testimonials.tsx`
+- `src/pages/ProductDetail.tsx`, `src/pages/Projects.tsx`, `src/pages/Faq.tsx`, `src/pages/Craft.tsx`
+- `src/data/projects.ts`, `src/data/testimonials.ts`
+- `src/hooks/useInView.ts`
+- `public/sitemap.xml`, `public/catalogue-greenova.pdf` (copie du PDF uploadé)
+- 6-10 nouvelles images AI (projets + savoir-faire)
+
+**Modifiés** :
+- `src/App.tsx` (routes + ScrollToTop + HelmetProvider)
+- `src/pages/Materials.tsx`, `src/pages/Products.tsx`, `src/pages/Index.tsx`, `src/pages/Blog.tsx`, `src/pages/BlogPost.tsx`, `src/pages/NotFound.tsx`, `src/pages/About.tsx`, `src/pages/Contact.tsx`
+- `src/components/Header.tsx`, `src/components/Footer.tsx`, `src/components/ProductCard.tsx`
+- `src/data/blog.ts`, `src/data/catalog.ts` (slugs)
+- `src/i18n/locales/*.ts` (nouvelles strings)
+- `public/robots.txt`
+- `index.html` (meta de base + lang)
+
+**Dépendance ajoutée** : `react-helmet-async`.
+
+## E. À me confirmer pendant l'implémentation
+- **Numéro WhatsApp & téléphone** : je mets un placeholder `+39 000 000 0000` que tu remplaceras.
+- **Projets fictifs** : 6 projets génériques (villa privée, place publique, hôtel, résidence, cuisine, salle de bain). Tu remplaceras par tes vraies réalisations.
+- **Témoignages** : 3 quotes plausibles (à remplacer par les vrais).
+
+## F. Hors scope (volontairement reporté)
+- Espace Pro/B2B, login, tarifs, fiches techniques PDF, dispo stock, calculateur quantité.
+- Demande d'échantillon physique (pourra venir après).
+- URLs traduites `/fr/produits` (chantier SEO important, à faire dans une 2e passe dédiée).
+- Mode sombre.
 
