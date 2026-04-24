@@ -21,12 +21,21 @@ export type CategoryKey = 'exterior' | 'interior' | 'slabs';
 export type MaterialKey = 'marble' | 'limestone' | 'granite' | 'porfido' | 'sandstone';
 
 export interface Product {
-  id: string;
+  id: string; // also used as URL slug
   i18nKey: string; // products.items.<key>
   category: CategoryKey;
   materials: MaterialKey[];
   image: string;
 }
+
+export const FINISHES = ['polished', 'honed', 'flamed', 'brushed', 'aged'] as const;
+export type Finish = typeof FINISHES[number];
+
+export const getProductBySlug = (slug?: string): Product | undefined =>
+  slug ? PRODUCTS.find((p) => p.id === slug) : undefined;
+
+export const getRelatedProducts = (product: Product, limit = 3): Product[] =>
+  PRODUCTS.filter((p) => p.id !== product.id && p.category === product.category).slice(0, limit);
 
 export const MATERIALS: MaterialKey[] = ['marble', 'limestone', 'granite', 'porfido', 'sandstone'];
 

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Facebook, Instagram, Linkedin } from 'lucide-react';
+import { Download, Facebook, Instagram, Linkedin } from 'lucide-react';
 import LanguageSwitcher from './LanguageSwitcher';
 
 const Footer = () => {
@@ -10,8 +10,11 @@ const Footer = () => {
     { to: '/', label: t('nav.home') },
     { to: '/products', label: t('nav.products') },
     { to: '/materials', label: t('nav.materials') },
+    { to: '/projects', label: t('nav.projects') },
     { to: '/blog', label: t('nav.blog') },
     { to: '/about', label: t('nav.about') },
+    { to: '/savoir-faire', label: t('nav.craft') },
+    { to: '/faq', label: t('nav.faq') },
     { to: '/contact', label: t('nav.contact') },
   ];
 
@@ -23,6 +26,15 @@ const Footer = () => {
             HQ <span className="text-accent">Stones</span>
           </Link>
           <p className="mt-4 max-w-sm text-sm text-background/70">{t('footer.tagline')}</p>
+          <a
+            href="/catalogue.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-6 inline-flex items-center gap-2 rounded-sm border border-accent/40 bg-accent/10 px-4 py-2.5 text-xs font-medium uppercase tracking-wider text-accent transition-colors hover:bg-accent hover:text-accent-foreground"
+          >
+            <Download className="h-3.5 w-3.5" />
+            {t('footer.downloadCatalog')}
+          </a>
         </div>
 
         <div>
@@ -52,11 +64,17 @@ const Footer = () => {
               {t('footer.follow')}
             </h4>
             <div className="flex gap-3">
-              {[Instagram, Facebook, Linkedin].map((Icon, i) => (
+              {[
+                { Icon: Instagram, href: 'https://instagram.com', label: 'Instagram' },
+                { Icon: Facebook, href: 'https://facebook.com', label: 'Facebook' },
+                { Icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
+              ].map(({ Icon, href, label }) => (
                 <a
-                  key={i}
-                  href="#"
-                  aria-label="social"
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
                   className="inline-flex h-9 w-9 items-center justify-center rounded-sm border border-background/20 text-background/70 transition-colors hover:border-accent hover:text-accent"
                 >
                   <Icon className="h-4 w-4" />

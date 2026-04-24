@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>/products</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>/products/external-paving</loc><priority>0.7</priority></url>
+  <url><loc>/products/fountains</loc><priority>0.7</priority></url>
+  <url><loc>/products/columns</loc><priority>0.7</priority></url>
+  <url><loc>/products/balustrades</loc><priority>0.7</priority></url>
+  <url><loc>/products/flower-boxes</loc><priority>0.7</priority></url>
+  <url><loc>/products/benches</loc><priority>0.7</priority></url>
+  <url><loc>/products/bollards</loc><priority>0.7</priority></url>
+  <url><loc>/products/curbs</loc><priority>0.7</priority></url>
+  <url><loc>/products/sculptures</loc><priority>0.7</priority></url>
+  <url><loc>/products/external-cladding</loc><priority>0.7</priority></url>
+  <url><loc>/products/interior-flooring</loc><priority>0.7</priority></url>
+  <url><loc>/products/interior-cladding</loc><priority>0.7</priority></url>
+  <url><loc>/products/kitchen-countertops</loc><priority>0.7</priority></url>
+  <url><loc>/products/sinks</loc><priority>0.7</priority></url>
+  <url><loc>/products/bathtubs</loc><priority>0.7</priority></url>
+  <url><loc>/products/open-book-slabs</loc><priority>0.7</priority></url>
+  <url><loc>/products/block-slabs</loc><priority>0.7</priority></url>
+  <url><loc>/materials</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>/projects</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>/blog</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>/blog/choosing-marble-kitchen</loc><priority>0.6</priority></url>
+  <url><loc>/blog/italian-quarries-heritage</loc><priority>0.6</priority></url>
+  <url><loc>/blog/caring-outdoor-limestone</loc><priority>0.6</priority></url>
+  <url><loc>/about</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>/savoir-faire</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>/faq</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>/contact</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+</urlset>

@@ -3,14 +3,21 @@ export default {
     home: 'Home',
     products: 'Products',
     materials: 'Materials',
-    blog: 'Blog',
+    projects: 'Projects',
+    blog: 'Journal',
     about: 'About',
+    craft: 'Craft',
+    faq: 'FAQ',
     contact: 'Contact',
+  },
+  header: {
+    callAria: 'Call us',
   },
   hero: {
     headline: 'HQ Stones — Natural Stone, Exceptional Projects',
     subline: 'Marble, Granite, Limestone & more — Italy',
     cta: 'Discover our catalog',
+    downloadCta: 'Download catalog',
   },
   home: {
     categoriesTitle: 'Explore the Catalog',
@@ -44,6 +51,14 @@ export default {
     sandstoneDesc: 'Earthy character and easy workability — favored for cladding and rustic settings.',
     typicalUses: 'Typical uses',
     examples: 'Featured products',
+    seeAll: 'See all products in this material',
+  },
+  finishes: {
+    polished: 'Polished',
+    honed: 'Honed',
+    flamed: 'Flamed',
+    brushed: 'Brushed',
+    aged: 'Aged',
   },
   products: {
     title: 'Products',
@@ -72,6 +87,145 @@ export default {
       blockSlabs: 'Block slabs',
     },
   },
+  productDetail: {
+    metaDescription: '{{name}} in natural stone — available in multiple materials and finishes. Custom fabrication on request.',
+    description: 'Made-to-measure {{name}} in natural stone, finished to your specification. Multiple materials and finishes available. Talk to us about dimensions, finishes and lead times.',
+    materials: 'Available materials',
+    finishes: 'Available finishes',
+    related: 'You may also like',
+    zoom: 'View larger',
+  },
+  projects: {
+    title: 'Projects',
+    subtitle: 'A selection of realisations across residential, public and commercial spaces.',
+    filterBy: 'Filter by type',
+    types: {
+      all: 'All',
+      residential: 'Residential',
+      public: 'Public',
+      commercial: 'Commercial',
+    },
+    items: {
+      villaPrivate: {
+        title: 'Mediterranean Villa',
+        location: 'Tuscany, Italy',
+        description: 'Travertine paving and limestone cladding for a private villa with Mediterranean garden.',
+      },
+      publicSquare: {
+        title: 'Historic Square Renovation',
+        location: 'Lombardy, Italy',
+        description: 'Porfido paving and granite bollards for the restoration of a historic public square.',
+      },
+      hotelLobby: {
+        title: 'Boutique Hotel Lobby',
+        location: 'Milan, Italy',
+        description: 'Calacatta marble flooring and Trani limestone cladding for a high-end hotel reception.',
+      },
+      luxuryKitchen: {
+        title: 'Calacatta Kitchen',
+        location: 'Como, Italy',
+        description: 'Bookmatched Calacatta marble island and countertops for a luxury private kitchen.',
+      },
+      spaBathroom: {
+        title: 'Hand-Carved Bathroom',
+        location: 'French Riviera',
+        description: 'Hand-carved marble bathtub and limestone cladding for an intimate spa bathroom.',
+      },
+      residentialCourtyard: {
+        title: 'Stone Courtyard',
+        location: 'Apulia, Italy',
+        description: 'Sandstone façade and reclaimed limestone planters for a contemporary courtyard.',
+      },
+    },
+  },
+  craft: {
+    title: 'Our Craft',
+    subtitle: 'From quarry to project — every step refined over generations.',
+    step: 'Step',
+    steps: {
+      extraction: {
+        title: 'Extraction',
+        body: 'We work directly with quarries across Italy and the Mediterranean. Each block is selected for grain, color and structural integrity before it ever leaves the mountain.',
+      },
+      cutting: {
+        title: 'Cutting',
+        body: 'Diamond wire and gang saws transform blocks into slabs and dimensioned pieces. Precision tolerances are honored throughout the process.',
+      },
+      finishing: {
+        title: 'Finishing',
+        body: 'Polished, honed, flamed, brushed, aged — the finish defines the character of the stone. Our artisans guide you to the surface best suited to your project.',
+      },
+      delivery: {
+        title: 'Delivery',
+        body: 'Carefully packaged on custom crates and tracked from workshop to site. We coordinate logistics across Europe and beyond.',
+      },
+    },
+  },
+  faq: {
+    title: 'Frequently Asked Questions',
+    subtitle: 'Everything you need to know before specifying natural stone.',
+    items: {
+      samples: {
+        q: 'Can I receive physical samples?',
+        a: 'Yes. We send small samples free of charge for projects under consideration. Larger reference pieces can be arranged for a nominal fee.',
+      },
+      delivery: {
+        q: 'Where do you deliver?',
+        a: 'We deliver across Europe and on request worldwide. Logistics are coordinated by our team and tracked end-to-end.',
+      },
+      leadTime: {
+        q: 'What are typical lead times?',
+        a: 'Standard products ship within 2–3 weeks. Bespoke pieces or large quantities typically require 6–10 weeks depending on quarry availability.',
+      },
+      maintenance: {
+        q: 'How do I maintain natural stone?',
+        a: 'Use pH-neutral cleaners, avoid acids, and reseal porous stones every 2–3 years. We provide a care guide with every order.',
+      },
+      finishes: {
+        q: 'Which finishes are available?',
+        a: 'Polished, honed, flamed, brushed, sandblasted and aged. Not every finish suits every stone — we advise on the best match for your use case.',
+      },
+      warranty: {
+        q: 'Do you offer a warranty?',
+        a: 'Material defects are covered for 12 months. Installation, when handled by us, is covered for 24 months.',
+      },
+      minimumOrder: {
+        q: 'Is there a minimum order?',
+        a: 'No strict minimum, but small orders incur higher per-unit logistics costs. We optimise consolidations whenever possible.',
+      },
+      installation: {
+        q: 'Do you handle installation?',
+        a: 'In Italy and select European cities, yes. Elsewhere we work with vetted local installers and supervise remotely.',
+      },
+      pricing: {
+        q: 'How is pricing calculated?',
+        a: 'By stone, finish, dimensions, complexity and quantity. Send us your project brief and we return a detailed quote within one business day.',
+      },
+      custom: {
+        q: 'Can you produce bespoke designs?',
+        a: 'Absolutely. From hand-carved sculptures to bookmatched countertops — most of our work is bespoke.',
+      },
+    },
+  },
+  testimonials: {
+    title: 'What Our Clients Say',
+    subtitle: 'Architects, designers and private clients across Europe.',
+    architect: {
+      quote: 'HQ Stones turned a complex façade specification into a smooth, on-time delivery. Their material knowledge is genuinely rare.',
+      name: 'Studio Marini',
+      role: 'Architecture practice, Milan',
+    },
+    homeowner: {
+      quote: 'We chose them for our kitchen and ended up working together on the whole house. Honest advice, beautiful stone.',
+      name: 'Famille Laurent',
+      role: 'Private client, Provence',
+    },
+    developer: {
+      quote: 'A reliable, single point of contact for every stone element across our hotel project. Saved us months.',
+      name: 'Lago Group',
+      role: 'Hotel developer, Como',
+    },
+  },
   blog: {
     title: 'Journal',
     subtitle: 'Stories, guides and insights from the world of natural stone.',
@@ -79,6 +233,9 @@ export default {
     by: 'By',
     relatedTitle: 'Related articles',
     backToBlog: 'Back to journal',
+    filterBy: 'Filter by topic',
+    allTags: 'All',
+    noResults: 'No articles for this topic yet.',
     categories: {
       stoneGuide: 'Stone Guide',
       projects: 'Projects',
@@ -122,6 +279,7 @@ export default {
     valueExpertiseDesc: 'Decades of consulting experience on residential and commercial projects.',
     valueCustom: 'Custom Projects',
     valueCustomDesc: 'Bespoke fabrication and installation tailored to your vision.',
+    craftCta: 'Discover our craft',
   },
   contact: {
     title: 'Contact',
@@ -157,12 +315,23 @@ export default {
     quoteTitle: 'Request a quote',
     quoteSubtitle: 'Tell us about the product you\u2019re interested in.',
   },
+  whatsapp: {
+    aria: 'Chat with us on WhatsApp',
+    message: 'Hello HQ Stones, I would like to discuss a project.',
+  },
+  cookie: {
+    title: 'We use cookies.',
+    body: 'Only essential cookies for site functionality and language preference. No tracking.',
+    accept: 'Accept',
+    decline: 'Decline',
+  },
   footer: {
     tagline: 'Natural stone, exceptional projects — Italy.',
     navigation: 'Navigation',
     language: 'Language',
     follow: 'Follow us',
     rights: 'All rights reserved.',
+    downloadCatalog: 'Download catalog',
   },
   language: {
     label: 'Language',
@@ -173,7 +342,45 @@ export default {
   },
   notFound: {
     title: 'Page not found',
-    body: 'The page you are looking for does not exist.',
+    body: 'The page you are looking for does not exist or has been moved.',
     cta: 'Back to home',
+  },
+  seo: {
+    home: {
+      title: 'HQ Stones — Natural Stone, Exceptional Projects | Italy',
+      description: 'HQ Stones — stone reseller and project consultant based in Italy. Marble, granite, limestone, porfido, sandstone for exterior, interior and raw slabs.',
+    },
+    products: {
+      title: 'Stone Products — Paving, Cladding, Countertops & More',
+      description: 'Browse our full catalog of natural stone products: external paving, fountains, cladding, countertops, sinks, bathtubs and slabs.',
+    },
+    materials: {
+      title: 'Stone Materials — Marble, Limestone, Granite, Porfido, Sandstone',
+      description: 'Explore the natural stones we work with — characteristics, typical uses and featured products for each material.',
+    },
+    projects: {
+      title: 'Realised Projects — Stone in Architecture',
+      description: 'A selection of HQ Stones realisations across residential, public and commercial projects.',
+    },
+    blog: {
+      title: 'Stone Journal — Guides, Insights & Maintenance Tips',
+      description: 'Articles, project stories and practical advice from our specialists in natural stone.',
+    },
+    about: {
+      title: 'About HQ Stones — Stone Reseller & Project Consultant',
+      description: 'Our story, values and commitment to natural stone. Based in Italy, working internationally.',
+    },
+    craft: {
+      title: 'Our Craft — From Quarry to Project',
+      description: 'Extraction, cutting, finishing and delivery — discover the four steps that bring natural stone from the mountain to your project.',
+    },
+    faq: {
+      title: 'FAQ — Natural Stone Questions Answered',
+      description: 'Samples, delivery, lead times, maintenance, finishes, warranty — answers to the most common questions about natural stone.',
+    },
+    contact: {
+      title: 'Contact HQ Stones — Request a Quote',
+      description: 'Tell us about your project. Phone, WhatsApp, email or contact form — we respond within one business day.',
+    },
   },
 };

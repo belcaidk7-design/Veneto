@@ -1,13 +1,32 @@
 import { useTranslation } from 'react-i18next';
-import { Mail, MapPin } from 'lucide-react';
+import { Mail, MapPin, MessageCircle, Phone } from 'lucide-react';
 import Layout from '@/components/Layout';
+import Seo from '@/components/Seo';
 import ContactForm from '@/components/ContactForm';
+
+const PHONE = '+39 000 000 0000';
+const PHONE_TEL = '+390000000000';
+const WHATSAPP = '390000000000';
 
 const Contact = () => {
   const { t } = useTranslation();
 
   return (
     <Layout>
+      <Seo
+        title={t('seo.contact.title')}
+        description={t('seo.contact.description')}
+        path="/contact"
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'LocalBusiness',
+          name: 'HQ Stones',
+          telephone: PHONE,
+          email: 'info@hqstones.example',
+          areaServed: 'Italy',
+          address: { '@type': 'PostalAddress', addressCountry: 'IT' },
+        }}
+      />
       <section className="border-b border-border/60 bg-secondary/40">
         <div className="container-prose py-16 md:py-20">
           <h1 className="font-serif text-4xl md:text-5xl">{t('contact.title')}</h1>
@@ -36,6 +55,23 @@ const Contact = () => {
               <Mail className="mt-0.5 h-4 w-4 text-accent" />
               <a href={`mailto:${t('contact.infoEmail')}`} className="hover:text-accent">
                 {t('contact.infoEmail')}
+              </a>
+            </div>
+            <div className="flex items-start gap-3">
+              <Phone className="mt-0.5 h-4 w-4 text-accent" />
+              <a href={`tel:${PHONE_TEL}`} className="hover:text-accent">
+                {PHONE}
+              </a>
+            </div>
+            <div className="flex items-start gap-3">
+              <MessageCircle className="mt-0.5 h-4 w-4 text-accent" />
+              <a
+                href={`https://wa.me/${WHATSAPP}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-accent"
+              >
+                WhatsApp
               </a>
             </div>
           </div>

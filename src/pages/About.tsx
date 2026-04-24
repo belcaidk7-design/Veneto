@@ -1,6 +1,9 @@
 import { useTranslation } from 'react-i18next';
-import { Award, Compass, Hammer } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Award, Compass, Hammer, ArrowRight } from 'lucide-react';
 import Layout from '@/components/Layout';
+import Seo from '@/components/Seo';
+import { Button } from '@/components/ui/button';
 import aboutImg from '@/assets/about-team.jpg';
 
 const About = () => {
@@ -14,6 +17,11 @@ const About = () => {
 
   return (
     <Layout>
+      <Seo
+        title={t('seo.about.title')}
+        description={t('seo.about.description')}
+        path="/about"
+      />
       <section className="border-b border-border/60 bg-secondary/40">
         <div className="container-prose py-16 md:py-20">
           <h1 className="font-serif text-4xl md:text-5xl">{t('about.title')}</h1>
@@ -29,6 +37,15 @@ const About = () => {
               <p key={i}>{p}</p>
             ))}
           </div>
+          <Button
+            asChild
+            variant="outline"
+            className="mt-8 border-foreground text-foreground hover:bg-foreground hover:text-background"
+          >
+            <Link to="/savoir-faire">
+              {t('about.craftCta')} <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </Button>
         </div>
         <div className="aspect-[4/3] overflow-hidden rounded-sm">
           <img
