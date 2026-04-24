@@ -1,8 +1,11 @@
 import { useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Menu, X } from 'lucide-react';
+import { Menu, Phone, X } from 'lucide-react';
 import LanguageSwitcher from './LanguageSwitcher';
+
+// TODO: replace with real phone number
+const PHONE_NUMBER = '+390000000000';
 
 const Header = () => {
   const { t } = useTranslation();
@@ -13,6 +16,7 @@ const Header = () => {
     { to: '/', label: t('nav.home') },
     { to: '/products', label: t('nav.products') },
     { to: '/materials', label: t('nav.materials') },
+    { to: '/projects', label: t('nav.projects') },
     { to: '/blog', label: t('nav.blog') },
     { to: '/about', label: t('nav.about') },
     { to: '/contact', label: t('nav.contact') },
@@ -25,7 +29,7 @@ const Header = () => {
           HQ <span className="text-accent">Stones</span>
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-7 lg:flex">
           {links.map((link) => (
             <NavLink
               key={link.to}
@@ -42,21 +46,30 @@ const Header = () => {
           ))}
         </nav>
 
-        <div className="hidden md:block">
+        <div className="hidden items-center gap-3 lg:flex">
           <LanguageSwitcher />
         </div>
 
-        <button
-          aria-label="Menu"
-          className="inline-flex h-10 w-10 items-center justify-center rounded-sm text-foreground hover:text-accent md:hidden"
-          onClick={() => setOpen((v) => !v)}
-        >
-          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
+        <div className="flex items-center gap-2 lg:hidden">
+          <a
+            href={`tel:${PHONE_NUMBER}`}
+            aria-label={t('header.callAria')}
+            className="inline-flex h-10 w-10 items-center justify-center rounded-sm text-foreground hover:text-accent"
+          >
+            <Phone className="h-4 w-4" />
+          </a>
+          <button
+            aria-label="Menu"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-sm text-foreground hover:text-accent"
+            onClick={() => setOpen((v) => !v)}
+          >
+            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+        </div>
       </div>
 
       {open && (
-        <div className="border-t border-border/60 bg-background md:hidden">
+        <div className="border-t border-border/60 bg-background lg:hidden">
           <div className="container-prose flex flex-col gap-1 py-4">
             {links.map((link) => (
               <NavLink
@@ -80,7 +93,6 @@ const Header = () => {
         </div>
       )}
 
-      {/* hidden marker so route changes re-render */}
       <span className="hidden">{location.pathname}</span>
     </header>
   );
