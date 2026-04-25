@@ -1,121 +1,106 @@
 
 
-# Audit complet + nouvelles features (sans B2B)
+# Refonte contenu + conversion + fluidité (passe complète)
 
-Fusion des deux plans précédents en une seule passe d'implémentation, **excluant la section Pro/B2B**.
+Objectif : donner envie de contacter rapidement. Plus de contenu, moins de tirets, design plus fluide, fiches produits riches.
 
-## A. Corrections (audit)
+## A. Réécriture du ton (tirets + style)
 
-### A1. Bug scroll au changement de page
-Créer `src/components/ScrollToTop.tsx` qui écoute `useLocation()` et fait `window.scrollTo(0,0)` à chaque changement de pathname. Le monter dans `<BrowserRouter>` avant `<Routes>`.
+### A1. Suppression systématique des tirets cadratins (—)
+Audit + remplacement dans `fr.ts`, `en.ts`, `it.ts`, `de.ts` :
+- Titres `H1/H2` réécrits sans `—` (ex : `"HQ Stones — Pierre Naturelle, Projets d'Exception"` → `"La pierre naturelle italienne pour vos projets d'exception"`).
+- Sublines reformulées en phrases complètes plutôt qu'en énumérations télégraphiques.
+- Descriptions matériaux/catégories : phrases liées, plus chaleureuses, plus vendeuses.
 
-### A2. Page Matériaux visuelle
-Refondre `src/pages/Materials.tsx` :
-- Sections alternées image/texte (gauche/droite) pour chaque matériau
-- Image hero = première photo produit qui utilise ce matériau (réutilisation des assets existants, aucune génération)
-- Mini-galerie de 3-5 vignettes produits cliquables (au lieu des liens texte)
-- Cliquer une vignette → `/products?material=<key>` (filtre pré-appliqué)
+### A2. Nouveau ton commercial chaleureux
+- Hero : promesse claire + bénéfice client + CTA contextualisé.
+- Sections : un mini-storytelling au lieu de listes sèches.
+- Tous les CTA reformulés ("Demander un devis" → "Parlons de votre projet", etc. — à valider en relecture).
 
-### A3. Filtre par query param dans Products
-`src/pages/Products.tsx` : lire `?material=marble` au montage et initialiser le state `active` avec ce filtre.
+## B. Fiches produits enrichies (structure + contenu mutualisé)
 
-### A4. Audit boutons & liens
-Lecture de `Header`, `Footer`, `Index`, `Blog`, `BlogPost`, `Contact` pour repérer tout `href="#"`, `onClick` vide, ou CTA non câblé. Correction systématique vers la bonne route ou suppression.
+### B1. Extension du modèle `Product` dans `src/data/catalog.ts`
+Ajout (optionnels) :
+- `descriptionKey` (description longue 3-4 paragraphes, mutualisée par catégorie/matériau quand pertinent).
+- `recommendedFinishes: Finish[]` (sous-ensemble des finitions adaptées).
+- `typicalUses: string[]` (clés i18n).
+- `formats: string[]` (ex : `'30×60 cm'`, `'sur mesure'`).
+- `careTips` clé i18n.
 
-## B. Nouvelles features
+### B2. Refonte de `ProductDetail.tsx`
+Nouvelles sections (en plus de l'existant) :
+1. **Breadcrumb** (Accueil > Produits > Catégorie > Produit) — SEO + UX.
+2. **Hero produit** image gauche + titre/desc/CTA droite (existant), enrichi.
+3. **"Pourquoi cette pierre"** : 3 cartes bénéfices (durabilité, esthétique, sur-mesure).
+4. **Usages typiques** : liste illustrée d'icônes Lucide.
+5. **Matériaux disponibles** (existant) avec mini-paragraphe par matériau.
+6. **Finitions recommandées** : grille avec swatches + courte description de chaque finition.
+7. **Formats & sur-mesure** : tableau simple.
+8. **Conseils d'entretien** : 3-4 puces.
+9. **FAQ produit** (3-4 questions ciblées via accordion partagé).
+10. **CTA sticky en bas (mobile)** "Demander un devis" toujours visible.
+11. **Bloc contact final** avant les related : "Un projet en tête ? Réponse sous 24h" + bouton + WhatsApp.
+12. **Related products** (existant, gardé).
 
-### B1. Conversion & contact
-- **WhatsApp flottant** : bouton fixe bas-droite, lien `wa.me/<numéro>` (numéro à confirmer — placeholder en attendant).
-- **Bouton "Appeler" mobile** dans le header (lien `tel:`).
-- **Téléchargement catalogue PDF** : bouton sur la home + footer, lien vers le PDF déjà uploadé (`greenova_light_rasterized.pdf` à servir depuis `/public`).
+### B3. JSON-LD Product schema sur chaque fiche
+`@type: Product` avec name, image, description, brand, category — pour le SEO Google Shopping/résultats enrichis.
 
-### B2. SEO & meta
-- Composant `<Seo>` réutilisable (title, description, og:image, og:url) basé sur `react-helmet-async`.
-- Meta uniques par page (Index, Products, Materials, Blog, BlogPost, About, Contact).
-- `public/sitemap.xml` généré statiquement avec toutes les routes.
-- `robots.txt` mis à jour pour pointer vers le sitemap.
-- Schema.org JSON-LD : `LocalBusiness` sur Home + Contact, `Article` sur BlogPost.
+## C. Pages matériaux enrichies
 
-### B3. Pages produit individuelles
-Nouvelle route `/products/:slug` (`src/pages/ProductDetail.tsx`) :
-- Photo grande (lightbox au clic)
-- Nom, catégorie, description longue (i18n)
-- Liste des matériaux disponibles avec liens vers `/materials`
-- Finitions courantes (poli, flammé, brossé, vieilli) — texte
-- CTA "Demander un devis" qui ouvre `QuoteModal` pré-rempli avec le produit
-- Section "Produits similaires" (3 autres produits de la même catégorie)
-- `ProductCard` devient cliquable → `/products/<id>`
+Sur `Materials.tsx`, allonger chaque bloc matériau :
+- `marbleDesc` passe de 1 phrase à 1 paragraphe complet (origine, caractère, usages).
+- Ajout sous chaque matériau : `marbleUses` (liste 4-5 usages typiques) + `marbleCare` (entretien court) + `marbleFinishes` (finitions recommandées sous forme de chips).
+- CTA contextuel "Demander un échantillon de marbre" par bloc.
 
-### B4. Lightbox galerie
-Composant `<Lightbox>` simple (overlay plein écran + close au clic/escape) utilisé sur `ProductDetail` et optionnellement sur `Materials`.
+JSON-LD `@type: Article` ou `WebPage` enrichi par section.
 
-### B5. Page Réalisations / Projets
-Nouvelle route `/projects` (`src/pages/Projects.tsx`) :
-- Grille de 6-8 projets fictifs (à remplacer plus tard par tes vraies réalisations)
-- Carte par projet : photo, lieu, type (résidentiel/public/commercial), matériaux utilisés
-- Données dans `src/data/projects.ts`
-- Photos AI générées (style cohérent avec le reste du site, ~6 images)
-- Lien ajouté dans header + footer
+## D. Accueil refondu (fluidité + storytelling)
 
-### B6. Témoignages sur la Home
-Section sur `Index.tsx` avec 3 quotes (architecte, particulier, entreprise) — données dans `src/data/testimonials.ts`, traductions i18n.
+### D1. Hero
+- Titre réécrit sans tirets.
+- Ajout d'une **ligne de réassurance** sous les CTA : "Carrières partenaires en Italie · Livraison Europe · Devis sous 24h".
+- Légère animation parallax sur l'image au scroll (CSS only).
 
-### B7. FAQ
-Nouvelle route `/faq` (`src/pages/Faq.tsx`) :
-- Composant `Accordion` (déjà présent dans shadcn)
-- 8-10 questions/réponses : entretien, livraison, délais, échantillons, finitions, garanties
-- Lien depuis footer
+### D2. Nouvelle section "Pourquoi HQ Stones" (4 piliers)
+Après les catégories, avant les matériaux : 4 colonnes avec icônes Lucide (Origine directe, Sur-mesure, Conseil expert, Logistique maîtrisée). Chaque colonne 2-3 lignes.
 
-### B8. Page Process / Savoir-faire
-Nouvelle route `/savoir-faire` (`src/pages/Craft.tsx`) :
-- Storytelling en 4 étapes : extraction → coupe → finition → livraison
-- Photo + texte par étape (4 images AI cohérentes)
-- Lien depuis About et footer
+### D3. Section "Notre processus en 4 étapes" (mini)
+Teaser de la page Craft, en 4 cartes horizontales numérotées avec lien "Voir notre savoir-faire".
 
-### B9. Polish UX
-- **Cookie consent** banner RGPD (composant simple, persistance localStorage)
-- **404 sur-mesure** : `src/pages/NotFound.tsx` enrichi avec photo de pierre + lien retour
-- **Skeleton loaders** sur images produits (utilisation de `Skeleton` shadcn déjà présent)
-- **Animations fade-in au scroll** : hook `useInView` simple appliqué aux sections clés
+### D4. Section "Réalisations récentes" (mini gallery)
+3 projets en cartes plein-largeur avec hover zoom, lien vers `/projects`. Actuellement la page Projects existe mais n'est pas teasée sur l'accueil.
 
-### B10. Blog enrichi
-- Tags / catégories d'articles (`src/data/blog.ts` enrichi)
-- Filtre par tag sur la page Blog
-- Section "Articles liés" en bas de chaque BlogPost (3 articles même tag)
+### D5. Section CTA finale forte
+Avant le footer : bandeau accent or doux + "Parlons de votre projet" + bouton blanc + numéro de téléphone visible.
 
-## C. i18n
+### D6. Animations au scroll
+Utiliser le hook `useInView` existant pour fade-in-up subtil sur les sections au scroll. Durée 600-800ms, easing doux. Pas d'effet tape-à-l'œil.
 
-Toutes les nouvelles strings ajoutées dans les 4 locales : `en.ts`, `fr.ts`, `it.ts`, `de.ts`.
+## E. Micro-design / fluidité
 
-## D. Fichiers impactés
+- Transitions de page douces (fade) via wrapper dans `Layout.tsx`.
+- Survols enrichis : sur les cards, ajouter un revealing du CTA (bouton "Voir →" qui apparait en bas de l'image au hover desktop).
+- Ratios d'image harmonisés (4:5 pour produits dans les listes ? à confirmer — actuellement 4:3, je laisse).
+- Plus de respirations verticales sur mobile (espace entre sections augmenté).
+- Boutons CTA principaux : ajouter une légère élévation au hover (shadow).
 
-**Créés** :
-- `src/components/ScrollToTop.tsx`, `src/components/Seo.tsx`, `src/components/WhatsAppButton.tsx`, `src/components/Lightbox.tsx`, `src/components/CookieConsent.tsx`, `src/components/Testimonials.tsx`
-- `src/pages/ProductDetail.tsx`, `src/pages/Projects.tsx`, `src/pages/Faq.tsx`, `src/pages/Craft.tsx`
-- `src/data/projects.ts`, `src/data/testimonials.ts`
-- `src/hooks/useInView.ts`
-- `public/sitemap.xml`, `public/catalogue-greenova.pdf` (copie du PDF uploadé)
-- 6-10 nouvelles images AI (projets + savoir-faire)
+## F. SEO renforcé
 
-**Modifiés** :
-- `src/App.tsx` (routes + ScrollToTop + HelmetProvider)
-- `src/pages/Materials.tsx`, `src/pages/Products.tsx`, `src/pages/Index.tsx`, `src/pages/Blog.tsx`, `src/pages/BlogPost.tsx`, `src/pages/NotFound.tsx`, `src/pages/About.tsx`, `src/pages/Contact.tsx`
-- `src/components/Header.tsx`, `src/components/Footer.tsx`, `src/components/ProductCard.tsx`
-- `src/data/blog.ts`, `src/data/catalog.ts` (slugs)
-- `src/i18n/locales/*.ts` (nouvelles strings)
-- `public/robots.txt`
-- `index.html` (meta de base + lang)
+- Toutes les meta titles et descriptions réécrites (≤60 / ≤155 chars), mots-clés réels (« marbre Calacatta Italie », « pavé porphyre extérieur », etc.).
+- H1 unique par page (audit + correction).
+- Alt text descriptif sur toutes les images produits (« Sol intérieur en marbre Calacatta poli » au lieu de « Sol intérieur »).
+- Sitemap.xml mis à jour avec les nouvelles fiches produit `/products/:slug`.
+- JSON-LD `BreadcrumbList` sur les fiches produit.
+- Lien interne croisé : depuis chaque fiche produit, lien vers la page matériau correspondante et l'article de blog associé si dispo.
 
-**Dépendance ajoutée** : `react-helmet-async`.
+## G. Internationalisation
 
-## E. À me confirmer pendant l'implémentation
-- **Numéro WhatsApp & téléphone** : je mets un placeholder `+39 000 000 0000` que tu remplaceras.
-- **Projets fictifs** : 6 projets génériques (villa privée, place publique, hôtel, résidence, cuisine, salle de bain). Tu remplaceras par tes vraies réalisations.
-- **Témoignages** : 3 quotes plausibles (à remplacer par les vrais).
+Tout le nouveau contenu ajouté dans les 4 langues (`fr`, `en`, `it`, `de`). FR et EN soignés, IT et DE traduits proprement (pas de Google Translate visible).
 
-## F. Hors scope (volontairement reporté)
-- Espace Pro/B2B, login, tarifs, fiches techniques PDF, dispo stock, calculateur quantité.
-- Demande d'échantillon physique (pourra venir après).
-- URLs traduites `/fr/produits` (chantier SEO important, à faire dans une 2e passe dédiée).
-- Mode sombre.
+## H. Hors scope (pour plus tard)
+- Calculateur de quantité, demande d'échantillon physique avec adresse, espace pro/B2B, comparateur de pierres, configurateur 3D, mode sombre, vidéos sur les fiches produits.
+
+## Notes
+- Le contenu mutualisé (descriptions par catégorie, conseils d'entretien par matériau) sera explicitement marqué dans le code avec un commentaire `// CONTENT: review and refine` pour que tu puisses repasser dessus facilement.
+- Pas de modification du backend ni de la structure de routes, uniquement contenu + UI.
 
