@@ -22,6 +22,22 @@ export type MaterialKey = 'marble' | 'limestone' | 'granite' | 'porfido' | 'sand
 export const FINISHES = ['polished', 'honed', 'flamed', 'brushed', 'aged'] as const;
 export type Finish = typeof FINISHES[number];
 
+/** Technical specs are i18n-agnostic facts. Each product carries its own. */
+export interface ProductTechnical {
+  /** Density range, e.g. '2,650–2,750 kg/m³'. */
+  density?: string;
+  /** Flexural strength, e.g. '15–22 MPa'. */
+  flexural?: string;
+  /** Water absorption, e.g. '< 0,4 %'. */
+  absorption?: string;
+  /** Slip resistance class, e.g. 'R11–R13 (DIN 51130)'. */
+  slip?: string;
+  /** Frost resistance, e.g. 'Résistant au gel (EN 12371)'. */
+  frost?: string;
+  /** Typical thickness range. */
+  thickness?: string;
+}
+
 export interface Product {
   id: string; // also used as URL slug
   i18nKey: string; // products.items.<key>
@@ -32,6 +48,12 @@ export interface Product {
   recommendedFinishes: Finish[];
   /** Typical formats / dimensions offered (free text, i18n-agnostic). */
   formats: string[];
+  /** Quarry / region of origin (i18n-agnostic, proper nouns). */
+  origin: string;
+  /** Technical facts (i18n-agnostic). */
+  technical: ProductTechnical;
+  /** Year HQ Stones started supplying this product family — adds expertise signal. */
+  since?: number;
 }
 
 export const getProductBySlug = (slug?: string): Product | undefined =>
