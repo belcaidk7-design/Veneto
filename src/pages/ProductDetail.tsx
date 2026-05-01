@@ -1,7 +1,18 @@
 import { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { ArrowLeft, ArrowRight, Maximize2, Sparkles, Hammer, Ruler, Phone, Mail } from 'lucide-react';
+import {
+  ArrowLeft,
+  ArrowRight,
+  Maximize2,
+  Sparkles,
+  Hammer,
+  Ruler,
+  Mail,
+  MapPin,
+  Award,
+  CheckCircle2,
+} from 'lucide-react';
 import Layout from '@/components/Layout';
 import Seo from '@/components/Seo';
 import Reveal from '@/components/Reveal';
