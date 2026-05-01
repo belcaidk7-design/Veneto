@@ -219,6 +219,94 @@ const ProductDetail = () => {
         </Reveal>
       </article>
 
+      {/* Story (E-E-A-T: experience + expertise) */}
+      {story.length > 0 && (
+        <section className="container-prose pb-4 md:pb-8">
+          <Reveal>
+            <h2 className="font-serif text-2xl md:text-3xl">{t('productDetail.storyTitle')}</h2>
+          </Reveal>
+          <div className="mt-8 grid gap-6 md:grid-cols-3">
+            {story.map((para, i) => (
+              <Reveal key={i} delay={i * 100}>
+                <p className="text-sm leading-relaxed text-foreground/85 md:text-base">{para}</p>
+              </Reveal>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Provenance + Signature (Authority + Trust) */}
+      {(provenance || signature) && (
+        <section className="container-prose py-12">
+          <div className="grid gap-6 md:grid-cols-2">
+            {provenance && (
+              <Reveal>
+                <div className="flex h-full gap-4 rounded-sm border border-border/60 bg-card p-7">
+                  <MapPin className="h-6 w-6 flex-shrink-0 text-accent" />
+                  <div>
+                    <h3 className="font-serif text-lg">{t('productDetail.provenanceTitle')}</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{provenance}</p>
+                  </div>
+                </div>
+              </Reveal>
+            )}
+            {signature && (
+              <Reveal delay={100}>
+                <div className="flex h-full gap-4 rounded-sm border border-border/60 bg-card p-7">
+                  <Award className="h-6 w-6 flex-shrink-0 text-accent" />
+                  <div>
+                    <h3 className="font-serif text-lg">{t('productDetail.signatureTitle')}</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{signature}</p>
+                  </div>
+                </div>
+              </Reveal>
+            )}
+          </div>
+        </section>
+      )}
+
+      {/* Technical sheet */}
+      <section className="bg-secondary/40 py-16 md:py-20">
+        <div className="container-prose">
+          <Reveal>
+            <h2 className="font-serif text-2xl md:text-3xl">{t('productDetail.technicalTitle')}</h2>
+          </Reveal>
+          <Reveal delay={100}>
+            <dl className="mt-8 grid gap-x-10 gap-y-4 rounded-sm border border-border/60 bg-card p-6 sm:grid-cols-2 md:p-8">
+              {technicalRows
+                .filter(([, v]) => Boolean(v))
+                .map(([label, value]) => (
+                  <div key={label} className="flex flex-col border-b border-border/40 pb-3 last:border-0">
+                    <dt className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+                      {label}
+                    </dt>
+                    <dd className="mt-1 text-sm text-foreground/90">{value}</dd>
+                  </div>
+                ))}
+            </dl>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Best projects (Experience signals) */}
+      {bestProjects.length > 0 && (
+        <section className="container-prose py-16 md:py-20">
+          <Reveal>
+            <h2 className="font-serif text-2xl md:text-3xl">{t('productDetail.bestProjectsTitle')}</h2>
+          </Reveal>
+          <ul className="mt-8 grid gap-4 md:grid-cols-3">
+            {bestProjects.map((project, i) => (
+              <Reveal key={i} delay={i * 100}>
+                <li className="flex h-full gap-3 rounded-sm border border-border/60 bg-card p-6">
+                  <CheckCircle2 className="h-5 w-5 flex-shrink-0 text-accent" />
+                  <span className="text-sm leading-relaxed text-foreground/85">{project}</span>
+                </li>
+              </Reveal>
+            ))}
+          </ul>
+        </section>
+      )}
+
       {/* Benefits */}
       <section className="bg-secondary/50 py-16 md:py-20">
         <div className="container-prose">
