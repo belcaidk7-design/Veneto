@@ -1,7 +1,18 @@
 import { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { ArrowLeft, ArrowRight, Maximize2, Sparkles, Hammer, Ruler, Phone, Mail } from 'lucide-react';
+import {
+  ArrowLeft,
+  ArrowRight,
+  Maximize2,
+  Sparkles,
+  Hammer,
+  Ruler,
+  Mail,
+  MapPin,
+  Award,
+  CheckCircle2,
+} from 'lucide-react';
 import Layout from '@/components/Layout';
 import Seo from '@/components/Seo';
 import Reveal from '@/components/Reveal';
@@ -49,22 +60,66 @@ const ProductDetail = () => {
   const related = getRelatedProducts(product, 3);
   const categoryLabel = t(`categories.${product.category}`);
 
+  // Unique E-E-A-T content per product (storytelling, provenance, references).
+  const contentBase = `productContent.${product.i18nKey}`;
+  const seoTitle = t(`${contentBase}.seoTitle`, { defaultValue: name });
+  const seoDescription = t(`${contentBase}.seoDescription`, {
+    defaultValue: t('productDetail.metaDescription', { name }),
+  });
+  const intro = t(`${contentBase}.intro`, { defaultValue: '' });
+  const story = t(`${contentBase}.story`, { returnObjects: true, defaultValue: [] }) as string[];
+  const provenance = t(`${contentBase}.provenance`, { defaultValue: product.origin });
+  const signature = t(`${contentBase}.signature`, { defaultValue: '' });
+  const bestProjects = t(`${contentBase}.bestProjects`, {
+    returnObjects: true,
+    defaultValue: [],
+  }) as string[];
+
+  const technicalRows: Array<[string, string | undefined]> = [
+    [t('productDetail.technical.origin'), product.origin],
+    [t('productDetail.technical.density'), product.technical.density],
+    [t('productDetail.technical.flexural'), product.technical.flexural],
+    [t('productDetail.technical.absorption'), product.technical.absorption],
+    [t('productDetail.technical.slip'), product.technical.slip],
+    [t('productDetail.technical.frost'), product.technical.frost],
+    [t('productDetail.technical.thickness'), product.technical.thickness],
+    [t('productDetail.technical.since'), product.since ? String(product.since) : undefined],
+  ];
+
   return (
     <Layout>
       <Seo
-        title={name}
-        description={t('productDetail.metaDescription', { name })}
+        title={seoTitle}
+        description={seoDescription}
         path={`/products/${product.id}`}
         image={product.image}
-        jsonLd={{
-          '@context': 'https://schema.org',
-          '@type': 'Product',
-          name,
-          image: product.image,
-          description: t('productDetail.description', { name }),
-          category: categoryLabel,
-          brand: { '@type': 'Brand', name: 'HQ Stones' },
-        }}
+        jsonLd={[
+          {
+            '@context': 'https://schema.org',
+            '@type': 'Product',
+            name,
+            image: product.image,
+            description: intro || seoDescription,
+            category: categoryLabel,
+            brand: { '@type': 'Brand', name: 'HQ Stones' },
+            material: product.materials.map((m) => t(`materials.${m}`)).join(', '),
+            countryOfOrigin: 'IT',
+            ...(product.since && {
+              additionalProperty: [
+                { '@type': 'PropertyValue', name: 'Supplied since', value: product.since },
+              ],
+            }),
+          },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: t('productDetail.breadcrumb.home'), item: '/' },
+              { '@type': 'ListItem', position: 2, name: t('productDetail.breadcrumb.products'), item: '/products' },
+              { '@type': 'ListItem', position: 3, name },
+            ],
+          },
+        ]}
       />
 
       {/* Breadcrumb */}
@@ -110,8 +165,15 @@ const ProductDetail = () => {
           <h1 className="mt-3 font-serif text-3xl md:text-5xl">{name}</h1>
 
           <p className="mt-6 text-foreground/85 leading-relaxed">
-            {t('productDetail.description', { name })}
+            {intro || t('productDetail.description', { name })}
           </p>
+
+          {product.since && (
+            <p className="mt-3 inline-flex items-center gap-2 text-xs uppercase tracking-widest text-muted-foreground">
+              <Award className="h-3.5 w-3.5 text-accent" />
+              {t('productDetail.technical.since')} {product.since}
+            </p>
+          )}
 
           <div className="mt-8">
             <h2 className="mb-3 font-serif text-xs uppercase tracking-widest text-muted-foreground">
@@ -156,6 +218,94 @@ const ProductDetail = () => {
           </Button>
         </Reveal>
       </article>
+
+      {/* Story (E-E-A-T: experience + expertise) */}
+      {story.length > 0 && (
+        <section className="container-prose pb-4 md:pb-8">
+          <Reveal>
+            <h2 className="font-serif text-2xl md:text-3xl">{t('productDetail.storyTitle')}</h2>
+          </Reveal>
+          <div className="mt-8 grid gap-6 md:grid-cols-3">
+            {story.map((para, i) => (
+              <Reveal key={i} delay={i * 100}>
+                <p className="text-sm leading-relaxed text-foreground/85 md:text-base">{para}</p>
+              </Reveal>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Provenance + Signature (Authority + Trust) */}
+      {(provenance || signature) && (
+        <section className="container-prose py-12">
+          <div className="grid gap-6 md:grid-cols-2">
+            {provenance && (
+              <Reveal>
+                <div className="flex h-full gap-4 rounded-sm border border-border/60 bg-card p-7">
+                  <MapPin className="h-6 w-6 flex-shrink-0 text-accent" />
+                  <div>
+                    <h3 className="font-serif text-lg">{t('productDetail.provenanceTitle')}</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{provenance}</p>
+                  </div>
+                </div>
+              </Reveal>
+            )}
+            {signature && (
+              <Reveal delay={100}>
+                <div className="flex h-full gap-4 rounded-sm border border-border/60 bg-card p-7">
+                  <Award className="h-6 w-6 flex-shrink-0 text-accent" />
+                  <div>
+                    <h3 className="font-serif text-lg">{t('productDetail.signatureTitle')}</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{signature}</p>
+                  </div>
+                </div>
+              </Reveal>
+            )}
+          </div>
+        </section>
+      )}
+
+      {/* Technical sheet */}
+      <section className="bg-secondary/40 py-16 md:py-20">
+        <div className="container-prose">
+          <Reveal>
+            <h2 className="font-serif text-2xl md:text-3xl">{t('productDetail.technicalTitle')}</h2>
+          </Reveal>
+          <Reveal delay={100}>
+            <dl className="mt-8 grid gap-x-10 gap-y-4 rounded-sm border border-border/60 bg-card p-6 sm:grid-cols-2 md:p-8">
+              {technicalRows
+                .filter(([, v]) => Boolean(v))
+                .map(([label, value]) => (
+                  <div key={label} className="flex flex-col border-b border-border/40 pb-3 last:border-0">
+                    <dt className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+                      {label}
+                    </dt>
+                    <dd className="mt-1 text-sm text-foreground/90">{value}</dd>
+                  </div>
+                ))}
+            </dl>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Best projects (Experience signals) */}
+      {bestProjects.length > 0 && (
+        <section className="container-prose py-16 md:py-20">
+          <Reveal>
+            <h2 className="font-serif text-2xl md:text-3xl">{t('productDetail.bestProjectsTitle')}</h2>
+          </Reveal>
+          <ul className="mt-8 grid gap-4 md:grid-cols-3">
+            {bestProjects.map((project, i) => (
+              <Reveal key={i} delay={i * 100}>
+                <li className="flex h-full gap-3 rounded-sm border border-border/60 bg-card p-6">
+                  <CheckCircle2 className="h-5 w-5 flex-shrink-0 text-accent" />
+                  <span className="text-sm leading-relaxed text-foreground/85">{project}</span>
+                </li>
+              </Reveal>
+            ))}
+          </ul>
+        </section>
+      )}
 
       {/* Benefits */}
       <section className="bg-secondary/50 py-16 md:py-20">
