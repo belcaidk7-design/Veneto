@@ -60,22 +60,66 @@ const ProductDetail = () => {
   const related = getRelatedProducts(product, 3);
   const categoryLabel = t(`categories.${product.category}`);
 
+  // Unique E-E-A-T content per product (storytelling, provenance, references).
+  const contentBase = `productContent.${product.i18nKey}`;
+  const seoTitle = t(`${contentBase}.seoTitle`, { defaultValue: name });
+  const seoDescription = t(`${contentBase}.seoDescription`, {
+    defaultValue: t('productDetail.metaDescription', { name }),
+  });
+  const intro = t(`${contentBase}.intro`, { defaultValue: '' });
+  const story = t(`${contentBase}.story`, { returnObjects: true, defaultValue: [] }) as string[];
+  const provenance = t(`${contentBase}.provenance`, { defaultValue: product.origin });
+  const signature = t(`${contentBase}.signature`, { defaultValue: '' });
+  const bestProjects = t(`${contentBase}.bestProjects`, {
+    returnObjects: true,
+    defaultValue: [],
+  }) as string[];
+
+  const technicalRows: Array<[string, string | undefined]> = [
+    [t('productDetail.technical.origin'), product.origin],
+    [t('productDetail.technical.density'), product.technical.density],
+    [t('productDetail.technical.flexural'), product.technical.flexural],
+    [t('productDetail.technical.absorption'), product.technical.absorption],
+    [t('productDetail.technical.slip'), product.technical.slip],
+    [t('productDetail.technical.frost'), product.technical.frost],
+    [t('productDetail.technical.thickness'), product.technical.thickness],
+    [t('productDetail.technical.since'), product.since ? String(product.since) : undefined],
+  ];
+
   return (
     <Layout>
       <Seo
-        title={name}
-        description={t('productDetail.metaDescription', { name })}
+        title={seoTitle}
+        description={seoDescription}
         path={`/products/${product.id}`}
         image={product.image}
-        jsonLd={{
-          '@context': 'https://schema.org',
-          '@type': 'Product',
-          name,
-          image: product.image,
-          description: t('productDetail.description', { name }),
-          category: categoryLabel,
-          brand: { '@type': 'Brand', name: 'HQ Stones' },
-        }}
+        jsonLd={[
+          {
+            '@context': 'https://schema.org',
+            '@type': 'Product',
+            name,
+            image: product.image,
+            description: intro || seoDescription,
+            category: categoryLabel,
+            brand: { '@type': 'Brand', name: 'HQ Stones' },
+            material: product.materials.map((m) => t(`materials.${m}`)).join(', '),
+            countryOfOrigin: 'IT',
+            ...(product.since && {
+              additionalProperty: [
+                { '@type': 'PropertyValue', name: 'Supplied since', value: product.since },
+              ],
+            }),
+          },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: t('productDetail.breadcrumb.home'), item: '/' },
+              { '@type': 'ListItem', position: 2, name: t('productDetail.breadcrumb.products'), item: '/products' },
+              { '@type': 'ListItem', position: 3, name },
+            ],
+          },
+        ]}
       />
 
       {/* Breadcrumb */}
