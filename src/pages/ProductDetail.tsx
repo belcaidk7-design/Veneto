@@ -165,8 +165,15 @@ const ProductDetail = () => {
           <h1 className="mt-3 font-serif text-3xl md:text-5xl">{name}</h1>
 
           <p className="mt-6 text-foreground/85 leading-relaxed">
-            {t('productDetail.description', { name })}
+            {intro || t('productDetail.description', { name })}
           </p>
+
+          {product.since && (
+            <p className="mt-3 inline-flex items-center gap-2 text-xs uppercase tracking-widest text-muted-foreground">
+              <Award className="h-3.5 w-3.5 text-accent" />
+              {t('productDetail.technical.since')} {product.since}
+            </p>
+          )}
 
           <div className="mt-8">
             <h2 className="mb-3 font-serif text-xs uppercase tracking-widest text-muted-foreground">
