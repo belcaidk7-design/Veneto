@@ -5,16 +5,20 @@ import en from './locales/en';
 import it from './locales/it';
 import fr from './locales/fr';
 import de from './locales/de';
+import productContentFr from './locales/productContent.fr';
+import productContentEn from './locales/productContent.en';
+import productContentIt from './locales/productContent.it';
+import productContentDe from './locales/productContent.de';
 
 i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
     resources: {
-      en: { translation: en },
-      it: { translation: it },
-      fr: { translation: fr },
-      de: { translation: de },
+      en: { translation: { ...en, productContent: productContentEn } },
+      it: { translation: { ...it, productContent: productContentIt } },
+      fr: { translation: { ...fr, productContent: productContentFr } },
+      de: { translation: { ...de, productContent: productContentDe } },
     },
     fallbackLng: 'en',
     supportedLngs: ['en', 'it', 'fr', 'de'],
