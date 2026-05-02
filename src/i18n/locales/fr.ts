@@ -16,10 +16,10 @@ export default {
   hero: {
     eyebrow: 'Maison italienne',
     headline: 'La pierre naturelle italienne pour vos projets d\u2019exception',
-    subline: 'Marbre, granit, calcaire, porphyre et grès, sourcés directement dans nos carrières partenaires. Conseil sur mesure, livraison Europe, devis sous 24 heures.',
+    subline: 'Marbre, granit, calcaire, porphyre et grès, sourcés directement dans nos carrières partenaires. Conseil sur mesure, livraison Europe, devis rapide.',
     cta: 'Découvrir le catalogue',
     downloadCta: 'Télécharger le catalogue',
-    reassurance: 'Carrières partenaires en Italie · Livraison toute l\u2019Europe · Devis sous 24 h',
+    reassurance: 'Carrières partenaires en Italie · Livraison toute l\u2019Europe · Devis rapide',
   },
   home: {
     categoriesTitle: 'Explorer le catalogue',
@@ -48,7 +48,7 @@ export default {
     projectsTeaserCta: 'Voir toutes les réalisations',
 
     finalCtaTitle: 'Un projet en tête ? Parlons-en.',
-    finalCtaBody: 'Décrivez-nous votre projet en quelques lignes. Nous revenons vers vous sous 24 heures avec un premier conseil et une estimation.',
+    finalCtaBody: 'Décrivez-nous votre projet en quelques lignes. Nous revenons vers vous rapidement avec un premier conseil et une estimation.',
     finalCtaButton: 'Demander un devis gratuit',
     finalCtaCall: 'Ou appelez-nous directement',
   },
@@ -137,7 +137,7 @@ export default {
     },
   },
   productDetail: {
-    metaDescription: '{{name}} en pierre naturelle italienne, fabriqué sur mesure. Plusieurs matériaux et finitions. Devis sous 24 h.',
+    metaDescription: '{{name}} en pierre naturelle italienne, fabriqué sur mesure. Plusieurs matériaux et finitions. Devis rapide.',
     description: 'Notre {{name}} est fabriqué à la demande dans la pierre de votre choix. Chaque pièce est calibrée selon vos dimensions, finie à la main par nos artisans et expédiée avec un emballage spécifique pour arriver intacte sur votre chantier.',
     materialsTitle: 'Matériaux disponibles',
     finishesTitle: 'Finitions recommandées',
@@ -149,7 +149,7 @@ export default {
     relatedTitle: 'Vous aimerez aussi',
     zoom: 'Voir en grand',
     quoteCtaTitle: 'Un projet pour ce produit ?',
-    quoteCtaBody: 'Décrivez-nous vos quantités, dimensions et délais. Nous revenons vers vous sous 24 h avec un devis détaillé.',
+    quoteCtaBody: 'Décrivez-nous vos quantités, dimensions et délais. Nous revenons vers vous rapidement avec un devis détaillé.',
     benefits: {
       durability: { title: 'Durable', body: 'La pierre traverse les générations. Bien posée et entretenue, elle vieillit en se patinant, sans jamais perdre sa noblesse.' },
       aesthetic: { title: 'Unique', body: 'Chaque pièce est différente. Veinages, nuances, inclusions : la pierre naturelle ne se reproduit jamais à l\u2019identique.' },
@@ -159,7 +159,7 @@ export default {
       leadTime: { q: 'Quels sont les délais de livraison ?', a: 'Comptez 2 à 3 semaines pour les pièces standard et 6 à 10 semaines pour le sur mesure ou les grandes quantités. Nous confirmons toujours un planning précis avec votre devis.' },
       sample: { q: 'Puis-je recevoir un échantillon avant commande ?', a: 'Oui, nous envoyons gratuitement de petits échantillons pour tout projet sérieux. Pour des pièces de référence plus grandes, un coût symbolique est demandé.' },
       install: { q: 'Gérez-vous la pose ?', a: 'En Italie et dans certaines villes européennes, nous proposons la pose. Ailleurs, nous travaillons avec des poseurs qualifiés et restons disponibles pour conseiller à distance.' },
-      pricing: { q: 'Comment obtenir un prix ?', a: 'Le prix dépend de la pierre, de la finition, des dimensions et de la quantité. Envoyez-nous votre brief : devis détaillé sous 24 heures.' },
+      pricing: { q: 'Comment obtenir un prix ?', a: 'Le prix dépend de la pierre, de la finition, des dimensions et de la quantité. Envoyez-nous votre brief : devis détaillé rapidement.' },
     },
     breadcrumb: { home: 'Accueil', products: 'Produits' },
     storyTitle: 'L\u2019histoire de cette pierre',
@@ -221,7 +221,7 @@ export default {
       warranty: { q: 'Proposez-vous une garantie ?', a: 'Les défauts matériels sont couverts pendant 12 mois. La pose, lorsqu\u2019elle est réalisée par nos soins, est couverte 24 mois.' },
       minimumOrder: { q: 'Y a-t-il une commande minimum ?', a: 'Pas de minimum strict, mais les petites commandes ont un coût logistique unitaire plus élevé. Nous optimisons les regroupements quand c\u2019est possible.' },
       installation: { q: 'Gérez-vous la pose ?', a: 'En Italie et dans certaines villes européennes, oui. Ailleurs, nous travaillons avec des poseurs locaux qualifiés et supervisons à distance.' },
-      pricing: { q: 'Comment se calcule le prix ?', a: 'Selon la pierre, la finition, les dimensions, la complexité et la quantité. Envoyez-nous votre brief : devis détaillé sous un jour ouvré.' },
+      pricing: { q: 'Comment se calcule le prix ?', a: 'Selon la pierre, la finition, les dimensions, la complexité et la quantité. Envoyez-nous votre brief : devis détaillé rapidement.' },
       custom: { q: 'Réalisez-vous des projets sur mesure ?', a: 'Absolument. Des sculptures à la main aux plans de travail bookmatchés, la majorité de notre travail est sur mesure.' },
     },
   },
@@ -271,7 +271,7 @@ export default {
   },
   contact: {
     title: 'Contact',
-    subtitle: 'Parlez-nous de votre projet. Réponse sous un jour ouvré.',
+    subtitle: 'Parlez-nous de votre projet. Réponse rapide.',
     formTitle: 'Demander un devis',
     fullName: 'Nom complet',
     email: 'Email',
@@ -334,7 +334,7 @@ export default {
     cta: 'Retour à l\u2019accueil',
   },
   seo: {
-    home: { title: 'HQ Stones, pierre naturelle italienne pour vos projets', description: 'Marbre, granit, calcaire, porphyre et grès italiens. Conseil sur mesure, livraison Europe, devis sous 24 h. HQ Stones, votre partenaire pierre.' },
+    home: { title: 'HQ Stones, pierre naturelle italienne pour vos projets', description: 'Marbre, granit, calcaire, porphyre et grès italiens. Conseil sur mesure, livraison Europe, devis rapide. HQ Stones, votre partenaire pierre.' },
     products: { title: 'Produits en pierre : dallage, parement, plans de travail', description: 'Catalogue complet de produits en pierre naturelle italienne : dallage, fontaines, parements, plans de travail, vasques, baignoires et dalles brutes.' },
     materials: { title: 'Marbre, calcaire, granit, porphyre et grès italiens', description: 'Découvrez les pierres avec lesquelles nous travaillons : caractéristiques, usages, finitions et entretien pour chaque matériau.' },
     projects: { title: 'Nos réalisations en pierre naturelle', description: 'Une sélection de projets résidentiels, hôteliers et publics réalisés avec HQ Stones à travers l\u2019Europe.' },
@@ -342,6 +342,6 @@ export default {
     about: { title: 'À propos de HQ Stones, revendeur et consultant pierre', description: 'Notre histoire, nos valeurs et notre engagement pour la pierre naturelle. Basés en Italie, intervention internationale.' },
     craft: { title: 'Notre savoir-faire, de la carrière au projet', description: 'Extraction, découpe, finition, livraison : les quatre étapes qui amènent la pierre de la montagne à votre projet.' },
     faq: { title: 'FAQ : tout savoir sur la pierre naturelle', description: 'Échantillons, livraison, délais, entretien, finitions, garantie. Réponses aux questions les plus fréquentes.' },
-    contact: { title: 'Contact HQ Stones, demandez votre devis', description: 'Parlez-nous de votre projet. Téléphone, WhatsApp, email ou formulaire. Réponse sous un jour ouvré.' },
+    contact: { title: 'Contact HQ Stones, demandez votre devis', description: 'Parlez-nous de votre projet. Téléphone, WhatsApp, email ou formulaire. Réponse rapide.' },
   },
 };

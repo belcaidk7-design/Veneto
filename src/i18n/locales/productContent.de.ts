@@ -3,7 +3,7 @@ import type { ProductContentEntry } from './productContent.fr';
 const productContent: Record<string, ProductContentEntry> = {
   externalPaving: {
     seoTitle: 'Außenpflaster aus Naturstein | Porphyr, Granit, Sandstein',
-    seoDescription: 'Außenpflaster aus Trentiner Porphyr, sardischem Granit und Veroneser Sandstein. Rutschfest R11–R13, frostbeständig. Angebot in 24 h.',
+    seoDescription: 'Außenpflaster aus Trentiner Porphyr, sardischem Granit und Veroneser Sandstein. Rutschfest R11–R13, frostbeständig. Schnelles Angebot.',
     intro: 'Das Außenpflaster ist das Erste, was Ihre Gäste betreten. Unsere Aufgabe ist es, einen Stein zu wählen, der dreißig Jahre Tritte, Frost und Salz übersteht, ohne seinen Charakter zu verlieren.',
     story: [
       'Seit 1998 liefern wir Außenpflaster für italienische Plätze, provenzalische Höfe und alpine Villenzufahrten. Jedes Projekt lehrte uns dieselbe Lektion: 80 % der Langlebigkeit hängen von Steinwahl und Verlegung ab, nicht vom Preis.',
@@ -20,7 +20,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   fountains: {
     seoTitle: 'Brunnen aus Naturstein | Italienischer Marmor und Kalkstein',
-    seoDescription: 'Brunnen aus Carrara-Marmor und Trani-Kalkstein, handgemeißelt in Pietrasanta. Katalog oder Maßanfertigung. Angebot in 24 h.',
+    seoDescription: 'Brunnen aus Carrara-Marmor und Trani-Kalkstein, handgemeißelt in Pietrasanta. Katalog oder Maßanfertigung. Schnelles Angebot.',
     intro: 'Ein Brunnen ist kein Objekt, sondern ein Schwerpunkt. Das Wassergeräusch, die Steinmasse, die entstehende Patina: alles muss für Generationen gedacht sein.',
     story: [
       'Unsere Brunnen werden in Pietrasanta gemeißelt, dem toskanischen Bildhauerviertel seit Michelangelo. Wir arbeiten mit drei Familienwerkstätten, die sowohl klassische Repliken als auch zeitgenössische Auftragsarbeiten beherrschen.',
@@ -37,7 +37,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   columns: {
     seoTitle: 'Maßgefertigte Natursteinsäulen | Marmor, Kalkstein, Granit',
-    seoDescription: 'Säulen aus Marmor, Kalkstein und Granit, CNC-gedreht und handveredelt. Durchmesser 20–60 cm, Höhen bis 4 m. Angebot in 24 h.',
+    seoDescription: 'Säulen aus Marmor, Kalkstein und Granit, CNC-gedreht und handveredelt. Durchmesser 20–60 cm, Höhen bis 4 m. Schnelles Angebot.',
     intro: 'Eine Säule trägt ein Dach oder eine Absicht. In beiden Fällen entscheiden Proportionen, Kapitell und Oberfläche alles.',
     story: [
       'Wir produzieren Säulen seit 2002, vom glatten zeitgenössischen Schaft bis zu klassischen Ordnungen (toskanisch, dorisch, ionisch, korinthisch).',
@@ -54,7 +54,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   balustrades: {
     seoTitle: 'Naturstein-Balustraden | Italienischer Marmor und Kalkstein',
-    seoDescription: 'Gedrehte Baluster, Handläufe und Pilaster aus italienischem Marmor und Kalkstein. Maßproduktion, normgerecht. Angebot in 24 h.',
+    seoDescription: 'Gedrehte Baluster, Handläufe und Pilaster aus italienischem Marmor und Kalkstein. Maßproduktion, normgerecht. Schnelles Angebot.',
     intro: 'Eine Balustrade ist ein Sicherheitselement, bevor sie ein Ornament ist. Normhöhe, Balusterabstand, Verankerung: beide Dimensionen werden kompromisslos behandelt.',
     story: [
       'Unsere Balustraden entsprechen europäischen Sicherheitsnormen (1 m Mindesthöhe, ≤ 11 cm vertikaler Abstand).',
@@ -71,7 +71,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   flowerBoxes: {
     seoTitle: 'Naturstein-Pflanzgefäße | Italienischer Kalkstein und Sandstein',
-    seoDescription: 'Pflanzgefäße aus Trani-Kalkstein und Veroneser Sandstein, aus dem Block gehauen. Frostbeständig, integrierte Drainage. Angebot in 24 h.',
+    seoDescription: 'Pflanzgefäße aus Trani-Kalkstein und Veroneser Sandstein, aus dem Block gehauen. Frostbeständig, integrierte Drainage. Schnelles Angebot.',
     intro: 'Ein Naturstein-Pflanzgefäß ist eine 30-Jahre-Investition. Der richtige Stein und die richtige Drainage verhindern die Risse des ersten Winters.',
     story: [
       'Wir hauen unsere Pflanzgefäße aus dem Block, niemals aus verklebten Platten.',
@@ -88,7 +88,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   benches: {
     seoTitle: 'Natursteinbänke | Italienischer Granit und Kalkstein',
-    seoDescription: 'Monolithische Bänke aus sardischem Granit und Trani-Kalkstein, bis 3 lfm. Für Plätze, Gärten, Umgebungen. Angebot in 24 h.',
+    seoDescription: 'Monolithische Bänke aus sardischem Granit und Trani-Kalkstein, bis 3 lfm. Für Plätze, Gärten, Umgebungen. Schnelles Angebot.',
     intro: 'Eine Steinbank wählt man nach zwei Kriterien: die Masse, die Verschiebung und Vandalismus verhindert, und der thermische Komfort.',
     story: [
       'Wir arbeiten Bänke als Monolithen (aus einem einzigen Block) bis 3 lfm.',
@@ -105,7 +105,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   bollards: {
     seoTitle: 'Naturstein-Poller | Granit und Porphyr',
-    seoDescription: 'Stadtpoller aus sardischem Granit und Trentiner Porphyr. Unzerstörbar, normgerecht. Angebot in 24 h.',
+    seoDescription: 'Stadtpoller aus sardischem Granit und Trentiner Porphyr. Unzerstörbar, normgerecht. Schnelles Angebot.',
     intro: 'Ein Poller trennt einen Fußgänger von einem Fahrzeug. In exponierten Stadtzonen ist er ein Sicherheitsobjekt vor allem.',
     story: [
       'Wir produzieren Stadtpoller seit 2005, alle aus einem einzigen Block gehauen, ohne Hohlraum oder Montage.',
@@ -122,7 +122,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   curbs: {
     seoTitle: 'Naturstein-Bordsteine | Italienischer Granit und Porphyr',
-    seoDescription: 'Straßen- und Gartenbordsteine aus sardischem Granit und Porphyr. Längen bis 2 m, Sondermaße. Angebot in 24 h.',
+    seoDescription: 'Straßen- und Gartenbordsteine aus sardischem Granit und Porphyr. Längen bis 2 m, Sondermaße. Schnelles Angebot.',
     intro: 'Der Bordstein strukturiert alles: einen Weg, ein Beet, einen Bürgersteig. Schlecht gewählt reißt er beim ersten Winter. Gut gewählt hält er fünfzig Jahre.',
     story: [
       'Wir liefern Bordsteine seit 2000, für private Projekte und italienische öffentliche Ausschreibungen.',
@@ -139,7 +139,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   sculptures: {
     seoTitle: 'Naturstein-Skulpturen | Carrara-Marmor und Kalkstein',
-    seoDescription: 'Maßgefertigte Skulpturen aus Carrara-Marmor und Kalkstein, in Pietrasanta handgemeißelt. Reproduktionen, Originale, Restaurierungen. Angebot in 24 h.',
+    seoDescription: 'Maßgefertigte Skulpturen aus Carrara-Marmor und Kalkstein, in Pietrasanta handgemeißelt. Reproduktionen, Originale, Restaurierungen. Schnelles Angebot.',
     intro: 'Eine maßgefertigte Skulptur ist ein Dialog zwischen Ihrer Absicht, dem Bildhauer und dem Stein.',
     story: [
       'Wir arbeiten mit drei Werkstätten in Pietrasanta, dem toskanischen Viertel mit den besten Marmorbildhauern seit fünf Jahrhunderten.',
@@ -156,7 +156,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   externalCladding: {
     seoTitle: 'Naturstein-Fassadenverkleidung | Kalkstein, Sandstein, Porphyr',
-    seoDescription: 'Fassadenverkleidungen aus Trani-Kalkstein, Veroneser Sandstein und Porphyr. Geklebte oder verankerte Verlegung, normgerecht. Angebot in 24 h.',
+    seoDescription: 'Fassadenverkleidungen aus Trani-Kalkstein, Veroneser Sandstein und Porphyr. Geklebte oder verankerte Verlegung, normgerecht. Schnelles Angebot.',
     intro: 'Eine Naturstein-Fassade ist mehr als eine Verkleidung: sie ist die Identität eines Gebäudes für fünfzig Jahre.',
     story: [
       'Wir begleiten Fassadenprojekte seit 2001, von der Klebeverlegung auf Putz bis zur hinterlüfteten verankerten Verlegung.',
@@ -173,7 +173,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   interiorFlooring: {
     seoTitle: 'Innenboden aus Naturstein | Marmor, Kalkstein, Granit',
-    seoDescription: 'Innenböden aus Carrara-Marmor, Trani-Kalkstein und Granit. Großformate bis 60×120 cm. Vollbettverlegung. Angebot in 24 h.',
+    seoDescription: 'Innenböden aus Carrara-Marmor, Trani-Kalkstein und Granit. Großformate bis 60×120 cm. Vollbettverlegung. Schnelles Angebot.',
     intro: 'Ein Naturstein-Boden ist das Erste, was Sie morgens berühren, und das, was Sie ständig betrachten.',
     story: [
       'Seit 1998 statten wir hochwertige Wohn- und Hospitality-Innenräume aus.',
@@ -190,7 +190,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   interiorCladding: {
     seoTitle: 'Innenwandverkleidung aus Naturstein | Marmor und Kalkstein',
-    seoDescription: 'Innenwandverkleidungen aus Carrara-Marmor und italienischem Kalkstein. Bookmatch, Großplatten, Sondermaße. Angebot in 24 h.',
+    seoDescription: 'Innenwandverkleidungen aus Carrara-Marmor und italienischem Kalkstein. Bookmatch, Großplatten, Sondermaße. Schnelles Angebot.',
     intro: 'Eine Naturstein-Wand verändert die Wahrnehmung eines Raumes komplett. Licht, Akustik, Materialgefühl: kein anderes Material erzeugt diesen Effekt.',
     story: [
       'Unsere Innenwandverkleidungen reichen von der 30×60-Platte bis zum monumentalen 180×280-Bookmatch-Paneel.',
@@ -207,7 +207,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   kitchenCountertops: {
     seoTitle: 'Marmor- und Granit-Küchenarbeitsplatten | Maßanfertigung',
-    seoDescription: 'Küchenarbeitsplatten aus Calacatta-, Statuario-Marmor und sardischem Granit. Bookmatch, Mitered Edge, Maßanfertigung. Angebot in 24 h.',
+    seoDescription: 'Küchenarbeitsplatten aus Calacatta-, Statuario-Marmor und sardischem Granit. Bookmatch, Mitered Edge, Maßanfertigung. Schnelles Angebot.',
     intro: 'Eine Naturstein-Arbeitsplatte ist das meistbeobachtete Element einer Küche. Sie muss am ersten Tag schön sein und es nach zehntausend Mahlzeiten bleiben.',
     story: [
       'Wir statten Küchen seit 2004 aus, von der einfachen Arbeitsplatte bis zur 4-Meter-Bookmatch-Insel ohne sichtbare Fuge.',
@@ -224,7 +224,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   sinks: {
     seoTitle: 'Naturstein-Waschbecken | Marmor und Granit aus dem Block',
-    seoDescription: 'Waschbecken aus Marmor und Granit aus dem Block gehauen. Aufsatz oder integriert, Sondermaße. Angebot in 24 h.',
+    seoDescription: 'Waschbecken aus Marmor und Granit aus dem Block gehauen. Aufsatz oder integriert, Sondermaße. Schnelles Angebot.',
     intro: 'Ein Naturstein-Waschbecken aus dem Block ist ein seltenes Objekt. Es wiegt, hält, patiniert. Kein Komposit reproduziert diese Präsenz.',
     story: [
       'Wir hauen unsere Waschbecken aus einem einzigen Block, ohne verklebten Boden oder Wände.',
@@ -241,7 +241,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   bathtubs: {
     seoTitle: 'Handgemeißelte Marmor-Badewannen | Einzelstücke',
-    seoDescription: 'Monolithische Badewannen aus Carrara-Marmor, in Pietrasanta handgemeißelt. Einzelstücke nach Entwurf. Angebot in 24 h.',
+    seoDescription: 'Monolithische Badewannen aus Carrara-Marmor, in Pietrasanta handgemeißelt. Einzelstücke nach Entwurf. Schnelles Angebot.',
     intro: 'Eine Marmor-Badewanne ist wahrscheinlich das beeindruckendste Stück, das man in einem Bad installieren kann.',
     story: [
       'Unsere Badewannen werden aus einem einzigen Marmorblock gemeißelt, in Pietrasanta.',
@@ -258,7 +258,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   openBookSlabs: {
     seoTitle: 'Open-Book-Bookmatch-Platten | Marmor und Granit für Profis',
-    seoDescription: 'Open-Book-Bookmatch-Platten aus Carrara-Marmor und Granit. Im Steinbruch ausgewählte Paare. Verkauf an Profis. Angebot in 24 h.',
+    seoDescription: 'Open-Book-Bookmatch-Platten aus Carrara-Marmor und Granit. Im Steinbruch ausgewählte Paare. Verkauf an Profis. Schnelles Angebot.',
     intro: 'Open-Book ist der spektakulärste Ausdruck des Natursteins. Zwei wie ein Buch geöffnete Platten, zwei gespiegelte Maserungen, ein fast architektonischer Effekt.',
     story: [
       'Wir liefern Open-Book-Paare an Steinmetze, Tischler und Architekten seit 2005.',
@@ -275,7 +275,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   blockSlabs: {
     seoTitle: 'Blockplatten aus Naturstein | Verkauf an Profis',
-    seoDescription: 'Rohplatten aus Marmor, Granit, Kalkstein und Sandstein. Verschiedene Stärken, Verkauf pro Stück oder Container. Nur für Profis. Angebot in 24 h.',
+    seoDescription: 'Rohplatten aus Marmor, Granit, Kalkstein und Sandstein. Verschiedene Stärken, Verkauf pro Stück oder Container. Nur für Profis. Schnelles Angebot.',
     intro: 'Für Steinmetze und Tischler macht der Zugang zu einem zuverlässigen und nachverfolgten Rohmaterial den ganzen Unterschied. Wir sind Ihr direktes Bindeglied zu italienischen Steinbrüchen.',
     story: [
       'Seit 1998 beliefern wir europäische Steinmetze mit Rohplatten. Unser Mehrwert ist nicht der Preis — es ist die Auswahl.',

@@ -4,10 +4,10 @@ export default {
   hero: {
     eyebrow: 'Maison italiana',
     headline: 'La pietra naturale italiana per i tuoi progetti d\u2019eccezione',
-    subline: 'Marmo, granito, calcare, porfido e arenaria, dalle nostre cave partner. Consulenza su misura, consegna in Europa, preventivo in 24 ore.',
+    subline: 'Marmo, granito, calcare, porfido e arenaria, dalle nostre cave partner. Consulenza su misura, consegna in Europa, preventivo rapido.',
     cta: 'Scopri il catalogo',
     downloadCta: 'Scarica il catalogo',
-    reassurance: 'Cave partner in Italia · Consegna in tutta Europa · Preventivo in 24 h',
+    reassurance: 'Cave partner in Italia · Consegna in tutta Europa · Preventivo rapido',
   },
   home: {
     categoriesTitle: 'Esplora il catalogo',
@@ -32,7 +32,7 @@ export default {
     projectsTeaserSubtitle: 'Una selezione di progetti residenziali, alberghieri e pubblici che abbiamo accompagnato.',
     projectsTeaserCta: 'Vedi tutte le realizzazioni',
     finalCtaTitle: 'Hai un progetto in mente? Parliamone.',
-    finalCtaBody: 'Raccontaci il tuo progetto in poche righe. Ti rispondiamo entro 24 ore con un primo consiglio e una stima.',
+    finalCtaBody: 'Raccontaci il tuo progetto in poche righe. Ti rispondiamo in tempi brevi con un primo consiglio e una stima.',
     finalCtaButton: 'Richiedi un preventivo gratuito',
     finalCtaCall: 'Oppure chiamaci direttamente',
   },
@@ -92,12 +92,12 @@ export default {
     },
   },
   productDetail: {
-    metaDescription: '{{name}} in pietra naturale italiana, su misura. Vari materiali e finiture. Preventivo in 24 h.',
+    metaDescription: '{{name}} in pietra naturale italiana, su misura. Vari materiali e finiture. Preventivo rapido.',
     description: 'Il nostro {{name}} è realizzato su ordinazione nella pietra di tua scelta. Ogni pezzo è calibrato sulle tue dimensioni, finito a mano dai nostri artigiani e spedito con imballo dedicato.',
     materialsTitle: 'Materiali disponibili', finishesTitle: 'Finiture consigliate', formatsTitle: 'Formati e personalizzazione',
     usesTitle: 'Usi tipici', careTitle: 'Consigli di manutenzione', benefitsTitle: 'Perché questa pietra',
     faqTitle: 'Domande frequenti', relatedTitle: 'Potrebbe interessarti anche', zoom: 'Vedi più grande',
-    quoteCtaTitle: 'Un progetto per questo prodotto?', quoteCtaBody: 'Indicaci quantità, dimensioni e tempi. Ti rispondiamo entro 24 h con un preventivo dettagliato.',
+    quoteCtaTitle: 'Un progetto per questo prodotto?', quoteCtaBody: 'Indicaci quantità, dimensioni e tempi. Ti rispondiamo in tempi brevi con un preventivo dettagliato.',
     benefits: {
       durability: { title: 'Duratura', body: 'La pietra attraversa le generazioni. Posata e curata, patina senza perdere nobiltà.' },
       aesthetic: { title: 'Unica', body: 'Ogni pezzo è diverso. Venature, sfumature, inclusioni: la pietra naturale non si ripete mai.' },
@@ -161,7 +161,7 @@ export default {
       warranty: { q: 'Offrite una garanzia?', a: 'I difetti materiali sono coperti per 12 mesi. La posa, se eseguita da noi, è coperta per 24 mesi.' },
       minimumOrder: { q: 'C\u2019è un ordine minimo?', a: 'Nessun minimo rigoroso, ma i piccoli ordini hanno un costo logistico unitario più alto. Ottimizziamo i raggruppamenti quando possibile.' },
       installation: { q: 'Vi occupate della posa?', a: 'In Italia e in alcune città europee, sì. Altrove lavoriamo con posatori locali qualificati e supervisioniamo da remoto.' },
-      pricing: { q: 'Come si calcola il prezzo?', a: 'In base a pietra, finitura, dimensioni, complessità e quantità. Inviaci il brief: preventivo dettagliato in un giorno lavorativo.' },
+      pricing: { q: 'Come si calcola il prezzo?', a: 'In base a pietra, finitura, dimensioni, complessità e quantità. Inviaci il brief: preventivo dettagliato in tempi brevi.' },
       custom: { q: 'Realizzate progetti su misura?', a: 'Assolutamente. Dalle sculture a mano ai top bookmatched, la maggior parte del nostro lavoro è su misura.' },
     },
   },
@@ -192,7 +192,7 @@ export default {
     craftCta: 'Scopri il nostro savoir-faire',
   },
   contact: {
-    title: 'Contatti', subtitle: 'Raccontaci il tuo progetto. Risposta in un giorno lavorativo.',
+    title: 'Contatti', subtitle: 'Raccontaci il tuo progetto. Risposta in tempi brevi.',
     formTitle: 'Richiedi un preventivo', fullName: 'Nome completo', email: 'Email', phone: 'Telefono',
     productInterest: 'Prodotto di interesse', productInterestPlaceholder: 'Seleziona una categoria',
     message: 'Messaggio', submit: 'Invia richiesta', submitting: 'Invio in corso…',
@@ -214,7 +214,7 @@ export default {
   language: { label: 'Lingua', en: 'English', it: 'Italiano', fr: 'Français', de: 'Deutsch' },
   notFound: { title: 'Pagina non trovata', body: 'La pagina cercata non esiste o è stata spostata.', cta: 'Torna alla home' },
   seo: {
-    home: { title: 'HQ Stones, pietra naturale italiana per i tuoi progetti', description: 'Marmo, granito, calcare, porfido e arenaria italiani. Consulenza su misura, consegna in Europa, preventivo in 24 h.' },
+    home: { title: 'HQ Stones, pietra naturale italiana per i tuoi progetti', description: 'Marmo, granito, calcare, porfido e arenaria italiani. Consulenza su misura, consegna in Europa, preventivo rapido.' },
     products: { title: 'Prodotti in pietra: pavimentazioni, rivestimenti, top', description: 'Catalogo completo di prodotti in pietra naturale italiana: pavimentazioni, fontane, rivestimenti, top, lavabi, vasche e lastre.' },
     materials: { title: 'Marmo, calcare, granito, porfido e arenaria italiani', description: 'Scopri le pietre con cui lavoriamo: caratteristiche, usi, finiture e manutenzione per ogni materiale.' },
     projects: { title: 'Le nostre realizzazioni in pietra naturale', description: 'Una selezione di progetti residenziali, alberghieri e pubblici realizzati con HQ Stones in Europa.' },
@@ -222,6 +222,6 @@ export default {
     about: { title: 'Chi siamo, rivenditore e consulente di pietra', description: 'La nostra storia, valori e impegno per la pietra naturale. Sede in Italia, intervento internazionale.' },
     craft: { title: 'Il nostro savoir-faire, dalla cava al progetto', description: 'Estrazione, taglio, finitura, consegna: le quattro tappe che portano la pietra dalla montagna al tuo progetto.' },
     faq: { title: 'FAQ: tutto sulla pietra naturale', description: 'Campioni, consegna, tempi, manutenzione, finiture, garanzia. Risposte alle domande più frequenti.' },
-    contact: { title: 'Contatta HQ Stones, richiedi il tuo preventivo', description: 'Raccontaci il tuo progetto. Telefono, WhatsApp, email o modulo. Risposta in un giorno lavorativo.' },
+    contact: { title: 'Contatta HQ Stones, richiedi il tuo preventivo', description: 'Raccontaci il tuo progetto. Telefono, WhatsApp, email o modulo. Risposta in tempi brevi.' },
   },
 };

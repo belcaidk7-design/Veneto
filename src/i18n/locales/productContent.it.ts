@@ -3,7 +3,7 @@ import type { ProductContentEntry } from './productContent.fr';
 const productContent: Record<string, ProductContentEntry> = {
   externalPaving: {
     seoTitle: 'Pavimentazione esterna in pietra | Porfido, granito, arenaria',
-    seoDescription: 'Pavimentazioni esterne in porfido del Trentino, granito sardo e arenaria di Verona. Antiscivolo R11–R13, resistenti al gelo. Preventivo in 24 h.',
+    seoDescription: 'Pavimentazioni esterne in porfido del Trentino, granito sardo e arenaria di Verona. Antiscivolo R11–R13, resistenti al gelo. Preventivo rapido.',
     intro: 'La pavimentazione esterna è la prima cosa che si calpesta entrando in casa vostra. Il nostro ruolo è scegliere la pietra che resisterà trent\u2019anni a passaggi, gelo e sale, senza perdere carattere.',
     story: [
       'Dal 1998 forniamo pavimentazioni esterne per piazze pubbliche italiane, corti private in Provenza e accessi di ville alpine. Ogni cantiere ci ha insegnato la stessa lezione: l\u201980% della durata dipende dalla scelta della pietra e della posa, non dal prezzo.',
@@ -20,7 +20,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   fountains: {
     seoTitle: 'Fontane in pietra naturale | Marmo e calcare italiano',
-    seoDescription: 'Fontane in marmo di Carrara e calcare di Trani, scolpite a mano a Pietrasanta. Modelli a catalogo o su disegno. Preventivo in 24 h.',
+    seoDescription: 'Fontane in marmo di Carrara e calcare di Trani, scolpite a mano a Pietrasanta. Modelli a catalogo o su disegno. Preventivo rapido.',
     intro: 'Una fontana non è un oggetto, è un centro di gravità. Il suono dell\u2019acqua, la massa della pietra, la patina che si forma: tutto deve essere pensato per attraversare le generazioni.',
     story: [
       'Le nostre fontane sono scolpite a Pietrasanta, il quartiere degli scultori del marmo da Michelangelo in poi. Lavoriamo con tre laboratori familiari che padroneggiano sia la copia di modelli classici sia la creazione contemporanea.',
@@ -37,7 +37,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   columns: {
     seoTitle: 'Colonne in pietra naturale su misura | Marmo, calcare, granito',
-    seoDescription: 'Colonne in marmo, calcare e granito, tornite CNC e rifinite a mano. Diametri 20–60 cm, altezze fino a 4 m. Preventivo in 24 h.',
+    seoDescription: 'Colonne in marmo, calcare e granito, tornite CNC e rifinite a mano. Diametri 20–60 cm, altezze fino a 4 m. Preventivo rapido.',
     intro: 'Una colonna sostiene un tetto o un\u2019intenzione. In entrambi i casi, proporzioni, capitello e finitura decidono tutto.',
     story: [
       'Produciamo colonne dal 2002, dal fusto liscio contemporaneo agli ordini classici (toscano, dorico, ionico, corinzio). La tornitura è CNC per la precisione delle proporzioni, poi affinata a mano dai nostri scultori.',
@@ -54,7 +54,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   balustrades: {
     seoTitle: 'Balaustre in pietra naturale | Marmo e calcare italiano',
-    seoDescription: 'Balaustri torniti, corrimano e pilastri in marmo e calcare italiano. Produzione su misura, conforme alle norme. Preventivo in 24 h.',
+    seoDescription: 'Balaustri torniti, corrimano e pilastri in marmo e calcare italiano. Produzione su misura, conforme alle norme. Preventivo rapido.',
     intro: 'Una balaustra è un elemento di sicurezza prima di essere ornamento. Altezza normativa, interasse dei balaustri, ancoraggio: trattiamo entrambe le dimensioni senza compromessi.',
     story: [
       'Le nostre balaustre rispettano le norme europee di sicurezza (1 m minimo, interasse verticale ≤ 11 cm). Adattiamo sistematicamente i modelli classici per essere insieme eleganti e conformi.',
@@ -71,7 +71,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   flowerBoxes: {
     seoTitle: 'Fioriere in pietra naturale | Calcare e arenaria italiana',
-    seoDescription: 'Fioriere in calcare di Trani e arenaria di Verona, scolpite nella massa. Resistenti al gelo, drenaggio integrato. Preventivo in 24 h.',
+    seoDescription: 'Fioriere in calcare di Trani e arenaria di Verona, scolpite nella massa. Resistenti al gelo, drenaggio integrato. Preventivo rapido.',
     intro: 'Una fioriera in pietra naturale è un investimento a 30 anni. Scegliere la pietra giusta e il drenaggio significa evitare le crepe del primo inverno.',
     story: [
       'Scolpiamo le nostre fioriere nella massa, mai per incollaggio di lastre. Costa di più in materia, ma è l\u2019unico modo per evitare le infiltrazioni che fanno scoppiare una fioriera al primo gelo.',
@@ -88,7 +88,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   benches: {
     seoTitle: 'Panchine in pietra naturale | Granito e calcare italiano',
-    seoDescription: 'Panchine monolitiche in granito sardo e calcare di Trani, fino a 3 m lineari. Per piazze, giardini e percorsi. Preventivo in 24 h.',
+    seoDescription: 'Panchine monolitiche in granito sardo e calcare di Trani, fino a 3 m lineari. Per piazze, giardini e percorsi. Preventivo rapido.',
     intro: 'Una panchina di pietra si sceglie su due criteri: la massa che scoraggia spostamento e vandalismo, e il comfort termico che decide se ci si siede davvero.',
     story: [
       'Lavoriamo le panchine in monolite (scolpite da un solo blocco) fino a 3 m lineari. Oltre, segmentiamo in elementi allineati per preservare la lettura continua.',
@@ -105,7 +105,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   bollards: {
     seoTitle: 'Dissuasori in pietra naturale | Granito e porfido',
-    seoDescription: 'Dissuasori urbani in granito sardo e porfido del Trentino. Indistruttibili, conformi alle norme urbane. Preventivo in 24 h.',
+    seoDescription: 'Dissuasori urbani in granito sardo e porfido del Trentino. Indistruttibili, conformi alle norme urbane. Preventivo rapido.',
     intro: 'Un dissuasore separa un pedone da un\u2019auto. Nelle zone urbane esposte è un oggetto di sicurezza prima che ornamentale.',
     story: [
       'Produciamo dissuasori urbani dal 2005, dal modello classico tronco-conico al design contemporaneo. Tutti scolpiti da un blocco unico, senza vuoti né assemblaggi, per massima resistenza agli urti.',
@@ -122,7 +122,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   curbs: {
     seoTitle: 'Cordoli in pietra naturale | Granito e porfido italiano',
-    seoDescription: 'Cordoli stradali e da giardino in granito sardo e porfido. Lunghezze fino a 2 m, sezioni su misura. Preventivo in 24 h.',
+    seoDescription: 'Cordoli stradali e da giardino in granito sardo e porfido. Lunghezze fino a 2 m, sezioni su misura. Preventivo rapido.',
     intro: 'Il cordolo struttura tutto: un viale, un\u2019aiuola, un marciapiede. Mal scelto, si crepa al primo inverno. Ben scelto, dura cinquant\u2019anni.',
     story: [
       'Forniamo cordoli dal 2000, per cantieri privati e appalti pubblici italiani. Le sezioni più richieste (10×25, 15×30) sono a magazzino, le altre prodotte in 4–6 settimane.',
@@ -139,7 +139,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   sculptures: {
     seoTitle: 'Sculture in pietra naturale | Marmo di Carrara e calcare',
-    seoDescription: 'Sculture su misura in marmo di Carrara e calcare, scolpite a mano a Pietrasanta. Copie, creazioni, restauri. Preventivo in 24 h.',
+    seoDescription: 'Sculture su misura in marmo di Carrara e calcare, scolpite a mano a Pietrasanta. Copie, creazioni, restauri. Preventivo rapido.',
     intro: 'Una scultura su misura è un dialogo tra la vostra intenzione, lo scultore e la pietra. Facilitiamo questo dialogo dal 2003.',
     story: [
       'Lavoriamo con tre laboratori di Pietrasanta, il quartiere toscano dove si concentrano i migliori scultori del marmo da cinque secoli. Ognuno ha la sua specialità.',
@@ -156,7 +156,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   externalCladding: {
     seoTitle: 'Rivestimento esterno in pietra naturale | Calcare, arenaria, porfido',
-    seoDescription: 'Rivestimenti di facciata in calcare di Trani, arenaria di Verona e porfido. Posa incollata o ancorata, conforme alle norme. Preventivo in 24 h.',
+    seoDescription: 'Rivestimenti di facciata in calcare di Trani, arenaria di Verona e porfido. Posa incollata o ancorata, conforme alle norme. Preventivo rapido.',
     intro: 'Una facciata in pietra naturale non è solo rivestimento: è l\u2019identità di un edificio per cinquant\u2019anni. Pietra, formato e sistema di posa condizionano tutto il resto.',
     story: [
       'Accompagniamo progetti di facciata dal 2001, dal rivestimento incollato su intonaco alla posa ancorata ventilata. Sui progetti contemporanei la posa ventilata si impone: migliore isolamento, asciugatura rapida, sostituibilità.',
@@ -173,7 +173,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   interiorFlooring: {
     seoTitle: 'Pavimento interno in pietra naturale | Marmo, calcare, granito',
-    seoDescription: 'Pavimenti interni in marmo di Carrara, calcare di Trani e granito. Grandi formati fino a 60×120 cm. Posa a colla. Preventivo in 24 h.',
+    seoDescription: 'Pavimenti interni in marmo di Carrara, calcare di Trani e granito. Grandi formati fino a 60×120 cm. Posa a colla. Preventivo rapido.',
     intro: 'Un pavimento in pietra naturale è ciò che si tocca per primo al mattino e si guarda di continuo. La sua riuscita dipende da tre cose: materiale, calepinio e qualità della posa.',
     story: [
       'Dal 1998 equipaggiamo interni residenziali e alberghieri di alta gamma. I grandi formati (60×60 e soprattutto 60×120) sono diventati la norma.',
@@ -190,7 +190,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   interiorCladding: {
     seoTitle: 'Rivestimento murale interno in pietra | Marmo e calcare',
-    seoDescription: 'Rivestimenti murali interni in marmo di Carrara e calcare italiano. Bookmatch, grandi lastre, formati su misura. Preventivo in 24 h.',
+    seoDescription: 'Rivestimenti murali interni in marmo di Carrara e calcare italiano. Bookmatch, grandi lastre, formati su misura. Preventivo rapido.',
     intro: 'Una parete in pietra naturale cambia completamente la percezione di una stanza. Luce, acustica, sensazione di materia: nessun altro materiale produce questo effetto.',
     story: [
       'I nostri rivestimenti murali interni vanno dalla piastrella 30×60 al pannello monumentale 180×280 in bookmatch. Il bookmatch è l\u2019espressione più spettacolare della pietra naturale.',
@@ -207,7 +207,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   kitchenCountertops: {
     seoTitle: 'Top cucina in marmo e granito | Su misura',
-    seoDescription: 'Top cucina in marmo Calacatta, Statuario e granito sardo. Bookmatch, mitered edge, su misura. Preventivo in 24 h.',
+    seoDescription: 'Top cucina in marmo Calacatta, Statuario e granito sardo. Bookmatch, mitered edge, su misura. Preventivo rapido.',
     intro: 'Un top cucina in pietra naturale è l\u2019elemento più osservato di una cucina. Deve essere bello il primo giorno e restarlo dopo diecimila pasti.',
     story: [
       'Equipaggiamo cucine dal 2004, dal top semplice all\u2019isola da 4 metri in bookmatch senza giunto visibile. La nostra forza: validare ogni lastra di persona in cava prima della produzione.',
@@ -224,7 +224,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   sinks: {
     seoTitle: 'Lavabi in pietra naturale | Marmo e granito nella massa',
-    seoDescription: 'Lavabi in marmo e granito scolpiti nella massa. Da appoggio o integrati, dimensioni su misura. Preventivo in 24 h.',
+    seoDescription: 'Lavabi in marmo e granito scolpiti nella massa. Da appoggio o integrati, dimensioni su misura. Preventivo rapido.',
     intro: 'Un lavabo nella massa in pietra naturale è un oggetto raro. Pesa, dura, si patina. Nessun composito riproduce questa presenza.',
     story: [
       'Scolpiamo i nostri lavabi da un blocco unico, senza incollaggi di fondo né di pareti. Limita i rischi di perdita a lungo termine.',
@@ -241,7 +241,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   bathtubs: {
     seoTitle: 'Vasche in marmo scolpite a mano | Pezzi unici',
-    seoDescription: 'Vasche monolitiche in marmo di Carrara, scolpite a mano a Pietrasanta. Pezzi unici su disegno. Preventivo in 24 h.',
+    seoDescription: 'Vasche monolitiche in marmo di Carrara, scolpite a mano a Pietrasanta. Pezzi unici su disegno. Preventivo rapido.',
     intro: 'Una vasca in marmo è probabilmente il pezzo più impressionante che si possa installare in un bagno. È anche un progetto di artigianato puro: 6-12 settimane di scultura, e un oggetto unico alla fine.',
     story: [
       'Le nostre vasche sono scolpite in un blocco unico di marmo, a Pietrasanta, dagli stessi laboratori che scolpiscono le nostre sculture monumentali.',
@@ -258,7 +258,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   openBookSlabs: {
     seoTitle: 'Lastre open book bookmatch | Marmo e granito per professionisti',
-    seoDescription: 'Lastre open book bookmatch in marmo di Carrara e granito. Coppie selezionate in cava. Vendita ai professionisti. Preventivo in 24 h.',
+    seoDescription: 'Lastre open book bookmatch in marmo di Carrara e granito. Coppie selezionate in cava. Vendita ai professionisti. Preventivo rapido.',
     intro: 'L\u2019open book è l\u2019espressione più spettacolare della pietra naturale. Due lastre aperte come un libro, due venature a specchio, un effetto quasi architettonico.',
     story: [
       'Forniamo coppie open book a marmisti, falegnami e architetti dal 2005. Il nostro lavoro: pre-selezionare le coppie in cava, validare la coerenza della venatura, poi spedirle protette in casse di legno su misura.',
@@ -275,7 +275,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   blockSlabs: {
     seoTitle: 'Lastre da blocco in pietra naturale | Vendita a professionisti',
-    seoDescription: 'Lastre grezze in marmo, granito, calcare e arenaria. Vari spessori, vendita al pezzo o container. Per professionisti. Preventivo in 24 h.',
+    seoDescription: 'Lastre grezze in marmo, granito, calcare e arenaria. Vari spessori, vendita al pezzo o container. Per professionisti. Preventivo rapido.',
     intro: 'Per marmisti e falegnami, accedere a una materia prima affidabile e tracciata fa tutta la differenza. Siamo il vostro relais diretto con le cave italiane.',
     story: [
       'Dal 1998 forniamo lastre grezze a marmisti europei. Il nostro valore aggiunto non è il prezzo — è la selezione.',
