@@ -158,7 +158,7 @@ export default {
     productFaq: {
       leadTime: { q: 'Quels sont les délais de livraison ?', a: 'Comptez 2 à 3 semaines pour les pièces standard et 6 à 10 semaines pour le sur mesure ou les grandes quantités. Nous confirmons toujours un planning précis avec votre devis.' },
       sample: { q: 'Puis-je recevoir un échantillon avant commande ?', a: 'Oui, nous envoyons gratuitement de petits échantillons pour tout projet sérieux. Pour des pièces de référence plus grandes, un coût symbolique est demandé.' },
-      install: { q: 'Gérez-vous la pose ?', a: 'En Italie et dans certaines villes européennes, nous proposons la pose. Ailleurs, nous travaillons avec des poseurs qualifiés et restons disponibles pour conseiller à distance.' },
+      install: { q: 'Gérez-vous la pose ?', a: 'Sur certains projets, nous proposons la pose via nos partenaires. Ailleurs, nous travaillons avec vos poseurs ou des poseurs locaux qualifiés et restons disponibles pour conseiller à distance.' },
       pricing: { q: 'Comment obtenir un prix ?', a: 'Le prix dépend de la pierre, de la finition, des dimensions et de la quantité. Envoyez-nous votre brief : devis détaillé rapidement.' },
     },
     breadcrumb: { home: 'Accueil', products: 'Produits' },
@@ -220,7 +220,7 @@ export default {
       finishes: { q: 'Quelles finitions sont disponibles ?', a: 'Poli, adouci, flammé, brossé, sablé et vieilli. Toutes les finitions ne conviennent pas à toutes les pierres. Nous vous conseillons la meilleure option selon votre usage.' },
       warranty: { q: 'Proposez-vous une garantie ?', a: 'Les défauts matériels sont couverts pendant 12 mois. La pose, lorsqu\u2019elle est réalisée par nos soins, est couverte 24 mois.' },
       minimumOrder: { q: 'Y a-t-il une commande minimum ?', a: 'Pas de minimum strict, mais les petites commandes ont un coût logistique unitaire plus élevé. Nous optimisons les regroupements quand c\u2019est possible.' },
-      installation: { q: 'Gérez-vous la pose ?', a: 'En Italie et dans certaines villes européennes, oui. Ailleurs, nous travaillons avec des poseurs locaux qualifiés et supervisons à distance.' },
+      installation: { q: 'Gérez-vous la pose ?', a: 'Sur certains projets, oui, via nos partenaires. Ailleurs, nous travaillons avec des poseurs locaux qualifiés et supervisons à distance.' },
       pricing: { q: 'Comment se calcule le prix ?', a: 'Selon la pierre, la finition, les dimensions, la complexité et la quantité. Envoyez-nous votre brief : devis détaillé rapidement.' },
       custom: { q: 'Réalisez-vous des projets sur mesure ?', a: 'Absolument. Des sculptures à la main aux plans de travail bookmatchés, la majorité de notre travail est sur mesure.' },
     },
