@@ -3,7 +3,7 @@ import type { ProductContentEntry } from './productContent.fr';
 const productContent: Record<string, ProductContentEntry> = {
   externalPaving: {
     seoTitle: 'Outdoor stone paving | Italian porfido, granite, sandstone',
-    seoDescription: 'Outdoor paving in Trentino porfido, Sardinian granite and Verona sandstone. Slip-resistant R11–R13, frost-proof. Quote within 24 hours.',
+    seoDescription: 'Outdoor paving in Trentino porfido, Sardinian granite and Verona sandstone. Slip-resistant R11–R13, frost-proof. Fast quote.',
     intro: 'Outdoor paving is the first thing your guests step on. Our job is to choose stone that will resist thirty years of footfall, frost and salt without losing its character.',
     story: [
       'Since 1998 we have supplied outdoor paving for Italian public squares, Provençal courtyards and alpine villa driveways. Each project taught us the same lesson: 80% of long-term durability comes from stone selection and installation, not price.',
@@ -20,7 +20,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   fountains: {
     seoTitle: 'Natural stone fountains | Italian marble & limestone',
-    seoDescription: 'Fountains in Carrara marble and Trani limestone, hand-carved in Pietrasanta. Catalogue or bespoke. Quote within 24 hours.',
+    seoDescription: 'Fountains in Carrara marble and Trani limestone, hand-carved in Pietrasanta. Catalogue or bespoke. Fast quote.',
     intro: 'A fountain is not an object, it is a centre of gravity. The sound of water, the mass of stone, the patina that builds up: everything must be designed to last generations.',
     story: [
       'Our fountains are carved in Pietrasanta, the Tuscan district of marble sculptors since Michelangelo. We work with three family workshops fluent in both classical reproductions and contemporary commissions.',
@@ -37,7 +37,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   columns: {
     seoTitle: 'Bespoke natural stone columns | Marble, limestone, granite',
-    seoDescription: 'Columns in marble, limestone and granite, CNC-turned and hand-finished. Diameters 20–60 cm, heights up to 4 m. Quote within 24 hours.',
+    seoDescription: 'Columns in marble, limestone and granite, CNC-turned and hand-finished. Diameters 20–60 cm, heights up to 4 m. Fast quote.',
     intro: 'A column carries a roof or an intention. In both cases, its proportions, capital and finish decide everything.',
     story: [
       'We have produced columns since 2002, from contemporary smooth shafts to classical orders (Tuscan, Doric, Ionic, Corinthian). Turning is CNC for proportion accuracy, then hand-refined by our sculptors for capitals and bases.',
@@ -54,7 +54,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   balustrades: {
     seoTitle: 'Natural stone balustrades | Italian marble and limestone',
-    seoDescription: 'Turned balusters, handrails and pilasters in Italian marble and limestone. Custom production, code-compliant. Quote within 24 hours.',
+    seoDescription: 'Turned balusters, handrails and pilasters in Italian marble and limestone. Custom production, code-compliant. Fast quote.',
     intro: 'A balustrade is a safety element before it is an ornament. Code-required height, baluster spacing, anchoring: we treat both dimensions without compromise.',
     story: [
       'Our balustrades meet European safety codes (1 m minimum height, ≤ 11 cm vertical spacing). We systematically adapt classical models to be both elegant and compliant.',
@@ -71,7 +71,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   flowerBoxes: {
     seoTitle: 'Natural stone planters | Italian limestone and sandstone',
-    seoDescription: 'Planters in Trani limestone and Verona sandstone, carved from solid block. Frost-resistant, integrated drainage. Quote within 24 hours.',
+    seoDescription: 'Planters in Trani limestone and Verona sandstone, carved from solid block. Frost-resistant, integrated drainage. Fast quote.',
     intro: 'A natural stone planter is a 30-year investment. Choosing the right stone and drainage means avoiding the cracks of the first winter.',
     story: [
       'We carve our planters from a single block, never as glued plates. It costs more in material, but it is the only way to prevent infiltrations that crack a planter at first frost.',
@@ -88,7 +88,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   benches: {
     seoTitle: 'Natural stone benches | Italian granite and limestone',
-    seoDescription: 'Monolithic benches in Sardinian granite and Trani limestone, up to 3 linear m. For squares, gardens, surroundings. Quote within 24 hours.',
+    seoDescription: 'Monolithic benches in Sardinian granite and Trani limestone, up to 3 linear m. For squares, gardens, surroundings. Fast quote.',
     intro: 'A stone bench is chosen on two criteria: the mass that discourages displacement and vandalism, and thermal comfort that decides whether anyone actually sits on it.',
     story: [
       'We work benches as monoliths (carved from a single block) up to 3 linear m. Beyond that, we segment into precisely aligned elements to preserve the continuous read.',
@@ -105,7 +105,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   bollards: {
     seoTitle: 'Natural stone bollards | Granite and porfido',
-    seoDescription: 'Urban bollards in Sardinian granite and Trentino porfido. Indestructible, code-compliant. Quote within 24 hours.',
+    seoDescription: 'Urban bollards in Sardinian granite and Trentino porfido. Indestructible, code-compliant. Fast quote.',
     intro: 'A bollard separates a pedestrian from a vehicle. In exposed urban zones, it is a safety object before it is an ornament.',
     story: [
       'We have produced urban bollards since 2005, from classical truncated cones to contemporary designs. All are carved from a single block, no hollow or assembly, for maximum impact resistance.',
@@ -122,7 +122,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   curbs: {
     seoTitle: 'Natural stone curbs | Italian granite and porfido',
-    seoDescription: 'Road and garden curbs in Sardinian granite and porfido. Lengths up to 2 m, custom sections. Quote within 24 hours.',
+    seoDescription: 'Road and garden curbs in Sardinian granite and porfido. Lengths up to 2 m, custom sections. Fast quote.',
     intro: 'Curbs structure everything: a path, a flowerbed, a sidewalk. Poorly chosen, they crack at first winter. Well chosen, they last fifty years.',
     story: [
       'We have supplied curbs since 2000, for private projects and Italian public tenders. The most-requested sections (10×25, 15×30) are stocked; others produced in 4–6 weeks.',
@@ -139,7 +139,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   sculptures: {
     seoTitle: 'Natural stone sculptures | Carrara marble & limestone',
-    seoDescription: 'Bespoke sculptures in Carrara marble and limestone, hand-carved in Pietrasanta. Reproductions, originals, restorations. Quote within 24 hours.',
+    seoDescription: 'Bespoke sculptures in Carrara marble and limestone, hand-carved in Pietrasanta. Reproductions, originals, restorations. Fast quote.',
     intro: 'A bespoke sculpture is a dialogue between your intent, the sculptor and the stone. We have facilitated this dialogue since 2003.',
     story: [
       'We work with three Pietrasanta workshops, the Tuscan district where the best marble sculptors have concentrated for five centuries. Each has a specialty: classical reproduction, contemporary figurative, or monumental abstraction.',
@@ -156,7 +156,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   externalCladding: {
     seoTitle: 'Natural stone façade cladding | Limestone, sandstone, porfido',
-    seoDescription: 'Façade cladding in Trani limestone, Verona sandstone and porfido. Glued or anchored installation, code-compliant. Quote within 24 hours.',
+    seoDescription: 'Façade cladding in Trani limestone, Verona sandstone and porfido. Glued or anchored installation, code-compliant. Fast quote.',
     intro: 'A natural stone façade is more than a coating: it is a building\u2019s identity for fifty years. Stone, format and installation system condition everything else.',
     story: [
       'We have supported façade projects since 2001, from glued-on-render cladding to ventilated rear-anchored systems. On contemporary architectural projects, ventilated installation prevails: better insulation, fast drying, and the ability to replace one panel without dismounting everything.',
@@ -173,7 +173,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   interiorFlooring: {
     seoTitle: 'Natural stone interior flooring | Marble, limestone, granite',
-    seoDescription: 'Interior flooring in Carrara marble, Trani limestone and granite. Large formats up to 60×120 cm. Full-bed installation. Quote within 24 hours.',
+    seoDescription: 'Interior flooring in Carrara marble, Trani limestone and granite. Large formats up to 60×120 cm. Full-bed installation. Fast quote.',
     intro: 'A natural stone floor is what you touch first in the morning and look at constantly. Its success rests on three things: material, layout, and installation quality.',
     story: [
       'Since 1998, we have equipped high-end residential and hospitality interiors. Large formats (60×60 and especially 60×120) have become the norm: fewer joints, more continuous read, stone valorisation.',
@@ -190,7 +190,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   interiorCladding: {
     seoTitle: 'Interior wall cladding in natural stone | Marble & limestone',
-    seoDescription: 'Interior wall cladding in Carrara marble and Italian limestone. Bookmatch, large slabs, custom formats. Quote within 24 hours.',
+    seoDescription: 'Interior wall cladding in Carrara marble and Italian limestone. Bookmatch, large slabs, custom formats. Fast quote.',
     intro: 'A natural stone wall completely changes the perception of a room. Light, acoustics, sense of matter: no other material produces this effect.',
     story: [
       'Our interior wall claddings range from 30×60 plates to monumental 180×280 bookmatch panels. Bookmatch — two slabs opened mirror-like as a book — is the most spectacular expression of natural stone, ideal behind a TV unit or as a headboard.',
@@ -207,7 +207,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   kitchenCountertops: {
     seoTitle: 'Marble and granite kitchen countertops | Bespoke',
-    seoDescription: 'Kitchen countertops in Calacatta, Statuario marble and Sardinian granite. Bookmatch, mitered edge, bespoke. Quote within 24 hours.',
+    seoDescription: 'Kitchen countertops in Calacatta, Statuario marble and Sardinian granite. Bookmatch, mitered edge, bespoke. Fast quote.',
     intro: 'A natural stone countertop is the most-watched element of a kitchen. It must be beautiful on day one and stay that way after ten thousand meals.',
     story: [
       'We have equipped kitchens since 2004, from simple counters to 4-metre bookmatch islands without visible joints. Our edge: validating each slab in person at the quarry before production, guaranteeing the vein you choose is exactly what gets installed.',
@@ -224,7 +224,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   sinks: {
     seoTitle: 'Natural stone sinks | Solid-block marble and granite',
-    seoDescription: 'Sinks in marble and granite carved from a solid block. Vessel or integrated, custom dimensions. Quote within 24 hours.',
+    seoDescription: 'Sinks in marble and granite carved from a solid block. Vessel or integrated, custom dimensions. Fast quote.',
     intro: 'A solid-block natural stone sink is a rare object. It weighs, it lasts, it patinas. No composite reproduces this presence.',
     story: [
       'We carve our sinks from a single block, no glued bottom or walls. This limits long-term leak risks and gives the object its characteristic mass.',
@@ -241,7 +241,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   bathtubs: {
     seoTitle: 'Hand-carved marble bathtubs | One-of-a-kind pieces',
-    seoDescription: 'Monolithic bathtubs in Carrara marble, hand-carved in Pietrasanta. One-of-a-kind bespoke. Quote within 24 hours.',
+    seoDescription: 'Monolithic bathtubs in Carrara marble, hand-carved in Pietrasanta. One-of-a-kind bespoke. Fast quote.',
     intro: 'A marble bathtub is probably the most impressive piece you can install in a bathroom. It is also a pure craft project: 6 to 12 weeks of carving, and a unique object at the end.',
     story: [
       'Our bathtubs are carved from a single marble block, in Pietrasanta, by the same workshops that carve our monumental sculptures. A standard 180 cm tub starts from a 3–4 ton block, 80% of which will be removed during carving.',
@@ -258,7 +258,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   openBookSlabs: {
     seoTitle: 'Open-book bookmatch slabs | Marble and granite for trade',
-    seoDescription: 'Open-book bookmatch slabs in Carrara marble and granite. Pairs selected at the quarry. Trade sales. Quote within 24 hours.',
+    seoDescription: 'Open-book bookmatch slabs in Carrara marble and granite. Pairs selected at the quarry. Trade sales. Fast quote.',
     intro: 'Open-book is the most spectacular expression of natural stone. Two slabs opened like a book, two veins mirrored, an almost-architectural effect.',
     story: [
       'We have supplied open-book pairs to fabricators, joiners and architects since 2005. Our work: pre-selecting pairs at the quarry, validating veining coherence, then shipping protected by custom wood crates.',
@@ -275,7 +275,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   blockSlabs: {
     seoTitle: 'Block slabs in natural stone | Trade sales',
-    seoDescription: 'Raw slabs in marble, granite, limestone and sandstone. Multiple thicknesses, sold per piece or container. Trade only. Quote within 24 hours.',
+    seoDescription: 'Raw slabs in marble, granite, limestone and sandstone. Multiple thicknesses, sold per piece or container. Trade only. Fast quote.',
     intro: 'For fabricators and joiners, accessing a reliable and traced raw material makes all the difference. We are your direct relay with Italian quarries.',
     story: [
       'Since 1998 we have supplied raw slabs to European fabricators. Our value is not price — it is selection. We validate each lot at the quarry, refuse questionable slabs, and guarantee consistency from one container to the next.',

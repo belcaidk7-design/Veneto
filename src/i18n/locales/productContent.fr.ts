@@ -15,7 +15,7 @@ export type ProductContentEntry = {
 const productContent: Record<string, ProductContentEntry> = {
   externalPaving: {
     seoTitle: 'Dallage extérieur en pierre naturelle | Porphyre, granit, grès',
-    seoDescription: 'Dallages extérieurs en porphyre du Trentin, granit sarde et grès de Vérone. Antidérapant R11 à R13, résistants au gel. Devis sous 24 h.',
+    seoDescription: 'Dallages extérieurs en porphyre du Trentin, granit sarde et grès de Vérone. Antidérapant R11 à R13, résistants au gel. Devis rapide.',
     intro: 'Le dallage extérieur est la première chose que l\u2019on touche en arrivant chez vous. Notre rôle est de choisir la pierre qui résistera trente ans aux passages, au gel et au sel, sans rien perdre de son cachet.',
     story: [
       'Depuis 1998, nous fournissons des dallages extérieurs pour des places publiques italiennes, des cours privées en Provence et des accès de villas alpines. Chaque chantier nous a appris une chose : la durabilité d\u2019un dallage tient à 80 % au choix de la pierre et de la pose, pas à son prix.',
@@ -32,7 +32,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   fountains: {
     seoTitle: 'Fontaines en pierre naturelle | Marbre & calcaire italien',
-    seoDescription: 'Fontaines en marbre de Carrare et calcaire de Trani, sculptées à la main à Pietrasanta. Modèles catalogue ou sur dessin. Devis sous 24 h.',
+    seoDescription: 'Fontaines en marbre de Carrare et calcaire de Trani, sculptées à la main à Pietrasanta. Modèles catalogue ou sur dessin. Devis rapide.',
     intro: 'Une fontaine n\u2019est pas un objet, c\u2019est un point de gravité. Le bruit de l\u2019eau, la masse de la pierre, la patine qui se forme : tout doit être pensé pour traverser les générations.',
     story: [
       'Nos fontaines sont sculptées à Pietrasanta, le quartier des sculpteurs sur marbre depuis Michel-Ange. Nous travaillons avec trois ateliers familiaux qui maîtrisent aussi bien la copie de modèles classiques que la création contemporaine sur dessin.',
@@ -49,7 +49,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   columns: {
     seoTitle: 'Colonnes en pierre naturelle sur mesure | Marbre, calcaire, granit',
-    seoDescription: 'Colonnes en marbre, calcaire et granit, tournées CNC et finies à la main. Diamètres 20 à 60 cm, hauteurs jusqu\u2019à 4 m. Devis sous 24 h.',
+    seoDescription: 'Colonnes en marbre, calcaire et granit, tournées CNC et finies à la main. Diamètres 20 à 60 cm, hauteurs jusqu\u2019à 4 m. Devis rapide.',
     intro: 'Une colonne porte un toit ou une intention. Dans les deux cas, ses proportions, son chapiteau et sa finition décident de tout.',
     story: [
       'Nous produisons des colonnes depuis 2002, du fût lisse contemporain aux ordres classiques (toscan, dorique, ionique, corinthien). Le tournage est réalisé en CNC pour la précision des proportions, puis affiné à la main par nos sculpteurs pour les chapiteaux et bases.',
@@ -66,7 +66,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   balustrades: {
     seoTitle: 'Balustrades en pierre naturelle | Marbre et calcaire italien',
-    seoDescription: 'Balustres tournés, mains courantes et pilastres en marbre et calcaire italien. Production sur mesure, conforme NF P01-012. Devis sous 24 h.',
+    seoDescription: 'Balustres tournés, mains courantes et pilastres en marbre et calcaire italien. Production sur mesure, conforme NF P01-012. Devis rapide.',
     intro: 'Une balustrade est un élément de sécurité avant d\u2019être un ornement. Hauteur réglementaire, espacement des balustres, ancrage : nous traitons les deux dimensions sans compromis.',
     story: [
       'Nos balustrades respectent la norme NF P01-012 (hauteur 1 m minimum, espacement vertical entre balustres ≤ 11 cm). Nous adaptons systématiquement les modèles classiques pour qu\u2019ils soient à la fois esthétiques et conformes.',
@@ -83,7 +83,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   flowerBoxes: {
     seoTitle: 'Jardinières en pierre naturelle | Calcaire et grès italien',
-    seoDescription: 'Jardinières en calcaire de Trani et grès de Vérone, taillées dans la masse. Résistantes au gel, drainage intégré. Devis sous 24 h.',
+    seoDescription: 'Jardinières en calcaire de Trani et grès de Vérone, taillées dans la masse. Résistantes au gel, drainage intégré. Devis rapide.',
     intro: 'Une jardinière en pierre naturelle est un investissement à 30 ans. Choisir la bonne pierre et le bon drainage, c\u2019est s\u2019épargner les fissures du premier hiver.',
     story: [
       'Nous taillons nos jardinières dans la masse, pas en collage de plaques. Cela coûte plus cher en matière, mais c\u2019est la seule façon d\u2019éviter les infiltrations qui font éclater une jardinière au premier gel.',
@@ -100,7 +100,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   benches: {
     seoTitle: 'Bancs en pierre naturelle | Granit et calcaire italien',
-    seoDescription: 'Bancs monolithes en granit sarde et calcaire de Trani, jusqu\u2019à 3 m linéaires. Pour places publiques, jardins et abords. Devis sous 24 h.',
+    seoDescription: 'Bancs monolithes en granit sarde et calcaire de Trani, jusqu\u2019à 3 m linéaires. Pour places publiques, jardins et abords. Devis rapide.',
     intro: 'Un banc en pierre se choisit sur deux critères : la masse, qui décourage le déplacement et le vandalisme, et le confort thermique, qui détermine si on s\u2019y assied vraiment.',
     story: [
       'Nous travaillons les bancs en monolithe (taillés dans un seul bloc) jusqu\u2019à 3 m linéaires. Au-delà, nous segmentons en éléments alignés au cordeau pour préserver la lecture continue.',
@@ -117,7 +117,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   bollards: {
     seoTitle: 'Bornes en pierre naturelle | Granit et porphyre',
-    seoDescription: 'Bornes urbaines en granit sarde et porphyre du Trentin. Indestructibles, conformes aux normes urbaines. Devis sous 24 h.',
+    seoDescription: 'Bornes urbaines en granit sarde et porphyre du Trentin. Indestructibles, conformes aux normes urbaines. Devis rapide.',
     intro: 'Une borne sépare un piéton d\u2019une voiture. Dans les zones urbaines exposées, c\u2019est un objet de sécurité avant d\u2019être un ornement.',
     story: [
       'Nous produisons des bornes urbaines depuis 2005, du modèle classique tronconique au design contemporain. Toutes sont taillées dans un bloc unique, sans creux ni assemblage, pour une résistance maximale aux chocs de véhicules.',
@@ -134,7 +134,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   curbs: {
     seoTitle: 'Bordures en pierre naturelle | Granit et porphyre italien',
-    seoDescription: 'Bordures de voirie et de jardin en granit sarde et porphyre. Longueurs jusqu\u2019à 2 m, sections sur mesure. Devis sous 24 h.',
+    seoDescription: 'Bordures de voirie et de jardin en granit sarde et porphyre. Longueurs jusqu\u2019à 2 m, sections sur mesure. Devis rapide.',
     intro: 'La bordure structure tout : une allée, un parterre, un trottoir. Mal choisie, elle se fissure au premier hiver. Bien choisie, elle dure cinquante ans.',
     story: [
       'Nous fournissons des bordures depuis 2000, pour des chantiers privés comme pour des marchés publics italiens. Les sections les plus demandées (10×25, 15×30) sont en stock, les autres produites en 4 à 6 semaines.',
@@ -151,7 +151,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   sculptures: {
     seoTitle: 'Sculptures en pierre naturelle | Marbre de Carrare et calcaire',
-    seoDescription: 'Sculptures sur mesure en marbre de Carrare et calcaire, taillées à la main à Pietrasanta. Copies, créations, restaurations. Devis sous 24 h.',
+    seoDescription: 'Sculptures sur mesure en marbre de Carrare et calcaire, taillées à la main à Pietrasanta. Copies, créations, restaurations. Devis rapide.',
     intro: 'Une sculpture sur mesure est un dialogue entre votre intention, le sculpteur et la pierre. Nous facilitons ce dialogue depuis 2003.',
     story: [
       'Nous travaillons avec trois ateliers de Pietrasanta, le quartier toscan où se concentrent les meilleurs sculpteurs sur marbre depuis cinq siècles. Chacun a sa spécialité : reproduction de modèles classiques, sculpture figurative contemporaine, ou abstraction monumentale.',
@@ -168,7 +168,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   externalCladding: {
     seoTitle: 'Parement extérieur en pierre naturelle | Calcaire, grès, porphyre',
-    seoDescription: 'Parements de façade en calcaire de Trani, grès de Vérone et porphyre. Pose collée ou agrafée, conforme DTU 55.2. Devis sous 24 h.',
+    seoDescription: 'Parements de façade en calcaire de Trani, grès de Vérone et porphyre. Pose collée ou agrafée, conforme DTU 55.2. Devis rapide.',
     intro: 'Une façade en pierre naturelle, ce n\u2019est pas qu\u2019un revêtement : c\u2019est l\u2019identité d\u2019un bâtiment pour cinquante ans. Le choix de la pierre, du format et du système de pose conditionne tout le reste.',
     story: [
       'Nous accompagnons des projets de façade depuis 2001, du parement collé sur enduit à la pose agrafée ventilée. Sur les projets architecturaux contemporains, la pose ventilée s\u2019impose : meilleure isolation, séchage rapide, et possibilité de remplacer une plaque sans tout déposer.',
@@ -185,7 +185,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   interiorFlooring: {
     seoTitle: 'Sol intérieur en pierre naturelle | Marbre, calcaire, granit',
-    seoDescription: 'Sols intérieurs en marbre de Carrare, calcaire de Trani et granit. Grands formats jusqu\u2019à 60×120 cm. Pose collée plein bain. Devis sous 24 h.',
+    seoDescription: 'Sols intérieurs en marbre de Carrare, calcaire de Trani et granit. Grands formats jusqu\u2019à 60×120 cm. Pose collée plein bain. Devis rapide.',
     intro: 'Un sol en pierre naturelle est ce qu\u2019on touche en premier le matin et ce qu\u2019on regarde tout le temps. Sa réussite tient à trois choses : le matériau, le calepinage et la qualité de la pose.',
     story: [
       'Depuis 1998, nous équipons des intérieurs résidentiels et hôteliers haut de gamme. Les grands formats (60×60 et surtout 60×120) sont devenus la norme : moins de joints, lecture plus continue, valorisation de la pierre.',
@@ -202,7 +202,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   interiorCladding: {
     seoTitle: 'Parement mural intérieur en pierre naturelle | Marbre & calcaire',
-    seoDescription: 'Parements muraux intérieurs en marbre de Carrare et calcaire italien. Bookmatch, grandes dalles, formats sur mesure. Devis sous 24 h.',
+    seoDescription: 'Parements muraux intérieurs en marbre de Carrare et calcaire italien. Bookmatch, grandes dalles, formats sur mesure. Devis rapide.',
     intro: 'Un mur en pierre naturelle change la perception entière d\u2019une pièce. Lumière, acoustique, sensation de matière : aucun autre matériau ne produit cet effet.',
     story: [
       'Nos parements muraux intérieurs vont de la plaquette 30×60 au panneau monumental 180×280 en bookmatch. Le bookmatch — deux dalles ouvertes en miroir comme un livre — est l\u2019expression la plus spectaculaire de la pierre naturelle, idéal derrière un meuble TV ou en tête de lit.',
@@ -219,7 +219,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   kitchenCountertops: {
     seoTitle: 'Plans de travail en marbre et granit | Cuisine sur mesure',
-    seoDescription: 'Plans de travail cuisine en marbre Calacatta, Statuario et granit sarde. Bookmatch, mitered edge, sur mesure. Devis sous 24 h.',
+    seoDescription: 'Plans de travail cuisine en marbre Calacatta, Statuario et granit sarde. Bookmatch, mitered edge, sur mesure. Devis rapide.',
     intro: 'Un plan de travail en pierre naturelle est l\u2019élément le plus regardé d\u2019une cuisine. Il faut qu\u2019il soit beau le premier jour et qu\u2019il le reste après dix mille repas.',
     story: [
       'Nous équipons des cuisines depuis 2004, du plan simple à l\u2019îlot de 4 mètres en bookmatch sans joint apparent. Notre force : valider chaque dalle en personne en carrière avant production, pour garantir que la veine que vous choisissez est exactement celle qui sera installée.',
@@ -236,7 +236,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   sinks: {
     seoTitle: 'Vasques en pierre naturelle | Marbre et granit pleine masse',
-    seoDescription: 'Vasques en marbre et granit sculptées dans la masse. À poser ou intégrées, dimensions sur mesure. Devis sous 24 h.',
+    seoDescription: 'Vasques en marbre et granit sculptées dans la masse. À poser ou intégrées, dimensions sur mesure. Devis rapide.',
     intro: 'Une vasque pleine masse en pierre naturelle est un objet rare. Elle pèse, elle dure, elle se patine. Aucun composite ne reproduit cette présence.',
     story: [
       'Nous sculptons nos vasques dans un bloc unique, sans collage de fond ni de parois. Cela limite les risques de fuite à long terme et donne à l\u2019objet sa masse caractéristique.',
@@ -253,7 +253,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   bathtubs: {
     seoTitle: 'Baignoires en marbre sculptées à la main | Pièces uniques',
-    seoDescription: 'Baignoires monolithes en marbre de Carrare, sculptées à la main à Pietrasanta. Pièces uniques sur dessin. Devis sous 24 h.',
+    seoDescription: 'Baignoires monolithes en marbre de Carrare, sculptées à la main à Pietrasanta. Pièces uniques sur dessin. Devis rapide.',
     intro: 'Une baignoire en marbre est probablement la pièce la plus impressionnante qu\u2019on puisse installer dans une salle de bain. C\u2019est aussi un projet d\u2019artisanat pur : 6 à 12 semaines de sculpture, et un objet unique à la fin.',
     story: [
       'Nos baignoires sont sculptées dans un bloc unique de marbre, à Pietrasanta, par les mêmes ateliers qui taillent nos sculptures monumentales. Une baignoire standard de 180 cm part d\u2019un bloc de 3 à 4 tonnes, dont 80 % sera évacué pendant la sculpture.',
@@ -270,7 +270,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   openBookSlabs: {
     seoTitle: 'Dalles open book bookmatch | Marbre et granit pour pros',
-    seoDescription: 'Dalles open book bookmatch en marbre de Carrare et granit. Paires sélectionnées en carrière. Vente aux professionnels. Devis sous 24 h.',
+    seoDescription: 'Dalles open book bookmatch en marbre de Carrare et granit. Paires sélectionnées en carrière. Vente aux professionnels. Devis rapide.',
     intro: 'L\u2019open book est l\u2019expression la plus spectaculaire de la pierre naturelle. Deux dalles ouvertes comme un livre, deux veines en miroir, un effet quasi-architectural.',
     story: [
       'Nous fournissons des paires open book à des marbreries, agenceurs et architectes depuis 2005. Notre travail consiste à pré-sélectionner les paires en carrière, à valider la cohérence du veinage, puis à les expédier protégées par caisses bois sur mesure.',
@@ -287,7 +287,7 @@ const productContent: Record<string, ProductContentEntry> = {
   },
   blockSlabs: {
     seoTitle: 'Dalles de bloc en pierre naturelle | Vente aux professionnels',
-    seoDescription: 'Dalles brutes en marbre, granit, calcaire et grès. Plusieurs épaisseurs, vente à la pièce ou container. Pour pros. Devis sous 24 h.',
+    seoDescription: 'Dalles brutes en marbre, granit, calcaire et grès. Plusieurs épaisseurs, vente à la pièce ou container. Pour pros. Devis rapide.',
     intro: 'Pour les marbreries et agenceurs, accéder à une matière première fiable et tracée fait toute la différence. Nous sommes votre relais direct avec les carrières italiennes.',
     story: [
       'Depuis 1998, nous fournissons des dalles brutes à des marbreries européennes. Notre valeur ajoutée n\u2019est pas le prix — c\u2019est la sélection. Nous validons chaque lot en carrière, refusons les dalles douteuses, et garantissons la cohérence d\u2019un container à l\u2019autre.',
