@@ -107,7 +107,7 @@ export default {
       leadTime: { q: 'Quali sono i tempi di consegna?', a: 'Considera 2-3 settimane per i pezzi standard e 6-10 settimane per il su misura o le grandi quantità. Confermiamo sempre un calendario preciso col preventivo.' },
       sample: { q: 'Posso ricevere un campione prima dell\u2019ordine?', a: 'Sì, inviamo gratuitamente piccoli campioni per qualsiasi progetto serio. Per pezzi di riferimento più grandi è richiesto un costo simbolico.' },
       install: { q: 'Vi occupate della posa?', a: 'In Italia e in alcune città europee proponiamo la posa. Altrove lavoriamo con posatori qualificati e restiamo disponibili da remoto.' },
-      pricing: { q: 'Come ottengo un prezzo?', a: 'Il prezzo dipende da pietra, finitura, dimensioni e quantità. Inviaci il brief: preventivo dettagliato in 24 ore.' },
+      pricing: { q: 'Come ottengo un prezzo?', a: 'Il prezzo dipende da pietra, finitura, dimensioni e quantità. Inviaci il brief: ti prepariamo un preventivo dettagliato.' },
     },
     breadcrumb: { home: 'Home', products: 'Prodotti' },
     storyTitle: 'La storia di questa pietra',
