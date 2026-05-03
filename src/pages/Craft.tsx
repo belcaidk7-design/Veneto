@@ -21,6 +21,10 @@ const Craft = () => {
         title={t('seo.craft.title')}
         description={t('seo.craft.description')}
         path="/savoir-faire"
+        breadcrumbs={[
+          { name: t('nav.home'), path: '/' },
+          { name: t('nav.craft'), path: '/savoir-faire' },
+        ]}
       />
       <section className="border-b border-border/60 bg-secondary/40">
         <div className="container-prose py-16 md:py-20">

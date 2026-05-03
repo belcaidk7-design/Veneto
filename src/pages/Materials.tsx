@@ -15,6 +15,10 @@ const Materials = () => {
         title={t('seo.materials.title')}
         description={t('seo.materials.description')}
         path="/materials"
+        breadcrumbs={[
+          { name: t('nav.home'), path: '/' },
+          { name: t('nav.materials'), path: '/materials' },
+        ]}
       />
       <section className="border-b border-border/60 bg-secondary/40">
         <div className="container-prose py-16 md:py-20">

@@ -17,13 +17,22 @@ const Contact = () => {
         title={t('seo.contact.title')}
         description={t('seo.contact.description')}
         path="/contact"
+        breadcrumbs={[
+          { name: t('nav.home'), path: '/' },
+          { name: t('nav.contact'), path: '/contact' },
+        ]}
         jsonLd={{
           '@context': 'https://schema.org',
-          '@type': 'LocalBusiness',
-          name: 'HQ Stones',
-          telephone: PHONE,
-          email: 'info@hqstones.example',
-          areaServed: 'Worldwide',
+          '@type': 'ContactPage',
+          name: t('seo.contact.title'),
+          url: '/contact',
+          mainEntity: {
+            '@type': 'Organization',
+            name: 'HQ Stones',
+            telephone: PHONE,
+            email: 'info@hqstones.example',
+            areaServed: 'Worldwide',
+          },
         }}
       />
       <section className="border-b border-border/60 bg-secondary/40">
