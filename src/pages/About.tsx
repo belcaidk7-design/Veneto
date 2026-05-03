@@ -21,6 +21,17 @@ const About = () => {
         title={t('seo.about.title')}
         description={t('seo.about.description')}
         path="/about"
+        breadcrumbs={[
+          { name: t('nav.home'), path: '/' },
+          { name: t('nav.about'), path: '/about' },
+        ]}
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'AboutPage',
+          name: t('seo.about.title'),
+          description: t('seo.about.description'),
+          url: '/about',
+        }}
       />
       <section className="border-b border-border/60 bg-secondary/40">
         <div className="container-prose py-16 md:py-20">

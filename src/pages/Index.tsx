@@ -44,13 +44,6 @@ const Index = () => {
         description={t('seo.home.description')}
         path="/"
         image={heroMarble}
-        jsonLd={{
-          '@context': 'https://schema.org',
-          '@type': 'LocalBusiness',
-          name: 'HQ Stones',
-          description: t('seo.home.description'),
-          areaServed: 'Worldwide',
-        }}
       />
 
       {/* Hero */}

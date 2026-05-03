@@ -93,33 +93,26 @@ const ProductDetail = () => {
         description={seoDescription}
         path={`/products/${product.id}`}
         image={product.image}
-        jsonLd={[
-          {
-            '@context': 'https://schema.org',
-            '@type': 'Product',
-            name,
-            image: product.image,
-            description: intro || seoDescription,
-            category: categoryLabel,
-            brand: { '@type': 'Brand', name: 'HQ Stones' },
-            material: product.materials.map((m) => t(`materials.${m}`)).join(', '),
-            countryOfOrigin: 'IT',
-            ...(product.since && {
-              additionalProperty: [
-                { '@type': 'PropertyValue', name: 'Supplied since', value: product.since },
-              ],
-            }),
-          },
-          {
-            '@context': 'https://schema.org',
-            '@type': 'BreadcrumbList',
-            itemListElement: [
-              { '@type': 'ListItem', position: 1, name: t('productDetail.breadcrumb.home'), item: '/' },
-              { '@type': 'ListItem', position: 2, name: t('productDetail.breadcrumb.products'), item: '/products' },
-              { '@type': 'ListItem', position: 3, name },
-            ],
-          },
+        breadcrumbs={[
+          { name: t('productDetail.breadcrumb.home'), path: '/' },
+          { name: t('productDetail.breadcrumb.products'), path: '/products' },
+          { name, path: `/products/${product.id}` },
         ]}
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'Product',
+          name,
+          image: product.image,
+          description: intro || seoDescription,
+          category: categoryLabel,
+          brand: { '@type': 'Brand', name: 'HQ Stones' },
+          material: product.materials.map((m) => t(`materials.${m}`)).join(', '),
+          ...(product.since && {
+            additionalProperty: [
+              { '@type': 'PropertyValue', name: 'Supplied since', value: product.since },
+            ],
+          }),
+        }}
       />
 
       {/* Breadcrumb */}

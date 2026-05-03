@@ -29,6 +29,10 @@ const Faq = () => {
         title={t('seo.faq.title')}
         description={t('seo.faq.description')}
         path="/faq"
+        breadcrumbs={[
+          { name: t('nav.home'), path: '/' },
+          { name: t('nav.faq'), path: '/faq' },
+        ]}
         jsonLd={{
           '@context': 'https://schema.org',
           '@type': 'FAQPage',
