@@ -40,13 +40,28 @@ const BlogPost = () => {
         path={`/blog/${post.slug}`}
         image={post.cover}
         type="article"
+        breadcrumbs={[
+          { name: t('nav.home'), path: '/' },
+          { name: t('nav.blog'), path: '/blog' },
+          { name: title, path: `/blog/${post.slug}` },
+        ]}
         jsonLd={{
           '@context': 'https://schema.org',
-          '@type': 'Article',
+          '@type': 'BlogPosting',
           headline: title,
           description: excerpt,
+          image: post.cover,
           datePublished: post.date,
+          dateModified: post.date,
+          inLanguage: i18n.language,
+          articleSection: t(`blog.categories.${post.category}`),
           author: { '@type': 'Organization', name: 'HQ Stones' },
+          publisher: {
+            '@type': 'Organization',
+            name: 'HQ Stones',
+            logo: { '@type': 'ImageObject', url: '/favicon.ico' },
+          },
+          mainEntityOfPage: { '@type': 'WebPage', '@id': `/blog/${post.slug}` },
         }}
       />
 
