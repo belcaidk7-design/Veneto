@@ -6,9 +6,9 @@ const productContent: Record<string, ProductContentEntry> = {
     seoDescription: 'Pavimentazioni esterne in porfido del Trentino, granito sardo e arenaria di Verona. Antiscivolo R11–R13, resistenti al gelo. Preventivo rapido.',
     intro: 'La pavimentazione esterna è la prima cosa che si calpesta entrando in casa vostra. Il nostro ruolo è scegliere la pietra che resisterà trent\u2019anni a passaggi, gelo e sale, senza perdere carattere.',
     story: [
-      'Dal 1998 forniamo pavimentazioni esterne per piazze pubbliche italiane, corti private in Provenza e accessi di ville alpine. Ogni cantiere ci ha insegnato la stessa lezione: l\u201980% della durata dipende dalla scelta della pietra e della posa, non dal prezzo.',
+      'Da molti anni forniamo pavimentazioni esterne per piazze pubbliche italiane, corti private in Provenza e accessi di ville alpine. Ogni cantiere ci ha insegnato la stessa lezione: l\u201980% della durata dipende dalla scelta della pietra e della posa, non dal prezzo.',
       'Per le zone esposte (ingressi, bordi piscina, lungomare), consigliamo il porfido del Trentino, naturalmente antiscivolo e indifferente ai cicli gelo-disgelo. Per zone pedonali architettoniche, il granito sardo fiammato offre regolarità perfetta. Per ambienti mediterranei caldi, l\u2019arenaria di Verona invecchiata resta imbattibile.',
-      'Calepiniamo sempre prima della produzione: opus incertum, opus romano, lastre calibrate o cubetti. Ricevete un piano di posa, una cartella colore per lotto e una riserva di taglio del 5% — la base di un cantiere senza sorprese.',
+      'Calepiniamo sempre prima della produzione: opus incertum, opus romano, lastre calibrate o cubetti. Ricevete un piano di posa, una cartella colore per lotto e una riserva di taglio del 5%, la base di un cantiere senza sorprese.',
     ],
     provenance: 'Rete internazionale di cave partner, selezionate progetto per progetto.',
     signature: 'Calepinio personalizzato consegnato con ogni ordine, più riserva di taglio precalcolata.',
@@ -21,7 +21,7 @@ const productContent: Record<string, ProductContentEntry> = {
     story: [
       'Le nostre fontane sono scolpite a Pietrasanta, il quartiere degli scultori del marmo da Michelangelo in poi. Lavoriamo con tre laboratori familiari che padroneggiano sia la copia di modelli classici sia la creazione contemporanea.',
       'La scelta del materiale dipende da acqua e clima. Il marmo di Carrara conviene a fontane riparate o di patio. Per esterni esposti consigliamo calcare di Trani o di Vicenza, più tolleranti ai depositi calcarei e al gelo se il drenaggio è ben studiato.',
-      'Accompagniamo l\u2019idraulica: scelta della pompa, dimensionamento della vasca, trattamento dell\u2019acqua, allacciamento. Una fontana mal alimentata invecchia il doppio — meglio saperlo prima di gettare il massetto.',
+      'Accompagniamo l\u2019idraulica: scelta della pompa, dimensionamento della vasca, trattamento dell\u2019acqua, allacciamento. Una fontana mal alimentata invecchia il doppio, meglio saperlo prima di gettare il massetto.',
     ],
     provenance: 'Blocchi di Carrara e Trani, scultura a Pietrasanta (Toscana).',
     signature: 'Schema idraulico fornito con ogni fontana su misura.',
@@ -111,7 +111,7 @@ const productContent: Record<string, ProductContentEntry> = {
     intro: 'Una scultura su misura è un dialogo tra la vostra intenzione, lo scultore e la pietra. Facilitiamo questo dialogo da molti anni.',
     story: [
       'Lavoriamo con tre laboratori di Pietrasanta, il quartiere toscano dove si concentrano i migliori scultori del marmo da cinque secoli. Ognuno ha la sua specialità.',
-      'Il progetto inizia sempre con un disegno o un modello 3D, seguito da un bozzetto in argilla in scala 1:5. Validate prima che la pietra sia attaccata — passaggio che evita il 95% dei rimpianti.',
+      'Il progetto inizia sempre con un disegno o un modello 3D, seguito da un bozzetto in argilla in scala 1:5. Validate prima che la pietra sia attaccata, passaggio che evita il 95% dei rimpianti.',
       'Il marmo statuario di Carrara resta il vertice per la scultura figurativa. Per pezzi monumentali da esterno proponiamo anche il calcare di Vicenza, più economico e ugualmente espressivo.',
     ],
     provenance: 'Blocchi di Carrara e Vicenza, scultura a Pietrasanta.',
@@ -136,9 +136,9 @@ const productContent: Record<string, ProductContentEntry> = {
     seoDescription: 'Pavimenti interni in marmo di Carrara, calcare di Trani e granito. Grandi formati fino a 60×120 cm. Posa a colla. Preventivo rapido.',
     intro: 'Un pavimento in pietra naturale è ciò che si tocca per primo al mattino e si guarda di continuo. La sua riuscita dipende da tre cose: materiale, calepinio e qualità della posa.',
     story: [
-      'Dal 1998 equipaggiamo interni residenziali e alberghieri di alta gamma. I grandi formati (60×60 e soprattutto 60×120) sono diventati la norma.',
+      'Da molti anni equipaggiamo interni residenziali e alberghieri di alta gamma. I grandi formati (60×60 e soprattutto 60×120) sono diventati la norma.',
       'Il marmo Calacatta e Statuario restano i riferimenti per gli ambienti di rappresentanza. Per ambienti di vita intensiva, il calcare di Trani levigato offre eccellente compromesso. Il granito sardo è imbattibile in cucine ad alto traffico.',
-      'Consegniamo sempre un piano di calepinio validato. Le tagli in bordo non devono mai essere inferiori alla mezza piastrella — regola semplice che cambia tutto visivamente.',
+      'Consegniamo sempre un piano di calepinio validato. Le tagli in bordo non devono mai essere inferiori alla mezza piastrella, regola semplice che cambia tutto visivamente.',
     ],
     provenance: 'Carrara, Trani, Sardegna.',
     signature: 'Calepinio validato prima della produzione, mai tagli sotto la mezza piastrella.',
@@ -163,7 +163,7 @@ const productContent: Record<string, ProductContentEntry> = {
     intro: 'Un top cucina in pietra naturale è l\u2019elemento più osservato di una cucina. Deve essere bello il primo giorno e restarlo dopo diecimila pasti.',
     story: [
       'Equipaggiamo cucine da molti anni, dal top semplice all\u2019isola da 4 metri in bookmatch senza giunto visibile. La nostra forza: validare ogni lastra di persona in cava prima della produzione.',
-      'Il marmo Calacatta resta il sogno estetico dei nostri clienti. Vive, si patina e si macchia se mal mantenuto — siamo trasparenti su questo punto.',
+      'Il marmo Calacatta resta il sogno estetico dei nostri clienti. Vive, si patina e si macchia se mal mantenuto, siamo trasparenti su questo punto.',
       'Lo spessore visivo si lavora in mitered edge: due pezzi da 2 cm uniti a 45° danno l\u2019illusione di un blocco da 4, 6 o 8 cm.',
     ],
     provenance: 'Carrara (Calacatta, Statuario, Calacatta Viola), Sardegna (graniti).',
@@ -214,7 +214,7 @@ const productContent: Record<string, ProductContentEntry> = {
     seoDescription: 'Lastre grezze in marmo, granito, calcare e arenaria. Vari spessori, vendita al pezzo o container. Per professionisti. Preventivo rapido.',
     intro: 'Per marmisti e falegnami, accedere a una materia prima affidabile e tracciata fa tutta la differenza. Siamo il vostro relais diretto con le cave italiane.',
     story: [
-      'Dal 1998 forniamo lastre grezze a marmisti europei. Il nostro valore aggiunto non è il prezzo — è la selezione.',
+      'Da molti anni forniamo lastre grezze a marmisti europei. Il nostro valore aggiunto non è il prezzo, è la selezione.',
       'Lavoriamo tutti gli spessori standard (2, 3, 4, 6 e 8 cm) e tutte le finiture principali. Per progetti architettonici importanti possiamo riservare un blocco intero.',
       'La spedizione è al pezzo o al container completo. Documentazione doganale, certificazione CE e schede tecniche sempre fornite.',
     ],

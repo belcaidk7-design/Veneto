@@ -187,7 +187,7 @@ export default {
   about: {
     title: 'Chi siamo', subtitle: 'Rivenditore di pietra e consulente di progetto, sourcing internazionale.',
     storyTitle: 'La nostra storia',
-    storyBody: 'HQ Stones è nata da una convinzione: la pietra naturale merita di essere specificata, approvvigionata e finita con cura. Agiamo come rivenditore e consulente, guidando architetti, designer e privati a ogni passaggio, dalla scelta della cava alla consegna in cantiere.\n\nLa nostra rete internazionale di cave partner — bacino mediterraneo, Sud America, Asia — ci dà accesso ad alcune delle pietre più distinte al mondo, per rispondere a ogni progetto con la materia più giusta.',
+    storyBody: 'HQ Stones è nata da una convinzione: la pietra naturale merita di essere specificata, approvvigionata e finita con cura. Agiamo come rivenditore e consulente, guidando architetti, designer e privati a ogni passaggio, dalla scelta della cava alla consegna in cantiere.\n\nLa nostra rete internazionale di cave partner, bacino mediterraneo, Sud America, Asia, ci dà accesso ad alcune delle pietre più distinte al mondo, per rispondere a ogni progetto con la materia più giusta.',
     valuesTitle: 'I nostri valori', valueQuality: 'Qualità', valueQualityDesc: 'Ogni lastra ispezionata, ogni finitura verificata. Senza compromessi.',
     valueExpertise: 'Esperienza', valueExpertiseDesc: 'Decenni di consulenza su progetti residenziali e commerciali.',
     valueCustom: 'Progetti su misura', valueCustomDesc: 'Fabbricazione e installazione su misura, adattate alla tua visione.',

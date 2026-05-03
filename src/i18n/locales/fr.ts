@@ -261,7 +261,7 @@ export default {
     title: 'À propos de HQ Stones',
     subtitle: 'Revendeur de pierre et consultant projet, sourcing international.',
     storyTitle: 'Notre histoire',
-    storyBody: 'HQ Stones est née d\u2019une conviction : la pierre naturelle mérite d\u2019être spécifiée, sourcée et finie avec soin. Nous agissons comme revendeur et consultant, guidant architectes, designers et particuliers à chaque étape, du choix de la carrière à la livraison sur chantier.\n\nNotre réseau international de carrières partenaires nous donne accès à certaines des plus belles pierres du monde — bassin méditerranéen, Amérique du Sud, Asie — pour répondre à chaque projet par la matière la plus juste.',
+    storyBody: 'HQ Stones est née d\u2019une conviction : la pierre naturelle mérite d\u2019être spécifiée, sourcée et finie avec soin. Nous agissons comme revendeur et consultant, guidant architectes, designers et particuliers à chaque étape, du choix de la carrière à la livraison sur chantier.\n\nNotre réseau international de carrières partenaires nous donne accès à certaines des plus belles pierres du monde, bassin méditerranéen, Amérique du Sud, Asie, pour répondre à chaque projet par la matière la plus juste.',
     valuesTitle: 'Nos valeurs',
     valueQuality: 'Qualité',
     valueQualityDesc: 'Chaque dalle inspectée, chaque finition vérifiée. Sans compromis.',

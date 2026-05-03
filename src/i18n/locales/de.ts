@@ -186,7 +186,7 @@ export default {
   about: {
     title: 'Über HQ Stones', subtitle: 'Steinhändler und Projektberater mit internationalem Sourcing.',
     storyTitle: 'Unsere Geschichte',
-    storyBody: 'HQ Stones wurde aus einer Überzeugung gegründet: Naturstein verdient es, mit Sorgfalt spezifiziert, beschafft und veredelt zu werden. Wir agieren als Händler und Berater und führen Architekten, Designer und Privatkunden durch jeden Schritt, von der Steinbruchwahl bis zur Lieferung.\n\nUnser internationales Netzwerk an Partnersteinbrüchen — Mittelmeerraum, Südamerika, Asien — gibt uns Zugang zu einigen der edelsten Steine der Welt, sodass wir jedem Projekt das passende Material zuordnen können.',
+    storyBody: 'HQ Stones wurde aus einer Überzeugung gegründet: Naturstein verdient es, mit Sorgfalt spezifiziert, beschafft und veredelt zu werden. Wir agieren als Händler und Berater und führen Architekten, Designer und Privatkunden durch jeden Schritt, von der Steinbruchwahl bis zur Lieferung.\n\nUnser internationales Netzwerk an Partnersteinbrüchen, Mittelmeerraum, Südamerika, Asien, gibt uns Zugang zu einigen der edelsten Steine der Welt, sodass wir jedem Projekt das passende Material zuordnen können.',
     valuesTitle: 'Unsere Werte', valueQuality: 'Qualität', valueQualityDesc: 'Jede Platte geprüft, jede Oberfläche kontrolliert. Keine Kompromisse.',
     valueExpertise: 'Expertise', valueExpertiseDesc: 'Jahrzehnte Beratungserfahrung bei Wohn- und Gewerbeprojekten.',
     valueCustom: 'Maßprojekte', valueCustomDesc: 'Maßgeschneiderte Fertigung und Verlegung, abgestimmt auf Ihre Vision.',

@@ -248,7 +248,7 @@ export default {
     title: 'About HQ Stones',
     subtitle: 'A stone reseller and project consultant with international sourcing.',
     storyTitle: 'Our story',
-    storyBody: 'HQ Stones was founded with a single conviction: natural stone deserves to be specified, sourced and finished with care. We act as both reseller and consultant, guiding architects, designers and private clients through every step, from quarry selection to on-site delivery.\n\nOur international network of partner quarries — across the Mediterranean basin, South America and Asia — gives us access to some of the world\u2019s most distinguished stone, so we can match each project with the right material.',
+    storyBody: 'HQ Stones was founded with a single conviction: natural stone deserves to be specified, sourced and finished with care. We act as both reseller and consultant, guiding architects, designers and private clients through every step, from quarry selection to on-site delivery.\n\nOur international network of partner quarries, across the Mediterranean basin, South America and Asia, gives us access to some of the world\u2019s most distinguished stone, so we can match each project with the right material.',
     valuesTitle: 'Our values',
     valueQuality: 'Quality',
     valueQualityDesc: 'Every slab inspected, every finish verified. No compromises.',
