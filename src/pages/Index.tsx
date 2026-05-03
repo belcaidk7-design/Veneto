@@ -49,8 +49,7 @@ const Index = () => {
           '@type': 'LocalBusiness',
           name: 'HQ Stones',
           description: t('seo.home.description'),
-          areaServed: 'Italy',
-          address: { '@type': 'PostalAddress', addressCountry: 'IT' },
+          areaServed: 'Worldwide',
         }}
       />
 

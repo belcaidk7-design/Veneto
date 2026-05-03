@@ -23,8 +23,7 @@ const Contact = () => {
           name: 'HQ Stones',
           telephone: PHONE,
           email: 'info@hqstones.example',
-          areaServed: 'Italy',
-          address: { '@type': 'PostalAddress', addressCountry: 'IT' },
+          areaServed: 'Worldwide',
         }}
       />
       <section className="border-b border-border/60 bg-secondary/40">
@@ -76,16 +75,6 @@ const Contact = () => {
             </div>
           </div>
 
-          <h3 className="mt-10 font-serif text-lg">{t('contact.findUs')}</h3>
-          <div className="mt-4 aspect-[4/3] overflow-hidden rounded-sm border border-border/60">
-            <iframe
-              title="HQ Stones location"
-              src="https://www.google.com/maps?q=Italy&output=embed"
-              loading="lazy"
-              className="h-full w-full border-0"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
-          </div>
         </aside>
       </section>
     </Layout>
