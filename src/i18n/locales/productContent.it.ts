@@ -10,13 +10,9 @@ const productContent: Record<string, ProductContentEntry> = {
       'Per le zone esposte (ingressi, bordi piscina, lungomare), consigliamo il porfido del Trentino, naturalmente antiscivolo e indifferente ai cicli gelo-disgelo. Per zone pedonali architettoniche, il granito sardo fiammato offre regolarità perfetta. Per ambienti mediterranei caldi, l\u2019arenaria di Verona invecchiata resta imbattibile.',
       'Calepiniamo sempre prima della produzione: opus incertum, opus romano, lastre calibrate o cubetti. Ricevete un piano di posa, una cartella colore per lotto e una riserva di taglio del 5% — la base di un cantiere senza sorprese.',
     ],
-    provenance: 'Cave partner di Trento (porfido), Olbia (granito) e Sant\u2019Ambrogio di Valpolicella (arenaria).',
+    provenance: 'Rete internazionale di cave partner, selezionate progetto per progetto.',
     signature: 'Calepinio personalizzato consegnato con ogni ordine, più riserva di taglio precalcolata.',
-    bestProjects: [
-      'Restauro della piazza storica di un borgo lombardo (820 m² in cubetti di porfido, 2023)',
-      'Bordo piscina e contorno di una villa toscana (340 m² granito fiammato, 2024)',
-      'Viale d\u2019accesso e corte pavimentata di una tenuta vinicola in Provenza (180 m² arenaria invecchiata, 2022)',
-    ],
+    bestProjects: [],
   },
   fountains: {
     seoTitle: 'Fontane in pietra naturale | Marmo e calcare italiano',
@@ -29,28 +25,20 @@ const productContent: Record<string, ProductContentEntry> = {
     ],
     provenance: 'Blocchi di Carrara e Trani, scultura a Pietrasanta (Toscana).',
     signature: 'Schema idraulico fornito con ogni fontana su misura.',
-    bestProjects: [
-      'Fontana centrale di un riad ristrutturato a Marrakech (Bianco Carrara, 2,4 m, 2023)',
-      'Vasca rotonda d\u2019ingresso per villa a Cap-Ferrat (calcare di Trani, 2024)',
-      'Fontana a muro rinascimentale riprodotta per una tenuta toscana (2022)',
-    ],
+    bestProjects: [],
   },
   columns: {
     seoTitle: 'Colonne in pietra naturale su misura | Marmo, calcare, granito',
     seoDescription: 'Colonne in marmo, calcare e granito, tornite CNC e rifinite a mano. Diametri 20–60 cm, altezze fino a 4 m. Preventivo rapido.',
     intro: 'Una colonna sostiene un tetto o un\u2019intenzione. In entrambi i casi, proporzioni, capitello e finitura decidono tutto.',
     story: [
-      'Produciamo colonne dal 2002, dal fusto liscio contemporaneo agli ordini classici (toscano, dorico, ionico, corinzio). La tornitura è CNC per la precisione delle proporzioni, poi affinata a mano dai nostri scultori.',
+      'Produciamo colonne da molti anni, dal fusto liscio contemporaneo agli ordini classici (toscano, dorico, ionico, corinzio). La tornitura è CNC per la precisione delle proporzioni, poi affinata a mano dai nostri scultori.',
       'Il calcare di Vicenza resta il miglior compromesso qualità-prezzo per colonne ornamentali. Il marmo di Carrara per progetti prestigiosi. Il granito sardo per colonne strutturali sotto carico o esposte.',
       'Per altezze superiori a 2,5 m forniamo calcoli di stabilità, ancoraggi inox e istruzioni di sollevamento. Una colonna non è mai un oggetto isolato: trabeazione, base, ancoraggio chimico, tutto deve essere validato a monte.',
     ],
     provenance: 'Vicenza (calcare), Carrara (marmo), Olbia (granito).',
     signature: 'Nota di calcolo e schema di ancoraggio per ogni colonna ≥ 2,5 m.',
-    bestProjects: [
-      'Peristilio di 8 colonne corinzie in calcare per un\u2019aranciera privata (Île-de-France, 2023)',
-      'Quattro colonne monolitiche in marmo Carrara per la lobby di un hotel a Milano (2024)',
-      'Colonne doriche in granito per portico di villa balneare (Sardegna, 2022)',
-    ],
+    bestProjects: [],
   },
   balustrades: {
     seoTitle: 'Balaustre in pietra naturale | Marmo e calcare italiano',
@@ -63,11 +51,7 @@ const productContent: Record<string, ProductContentEntry> = {
     ],
     provenance: 'Botticino (Brescia), Vicenza, Carrara.',
     signature: 'Conformità normativa di default, piani di posa numerati.',
-    bestProjects: [
-      'Balaustra di terrazza panoramica per villa lacustre (Como, 80 m lineari, 2023)',
-      'Corrimano interni per scala di palazzo storico (Parigi, 2024)',
-      'Restauro balaustra di un\u2019aranciera del XVIII secolo (Provenza, 2022)',
-    ],
+    bestProjects: [],
   },
   flowerBoxes: {
     seoTitle: 'Fioriere in pietra naturale | Calcare e arenaria italiana',
@@ -80,11 +64,7 @@ const productContent: Record<string, ProductContentEntry> = {
     ],
     provenance: 'Trani (Puglia), Verona, Vicenza.',
     signature: 'Scultura nella massa + drenaggio integrato, pronte alla piantumazione.',
-    bestProjects: [
-      'Serie di 12 fioriere per rooftop d\u2019hotel a Milano (calcare Trani, 2024)',
-      'Fioriere monumentali d\u2019ingresso per tenuta vinicola (Bordeaux, arenaria, 2023)',
-      'Sistemazione paesaggistica privata Costa Azzurra (24 fioriere su misura, 2022)',
-    ],
+    bestProjects: [],
   },
   benches: {
     seoTitle: 'Panchine in pietra naturale | Granito e calcare italiano',
@@ -97,50 +77,38 @@ const productContent: Record<string, ProductContentEntry> = {
     ],
     provenance: 'Sardegna (granito), Trani (calcare).',
     signature: 'Monoliti fino a 3 m, note di calcolo del massetto incluse.',
-    bestProjects: [
-      'Arredo urbano per la ristrutturazione di una passeggiata lacustre (18 panchine in granito, 2023)',
-      'Cinque panchine monolitiche per un parco privato in Borgogna (calcare, 2024)',
-      'Arredo d\u2019accoglienza per un museo regionale italiano (granito fiammato, 2022)',
-    ],
+    bestProjects: [],
   },
   bollards: {
     seoTitle: 'Dissuasori in pietra naturale | Granito e porfido',
     seoDescription: 'Dissuasori urbani in granito sardo e porfido del Trentino. Indistruttibili, conformi alle norme urbane. Preventivo rapido.',
     intro: 'Un dissuasore separa un pedone da un\u2019auto. Nelle zone urbane esposte è un oggetto di sicurezza prima che ornamentale.',
     story: [
-      'Produciamo dissuasori urbani dal 2005, dal modello classico tronco-conico al design contemporaneo. Tutti scolpiti da un blocco unico, senza vuoti né assemblaggi, per massima resistenza agli urti.',
+      'Produciamo dissuasori urbani da molti anni, dal modello classico tronco-conico al design contemporaneo. Tutti scolpiti da un blocco unico, senza vuoti né assemblaggi, per massima resistenza agli urti.',
       'Il granito sardo resta il riferimento per l\u2019arredo urbano: densità ≥ 2 700 kg/m³, resistenza a flessione superiore a 20 MPa, insensibile al sale stradale. Il porfido del Trentino offre alternativa più colorata per i centri storici italiani.',
       'Forniamo gli ancoraggi inox (chimico o piastra) e adattiamo le altezze: 60 cm per segnalazione, 90 cm per separazione, 120 cm per protezione rinforzata.',
     ],
     provenance: 'Olbia (granito), Trento (porfido).',
     signature: 'Monolite senza incollaggi, ancoraggio inox incluso, conformità urbana.',
-    bestProjects: [
-      'Cinquanta dissuasori per messa in sicurezza di una zona pedonale (centro città italiano, 2023)',
-      'Dissuasori decorativi d\u2019ingresso per tenuta in Svizzera (granito, 2024)',
-      'Restauro dissuasori di una piazza storica (porfido, 2022)',
-    ],
+    bestProjects: [],
   },
   curbs: {
     seoTitle: 'Cordoli in pietra naturale | Granito e porfido italiano',
     seoDescription: 'Cordoli stradali e da giardino in granito sardo e porfido. Lunghezze fino a 2 m, sezioni su misura. Preventivo rapido.',
     intro: 'Il cordolo struttura tutto: un viale, un\u2019aiuola, un marciapiede. Mal scelto, si crepa al primo inverno. Ben scelto, dura cinquant\u2019anni.',
     story: [
-      'Forniamo cordoli dal 2000, per cantieri privati e appalti pubblici italiani. Le sezioni più richieste (10×25, 15×30) sono a magazzino, le altre prodotte in 4–6 settimane.',
+      'Forniamo cordoli da molti anni, per cantieri privati e appalti pubblici italiani. Le sezioni più richieste (10×25, 15×30) sono a magazzino, le altre prodotte in 4–6 settimane.',
       'Il granito è il materiale di riferimento per cordoli stradali. Il porfido conviene meglio agli spazi pedonali e ai giardini, dove la sua palette aggiunge carattere.',
       'Forniamo i cordoli con teste dritte o smussate (45°, 30°), e proponiamo angoli prefabbricati per evitare tagli in cantiere. Un dettaglio che fa risparmiare due giorni di posa su un progetto da 200 m lineari.',
     ],
     provenance: 'Olbia (granito), Trento (porfido).',
     signature: 'Angoli prefabbricati su richiesta, teste smussate senza sovrapprezzo.',
-    bestProjects: [
-      'Cordoli di viali e aiuole per un hotel 5 stelle (320 m granito fiammato, 2024)',
-      'Rifacimento completo cordoli di una piazza di paese (porfido, 2023)',
-      'Cordoli da giardino per tenuta privata in Svizzera (granito spazzolato, 2022)',
-    ],
+    bestProjects: [],
   },
   sculptures: {
     seoTitle: 'Sculture in pietra naturale | Marmo di Carrara e calcare',
     seoDescription: 'Sculture su misura in marmo di Carrara e calcare, scolpite a mano a Pietrasanta. Copie, creazioni, restauri. Preventivo rapido.',
-    intro: 'Una scultura su misura è un dialogo tra la vostra intenzione, lo scultore e la pietra. Facilitiamo questo dialogo dal 2003.',
+    intro: 'Una scultura su misura è un dialogo tra la vostra intenzione, lo scultore e la pietra. Facilitiamo questo dialogo da molti anni.',
     story: [
       'Lavoriamo con tre laboratori di Pietrasanta, il quartiere toscano dove si concentrano i migliori scultori del marmo da cinque secoli. Ognuno ha la sua specialità.',
       'Il progetto inizia sempre con un disegno o un modello 3D, seguito da un bozzetto in argilla in scala 1:5. Validate prima che la pietra sia attaccata — passaggio che evita il 95% dei rimpianti.',
@@ -148,28 +116,20 @@ const productContent: Record<string, ProductContentEntry> = {
     ],
     provenance: 'Blocchi di Carrara e Vicenza, scultura a Pietrasanta.',
     signature: 'Validazione tramite bozzetto in argilla 1:5 prima della scultura definitiva.',
-    bestProjects: [
-      'Busto-ritratto a grandezza naturale per collezionista privato (marmo statuario, 2023)',
-      'Scultura astratta monumentale per giardino di fondazione (calcare, 3 m, 2024)',
-      'Riproduzione di putto rinascimentale per cappella privata (marmo, 2022)',
-    ],
+    bestProjects: [],
   },
   externalCladding: {
     seoTitle: 'Rivestimento esterno in pietra naturale | Calcare, arenaria, porfido',
     seoDescription: 'Rivestimenti di facciata in calcare di Trani, arenaria di Verona e porfido. Posa incollata o ancorata, conforme alle norme. Preventivo rapido.',
     intro: 'Una facciata in pietra naturale non è solo rivestimento: è l\u2019identità di un edificio per cinquant\u2019anni. Pietra, formato e sistema di posa condizionano tutto il resto.',
     story: [
-      'Accompagniamo progetti di facciata dal 2001, dal rivestimento incollato su intonaco alla posa ancorata ventilata. Sui progetti contemporanei la posa ventilata si impone: migliore isolamento, asciugatura rapida, sostituibilità.',
+      'Accompagniamo progetti di facciata da molti anni, dal rivestimento incollato su intonaco alla posa ancorata ventilata. Sui progetti contemporanei la posa ventilata si impone: migliore isolamento, asciugatura rapida, sostituibilità.',
       'Il calcare di Trani resta il nostro best-seller per facciate mediterranee. L\u2019arenaria di Verona conviene meglio ai climi continentali umidi. Il porfido eccelle come accento.',
       'Calepiniamo rispettando i vincoli di posa e forniamo una cartella colore per lotto. Una facciata riuscita è omogenea, e l\u2019omogeneità si verifica a terra, non una volta posata.',
     ],
     provenance: 'Trani, Verona, Trento.',
     signature: 'Calepinio conforme a norma, cartella colore prevalidata per lotto.',
-    bestProjects: [
-      'Facciata residenziale di alta gamma (820 m² calcare Trani ancorato, Lione, 2024)',
-      'Restauro facciata di palazzo del XIX secolo (Italia, 2023)',
-      'Rivestimento e zoccolatura di villa contemporanea (porfido + arenaria, Svizzera, 2022)',
-    ],
+    bestProjects: [],
   },
   interiorFlooring: {
     seoTitle: 'Pavimento interno in pietra naturale | Marmo, calcare, granito',
@@ -182,11 +142,7 @@ const productContent: Record<string, ProductContentEntry> = {
     ],
     provenance: 'Carrara, Trani, Sardegna.',
     signature: 'Calepinio validato prima della produzione, mai tagli sotto la mezza piastrella.',
-    bestProjects: [
-      'Pavimento di rappresentanza di villa lacustre (Calacatta lucido 60×120, 240 m², 2024)',
-      'Pavimenti integrali di hotel 5 stelle (Trani levigato, 1 200 m², 2023)',
-      'Pavimento di cucina aperta con isola (granito fiammato, 90 m², 2022)',
-    ],
+    bestProjects: [],
   },
   interiorCladding: {
     seoTitle: 'Rivestimento murale interno in pietra | Marmo e calcare',
@@ -199,28 +155,20 @@ const productContent: Record<string, ProductContentEntry> = {
     ],
     provenance: 'Carrara, Botticino, Trani.',
     signature: 'Selezione di paia bookmatch in loco prima della spedizione.',
-    bestProjects: [
-      'Parete signature in Calacatta Viola per soggiorno parigino (4 m × 3 m bookmatch, 2024)',
-      'Testiera monumentale in Sahara Noir per suite d\u2019hotel (2023)',
-      'Rivestimento integrale di scala in calcare Botticino (villa privata, 2022)',
-    ],
+    bestProjects: [],
   },
   kitchenCountertops: {
     seoTitle: 'Top cucina in marmo e granito | Su misura',
     seoDescription: 'Top cucina in marmo Calacatta, Statuario e granito sardo. Bookmatch, mitered edge, su misura. Preventivo rapido.',
     intro: 'Un top cucina in pietra naturale è l\u2019elemento più osservato di una cucina. Deve essere bello il primo giorno e restarlo dopo diecimila pasti.',
     story: [
-      'Equipaggiamo cucine dal 2004, dal top semplice all\u2019isola da 4 metri in bookmatch senza giunto visibile. La nostra forza: validare ogni lastra di persona in cava prima della produzione.',
+      'Equipaggiamo cucine da molti anni, dal top semplice all\u2019isola da 4 metri in bookmatch senza giunto visibile. La nostra forza: validare ogni lastra di persona in cava prima della produzione.',
       'Il marmo Calacatta resta il sogno estetico dei nostri clienti. Vive, si patina e si macchia se mal mantenuto — siamo trasparenti su questo punto.',
       'Lo spessore visivo si lavora in mitered edge: due pezzi da 2 cm uniti a 45° danno l\u2019illusione di un blocco da 4, 6 o 8 cm.',
     ],
     provenance: 'Carrara (Calacatta, Statuario, Calacatta Viola), Sardegna (graniti).',
     signature: 'Validazione visiva della lastra in cava prima della produzione, senza sovrapprezzo.',
-    bestProjects: [
-      'Isola bookmatch da 3,8 m in Calacatta Borghini per cucina privata (Como, 2024)',
-      'Top cucina e schienali in mitered edge 6 cm (Statuario, 2023)',
-      'Cucina professionale di ristorante stellato (granito Nero Assoluto, 2022)',
-    ],
+    bestProjects: [],
   },
   sinks: {
     seoTitle: 'Lavabi in pietra naturale | Marmo e granito nella massa',
@@ -233,11 +181,7 @@ const productContent: Record<string, ProductContentEntry> = {
     ],
     provenance: 'Carrara, Sardegna.',
     signature: 'Scultura nella massa, fori adattati alla vostra rubinetteria.',
-    bestProjects: [
-      'Coppia di lavabi in marmo Calacatta per suite padronale (2024)',
-      'Lavabi nella massa di una spa d\u2019hotel (granito grigio fiammato, 2023)',
-      'Lavabo scolpito su disegno per villa contemporanea (Statuario, 2022)',
-    ],
+    bestProjects: [],
   },
   bathtubs: {
     seoTitle: 'Vasche in marmo scolpite a mano | Pezzi unici',
@@ -250,28 +194,20 @@ const productContent: Record<string, ProductContentEntry> = {
     ],
     provenance: 'Blocco di Carrara, scultura a Pietrasanta.',
     signature: 'Pezzo unico, nota di portanza fornita, studio strutturale coordinato.',
-    bestProjects: [
-      'Vasca ovale 200 cm in Calacatta Viola per suite padronale (Costa Azzurra, 2024)',
-      'Vasca monolitica su disegno per attico milanese (Statuario, 2023)',
-      'Vasca da spa privata in marmo nero (Sahara Noir, 2022)',
-    ],
+    bestProjects: [],
   },
   openBookSlabs: {
     seoTitle: 'Lastre open book bookmatch | Marmo e granito per professionisti',
     seoDescription: 'Lastre open book bookmatch in marmo di Carrara e granito. Coppie selezionate in cava. Vendita ai professionisti. Preventivo rapido.',
     intro: 'L\u2019open book è l\u2019espressione più spettacolare della pietra naturale. Due lastre aperte come un libro, due venature a specchio, un effetto quasi architettonico.',
     story: [
-      'Forniamo coppie open book a marmisti, falegnami e architetti dal 2005. Il nostro lavoro: pre-selezionare le coppie in cava, validare la coerenza della venatura, poi spedirle protette in casse di legno su misura.',
+      'Forniamo coppie open book a marmisti, falegnami e architetti da molti anni. Il nostro lavoro: pre-selezionare le coppie in cava, validare la coerenza della venatura, poi spedirle protette in casse di legno su misura.',
       'Non tutte le pietre si prestano al bookmatch. Calacatta, Statuario, Calacatta Viola e certi graniti esotici (Patagonia, Azul Macaubas) danno gli effetti più spettacolari.',
       'Per progetti esigenti proponiamo una visita in cava per validare le coppie di persona, a Carrara o in Sardegna.',
     ],
     provenance: 'Carrara, Sardegna, selezioni importate dal Sud America.',
     signature: 'Foto HD prima della spedizione, visita in cava su richiesta.',
-    bestProjects: [
-      'Sei coppie Calacatta Viola per progetto di suite alberghiere (Dubai, 2024)',
-      'Granito Patagonia bookmatch per reception aziendale (Ginevra, 2023)',
-      'Statuario per marmista partner in Germania (2022)',
-    ],
+    bestProjects: [],
   },
   blockSlabs: {
     seoTitle: 'Lastre da blocco in pietra naturale | Vendita a professionisti',
@@ -284,11 +220,7 @@ const productContent: Record<string, ProductContentEntry> = {
     ],
     provenance: 'Carrara, Sardegna, Trani, Verona.',
     signature: 'Validazione in cava + riserva di blocco intero su richiesta.',
-    bestProjects: [
-      'Approvvigionamento regolare di marmista svizzero di alta gamma (dal 2019)',
-      'Container completo di Calacatta per progetto d\u2019hotel (Germania, 2024)',
-      'Riserva di blocco Statuario per falegname parigino (2023)',
-    ],
+    bestProjects: [],
   },
 };
 
