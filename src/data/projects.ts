@@ -16,7 +16,7 @@ export interface Project {
   image: string;
 }
 
-// Réalisations issues du catalogue Greenova Solutions S.R.L.
+// Réalisations issues du catalogue HQ Stones
 // CONTENT: les visuels actuels sont des placeholders ; remplacer par les vraies photos du catalogue (page 1 à 5).
 export const PROJECTS: Project[] = [
   { id: 'ljubljana-cemetery', i18nKey: 'ljubljanaCemetery', type: 'public', materials: ['granite'], image: publicSquare },
