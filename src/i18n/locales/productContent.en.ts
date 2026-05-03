@@ -6,9 +6,9 @@ const productContent: Record<string, ProductContentEntry> = {
     seoDescription: 'Outdoor paving in Trentino porfido, Sardinian granite and Verona sandstone. Slip-resistant R11–R13, frost-proof. Fast quote.',
     intro: 'Outdoor paving is the first thing your guests step on. Our job is to choose stone that will resist thirty years of footfall, frost and salt without losing its character.',
     story: [
-      'Since 1998 we have supplied outdoor paving for Italian public squares, Provençal courtyards and alpine villa driveways. Each project taught us the same lesson: 80% of long-term durability comes from stone selection and installation, not price.',
+      'For many years we have supplied outdoor paving for Italian public squares, Provençal courtyards and alpine villa driveways. Each project taught us the same lesson: 80% of long-term durability comes from stone selection and installation, not price.',
       'For exposed zones (entrances, pool decks, seafront), we recommend Trentino porfido, naturally slip-resistant and indifferent to freeze-thaw cycles. For architectural pedestrian areas, flamed Sardinian granite offers perfect regularity. For warm Mediterranean settings, aged Verona sandstone remains unbeatable.',
-      'We always provide a layout plan before production: opus incertum, opus romanum, calibrated slabs or setts. You receive a tile-by-tile plan, a per-batch shade chart and a 5% cutting reserve — the foundation of a project without surprises.',
+      'We always provide a layout plan before production: opus incertum, opus romanum, calibrated slabs or setts. You receive a tile-by-tile plan, a per-batch shade chart and a 5% cutting reserve, the foundation of a project without surprises.',
     ],
     provenance: 'International network of partner quarries, selected project by project.',
     signature: 'Custom layout plan delivered with every order, plus pre-calculated cutting reserve.',
@@ -21,7 +21,7 @@ const productContent: Record<string, ProductContentEntry> = {
     story: [
       'Our fountains are carved in Pietrasanta, the Tuscan district of marble sculptors since Michelangelo. We work with three family workshops fluent in both classical reproductions and contemporary commissions.',
       'Material choice depends on water and climate. Carrara marble suits sheltered or interior patio fountains. For exposed exterior, we recommend Trani or Vicenza limestone, more tolerant of limescale and frost when drainage is properly engineered.',
-      'We support hydraulics: pump selection, basin sizing, water treatment, plumbing. A poorly fed fountain ages twice as fast — better to know before pouring the slab.',
+      'We support hydraulics: pump selection, basin sizing, water treatment, plumbing. A poorly fed fountain ages twice as fast, better to know before pouring the slab.',
     ],
     provenance: 'Blocks from Carrara and Trani, carved in Pietrasanta (Tuscany).',
     signature: 'Hydraulic plan provided with every bespoke fountain.',
@@ -34,7 +34,7 @@ const productContent: Record<string, ProductContentEntry> = {
     story: [
       'We have produced columns for many years, from contemporary smooth shafts to classical orders (Tuscan, Doric, Ionic, Corinthian). Turning is CNC for proportion accuracy, then hand-refined by our sculptors for capitals and bases.',
       'Vicenza limestone remains the best value for ornamental columns: easy to carve, stable, beautiful cream tone. Carrara marble for prestigious projects where light should play in the stone. Sardinian granite for structural columns under heavy load or weather.',
-      'For heights above 2.5 m, we provide stability calculations, stainless anchors and lifting instructions. A column is never an isolated object: entablature, base, chemical anchoring — all must be validated upfront.',
+      'For heights above 2.5 m, we provide stability calculations, stainless anchors and lifting instructions. A column is never an isolated object: entablature, base, chemical anchoring, all must be validated upfront.',
     ],
     provenance: 'Vicenza (limestone), Carrara (marble), Olbia (granite).',
     signature: 'Calculation note and anchoring scheme for any column ≥ 2.5 m.',
@@ -111,7 +111,7 @@ const productContent: Record<string, ProductContentEntry> = {
     intro: 'A bespoke sculpture is a dialogue between your intent, the sculptor and the stone. We have facilitated this dialogue for many years.',
     story: [
       'We work with three Pietrasanta workshops, the Tuscan district where the best marble sculptors have concentrated for five centuries. Each has a specialty: classical reproduction, contemporary figurative, or monumental abstraction.',
-      'A project always starts with a drawing or 3D model, then a 1:5 clay maquette. You validate before the stone is touched — a step that prevents 95% of regret.',
+      'A project always starts with a drawing or 3D model, then a 1:5 clay maquette. You validate before the stone is touched, a step that prevents 95% of regret.',
       'Carrara statuary marble remains the summit for figurative sculpture: fine grain, whiteness, transparency to light. For monumental outdoor pieces, we also offer Vicenza limestone, more economical and equally expressive.',
     ],
     provenance: 'Carrara and Vicenza blocks, carving in Pietrasanta.',
@@ -138,7 +138,7 @@ const productContent: Record<string, ProductContentEntry> = {
     story: [
       'we have equipped high-end residential and hospitality interiors. Large formats (60×60 and especially 60×120) have become the norm: fewer joints, more continuous read, stone valorisation.',
       'Calacatta and Statuario marble remain references for reception rooms. For intensive living areas, honed Trani limestone offers an excellent warmth-resistance compromise. Sardinian granite is unbeatable in high-traffic kitchens and commercial spaces.',
-      'We always deliver a validated layout plan: installation direction, starting points, cuts. Border cuts must never be smaller than half a tile — a simple rule that visually changes everything.',
+      'We always deliver a validated layout plan: installation direction, starting points, cuts. Border cuts must never be smaller than half a tile, a simple rule that visually changes everything.',
     ],
     provenance: 'Carrara, Trani, Sardinia.',
     signature: 'Validated layout before production, no border cut below half a tile.',
@@ -149,7 +149,7 @@ const productContent: Record<string, ProductContentEntry> = {
     seoDescription: 'Interior wall cladding in Carrara marble and Italian limestone. Bookmatch, large slabs, custom formats. Fast quote.',
     intro: 'A natural stone wall completely changes the perception of a room. Light, acoustics, sense of matter: no other material produces this effect.',
     story: [
-      'Our interior wall claddings range from 30×60 plates to monumental 180×280 bookmatch panels. Bookmatch — two slabs opened mirror-like as a book — is the most spectacular expression of natural stone, ideal behind a TV unit or as a headboard.',
+      'Our interior wall claddings range from 30×60 plates to monumental 180×280 bookmatch panels. Bookmatch, two slabs opened mirror-like as a book, is the most spectacular expression of natural stone, ideal behind a TV unit or as a headboard.',
       'Calacatta Viola, Statuario and Sahara Noir marble are our best-sellers for signature ambiences. For more sober projects, honed Botticino or Trani limestone offer a more discreet but equally noble presence.',
       'Large-slab installation requires rigorous substrate preparation and safety fixings (glue alone forbidden beyond certain formats). We provide technical sheets and coordinate with your installer.',
     ],
@@ -163,7 +163,7 @@ const productContent: Record<string, ProductContentEntry> = {
     intro: 'A natural stone countertop is the most-watched element of a kitchen. It must be beautiful on day one and stay that way after ten thousand meals.',
     story: [
       'We have equipped kitchens for many years, from simple counters to 4-metre bookmatch islands without visible joints. Our edge: validating each slab in person at the quarry before production, guaranteeing the vein you choose is exactly what gets installed.',
-      'Calacatta marble remains the aesthetic dream of our clients. It lives, patinas, and stains if poorly maintained — we are transparent about this. For those wanting the marble look without any constraint, we offer natural quartzites with granite-equivalent hardness.',
+      'Calacatta marble remains the aesthetic dream of our clients. It lives, patinas, and stains if poorly maintained, we are transparent about this. For those wanting the marble look without any constraint, we offer natural quartzites with granite-equivalent hardness.',
       'Visual thickness is crafted with mitered edges: two 2 cm pieces joined at 45° give the illusion of a 4, 6 or 8 cm block. Lighter, cheaper and more stable than a real block.',
     ],
     provenance: 'Carrara (Calacatta, Statuario, Calacatta Viola), Sardinia (granites).',
@@ -214,7 +214,7 @@ const productContent: Record<string, ProductContentEntry> = {
     seoDescription: 'Raw slabs in marble, granite, limestone and sandstone. Multiple thicknesses, sold per piece or container. Trade only. Fast quote.',
     intro: 'For fabricators and joiners, accessing a reliable and traced raw material makes all the difference. We are your direct relay with Italian quarries.',
     story: [
-      'Since 1998 we have supplied raw slabs to European fabricators. Our value is not price — it is selection. We validate each lot at the quarry, refuse questionable slabs, and guarantee consistency from one container to the next.',
+      'For many years we have supplied raw slabs to European fabricators. Our value is not price, it is selection. We validate each lot at the quarry, refuse questionable slabs, and guarantee consistency from one container to the next.',
       'We work all standard thicknesses (2, 3, 4, 6 and 8 cm) and all main finishes. For major architectural projects, we can reserve an entire block to guarantee shade unity across the whole site.',
       'Shipping is by piece (air pallet, port to port) or full container for fabricators replenishing stock. Customs documentation, CE certification and technical sheets provided systematically.',
     ],

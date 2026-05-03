@@ -214,7 +214,7 @@ const productContent: Record<string, ProductContentEntry> = {
     seoDescription: 'Rohplatten aus Marmor, Granit, Kalkstein und Sandstein. Verschiedene Stärken, Verkauf pro Stück oder Container. Nur für Profis. Schnelles Angebot.',
     intro: 'Für Steinmetze und Tischler macht der Zugang zu einem zuverlässigen und nachverfolgten Rohmaterial den ganzen Unterschied. Wir sind Ihr direktes Bindeglied zu italienischen Steinbrüchen.',
     story: [
-      'beliefern wir europäische Steinmetze mit Rohplatten. Unser Mehrwert ist nicht der Preis — es ist die Auswahl.',
+      'beliefern wir europäische Steinmetze mit Rohplatten. Unser Mehrwert ist nicht der Preis, es ist die Auswahl.',
       'Wir bearbeiten alle Standardstärken (2, 3, 4, 6 und 8 cm) und alle Hauptoberflächen.',
       'Versand erfolgt pro Stück oder im Vollcontainer.',
     ],

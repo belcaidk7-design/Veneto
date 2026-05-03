@@ -1,4 +1,4 @@
-// Contenu unique par produit — signaux E-E-A-T (expertise, expérience, autorité, fiabilité).
+// Contenu unique par produit, signaux E-E-A-T (expertise, expérience, autorité, fiabilité).
 // Chaque entrée : story (3 paragraphes), provenance, signature, bestProjects (3), seoTitle, seoDescription.
 // CONTENT: relire et personnaliser avec vos vraies références projets.
 
@@ -20,7 +20,7 @@ const productContent: Record<string, ProductContentEntry> = {
     story: [
       'nous fournissons des dallages extérieurs pour des places publiques italiennes, des cours privées en Provence et des accès de villas alpines. Chaque chantier nous a appris une chose : la durabilité d\u2019un dallage tient à 80 % au choix de la pierre et de la pose, pas à son prix.',
       'Pour les zones très exposées (entrées, plages de piscine, abords de mer), nous orientons vers le porphyre du Trentin, naturellement antidérapant et insensible aux cycles gel/dégel. Pour les espaces piétons à fort caractère architectural, le granit sarde flammé offre une régularité parfaite. Pour les ambiances chaleureuses méditerranéennes, le grès de Vérone vieilli reste imbattable.',
-      'Nous calepinons systématiquement avant production : opus incertum, opus romain, dalles calibrées ou pavés. Vous recevez un plan de pose, une nuanciée de teintes par lot et une réserve de 5 % pour les coupes — la base d\u2019un chantier sans mauvaise surprise.',
+      'Nous calepinons systématiquement avant production : opus incertum, opus romain, dalles calibrées ou pavés. Vous recevez un plan de pose, une nuanciée de teintes par lot et une réserve de 5 % pour les coupes, la base d\u2019un chantier sans mauvaise surprise.',
     ],
     provenance: 'Réseau international de carrières partenaires sélectionnées projet par projet.',
     signature: 'Calepinage personnalisé livré avec chaque commande, plus une réserve de coupe pré-calculée.',
@@ -33,7 +33,7 @@ const productContent: Record<string, ProductContentEntry> = {
     story: [
       'Nos fontaines sont sculptées à Pietrasanta, le quartier des sculpteurs sur marbre depuis Michel-Ange. Nous travaillons avec trois ateliers familiaux qui maîtrisent aussi bien la copie de modèles classiques que la création contemporaine sur dessin.',
       'Le choix du matériau dépend de l\u2019eau et du climat. Le marbre de Carrare convient aux fontaines abritées ou intérieures de patio. Pour l\u2019extérieur exposé, nous recommandons le calcaire de Trani ou le calcaire de Vicenza, plus tolérants aux dépôts calcaires et au gel quand le drainage est correctement étudié.',
-      'Nous accompagnons l\u2019hydraulique : choix de la pompe, dimensionnement du bassin, traitement de l\u2019eau, raccordement. Une fontaine mal alimentée vieillit deux fois plus vite — autant le savoir avant de couler la dalle.',
+      'Nous accompagnons l\u2019hydraulique : choix de la pompe, dimensionnement du bassin, traitement de l\u2019eau, raccordement. Une fontaine mal alimentée vieillit deux fois plus vite, autant le savoir avant de couler la dalle.',
     ],
     provenance: 'Approvisionnement international, sélection bloc par bloc.',
     signature: 'Plan hydraulique fourni avec chaque fontaine sur mesure (pompe, drainage, raccordement).',
@@ -123,7 +123,7 @@ const productContent: Record<string, ProductContentEntry> = {
     intro: 'Une sculpture sur mesure est un dialogue entre votre intention, le sculpteur et la pierre. Nous facilitons ce dialogue depuis longtemps.',
     story: [
       'Nous travaillons avec trois ateliers de Pietrasanta, le quartier toscan où se concentrent les meilleurs sculpteurs sur marbre depuis cinq siècles. Chacun a sa spécialité : reproduction de modèles classiques, sculpture figurative contemporaine, ou abstraction monumentale.',
-      'Le projet commence toujours par un dessin ou un modèle 3D, suivi d\u2019une maquette en argile à l\u2019échelle 1:5. Vous validez avant que la pierre soit attaquée — une étape qui évite 95 % des regrets.',
+      'Le projet commence toujours par un dessin ou un modèle 3D, suivi d\u2019une maquette en argile à l\u2019échelle 1:5. Vous validez avant que la pierre soit attaquée, une étape qui évite 95 % des regrets.',
       'Le marbre statuaire de Carrare reste le sommet pour la sculpture figurative : grain fin, blancheur, transparence à la lumière. Pour les pièces monumentales d\u2019extérieur, nous proposons aussi le calcaire de Vicenza, plus économique et tout aussi expressif.',
     ],
     provenance: 'Bloc de Carrare et Vicenza, sculpture à Pietrasanta.',
@@ -150,7 +150,7 @@ const productContent: Record<string, ProductContentEntry> = {
     story: [
       'nous équipons des intérieurs résidentiels et hôteliers haut de gamme. Les grands formats (60×60 et surtout 60×120) sont devenus la norme : moins de joints, lecture plus continue, valorisation de la pierre.',
       'Le marbre Calacatta et le marbre Statuario restent les références pour les pièces de réception. Pour les pièces à vivre intensives, le calcaire de Trani adouci offre un excellent compromis chaleur/résistance. Le granit sarde est imbattable dans les cuisines à fort passage et les espaces commerciaux.',
-      'Nous livrons toujours avec un plan de calepinage validé : sens de pose, départs, coupes. Les coupes en bordure ne doivent jamais être inférieures à la moitié d\u2019une dalle — règle simple qui change tout visuellement.',
+      'Nous livrons toujours avec un plan de calepinage validé : sens de pose, départs, coupes. Les coupes en bordure ne doivent jamais être inférieures à la moitié d\u2019une dalle, règle simple qui change tout visuellement.',
     ],
     provenance: 'Carrare, Trani, Sardaigne.',
     signature: 'Calepinage validé avant production, jamais de coupe inférieure à la demi-dalle en bordure.',
@@ -161,7 +161,7 @@ const productContent: Record<string, ProductContentEntry> = {
     seoDescription: 'Parements muraux intérieurs en marbre de Carrare et calcaire italien. Bookmatch, grandes dalles, formats sur mesure. Devis rapide.',
     intro: 'Un mur en pierre naturelle change la perception entière d\u2019une pièce. Lumière, acoustique, sensation de matière : aucun autre matériau ne produit cet effet.',
     story: [
-      'Nos parements muraux intérieurs vont de la plaquette 30×60 au panneau monumental 180×280 en bookmatch. Le bookmatch — deux dalles ouvertes en miroir comme un livre — est l\u2019expression la plus spectaculaire de la pierre naturelle, idéal derrière un meuble TV ou en tête de lit.',
+      'Nos parements muraux intérieurs vont de la plaquette 30×60 au panneau monumental 180×280 en bookmatch. Le bookmatch, deux dalles ouvertes en miroir comme un livre, est l\u2019expression la plus spectaculaire de la pierre naturelle, idéal derrière un meuble TV ou en tête de lit.',
       'Le marbre Calacatta Viola, le Statuario et le Sahara Noir sont nos best-sellers pour les ambiances signature. Pour des projets plus sobres, le calcaire Botticino adouci ou la pierre de Trani offrent une présence plus discrète mais tout aussi noble.',
       'La pose en grandes dalles demande une préparation rigoureuse du support et une visserie de sécurité (collage seul interdit au-delà de certains formats). Nous fournissons les fiches techniques et coordonnons avec votre poseur.',
     ],
@@ -175,7 +175,7 @@ const productContent: Record<string, ProductContentEntry> = {
     intro: 'Un plan de travail en pierre naturelle est l\u2019élément le plus regardé d\u2019une cuisine. Il faut qu\u2019il soit beau le premier jour et qu\u2019il le reste après dix mille repas.',
     story: [
       'Nous équipons des cuisines depuis longtemps, du plan simple à l\u2019îlot de 4 mètres en bookmatch sans joint apparent. Notre force : valider chaque dalle en personne en carrière avant production, pour garantir que la veine que vous choisissez est exactement celle qui sera installée.',
-      'Le marbre Calacatta reste le rêve esthétique de nos clients. Il vit, il se patine, et il se tache si on l\u2019entretient mal — nous sommes transparents sur ce point. Pour ceux qui veulent l\u2019aspect du marbre sans aucune contrainte, nous proposons des quartzites naturelles d\u2019une dureté équivalente au granit.',
+      'Le marbre Calacatta reste le rêve esthétique de nos clients. Il vit, il se patine, et il se tache si on l\u2019entretient mal, nous sommes transparents sur ce point. Pour ceux qui veulent l\u2019aspect du marbre sans aucune contrainte, nous proposons des quartzites naturelles d\u2019une dureté équivalente au granit.',
       'L\u2019épaisseur visuelle se travaille en mitered edge : deux pièces de 2 cm assemblées à 45° donnent l\u2019illusion d\u2019un bloc de 4, 6 ou 8 cm. C\u2019est plus léger, moins cher et plus stable qu\u2019un vrai bloc.',
     ],
     provenance: 'Carrare (Calacatta, Statuario, Calacatta Viola), Sardaigne (granits).',
@@ -226,7 +226,7 @@ const productContent: Record<string, ProductContentEntry> = {
     seoDescription: 'Dalles brutes en marbre, granit, calcaire et grès. Plusieurs épaisseurs, vente à la pièce ou container. Pour pros. Devis rapide.',
     intro: 'Pour les marbreries et agenceurs, accéder à une matière première fiable et tracée fait toute la différence. Nous sommes votre relais direct avec les carrières italiennes.',
     story: [
-      'nous fournissons des dalles brutes à des marbreries européennes. Notre valeur ajoutée n\u2019est pas le prix — c\u2019est la sélection. Nous validons chaque lot en carrière, refusons les dalles douteuses, et garantissons la cohérence d\u2019un container à l\u2019autre.',
+      'nous fournissons des dalles brutes à des marbreries européennes. Notre valeur ajoutée n\u2019est pas le prix, c\u2019est la sélection. Nous validons chaque lot en carrière, refusons les dalles douteuses, et garantissons la cohérence d\u2019un container à l\u2019autre.',
       'Nous travaillons toutes les épaisseurs standard (2, 3, 4, 6 et 8 cm) et toutes les finitions principales. Pour les projets architecturaux importants, nous pouvons réserver un bloc entier pour garantir l\u2019unité de teinte sur l\u2019ensemble du chantier.',
       'L\u2019expédition se fait à la pièce (palette aérienne, port à port) ou au container complet pour les marbreries qui réassortent leur stock. Documentation douanière, certification CE et fiches techniques fournies systématiquement.',
     ],
