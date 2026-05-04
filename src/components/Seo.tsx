@@ -101,7 +101,7 @@ const Seo = ({
       <meta name="description" content={description} />
       <link rel="canonical" href={url} />
       {SUPPORTED_LANGS.map((l) => (
-        <link key={l} rel="alternate" hrefLang={l} href={`${SITE_URL}${path}?lang=${l}`} />
+        <link key={l} rel="alternate" hrefLang={l} href={url} />
       ))}
       <link rel="alternate" hrefLang="x-default" href={url} />
       <meta property="og:site_name" content={SITE_NAME} />
