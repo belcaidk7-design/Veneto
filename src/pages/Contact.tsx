@@ -3,6 +3,9 @@ import { Mail, MapPin, MessageCircle, Phone } from 'lucide-react';
 import Layout from '@/components/Layout';
 import Seo from '@/components/Seo';
 import ContactForm from '@/components/ContactForm';
+import FaqSection, { buildFaqJsonLd } from '@/components/FaqSection';
+
+const CONTACT_FAQ_KEYS = ['responseTime', 'languages', 'quote', 'visit', 'privacy'];
 
 const PHONE = '+39 000 000 0000';
 const PHONE_TEL = '+390000000000';
