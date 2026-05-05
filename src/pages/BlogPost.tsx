@@ -4,6 +4,12 @@ import { ArrowLeft, ArrowRight } from 'lucide-react';
 import Layout from '@/components/Layout';
 import Seo from '@/components/Seo';
 import { BLOG_POSTS, BLOG_AUTHORS, getRelatedPosts } from '@/data/blog';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
 
 const BlogPost = () => {
   const { slug } = useParams();
@@ -31,10 +37,66 @@ const BlogPost = () => {
   const title = t(`blog.posts.${post.i18nKey}.title`);
   const excerpt = t(`blog.posts.${post.i18nKey}.excerpt`);
   const body = t(`blog.posts.${post.i18nKey}.body`) as string;
+  const faqItems = (t(`blog.posts.${post.i18nKey}.faq`, { returnObjects: true, defaultValue: [] }) as Array<{ q: string; a: string }>) || [];
+  const sources = (t(`blog.posts.${post.i18nKey}.sources`, { returnObjects: true, defaultValue: [] }) as Array<{ label: string; url: string }>) || [];
   const author = BLOG_AUTHORS[post.authorKey];
   const authorRole = t(`blog.authors.${author.key}.role`);
   const authorBio = t(`blog.authors.${author.key}.bio`);
   const wordCount = body.trim().split(/\s+/).length;
+
+  // Parse body into blocks (h2/h3/paragraph) from markdown-ish ## / ###
+  const blocks = body.split('\n\n').map((raw, i) => {
+    const trimmed = raw.trim();
+    if (trimmed.startsWith('### ')) {
+      return { type: 'h3' as const, text: trimmed.slice(4), key: i };
+    }
+    if (trimmed.startsWith('## ')) {
+      return { type: 'h2' as const, text: trimmed.slice(3), key: i };
+    }
+    return { type: 'p' as const, text: trimmed, key: i };
+  });
+
+  const jsonLdGraph: Record<string, unknown>[] = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BlogPosting',
+      headline: title,
+      description: excerpt,
+      image: post.cover,
+      datePublished: post.date,
+      dateModified: post.updated,
+      inLanguage: i18n.language,
+      articleSection: t(`blog.categories.${post.category}`),
+      wordCount,
+      timeRequired: `PT${post.readingTimeMin}M`,
+      author: {
+        '@type': 'Person',
+        name: author.name,
+        jobTitle: authorRole,
+        description: authorBio,
+        url: author.url,
+        ...(author.sameAs && author.sameAs.length ? { sameAs: author.sameAs } : {}),
+        worksFor: { '@type': 'Organization', name: 'HQ Stones' },
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'HQ Stones',
+        logo: { '@type': 'ImageObject', url: '/favicon.ico' },
+      },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': `/blog/${post.slug}` },
+    },
+  ];
+  if (faqItems.length > 0) {
+    jsonLdGraph.push({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqItems.map((it) => ({
+        '@type': 'Question',
+        name: it.q,
+        acceptedAnswer: { '@type': 'Answer', text: it.a },
+      })),
+    });
+  }
 
   return (
     <Layout>
@@ -49,34 +111,7 @@ const BlogPost = () => {
           { name: t('nav.blog'), path: '/blog' },
           { name: title, path: `/blog/${post.slug}` },
         ]}
-        jsonLd={{
-          '@context': 'https://schema.org',
-          '@type': 'BlogPosting',
-          headline: title,
-          description: excerpt,
-          image: post.cover,
-          datePublished: post.date,
-          dateModified: post.updated,
-          inLanguage: i18n.language,
-          articleSection: t(`blog.categories.${post.category}`),
-          wordCount,
-          timeRequired: `PT${post.readingTimeMin}M`,
-          author: {
-            '@type': 'Person',
-            name: author.name,
-            jobTitle: authorRole,
-            description: authorBio,
-            url: author.url,
-            ...(author.sameAs && author.sameAs.length ? { sameAs: author.sameAs } : {}),
-            worksFor: { '@type': 'Organization', name: 'HQ Stones' },
-          },
-          publisher: {
-            '@type': 'Organization',
-            name: 'HQ Stones',
-            logo: { '@type': 'ImageObject', url: '/favicon.ico' },
-          },
-          mainEntityOfPage: { '@type': 'WebPage', '@id': `/blog/${post.slug}` },
-        }}
+        jsonLd={jsonLdGraph}
       />
 
       <article>
@@ -127,13 +162,81 @@ const BlogPost = () => {
 
         <div className="container-prose py-16 md:py-20">
           <div className="prose-stone mx-auto max-w-2xl space-y-5 text-lg leading-relaxed text-foreground/90">
-            {body.split('\n\n').map((para, i) => (
-              <p key={i}>{para}</p>
-            ))}
+            {blocks.map((b) => {
+              if (b.type === 'h2')
+                return (
+                  <h2 key={b.key} className="mt-10 font-serif text-2xl md:text-3xl text-foreground">
+                    {b.text}
+                  </h2>
+                );
+              if (b.type === 'h3')
+                return (
+                  <h3 key={b.key} className="mt-6 font-serif text-xl text-foreground">
+                    {b.text}
+                  </h3>
+                );
+              return <p key={b.key}>{b.text}</p>;
+            })}
           </div>
 
+          {faqItems.length > 0 && (
+            <section
+              className="mx-auto mt-14 max-w-2xl rounded-sm border border-border/60 bg-secondary/30 p-6"
+              aria-labelledby="post-faq-heading"
+            >
+              <h2 id="post-faq-heading" className="font-serif text-2xl">
+                {t('blog.faqTitle')}
+              </h2>
+              <Accordion type="single" collapsible className="mt-4 w-full">
+                {faqItems.map((it, i) => (
+                  <AccordionItem key={i} value={`q-${i}`}>
+                    <AccordionTrigger className="text-left font-serif text-base">
+                      {it.q}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-sm text-foreground/85">
+                      {it.a}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </section>
+          )}
+
+          {sources.length > 0 && (
+            <aside
+              className="mx-auto mt-10 max-w-2xl rounded-sm border border-border/60 p-6"
+              aria-labelledby="post-sources-heading"
+            >
+              <h2
+                id="post-sources-heading"
+                className="text-xs font-medium uppercase tracking-[0.25em] text-accent"
+              >
+                {t('blog.sourcesTitle')}
+              </h2>
+              <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-foreground/85">
+                {sources.map((s, i) => (
+                  <li key={i}>
+                    <a
+                      href={s.url}
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                      className="underline-offset-2 hover:text-accent hover:underline"
+                    >
+                      {s.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </aside>
+          )}
+
+          <p className="mx-auto mt-8 max-w-2xl text-xs text-muted-foreground">
+            {t('blog.lastReviewed')}{' '}
+            <time dateTime={post.updated}>{fmt(post.updated)}</time>
+          </p>
+
           <aside
-            className="mx-auto mt-14 max-w-2xl rounded-sm border border-border/60 bg-secondary/40 p-6"
+            className="mx-auto mt-10 max-w-2xl rounded-sm border border-border/60 bg-secondary/40 p-6"
             aria-labelledby="author-bio-heading"
           >
             <p
