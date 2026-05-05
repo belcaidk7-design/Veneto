@@ -24,19 +24,22 @@ const Contact = () => {
           { name: t('nav.home'), path: '/' },
           { name: t('nav.contact'), path: '/contact' },
         ]}
-        jsonLd={{
-          '@context': 'https://schema.org',
-          '@type': 'ContactPage',
-          name: t('seo.contact.title'),
-          url: '/contact',
-          mainEntity: {
-            '@type': 'Organization',
-            name: 'HQ Stones',
-            telephone: PHONE,
-            email: 'info@hqstones.example',
-            areaServed: 'Worldwide',
+        jsonLd={[
+          {
+            '@context': 'https://schema.org',
+            '@type': 'ContactPage',
+            name: t('seo.contact.title'),
+            url: '/contact',
+            mainEntity: {
+              '@type': 'Organization',
+              name: 'HQ Stones',
+              telephone: PHONE,
+              email: 'info@hqstones.example',
+              areaServed: 'Worldwide',
+            },
           },
-        }}
+          buildFaqJsonLd(t, 'contact', CONTACT_FAQ_KEYS),
+        ]}
       />
       <section className="border-b border-border/60 bg-secondary/40">
         <div className="container-prose py-16 md:py-20">
