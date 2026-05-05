@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import Layout from '@/components/Layout';
 import Seo from '@/components/Seo';
-import { BLOG_POSTS, getRelatedPosts } from '@/data/blog';
+import { BLOG_POSTS, BLOG_AUTHORS, getRelatedPosts } from '@/data/blog';
 
 const BlogPost = () => {
   const { slug } = useParams();
