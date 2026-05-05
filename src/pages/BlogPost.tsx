@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import Layout from '@/components/Layout';
 import Seo from '@/components/Seo';
-import { BLOG_POSTS, getRelatedPosts } from '@/data/blog';
+import { BLOG_POSTS, BLOG_AUTHORS, getRelatedPosts } from '@/data/blog';
 
 const BlogPost = () => {
   const { slug } = useParams();
@@ -31,6 +31,10 @@ const BlogPost = () => {
   const title = t(`blog.posts.${post.i18nKey}.title`);
   const excerpt = t(`blog.posts.${post.i18nKey}.excerpt`);
   const body = t(`blog.posts.${post.i18nKey}.body`) as string;
+  const author = BLOG_AUTHORS[post.authorKey];
+  const authorRole = t(`blog.authors.${author.key}.role`);
+  const authorBio = t(`blog.authors.${author.key}.bio`);
+  const wordCount = body.trim().split(/\s+/).length;
 
   return (
     <Layout>
@@ -52,10 +56,20 @@ const BlogPost = () => {
           description: excerpt,
           image: post.cover,
           datePublished: post.date,
-          dateModified: post.date,
+          dateModified: post.updated,
           inLanguage: i18n.language,
           articleSection: t(`blog.categories.${post.category}`),
-          author: { '@type': 'Organization', name: 'HQ Stones' },
+          wordCount,
+          timeRequired: `PT${post.readingTimeMin}M`,
+          author: {
+            '@type': 'Person',
+            name: author.name,
+            jobTitle: authorRole,
+            description: authorBio,
+            url: author.url,
+            ...(author.sameAs && author.sameAs.length ? { sameAs: author.sameAs } : {}),
+            worksFor: { '@type': 'Organization', name: 'HQ Stones' },
+          },
           publisher: {
             '@type': 'Organization',
             name: 'HQ Stones',
@@ -89,7 +103,24 @@ const BlogPost = () => {
               {title}
             </h1>
             <p className="mt-4 text-sm text-background/80">
-              {t('blog.by')} {t(`blog.posts.${post.i18nKey}.author`)} · {fmt(post.date)}
+              {t('blog.by')}{' '}
+              <Link to={author.url} className="underline-offset-2 hover:text-accent hover:underline">
+                {author.name}
+              </Link>
+              <span className="mx-1.5 opacity-60">·</span>
+              <span>{authorRole}</span>
+            </p>
+            <p className="mt-1 text-xs text-background/70">
+              {t('blog.publishedOn')} <time dateTime={post.date}>{fmt(post.date)}</time>
+              {post.updated && post.updated !== post.date && (
+                <>
+                  <span className="mx-1.5 opacity-60">·</span>
+                  {t('blog.updatedOn')}{' '}
+                  <time dateTime={post.updated}>{fmt(post.updated)}</time>
+                </>
+              )}
+              <span className="mx-1.5 opacity-60">·</span>
+              {t('blog.readingTime', { min: post.readingTimeMin })}
             </p>
           </div>
         </div>
@@ -100,6 +131,21 @@ const BlogPost = () => {
               <p key={i}>{para}</p>
             ))}
           </div>
+
+          <aside
+            className="mx-auto mt-14 max-w-2xl rounded-sm border border-border/60 bg-secondary/40 p-6"
+            aria-labelledby="author-bio-heading"
+          >
+            <p
+              id="author-bio-heading"
+              className="text-xs font-medium uppercase tracking-[0.25em] text-accent"
+            >
+              {t('blog.aboutAuthor')}
+            </p>
+            <p className="mt-3 font-serif text-lg">{author.name}</p>
+            <p className="text-sm text-muted-foreground">{authorRole}</p>
+            <p className="mt-3 text-sm leading-relaxed text-foreground/85">{authorBio}</p>
+          </aside>
         </div>
       </article>
 

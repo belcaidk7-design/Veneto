@@ -1,4 +1,48 @@
+# robots.txt — HQ Stones (multilingual: en, it, fr, de)
+# Single canonical URL per page; language variants are exposed via hreflang
+# tags in the HTML <head>, so all language versions share the same paths
+# and must remain crawlable.
+
 User-agent: *
 Allow: /
+
+# Block low-value or technical paths
+Disallow: /api/
+Disallow: /admin/
+Disallow: /*?*utm_
+Disallow: /*?*ref=
+Disallow: /*?*fbclid=
+Disallow: /*?*gclid=
+
+# Allow indexing of static assets (CSS/JS/images) explicitly
+Allow: /assets/
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.svg$
+Allow: /*.webp$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /favicon.ico
+
+# Bad bots — block scrapers / AI crawlers we do not want
+User-agent: GPTBot
+Disallow: /
+User-agent: CCBot
+Disallow: /
+User-agent: anthropic-ai
+Disallow: /
+User-agent: ClaudeBot
+Disallow: /
+
+# Polite crawl-delay for aggressive crawlers
+User-agent: AhrefsBot
+Crawl-delay: 10
+User-agent: SemrushBot
+Crawl-delay: 10
+User-agent: MJ12bot
+Crawl-delay: 10
+
+Host: hqstones.example
 
 Sitemap: https://hqstones.example/sitemap.xml
