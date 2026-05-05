@@ -219,6 +219,28 @@ export default {
       pricing: { q: 'How is pricing calculated?', a: 'By stone, finish, dimensions, complexity and quantity. Send us your project brief and we return a detailed quote quickly.' },
       custom: { q: 'Can you produce bespoke designs?', a: 'Absolutely. From hand-carved sculptures to bookmatched countertops, most of our work is bespoke.' },
     },
+    contact: {
+      title: 'Before you reach out',
+      subtitle: 'Quick answers to the questions we hear most often when starting a new project.',
+      items: {
+        responseTime: { q: 'How quickly will I get a reply?', a: 'Our team responds to every enquiry within one business day, often the same day for projects in Europe.' },
+        languages: { q: 'Which languages do you work in?', a: 'We handle projects in English, Italian, French and German, both written and on calls.' },
+        quote: { q: 'How do I request a detailed quote?', a: 'Share your drawings, surface areas and finish preferences via the form, email or WhatsApp. We return a structured quote within 48 hours.' },
+        visit: { q: 'Can I visit your showroom or quarries?', a: 'Yes. Showroom visits are by appointment, and we organise quarry tours in Italy for confirmed projects.' },
+        privacy: { q: 'How is my information handled?', a: 'Your enquiry is used only to answer your project and is never shared with third parties. See our privacy practices for details.' },
+      },
+    },
+    products: {
+      title: 'About our stone collection',
+      subtitle: 'Practical answers about materials, finishes and ordering directly from the catalogue.',
+      items: {
+        availability: { q: 'Are all products in stock?', a: 'Most standard items are available from stock or short lead time. Rare blocks and bespoke pieces are produced on order.' },
+        finishesProduct: { q: 'Can I change the finish of a product?', a: 'Yes. Almost every item can be supplied polished, honed, brushed, flamed or aged on request.' },
+        sizes: { q: 'Are custom sizes possible?', a: 'Custom dimensions are part of our daily work, from small tiles to large bookmatched slabs.' },
+        samples2: { q: 'How do I order a sample of a specific product?', a: 'Use the contact form and mention the product reference. We dispatch samples within a few working days.' },
+        sustainability: { q: 'Is the stone sourced responsibly?', a: 'We work only with quarries that meet European environmental and labour standards, with full traceability per block.' },
+      },
+    },
   },
   testimonials: {
     title: 'What our clients say',
