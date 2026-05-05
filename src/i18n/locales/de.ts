@@ -177,6 +177,15 @@ export default {
     readMore: 'Weiterlesen', by: 'Von', relatedTitle: 'Ähnliche Artikel', backToBlog: 'Zurück zum Magazin',
     filterBy: 'Nach Thema filtern', allTags: 'Alle', noResults: 'Aktuell keine Artikel zu diesem Thema.',
     categories: { stoneGuide: 'Steinleitfaden', projects: 'Projekte', materials: 'Materialien', maintenance: 'Pflege', news: 'Aktuelles' },
+    updatedOn: 'Aktualisiert am',
+    publishedOn: 'Veröffentlicht am',
+    readingTime: '{{min}} Min. Lesezeit',
+    aboutAuthor: 'Über den Autor',
+    authors: {
+      marco: { role: 'Leitung Sourcing — 18 Jahre in italienischen Steinbrüchen', bio: 'Marco verantwortet das Stein-Sourcing im gesamten Mittelmeerraum. Als in Carrara ausgebildeter Geologe wählt und prüft er seit 2007 Marmor, Granit und Kalkstein für Wohn- und Hotelprojekte.' },
+      sophie: { role: 'Senior Projektberaterin — Interieur & Erbe', bio: 'Sophie berät seit über 12 Jahren Architekten und Designer bei Innenraum-Steinprojekten, mit Schwerpunkt auf italienischen und französischen Materialien und Maßanfertigung.' },
+      andreas: { role: 'Feldspezialist — Verlegung & Pflege', bio: 'Andreas leitet Verlegung vor Ort und Langzeitpflege mit praktischer Erfahrung aus mehr als 200 Außenstein-Projekten zwischen Alpen und Côte d’Azur.' },
+    },
     posts: {
       marbleKitchen: { title: 'Den richtigen Marmor für Ihre Küche wählen', excerpt: 'Praktischer Leitfaden zur Wahl von Marmor-Arbeitsplatten, die Schönheit, Beständigkeit und Alltagstauglichkeit vereinen.', body: 'Marmor ist seit Generationen die Küchenoberfläche schlechthin, aus gutem Grund. Seine Kühle ist ideal für Patisserie, seine Maserungen erzählen in jeder Platte eine eigene Geschichte, und seine Patina vertieft sich mit dem Gebrauch.\n\nFür intensive Nutzung halten dichte Marmore wie Calacatta und Statuario besser als weichere Sorten. Geschliffene Oberflächen kaschieren Spuren besser als polierte. Versiegelung verlangsamt Flecken, aber Marmor lebt immer: das ist sein Charakter.\n\nWenn Sie das Aussehen lieben, aber maximale Widerstandsfähigkeit wollen, wählen Sie einen Quarzit. In jedem Fall: Wählen Sie die Platte vor Ort: Fotos zeigen die Tiefe von Naturstein nicht.', author: 'HQ Stones Team', date: '2025-03-12' },
       italianQuarries: { title: 'Italienische Steinbrüche, ein Steinerbe', excerpt: 'Von den Alpen bis Sizilien haben italienische Steinbrüche die Architektur über Jahrhunderte geprägt.', body: 'Italien ist ein geologischer Schatz. Vom Carrara-Marmor zum Trani-Kalkstein, vom sardischen Granit zum Trentino-Porphyr: Unsere Halbinsel hat Paläste, Kirchen und moderne Villen mit Materialien beliefert, die zeitlose Eleganz definieren.\n\nDirektarbeit mit Steinbrüchen bietet volle Rückverfolgbarkeit und außergewöhnliche Konsistenz, auch bei Großprojekten. Sie hält auch jahrhundertealtes Handwerk lebendig.\n\nWer italienischen Stein spezifiziert, bringt dieses Erbe in sein Projekt, mit Textur, Farbe und stiller Autorität.', author: 'HQ Stones Team', date: '2025-02-04' },

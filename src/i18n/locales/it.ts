@@ -178,6 +178,15 @@ export default {
     readMore: 'Leggi tutto', by: 'Di', relatedTitle: 'Articoli correlati', backToBlog: 'Torna al magazine',
     filterBy: 'Filtra per argomento', allTags: 'Tutti', noResults: 'Nessun articolo per questo argomento al momento.',
     categories: { stoneGuide: 'Guida alla pietra', projects: 'Progetti', materials: 'Materiali', maintenance: 'Manutenzione', news: 'Novità' },
+    updatedOn: 'Aggiornato il',
+    publishedOn: 'Pubblicato il',
+    readingTime: '{{min}} min di lettura',
+    aboutAuthor: 'Sull’autore',
+    authors: {
+      marco: { role: 'Responsabile Sourcing — 18 anni nelle cave italiane', bio: 'Marco supervisiona il sourcing della pietra nel bacino mediterraneo. Geologo formato a Carrara, seleziona e ispeziona marmi, graniti e calcari per progetti residenziali e alberghieri dal 2007.' },
+      sophie: { role: 'Consulente Progetti Senior — interni e patrimonio', bio: 'Sophie affianca architetti e designer su progetti di pietra in interni da oltre 12 anni, con focus su materiali patrimoniali italiani e francesi e fabbricazione su misura.' },
+      andreas: { role: 'Specialista di cantiere — posa e manutenzione', bio: 'Andreas guida la posa in opera e la manutenzione a lungo termine, con esperienza diretta su oltre 200 progetti di pietra in esterno tra Alpi e Costa Azzurra.' },
+    },
     posts: {
       marbleKitchen: { title: 'Scegliere il marmo giusto per la tua cucina', excerpt: 'Una guida pratica per scegliere top in marmo che uniscono bellezza, resistenza e vita quotidiana.', body: 'Il marmo è da generazioni la superficie da cucina per eccellenza, e per buoni motivi. La sua freschezza è ideale per la pasticceria, le venature raccontano una storia unica e la patina si arricchisce con l\u2019uso.\n\nPer un uso intensivo, marmi densi come Calacatta e Statuario reggono meglio delle varietà più tenere. Le finiture levigate mascherano meglio i segni rispetto alla lucida. Sigillare rallenta le macchie, ma il marmo vivrà sempre: è il suo carattere.\n\nSe ami l\u2019aspetto ma vuoi più resistenza, opta per una quarzite. In ogni caso, scegli la lastra di persona: nessuna foto rende la profondità della pietra naturale.', author: 'Team HQ Stones', date: '2025-03-12' },
       italianQuarries: { title: 'Cave italiane, un patrimonio di pietra', excerpt: 'Dalle Alpi alla Sicilia, le cave italiane hanno modellato l\u2019architettura per secoli.', body: 'L\u2019Italia è un tesoro geologico. Dal marmo di Carrara alla pietra di Trani, dal granito sardo al porfido del Trentino, la nostra penisola ha fornito palazzi, chiese e ville moderne con materie che definiscono un\u2019eleganza senza tempo.\n\nLavorare direttamente con le cave offre piena tracciabilità e coerenza notevole, anche su grandi progetti. Mantiene anche viva un\u2019artigianalità secolare.\n\nScegliere la pietra italiana significa portare questo patrimonio nel tuo progetto, con la sua texture, il suo colore e la sua autorità tranquilla.', author: 'Team HQ Stones', date: '2025-02-04' },

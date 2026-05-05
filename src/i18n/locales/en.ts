@@ -238,6 +238,15 @@ export default {
     allTags: 'All',
     noResults: 'No articles for this topic yet.',
     categories: { stoneGuide: 'Stone guide', projects: 'Projects', materials: 'Materials', maintenance: 'Maintenance', news: 'News' },
+    updatedOn: 'Updated on',
+    publishedOn: 'Published on',
+    readingTime: '{{min}} min read',
+    aboutAuthor: 'About the author',
+    authors: {
+      marco: { role: 'Head of Sourcing — 18 years in Italian quarries', bio: 'Marco oversees stone sourcing across the Mediterranean basin. Trained as a geologist in Carrara, he has selected and inspected marble, granite and limestone for residential and hospitality projects since 2007.' },
+      sophie: { role: 'Senior Project Consultant — interiors & heritage', bio: 'Sophie has been advising architects and designers on stone interior projects for over 12 years, with a focus on Italian and French heritage materials and bespoke fabrication.' },
+      andreas: { role: 'Field Specialist — installation & maintenance', bio: 'Andreas leads on-site stone installation and long-term maintenance, with hands-on experience on more than 200 outdoor stone projects across the Alps and Côte d’Azur.' },
+    },
     posts: {
       marbleKitchen: { title: 'Choosing the right marble for your kitchen', excerpt: 'A practical guide to selecting marble countertops that balance beauty, durability and daily life.', body: 'Marble has been the kitchen surface of choice for generations, and for good reason. Its cool surface is ideal for pastry, its veining tells a unique story in every slab, and its patina deepens with use.\n\nFor heavy daily use, denser marbles such as Calacatta and Statuario hold up better than softer varieties. Honed finishes hide etching far better than polished ones. Sealing slows staining, but marble will always live and breathe: that is part of its character.\n\nIf you love the look but want maximum resilience, consider a quartzite. Either way, choose a slab in person: photographs cannot capture the depth of natural stone.', author: 'HQ Stones Team', date: '2025-03-12' },
       italianQuarries: { title: 'Italian quarries, a heritage of stone', excerpt: 'From the Alps to Sicily, Italian quarries have shaped architecture for centuries.', body: 'Italy is a geological treasure. From Carrara marble to Trani limestone, from Sardinian granite to Trentino porphyry, our peninsula has supplied palaces, churches and modern villas with the materials that define timeless elegance.\n\nWorking directly with quarries gives full traceability and exceptional consistency, even on large projects. It also keeps centuries-old craft alive.\n\nWhen you specify Italian stone, you bring this heritage into your project, with all its texture, colour and quiet authority.', author: 'HQ Stones Team', date: '2025-02-04' },

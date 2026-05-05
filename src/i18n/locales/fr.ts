@@ -251,6 +251,15 @@ export default {
       maintenance: 'Entretien',
       news: 'Actualités',
     },
+    updatedOn: 'Mis à jour le',
+    publishedOn: 'Publié le',
+    readingTime: '{{min}} min de lecture',
+    aboutAuthor: 'À propos de l’auteur',
+    authors: {
+      marco: { role: 'Responsable Sourcing — 18 ans dans les carrières italiennes', bio: 'Marco supervise le sourcing de pierre dans tout le bassin méditerranéen. Formé comme géologue à Carrare, il sélectionne et inspecte marbres, granits et calcaires pour des projets résidentiels et hôteliers depuis 2007.' },
+      sophie: { role: 'Consultante Projets Senior — intérieurs & patrimoine', bio: 'Sophie conseille architectes et designers sur des projets de pierre intérieure depuis plus de 12 ans, avec une expertise en matériaux patrimoniaux italiens et français et en fabrication sur mesure.' },
+      andreas: { role: 'Expert Terrain — pose & entretien', bio: 'Andreas dirige la pose sur chantier et l’entretien longue durée, avec une expérience pratique sur plus de 200 projets de pierre extérieure entre les Alpes et la Côte d’Azur.' },
+    },
     posts: {
       marbleKitchen: { title: 'Choisir le bon marbre pour votre cuisine', excerpt: 'Un guide pratique pour sélectionner des plans en marbre alliant beauté, résistance et vie quotidienne.', body: 'Le marbre est depuis des générations la surface de cuisine par excellence, et pour de bonnes raisons. Sa fraîcheur est idéale pour la pâtisserie, ses veinages racontent une histoire unique dans chaque dalle, et sa patine s\u2019enrichit avec l\u2019usage.\n\nPour un usage intensif, des marbres denses comme le Calacatta et le Statuario tiennent mieux que les variétés plus tendres. Les finitions adoucies masquent mieux les marques que les finitions polies. Sceller ralentit les taches, mais le marbre vivra toujours : c\u2019est son caractère.\n\nSi vous aimez l\u2019aspect mais cherchez plus de résistance, optez pour une quartzite. Dans tous les cas, choisissez la dalle en personne : aucune photo ne rend la profondeur de la pierre naturelle.', author: 'Équipe HQ Stones', date: '2025-03-12' },
       italianQuarries: { title: 'Carrières italiennes, un patrimoine de pierre', excerpt: 'Des Alpes à la Sicile, les carrières italiennes ont façonné l\u2019architecture pendant des siècles.', body: 'L\u2019Italie est un trésor géologique. Du marbre de Carrare à la pierre de Trani, du granit sarde au porphyre du Trentin, notre péninsule a fourni palais, églises et villas modernes en matières qui définissent une élégance intemporelle.\n\nTravailler directement avec les carrières offre une traçabilité totale et une cohérence remarquable, même sur de grands projets. Cela maintient aussi vivant un artisanat séculaire.\n\nChoisir la pierre italienne, c\u2019est inscrire ce patrimoine dans votre projet, avec sa texture, sa couleur et son autorité tranquille.', author: 'Équipe HQ Stones', date: '2025-02-04' },
