@@ -226,6 +226,28 @@ export default {
       pricing: { q: 'Comment se calcule le prix ?', a: 'Selon la pierre, la finition, les dimensions, la complexité et la quantité. Envoyez-nous votre brief : devis détaillé rapidement.' },
       custom: { q: 'Réalisez-vous des projets sur mesure ?', a: 'Absolument. Des sculptures à la main aux plans de travail bookmatchés, la majorité de notre travail est sur mesure.' },
     },
+    contact: {
+      title: 'Avant de nous contacter',
+      subtitle: 'Réponses rapides aux questions les plus fréquentes au démarrage d\u2019un projet.',
+      items: {
+        responseTime: { q: 'Sous quel délai répondez-vous ?', a: 'Notre équipe répond à chaque demande sous un jour ouvré, souvent le jour même pour les projets en Europe.' },
+        languages: { q: 'Dans quelles langues travaillez-vous ?', a: 'Nous gérons les projets en anglais, italien, français et allemand, à l\u2019écrit comme à l\u2019oral.' },
+        quote: { q: 'Comment obtenir un devis détaillé ?', a: 'Partagez plans, surfaces et finitions souhaitées via le formulaire, par email ou WhatsApp. Devis structuré sous 48 heures.' },
+        visit: { q: 'Puis-je visiter le showroom ou les carrières ?', a: 'Oui. Le showroom se visite sur rendez-vous et nous organisons des visites de carrières en Italie pour les projets confirmés.' },
+        privacy: { q: 'Comment sont traitées mes informations ?', a: 'Votre demande sert uniquement à répondre à votre projet et n\u2019est jamais partagée avec des tiers.' },
+      },
+    },
+    products: {
+      title: 'À propos de notre collection',
+      subtitle: 'Réponses pratiques sur les matériaux, finitions et commandes depuis le catalogue.',
+      items: {
+        availability: { q: 'Tous les produits sont-ils en stock ?', a: 'La plupart des références standard sont disponibles en stock ou avec un délai court. Les blocs rares et pièces sur mesure sont produits à la commande.' },
+        finishesProduct: { q: 'Puis-je changer la finition d\u2019un produit ?', a: 'Oui. Presque chaque référence peut être livrée polie, adoucie, brossée, flammée ou vieillie sur demande.' },
+        sizes: { q: 'Des dimensions sur mesure sont-elles possibles ?', a: 'Les dimensions sur mesure font partie de notre quotidien, des petits carreaux aux grandes dalles bookmatchées.' },
+        samples2: { q: 'Comment commander un échantillon d\u2019un produit précis ?', a: 'Utilisez le formulaire de contact en mentionnant la référence. Échantillons expédiés sous quelques jours ouvrés.' },
+        sustainability: { q: 'La pierre est-elle sourcée de manière responsable ?', a: 'Nous travaillons uniquement avec des carrières respectant les normes européennes environnementales et sociales, avec traçabilité par bloc.' },
+      },
+    },
   },
   testimonials: {
     title: 'Ils nous font confiance',
