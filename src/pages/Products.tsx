@@ -4,7 +4,10 @@ import { useTranslation } from 'react-i18next';
 import Layout from '@/components/Layout';
 import Seo from '@/components/Seo';
 import ProductCard from '@/components/ProductCard';
+import FaqSection, { buildFaqJsonLd } from '@/components/FaqSection';
 import { CATEGORIES, MATERIALS, MaterialKey, PRODUCTS } from '@/data/catalog';
+
+const PRODUCTS_FAQ_KEYS = ['availability', 'finishesProduct', 'sizes', 'samples2', 'sustainability'];
 
 const Products = () => {
   const { t } = useTranslation();
@@ -54,6 +57,7 @@ const Products = () => {
           { name: t('nav.home'), path: '/' },
           { name: t('nav.products'), path: '/products' },
         ]}
+        jsonLd={buildFaqJsonLd(t, 'products', PRODUCTS_FAQ_KEYS)}
       />
       <section className="border-b border-border/60 bg-secondary/40">
         <div className="container-prose py-16 md:py-20">
@@ -120,6 +124,8 @@ const Products = () => {
           <p className="py-20 text-center text-muted-foreground">{t('products.noResults')}</p>
         )}
       </div>
+
+      <FaqSection namespace="products" itemKeys={PRODUCTS_FAQ_KEYS} />
     </Layout>
   );
 };

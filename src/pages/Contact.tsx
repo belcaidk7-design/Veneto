@@ -3,6 +3,9 @@ import { Mail, MapPin, MessageCircle, Phone } from 'lucide-react';
 import Layout from '@/components/Layout';
 import Seo from '@/components/Seo';
 import ContactForm from '@/components/ContactForm';
+import FaqSection, { buildFaqJsonLd } from '@/components/FaqSection';
+
+const CONTACT_FAQ_KEYS = ['responseTime', 'languages', 'quote', 'visit', 'privacy'];
 
 const PHONE = '+39 000 000 0000';
 const PHONE_TEL = '+390000000000';
@@ -21,19 +24,22 @@ const Contact = () => {
           { name: t('nav.home'), path: '/' },
           { name: t('nav.contact'), path: '/contact' },
         ]}
-        jsonLd={{
-          '@context': 'https://schema.org',
-          '@type': 'ContactPage',
-          name: t('seo.contact.title'),
-          url: '/contact',
-          mainEntity: {
-            '@type': 'Organization',
-            name: 'HQ Stones',
-            telephone: PHONE,
-            email: 'info@hqstones.example',
-            areaServed: 'Worldwide',
+        jsonLd={[
+          {
+            '@context': 'https://schema.org',
+            '@type': 'ContactPage',
+            name: t('seo.contact.title'),
+            url: '/contact',
+            mainEntity: {
+              '@type': 'Organization',
+              name: 'HQ Stones',
+              telephone: PHONE,
+              email: 'info@hqstones.example',
+              areaServed: 'Worldwide',
+            },
           },
-        }}
+          buildFaqJsonLd(t, 'contact', CONTACT_FAQ_KEYS),
+        ]}
       />
       <section className="border-b border-border/60 bg-secondary/40">
         <div className="container-prose py-16 md:py-20">
@@ -86,6 +92,8 @@ const Contact = () => {
 
         </aside>
       </section>
+
+      <FaqSection namespace="contact" itemKeys={CONTACT_FAQ_KEYS} />
     </Layout>
   );
 };

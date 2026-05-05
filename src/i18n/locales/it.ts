@@ -166,6 +166,28 @@ export default {
       pricing: { q: 'Come si calcola il prezzo?', a: 'In base a pietra, finitura, dimensioni, complessità e quantità. Inviaci il brief: preventivo dettagliato in tempi brevi.' },
       custom: { q: 'Realizzate progetti su misura?', a: 'Assolutamente. Dalle sculture a mano ai top bookmatched, la maggior parte del nostro lavoro è su misura.' },
     },
+    contact: {
+      title: 'Prima di contattarci',
+      subtitle: 'Risposte rapide alle domande più frequenti all\u2019avvio di un progetto.',
+      items: {
+        responseTime: { q: 'In quanto tempo rispondete?', a: 'Il nostro team risponde a ogni richiesta entro un giorno lavorativo, spesso lo stesso giorno per i progetti in Europa.' },
+        languages: { q: 'In che lingue lavorate?', a: 'Gestiamo progetti in inglese, italiano, francese e tedesco, sia scritto che in chiamata.' },
+        quote: { q: 'Come richiedo un preventivo dettagliato?', a: 'Condividi disegni, superfici e finiture preferite tramite form, email o WhatsApp. Preventivo strutturato entro 48 ore.' },
+        visit: { q: 'Posso visitare lo showroom o le cave?', a: 'Sì. Lo showroom si visita su appuntamento e organizziamo tour in cava in Italia per i progetti confermati.' },
+        privacy: { q: 'Come vengono gestiti i miei dati?', a: 'La tua richiesta serve solo a rispondere al tuo progetto e non viene mai condivisa con terzi.' },
+      },
+    },
+    products: {
+      title: 'Sulla nostra collezione',
+      subtitle: 'Risposte pratiche su materiali, finiture e ordini dal catalogo.',
+      items: {
+        availability: { q: 'Tutti i prodotti sono a magazzino?', a: 'La maggior parte degli articoli standard è disponibile a stock o con tempi brevi. Blocchi rari e pezzi su misura sono prodotti su ordine.' },
+        finishesProduct: { q: 'Posso cambiare la finitura di un prodotto?', a: 'Sì. Quasi ogni articolo può essere fornito lucido, levigato, spazzolato, fiammato o anticato su richiesta.' },
+        sizes: { q: 'Sono possibili dimensioni su misura?', a: 'Le dimensioni su misura sono parte del nostro lavoro quotidiano, dai piccoli formati alle grandi lastre bookmatched.' },
+        samples2: { q: 'Come ordino un campione di un prodotto specifico?', a: 'Usa il form di contatto indicando il riferimento. Spediamo i campioni in pochi giorni lavorativi.' },
+        sustainability: { q: 'La pietra è approvvigionata in modo responsabile?', a: 'Lavoriamo solo con cave che rispettano gli standard europei ambientali e del lavoro, con tracciabilità per blocco.' },
+      },
+    },
   },
   testimonials: {
     title: 'Si fidano di noi', subtitle: 'Architetti, designer e privati in tutta Europa.',
