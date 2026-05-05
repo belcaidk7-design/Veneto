@@ -92,6 +92,8 @@ const Contact = () => {
 
         </aside>
       </section>
+
+      <FaqSection namespace="contact" itemKeys={CONTACT_FAQ_KEYS} />
     </Layout>
   );
 };
