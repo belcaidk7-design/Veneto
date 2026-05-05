@@ -31,10 +31,66 @@ const BlogPost = () => {
   const title = t(`blog.posts.${post.i18nKey}.title`);
   const excerpt = t(`blog.posts.${post.i18nKey}.excerpt`);
   const body = t(`blog.posts.${post.i18nKey}.body`) as string;
+  const faqItems = (t(`blog.posts.${post.i18nKey}.faq`, { returnObjects: true, defaultValue: [] }) as Array<{ q: string; a: string }>) || [];
+  const sources = (t(`blog.posts.${post.i18nKey}.sources`, { returnObjects: true, defaultValue: [] }) as Array<{ label: string; url: string }>) || [];
   const author = BLOG_AUTHORS[post.authorKey];
   const authorRole = t(`blog.authors.${author.key}.role`);
   const authorBio = t(`blog.authors.${author.key}.bio`);
   const wordCount = body.trim().split(/\s+/).length;
+
+  // Parse body into blocks (h2/h3/paragraph) from markdown-ish ## / ###
+  const blocks = body.split('\n\n').map((raw, i) => {
+    const trimmed = raw.trim();
+    if (trimmed.startsWith('### ')) {
+      return { type: 'h3' as const, text: trimmed.slice(4), key: i };
+    }
+    if (trimmed.startsWith('## ')) {
+      return { type: 'h2' as const, text: trimmed.slice(3), key: i };
+    }
+    return { type: 'p' as const, text: trimmed, key: i };
+  });
+
+  const jsonLdGraph: Record<string, unknown>[] = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BlogPosting',
+      headline: title,
+      description: excerpt,
+      image: post.cover,
+      datePublished: post.date,
+      dateModified: post.updated,
+      inLanguage: i18n.language,
+      articleSection: t(`blog.categories.${post.category}`),
+      wordCount,
+      timeRequired: `PT${post.readingTimeMin}M`,
+      author: {
+        '@type': 'Person',
+        name: author.name,
+        jobTitle: authorRole,
+        description: authorBio,
+        url: author.url,
+        ...(author.sameAs && author.sameAs.length ? { sameAs: author.sameAs } : {}),
+        worksFor: { '@type': 'Organization', name: 'HQ Stones' },
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'HQ Stones',
+        logo: { '@type': 'ImageObject', url: '/favicon.ico' },
+      },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': `/blog/${post.slug}` },
+    },
+  ];
+  if (faqItems.length > 0) {
+    jsonLdGraph.push({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqItems.map((it) => ({
+        '@type': 'Question',
+        name: it.q,
+        acceptedAnswer: { '@type': 'Answer', text: it.a },
+      })),
+    });
+  }
 
   return (
     <Layout>
@@ -49,34 +105,7 @@ const BlogPost = () => {
           { name: t('nav.blog'), path: '/blog' },
           { name: title, path: `/blog/${post.slug}` },
         ]}
-        jsonLd={{
-          '@context': 'https://schema.org',
-          '@type': 'BlogPosting',
-          headline: title,
-          description: excerpt,
-          image: post.cover,
-          datePublished: post.date,
-          dateModified: post.updated,
-          inLanguage: i18n.language,
-          articleSection: t(`blog.categories.${post.category}`),
-          wordCount,
-          timeRequired: `PT${post.readingTimeMin}M`,
-          author: {
-            '@type': 'Person',
-            name: author.name,
-            jobTitle: authorRole,
-            description: authorBio,
-            url: author.url,
-            ...(author.sameAs && author.sameAs.length ? { sameAs: author.sameAs } : {}),
-            worksFor: { '@type': 'Organization', name: 'HQ Stones' },
-          },
-          publisher: {
-            '@type': 'Organization',
-            name: 'HQ Stones',
-            logo: { '@type': 'ImageObject', url: '/favicon.ico' },
-          },
-          mainEntityOfPage: { '@type': 'WebPage', '@id': `/blog/${post.slug}` },
-        }}
+        jsonLd={jsonLdGraph}
       />
 
       <article>
