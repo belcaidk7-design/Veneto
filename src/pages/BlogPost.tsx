@@ -156,13 +156,81 @@ const BlogPost = () => {
 
         <div className="container-prose py-16 md:py-20">
           <div className="prose-stone mx-auto max-w-2xl space-y-5 text-lg leading-relaxed text-foreground/90">
-            {body.split('\n\n').map((para, i) => (
-              <p key={i}>{para}</p>
-            ))}
+            {blocks.map((b) => {
+              if (b.type === 'h2')
+                return (
+                  <h2 key={b.key} className="mt-10 font-serif text-2xl md:text-3xl text-foreground">
+                    {b.text}
+                  </h2>
+                );
+              if (b.type === 'h3')
+                return (
+                  <h3 key={b.key} className="mt-6 font-serif text-xl text-foreground">
+                    {b.text}
+                  </h3>
+                );
+              return <p key={b.key}>{b.text}</p>;
+            })}
           </div>
 
+          {faqItems.length > 0 && (
+            <section
+              className="mx-auto mt-14 max-w-2xl rounded-sm border border-border/60 bg-secondary/30 p-6"
+              aria-labelledby="post-faq-heading"
+            >
+              <h2 id="post-faq-heading" className="font-serif text-2xl">
+                {t('blog.faqTitle')}
+              </h2>
+              <Accordion type="single" collapsible className="mt-4 w-full">
+                {faqItems.map((it, i) => (
+                  <AccordionItem key={i} value={`q-${i}`}>
+                    <AccordionTrigger className="text-left font-serif text-base">
+                      {it.q}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-sm text-foreground/85">
+                      {it.a}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </section>
+          )}
+
+          {sources.length > 0 && (
+            <aside
+              className="mx-auto mt-10 max-w-2xl rounded-sm border border-border/60 p-6"
+              aria-labelledby="post-sources-heading"
+            >
+              <h2
+                id="post-sources-heading"
+                className="text-xs font-medium uppercase tracking-[0.25em] text-accent"
+              >
+                {t('blog.sourcesTitle')}
+              </h2>
+              <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-foreground/85">
+                {sources.map((s, i) => (
+                  <li key={i}>
+                    <a
+                      href={s.url}
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                      className="underline-offset-2 hover:text-accent hover:underline"
+                    >
+                      {s.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </aside>
+          )}
+
+          <p className="mx-auto mt-8 max-w-2xl text-xs text-muted-foreground">
+            {t('blog.lastReviewed')}{' '}
+            <time dateTime={post.updated}>{fmt(post.updated)}</time>
+          </p>
+
           <aside
-            className="mx-auto mt-14 max-w-2xl rounded-sm border border-border/60 bg-secondary/40 p-6"
+            className="mx-auto mt-10 max-w-2xl rounded-sm border border-border/60 bg-secondary/40 p-6"
             aria-labelledby="author-bio-heading"
           >
             <p
