@@ -165,6 +165,28 @@ export default {
       pricing: { q: 'Wie wird der Preis berechnet?', a: 'Nach Stein, Oberfläche, Maßen, Komplexität und Menge. Senden Sie uns Ihr Briefing: detailliertes Angebot, zeitnah.' },
       custom: { q: 'Realisieren Sie Maßanfertigungen?', a: 'Absolut. Von handgehauenen Skulpturen bis zu bookmatched Arbeitsplatten: Der Großteil unserer Arbeit ist Maßanfertigung.' },
     },
+    contact: {
+      title: 'Bevor Sie uns kontaktieren',
+      subtitle: 'Schnelle Antworten auf die häufigsten Fragen zum Projektstart.',
+      items: {
+        responseTime: { q: 'Wie schnell antworten Sie?', a: 'Unser Team antwortet auf jede Anfrage innerhalb eines Werktages, bei Projekten in Europa oft am selben Tag.' },
+        languages: { q: 'In welchen Sprachen arbeiten Sie?', a: 'Wir betreuen Projekte auf Englisch, Italienisch, Französisch und Deutsch, schriftlich wie telefonisch.' },
+        quote: { q: 'Wie erhalte ich ein detailliertes Angebot?', a: 'Senden Sie Pläne, Flächen und gewünschte Oberflächen per Formular, E-Mail oder WhatsApp. Strukturiertes Angebot binnen 48 Stunden.' },
+        visit: { q: 'Kann ich Showroom oder Steinbrüche besuchen?', a: 'Ja. Showroom-Besuche nach Vereinbarung, Steinbruch-Touren in Italien organisieren wir für bestätigte Projekte.' },
+        privacy: { q: 'Wie werden meine Daten verarbeitet?', a: 'Ihre Anfrage dient ausschließlich der Bearbeitung Ihres Projekts und wird nicht an Dritte weitergegeben.' },
+      },
+    },
+    products: {
+      title: 'Zu unserer Steinkollektion',
+      subtitle: 'Praktische Antworten zu Materialien, Oberflächen und Bestellungen aus dem Katalog.',
+      items: {
+        availability: { q: 'Sind alle Produkte auf Lager?', a: 'Die meisten Standardartikel sind ab Lager oder mit kurzer Lieferzeit verfügbar. Seltene Blöcke und Maßanfertigungen werden auf Bestellung produziert.' },
+        finishesProduct: { q: 'Kann ich die Oberfläche eines Produkts ändern?', a: 'Ja. Fast jeder Artikel kann poliert, geschliffen, gebürstet, geflammt oder gealtert geliefert werden.' },
+        sizes: { q: 'Sind Sondermaße möglich?', a: 'Sondermaße gehören zu unserem Tagesgeschäft, von kleinen Fliesen bis zu großen bookmatched Platten.' },
+        samples2: { q: 'Wie bestelle ich ein Muster eines bestimmten Produkts?', a: 'Nutzen Sie das Kontaktformular und nennen Sie die Produktreferenz. Versand der Muster binnen weniger Werktage.' },
+        sustainability: { q: 'Wird der Stein verantwortungsvoll gewonnen?', a: 'Wir arbeiten ausschließlich mit Steinbrüchen, die europäische Umwelt- und Arbeitsstandards erfüllen, mit voller Rückverfolgbarkeit pro Block.' },
+      },
+    },
   },
   testimonials: {
     title: 'Sie vertrauen uns', subtitle: 'Architekten, Designer und Privatkunden in ganz Europa.',
