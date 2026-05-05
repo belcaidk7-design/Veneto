@@ -124,6 +124,8 @@ const Products = () => {
           <p className="py-20 text-center text-muted-foreground">{t('products.noResults')}</p>
         )}
       </div>
+
+      <FaqSection namespace="products" itemKeys={PRODUCTS_FAQ_KEYS} />
     </Layout>
   );
 };
