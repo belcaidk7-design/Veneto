@@ -4,7 +4,10 @@ import { useTranslation } from 'react-i18next';
 import Layout from '@/components/Layout';
 import Seo from '@/components/Seo';
 import ProductCard from '@/components/ProductCard';
+import FaqSection, { buildFaqJsonLd } from '@/components/FaqSection';
 import { CATEGORIES, MATERIALS, MaterialKey, PRODUCTS } from '@/data/catalog';
+
+const PRODUCTS_FAQ_KEYS = ['availability', 'finishesProduct', 'sizes', 'samples2', 'sustainability'];
 
 const Products = () => {
   const { t } = useTranslation();
