@@ -57,6 +57,7 @@ const Products = () => {
           { name: t('nav.home'), path: '/' },
           { name: t('nav.products'), path: '/products' },
         ]}
+        jsonLd={buildFaqJsonLd(t, 'products', PRODUCTS_FAQ_KEYS)}
       />
       <section className="border-b border-border/60 bg-secondary/40">
         <div className="container-prose py-16 md:py-20">
