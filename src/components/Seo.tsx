@@ -49,6 +49,7 @@ const Seo = ({
   description,
   path = '/',
   image,
+  imageAlt,
   type = 'website',
   jsonLd,
   breadcrumbs,
