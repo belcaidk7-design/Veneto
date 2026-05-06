@@ -65,7 +65,7 @@ const BlogPost = () => {
       '@type': 'BlogPosting',
       headline: title,
       description: excerpt,
-      image: post.cover,
+      image: { '@type': 'ImageObject', url: post.cover, caption: imageAlt },
       datePublished: post.date,
       dateModified: post.updated,
       inLanguage: i18n.language,
