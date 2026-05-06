@@ -11,6 +11,7 @@ interface SeoProps {
   description: string;
   path?: string;
   image?: string;
+  imageAlt?: string;
   type?: 'website' | 'article';
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
   breadcrumbs?: BreadcrumbItem[];
