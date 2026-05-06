@@ -122,7 +122,7 @@ const BlogPost = () => {
         <div className="relative h-[55vh] min-h-[360px] w-full overflow-hidden">
           <img
             src={post.cover}
-            alt={title}
+            alt={imageAlt}
             width={1280}
             height={832}
             className="absolute inset-0 h-full w-full object-cover"
