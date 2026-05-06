@@ -36,6 +36,9 @@ const BlogPost = () => {
   const related = getRelatedPosts(post, 3);
   const title = t(`blog.posts.${post.i18nKey}.title`);
   const excerpt = t(`blog.posts.${post.i18nKey}.excerpt`);
+  const seoTitle = t(`blog.posts.${post.i18nKey}.seoTitle`, { defaultValue: title }) as string;
+  const seoDescription = t(`blog.posts.${post.i18nKey}.seoDescription`, { defaultValue: excerpt }) as string;
+  const imageAlt = t(`blog.posts.${post.i18nKey}.imageAlt`, { defaultValue: title }) as string;
   const body = t(`blog.posts.${post.i18nKey}.body`) as string;
   const faqItems = (t(`blog.posts.${post.i18nKey}.faq`, { returnObjects: true, defaultValue: [] }) as Array<{ q: string; a: string }>) || [];
   const sources = (t(`blog.posts.${post.i18nKey}.sources`, { returnObjects: true, defaultValue: [] }) as Array<{ label: string; url: string }>) || [];
