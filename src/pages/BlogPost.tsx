@@ -270,7 +270,7 @@ const BlogPost = () => {
                   <div className="aspect-square w-28 shrink-0 overflow-hidden rounded-sm">
                     <img
                       src={p.cover}
-                      alt={t(`blog.posts.${p.i18nKey}.title`)}
+                      alt={t(`blog.posts.${p.i18nKey}.imageAlt`, { defaultValue: t(`blog.posts.${p.i18nKey}.title`) }) as string}
                       loading="lazy"
                       className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
