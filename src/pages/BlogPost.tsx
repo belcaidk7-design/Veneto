@@ -104,10 +104,11 @@ const BlogPost = () => {
   return (
     <Layout>
       <Seo
-        title={title}
-        description={excerpt}
+        title={seoTitle}
+        description={seoDescription}
         path={`/blog/${post.slug}`}
         image={post.cover}
+        imageAlt={imageAlt}
         type="article"
         breadcrumbs={[
           { name: t('nav.home'), path: '/' },
