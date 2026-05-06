@@ -11,6 +11,7 @@ interface SeoProps {
   description: string;
   path?: string;
   image?: string;
+  imageAlt?: string;
   type?: 'website' | 'article';
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
   breadcrumbs?: BreadcrumbItem[];
@@ -48,6 +49,7 @@ const Seo = ({
   description,
   path = '/',
   image,
+  imageAlt,
   type = 'website',
   jsonLd,
   breadcrumbs,
@@ -111,10 +113,12 @@ const Seo = ({
       <meta property="og:url" content={url} />
       <meta property="og:locale" content={lang} />
       {ogImage && <meta property="og:image" content={ogImage} />}
+      {ogImage && imageAlt && <meta property="og:image:alt" content={imageAlt} />}
       <meta name="twitter:card" content={ogImage ? 'summary_large_image' : 'summary'} />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       {ogImage && <meta name="twitter:image" content={ogImage} />}
+      {ogImage && imageAlt && <meta name="twitter:image:alt" content={imageAlt} />}
       <script type="application/ld+json">{JSON.stringify(graph)}</script>
     </Helmet>
   );

@@ -36,6 +36,9 @@ const BlogPost = () => {
   const related = getRelatedPosts(post, 3);
   const title = t(`blog.posts.${post.i18nKey}.title`);
   const excerpt = t(`blog.posts.${post.i18nKey}.excerpt`);
+  const seoTitle = t(`blog.posts.${post.i18nKey}.seoTitle`, { defaultValue: title }) as string;
+  const seoDescription = t(`blog.posts.${post.i18nKey}.seoDescription`, { defaultValue: excerpt }) as string;
+  const imageAlt = t(`blog.posts.${post.i18nKey}.imageAlt`, { defaultValue: title }) as string;
   const body = t(`blog.posts.${post.i18nKey}.body`) as string;
   const faqItems = (t(`blog.posts.${post.i18nKey}.faq`, { returnObjects: true, defaultValue: [] }) as Array<{ q: string; a: string }>) || [];
   const sources = (t(`blog.posts.${post.i18nKey}.sources`, { returnObjects: true, defaultValue: [] }) as Array<{ label: string; url: string }>) || [];
@@ -62,7 +65,7 @@ const BlogPost = () => {
       '@type': 'BlogPosting',
       headline: title,
       description: excerpt,
-      image: post.cover,
+      image: { '@type': 'ImageObject', url: post.cover, caption: imageAlt },
       datePublished: post.date,
       dateModified: post.updated,
       inLanguage: i18n.language,
@@ -101,10 +104,11 @@ const BlogPost = () => {
   return (
     <Layout>
       <Seo
-        title={title}
-        description={excerpt}
+        title={seoTitle}
+        description={seoDescription}
         path={`/blog/${post.slug}`}
         image={post.cover}
+        imageAlt={imageAlt}
         type="article"
         breadcrumbs={[
           { name: t('nav.home'), path: '/' },
@@ -118,7 +122,7 @@ const BlogPost = () => {
         <div className="relative h-[55vh] min-h-[360px] w-full overflow-hidden">
           <img
             src={post.cover}
-            alt={title}
+            alt={imageAlt}
             width={1280}
             height={832}
             className="absolute inset-0 h-full w-full object-cover"
@@ -266,7 +270,7 @@ const BlogPost = () => {
                   <div className="aspect-square w-28 shrink-0 overflow-hidden rounded-sm">
                     <img
                       src={p.cover}
-                      alt={t(`blog.posts.${p.i18nKey}.title`)}
+                      alt={t(`blog.posts.${p.i18nKey}.imageAlt`, { defaultValue: t(`blog.posts.${p.i18nKey}.title`) }) as string}
                       loading="lazy"
                       className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />

@@ -78,7 +78,7 @@ const Blog = () => {
                 <Link to={`/blog/${post.slug}`} className="block aspect-[4/3] overflow-hidden">
                   <img
                     src={post.cover}
-                    alt={t(`blog.posts.${post.i18nKey}.title`)}
+                    alt={t(`blog.posts.${post.i18nKey}.imageAlt`, { defaultValue: t(`blog.posts.${post.i18nKey}.title`) }) as string}
                     loading="lazy"
                     width={1280}
                     height={832}
