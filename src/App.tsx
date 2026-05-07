@@ -19,6 +19,14 @@ import Craft from "./pages/Craft.tsx";
 import Faq from "./pages/Faq.tsx";
 import Contact from "./pages/Contact.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import AdminLayout from "./admin/AdminLayout";
+import AdminLogin from "./admin/AdminLogin";
+import AdminDashboard from "./admin/AdminDashboard";
+import AdminPages from "./admin/AdminPages";
+import AdminBlog from "./admin/AdminBlog";
+import AdminProducts from "./admin/AdminProducts";
+import AdminFaq from "./admin/AdminFaq";
+import AdminAuthors from "./admin/AdminAuthors";
 
 const queryClient = new QueryClient();
 
@@ -42,6 +50,15 @@ const App = () => (
             <Route path="/savoir-faire" element={<Craft />} />
             <Route path="/faq" element={<Faq />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/admin/login" element={<AdminLogin />} />
+            <Route path="/admin" element={<AdminLayout />}>
+              <Route index element={<AdminDashboard />} />
+              <Route path="pages" element={<AdminPages />} />
+              <Route path="blog" element={<AdminBlog />} />
+              <Route path="products" element={<AdminProducts />} />
+              <Route path="faq" element={<AdminFaq />} />
+              <Route path="authors" element={<AdminAuthors />} />
+            </Route>
             <Route path="*" element={<NotFound />} />
           </Routes>
           <WhatsAppButton />
