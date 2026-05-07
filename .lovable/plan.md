@@ -1,106 +1,73 @@
+# Admin SEO – plan d'implémentation
 
+## Objectif
+Créer une zone admin protégée par login `/admin/seo` pour éditer tous les contenus SEO (articles, produits, pages statiques, FAQ, auteurs/E-E-A-T) en EN/IT/FR/DE, sans passer par le chat.
 
-# Refonte contenu + conversion + fluidité (passe complète)
+## Stack
+- **Lovable Cloud** (auth email/password + base Postgres + RLS)
+- **Pas de signup public** : un seul compte admin, créé manuellement, identifié par un rôle `admin` (table `user_roles` séparée, jamais sur `profiles`)
+- Frontend React existant (shadcn + Tailwind + i18n)
 
-Objectif : donner envie de contacter rapidement. Plus de contenu, moins de tirets, design plus fluide, fiches produits riches.
+## Architecture base de données
 
-## A. Réécriture du ton (tirets + style)
+```text
+user_roles (user_id, role)              -- rôle "admin" uniquement
+seo_pages (key, lang, ...)              -- SEO des pages statiques (home, products, contact…)
+seo_blog_posts (slug, lang, ...)        -- SEO + contenu articles (title, body, faq[], sources[])
+seo_products (product_id, lang, ...)    -- SEO par fiche produit
+seo_faq (page, lang, items[])           -- FAQ Contact / Products
+authors (id, name, bio_*, avatar, links)-- auteurs E-E-A-T (multi-langue)
+```
 
-### A1. Suppression systématique des tirets cadratins (—)
-Audit + remplacement dans `fr.ts`, `en.ts`, `it.ts`, `de.ts` :
-- Titres `H1/H2` réécrits sans `—` (ex : `"HQ Stones — Pierre Naturelle, Projets d'Exception"` → `"La pierre naturelle italienne pour vos projets d'exception"`).
-- Sublines reformulées en phrases complètes plutôt qu'en énumérations télégraphiques.
-- Descriptions matériaux/catégories : phrases liées, plus chaleureuses, plus vendeuses.
+Toutes les tables : RLS activée. Lecture publique pour le contenu SEO (le site doit l'afficher), écriture réservée à `has_role(auth.uid(), 'admin')`.
 
-### A2. Nouveau ton commercial chaleureux
-- Hero : promesse claire + bénéfice client + CTA contextualisé.
-- Sections : un mini-storytelling au lieu de listes sèches.
-- Tous les CTA reformulés ("Demander un devis" → "Parlons de votre projet", etc. — à valider en relecture).
+## Migration du contenu existant
+Les contenus actuellement dans `src/i18n/locales/*.ts` (articles, FAQ, SEO pages) seront **seedés** en base via une migration initiale. Les locales gardent uniquement l'UI (boutons, labels, navigation).
 
-## B. Fiches produits enrichies (structure + contenu mutualisé)
+## Chargement côté site
+- Hook `useSeoContent(key, lang)` qui lit la table correspondante via Supabase client
+- Cache via React Query
+- Les pages publiques (Blog, BlogPost, Products, Contact, Home) consomment ce hook au lieu de `t()` pour les champs SEO
+- Fallback automatique sur EN si la traduction manque
 
-### B1. Extension du modèle `Product` dans `src/data/catalog.ts`
-Ajout (optionnels) :
-- `descriptionKey` (description longue 3-4 paragraphes, mutualisée par catégorie/matériau quand pertinent).
-- `recommendedFinishes: Finish[]` (sous-ensemble des finitions adaptées).
-- `typicalUses: string[]` (clés i18n).
-- `formats: string[]` (ex : `'30×60 cm'`, `'sur mesure'`).
-- `careTips` clé i18n.
+## Interface Admin
 
-### B2. Refonte de `ProductDetail.tsx`
-Nouvelles sections (en plus de l'existant) :
-1. **Breadcrumb** (Accueil > Produits > Catégorie > Produit) — SEO + UX.
-2. **Hero produit** image gauche + titre/desc/CTA droite (existant), enrichi.
-3. **"Pourquoi cette pierre"** : 3 cartes bénéfices (durabilité, esthétique, sur-mesure).
-4. **Usages typiques** : liste illustrée d'icônes Lucide.
-5. **Matériaux disponibles** (existant) avec mini-paragraphe par matériau.
-6. **Finitions recommandées** : grille avec swatches + courte description de chaque finition.
-7. **Formats & sur-mesure** : tableau simple.
-8. **Conseils d'entretien** : 3-4 puces.
-9. **FAQ produit** (3-4 questions ciblées via accordion partagé).
-10. **CTA sticky en bas (mobile)** "Demander un devis" toujours visible.
-11. **Bloc contact final** avant les related : "Un projet en tête ? Réponse sous 24h" + bouton + WhatsApp.
-12. **Related products** (existant, gardé).
+Routes (toutes protégées par `<AdminGuard>`) :
+- `/admin/login` – formulaire email/password
+- `/admin` – tableau de bord (compteurs : N articles, N produits, traductions manquantes…)
+- `/admin/blog` – liste articles + bouton "Nouveau"
+- `/admin/blog/:slug` – éditeur tabs EN/IT/FR/DE (title, slug, excerpt, body markdown, image, alt, dates, FAQ, sources, seoTitle, seoDescription)
+- `/admin/pages` – éditeur pages statiques (title, meta, OG image, alt) par langue
+- `/admin/products` – idem par fiche produit
+- `/admin/faq` – éditeur des FAQ Contact / Products
+- `/admin/authors` – CRUD auteurs (nom, bio multi-langue, avatar, liens sociaux/sources)
 
-### B3. JSON-LD Product schema sur chaque fiche
-`@type: Product` avec name, image, description, brand, category — pour le SEO Google Shopping/résultats enrichis.
+UI : shadcn `Tabs` (langues), `Form` + `Textarea`/`Input`, preview live à droite, bouton "Enregistrer" qui upsert en DB.
 
-## C. Pages matériaux enrichies
+## Sécurité
+- Pas de signup ouvert (`disable_sign_up=true` ou simplement pas de page signup)
+- Compte admin créé via SQL après première connexion (insertion dans `user_roles`)
+- Toutes les mutations vérifient `has_role` côté RLS
+- Aucun rôle stocké dans `profiles` ou `localStorage`
 
-Sur `Materials.tsx`, allonger chaque bloc matériau :
-- `marbleDesc` passe de 1 phrase à 1 paragraphe complet (origine, caractère, usages).
-- Ajout sous chaque matériau : `marbleUses` (liste 4-5 usages typiques) + `marbleCare` (entretien court) + `marbleFinishes` (finitions recommandées sous forme de chips).
-- CTA contextuel "Demander un échantillon de marbre" par bloc.
+## Étapes d'implémentation
 
-JSON-LD `@type: Article` ou `WebPage` enrichi par section.
-
-## D. Accueil refondu (fluidité + storytelling)
-
-### D1. Hero
-- Titre réécrit sans tirets.
-- Ajout d'une **ligne de réassurance** sous les CTA : "Carrières partenaires en Italie · Livraison Europe · Devis sous 24h".
-- Légère animation parallax sur l'image au scroll (CSS only).
-
-### D2. Nouvelle section "Pourquoi HQ Stones" (4 piliers)
-Après les catégories, avant les matériaux : 4 colonnes avec icônes Lucide (Origine directe, Sur-mesure, Conseil expert, Logistique maîtrisée). Chaque colonne 2-3 lignes.
-
-### D3. Section "Notre processus en 4 étapes" (mini)
-Teaser de la page Craft, en 4 cartes horizontales numérotées avec lien "Voir notre savoir-faire".
-
-### D4. Section "Réalisations récentes" (mini gallery)
-3 projets en cartes plein-largeur avec hover zoom, lien vers `/projects`. Actuellement la page Projects existe mais n'est pas teasée sur l'accueil.
-
-### D5. Section CTA finale forte
-Avant le footer : bandeau accent or doux + "Parlons de votre projet" + bouton blanc + numéro de téléphone visible.
-
-### D6. Animations au scroll
-Utiliser le hook `useInView` existant pour fade-in-up subtil sur les sections au scroll. Durée 600-800ms, easing doux. Pas d'effet tape-à-l'œil.
-
-## E. Micro-design / fluidité
-
-- Transitions de page douces (fade) via wrapper dans `Layout.tsx`.
-- Survols enrichis : sur les cards, ajouter un revealing du CTA (bouton "Voir →" qui apparait en bas de l'image au hover desktop).
-- Ratios d'image harmonisés (4:5 pour produits dans les listes ? à confirmer — actuellement 4:3, je laisse).
-- Plus de respirations verticales sur mobile (espace entre sections augmenté).
-- Boutons CTA principaux : ajouter une légère élévation au hover (shadow).
-
-## F. SEO renforcé
-
-- Toutes les meta titles et descriptions réécrites (≤60 / ≤155 chars), mots-clés réels (« marbre Calacatta Italie », « pavé porphyre extérieur », etc.).
-- H1 unique par page (audit + correction).
-- Alt text descriptif sur toutes les images produits (« Sol intérieur en marbre Calacatta poli » au lieu de « Sol intérieur »).
-- Sitemap.xml mis à jour avec les nouvelles fiches produit `/products/:slug`.
-- JSON-LD `BreadcrumbList` sur les fiches produit.
-- Lien interne croisé : depuis chaque fiche produit, lien vers la page matériau correspondante et l'article de blog associé si dispo.
-
-## G. Internationalisation
-
-Tout le nouveau contenu ajouté dans les 4 langues (`fr`, `en`, `it`, `de`). FR et EN soignés, IT et DE traduits proprement (pas de Google Translate visible).
-
-## H. Hors scope (pour plus tard)
-- Calculateur de quantité, demande d'échantillon physique avec adresse, espace pro/B2B, comparateur de pierres, configurateur 3D, mode sombre, vidéos sur les fiches produits.
+1. **Activer Lovable Cloud** + créer le schéma (enum `app_role`, tables ci-dessus, RLS, fonction `has_role`)
+2. **Seed** : migration qui copie le contenu actuel des locales TS vers la DB
+3. **Auth** : page `/admin/login`, hook `useAuth`, `<AdminGuard>`, `useIsAdmin()`
+4. **Hooks de lecture publique** (`useSeoContent`, `useBlogPost`, `useProductSeo`…)
+5. **Refactor pages publiques** pour consommer la DB au lieu des locales (champs SEO uniquement)
+6. **UI Admin** : layout + sidebar + 5 éditeurs (blog, pages, produits, FAQ, auteurs)
+7. **Tests** : maj du test sitemap pour lire depuis la DB ; ajout test RLS basique
+8. **Doc** : courte note pour expliquer comment créer le premier admin (insert SQL guidé)
 
 ## Notes
-- Le contenu mutualisé (descriptions par catégorie, conseils d'entretien par matériau) sera explicitement marqué dans le code avec un commentaire `// CONTENT: review and refine` pour que tu puisses repasser dessus facilement.
-- Pas de modification du backend ni de la structure de routes, uniquement contenu + UI.
+- Les **slugs** restent stables : changer un slug crée une redirection plutôt que casser l'URL (peut être ajouté en v2)
+- L'éditeur body utilise une simple `Textarea` avec syntaxe markdown `## / ###` déjà supportée par `BlogPost.tsx` ; pas de WYSIWYG en v1
+- Volume d'écriture très faible → pas besoin de cache invalidation sophistiquée, un `queryClient.invalidateQueries` après save suffit
 
+## Hors périmètre (v2 possibles)
+- Versioning / historique des modifs
+- Workflow review/publish (draft vs published)
+- Upload d'images directement dans l'admin (v1 : URL à coller)
+- Plusieurs éditeurs avec rôles différents
