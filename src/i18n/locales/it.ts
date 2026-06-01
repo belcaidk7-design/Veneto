@@ -89,6 +89,7 @@ export default {
       flowerBoxes: 'Fioriere', benches: 'Panchine', bollards: 'Dissuasori', curbs: 'Cordoli', sculptures: 'Sculture',
       externalCladding: 'Rivestimento esterno', interiorFlooring: 'Pavimento interno', interiorCladding: 'Rivestimento interno',
       kitchenCountertops: 'Top cucina', sinks: 'Lavabi', bathtubs: 'Vasche', openBookSlabs: 'Lastre open book', blockSlabs: 'Lastre da blocco',
+      stairs: 'Scale', windowSills: 'Davanzali', pools: 'Piscine e margelles', wells: 'Pozzi', vases: 'Vasi ornamentali', wallFountains: 'Fontane a parete', braziers: 'Bracieri', fireplaces: 'Caminetti',
     },
   },
   productDetail: {
