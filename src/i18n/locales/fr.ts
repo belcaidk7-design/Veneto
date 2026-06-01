@@ -2,6 +2,7 @@ export default {
   nav: {
     home: 'Accueil',
     products: 'Produits',
+    catalog: 'Catalogue',
     materials: 'Matériaux',
     projects: 'Réalisations',
     blog: 'Magazine',

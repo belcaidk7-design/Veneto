@@ -1,5 +1,5 @@
 export default {
-  nav: { home: 'Start', products: 'Produkte', materials: 'Materialien', projects: 'Referenzen', blog: 'Magazin', about: 'Über uns', craft: 'Handwerk', faq: 'FAQ', contact: 'Kontakt' },
+  nav: { home: 'Start', products: 'Produkte', catalog: 'Katalog', materials: 'Materialien', projects: 'Referenzen', blog: 'Magazin', about: 'Über uns', craft: 'Handwerk', faq: 'FAQ', contact: 'Kontakt' },
   header: { callAria: 'Anrufen' },
   hero: {
     eyebrow: 'Naturstein',

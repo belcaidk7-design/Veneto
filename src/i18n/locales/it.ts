@@ -1,5 +1,5 @@
 export default {
-  nav: { home: 'Home', products: 'Prodotti', materials: 'Materiali', projects: 'Realizzazioni', blog: 'Magazine', about: 'Chi siamo', craft: 'Savoir-faire', faq: 'FAQ', contact: 'Contatti' },
+  nav: { home: 'Home', products: 'Prodotti', catalog: 'Catalogo', materials: 'Materiali', projects: 'Realizzazioni', blog: 'Magazine', about: 'Chi siamo', craft: 'Savoir-faire', faq: 'FAQ', contact: 'Contatti' },
   header: { callAria: 'Chiamaci' },
   hero: {
     eyebrow: 'Pietra naturale',
