@@ -438,5 +438,23 @@ export default {
     craft: { title: 'Notre savoir-faire, de la carrière au projet', description: 'Extraction, découpe, finition, livraison : les quatre étapes qui amènent la pierre de la montagne à votre projet.' },
     faq: { title: 'FAQ : tout savoir sur la pierre naturelle', description: 'Échantillons, livraison, délais, entretien, finitions, garantie. Réponses aux questions les plus fréquentes.' },
     contact: { title: 'Contact HQ Stones, demandez votre devis', description: 'Parlez-nous de votre projet. Téléphone, WhatsApp, email ou formulaire. Réponse rapide.' },
+    catalog: { title: 'Catalogue pierre : fontaines, jardinières, colonnes, balustrades', description: 'Parcourez notre catalogue complet de produits en pierre naturelle : fontaines, fontaines murales, jardinières, vasques, piscines, balustrades, colonnes, escaliers, seuils et dallages.' },
+  },
+  catalog: {
+    title: 'Catalogue produits',
+    subtitle: 'Parcourez notre catalogue complet de modèles en pierre naturelle. Chaque planche présente une série de références disponibles sur demande — choisissez une famille ou cliquez sur une planche pour l\u2019afficher en grand.',
+    all: 'Tout',
+    families: {
+      fountains: 'Fontaines',
+      wallFountains: 'Fontaines murales',
+      flowerpots: 'Jardinières',
+      pots: 'Vasques',
+      pools: 'Piscines',
+      balustrades: 'Balustrades',
+      columns: 'Colonnes',
+      stairs: 'Escaliers',
+      windowSills: 'Seuils & appuis',
+      paving: 'Dallages',
+    },
   },
 };

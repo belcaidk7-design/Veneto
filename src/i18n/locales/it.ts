@@ -310,5 +310,23 @@ export default {
     craft: { title: 'Il nostro savoir-faire, dalla cava al progetto', description: 'Estrazione, taglio, finitura, consegna: le quattro tappe che portano la pietra dalla montagna al tuo progetto.' },
     faq: { title: 'FAQ: tutto sulla pietra naturale', description: 'Campioni, consegna, tempi, manutenzione, finiture, garanzia. Risposte alle domande più frequenti.' },
     contact: { title: 'Contatta HQ Stones, richiedi il tuo preventivo', description: 'Raccontaci il tuo progetto. Telefono, WhatsApp, email o modulo. Risposta in tempi brevi.' },
+    catalog: { title: 'Catalogo pietra: fontane, fioriere, colonne, balaustre', description: 'Sfoglia il catalogo completo di prodotti in pietra naturale: fontane, fontane a muro, fioriere, vasche, piscine, balaustre, colonne, scale, davanzali e pavimentazioni.' },
+  },
+  catalog: {
+    title: 'Catalogo prodotti',
+    subtitle: 'Sfoglia il catalogo completo dei nostri modelli in pietra naturale. Ogni tavola mostra una serie di referenze disponibili su richiesta — scegli una famiglia o clicca per ingrandire.',
+    all: 'Tutto',
+    families: {
+      fountains: 'Fontane',
+      wallFountains: 'Fontane a muro',
+      flowerpots: 'Fioriere',
+      pots: 'Vasche',
+      pools: 'Piscine',
+      balustrades: 'Balaustre',
+      columns: 'Colonne',
+      stairs: 'Scale',
+      windowSills: 'Davanzali',
+      paving: 'Pavimentazioni',
+    },
   },
 };
