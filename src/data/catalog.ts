@@ -15,6 +15,14 @@ import imgCurbs from '@/assets/products/curbs.jpg';
 import imgBathtubs from '@/assets/products/bathtubs.jpg';
 import imgOpenBookSlabs from '@/assets/products/open-book-slabs.jpg';
 import imgBlockSlabs from '@/assets/products/block-slabs.jpg';
+import imgStairs from '@/assets/products/stairs.jpg';
+import imgWindowSills from '@/assets/products/window-sills.jpg';
+import imgPools from '@/assets/products/pools.jpg';
+import imgWells from '@/assets/products/wells.jpg';
+import imgVases from '@/assets/products/vases.jpg';
+import imgWallFountains from '@/assets/products/wall-fountains.jpg';
+import imgBraziers from '@/assets/products/braziers.jpg';
+import imgFireplaces from '@/assets/products/fireplaces.jpg';
 
 export type CategoryKey = 'exterior' | 'interior' | 'slabs';
 export type MaterialKey = 'marble' | 'limestone' | 'granite' | 'porfido' | 'sandstone';
