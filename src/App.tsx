@@ -9,6 +9,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import CookieConsent from "@/components/CookieConsent";
 import Index from "./pages/Index.tsx";
 import Products from "./pages/Products.tsx";
+import Catalog from "./pages/Catalog.tsx";
 import ProductDetail from "./pages/ProductDetail.tsx";
 import Materials from "./pages/Materials.tsx";
 import Projects from "./pages/Projects.tsx";
@@ -42,6 +43,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/products" element={<Products />} />
             <Route path="/products/:slug" element={<ProductDetail />} />
+            <Route path="/catalog" element={<Catalog />} />
             <Route path="/materials" element={<Materials />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/blog" element={<Blog />} />

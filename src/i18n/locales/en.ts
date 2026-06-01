@@ -2,6 +2,7 @@ export default {
   nav: {
     home: 'Home',
     products: 'Products',
+    catalog: 'Catalog',
     materials: 'Materials',
     projects: 'Projects',
     blog: 'Journal',
@@ -393,5 +394,23 @@ export default {
     craft: { title: 'Our craft, from quarry to project', description: 'Extraction, cutting, finishing, delivery: the four steps that bring stone from the mountain to your project.' },
     faq: { title: 'FAQ: everything about natural stone', description: 'Samples, delivery, lead times, maintenance, finishes, warranty. Answers to the most common questions about natural stone.' },
     contact: { title: 'Contact HQ Stones, request a quote', description: 'Tell us about your project. Phone, WhatsApp, email or contact form. We respond quickly.' },
+    catalog: { title: 'Stone catalog: fountains, planters, columns, balustrades', description: 'Browse our full catalog of natural stone products: fountains, wall fountains, planters, troughs, pools, balustrades, columns, stairs, window sills and paving.' },
+  },
+  catalog: {
+    title: 'Product Catalog',
+    subtitle: 'Browse our complete catalog of natural stone models. Each plate shows a series of references available on request — pick a family or click a plate to see it in detail.',
+    all: 'All',
+    families: {
+      fountains: 'Fountains',
+      wallFountains: 'Wall fountains',
+      flowerpots: 'Planters',
+      pots: 'Troughs',
+      pools: 'Pools',
+      balustrades: 'Balustrades',
+      columns: 'Columns',
+      stairs: 'Stairs',
+      windowSills: 'Window sills',
+      paving: 'Paving',
+    },
   },
 };

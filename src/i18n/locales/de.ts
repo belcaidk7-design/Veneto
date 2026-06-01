@@ -1,5 +1,5 @@
 export default {
-  nav: { home: 'Start', products: 'Produkte', materials: 'Materialien', projects: 'Referenzen', blog: 'Magazin', about: 'Über uns', craft: 'Handwerk', faq: 'FAQ', contact: 'Kontakt' },
+  nav: { home: 'Start', products: 'Produkte', catalog: 'Katalog', materials: 'Materialien', projects: 'Referenzen', blog: 'Magazin', about: 'Über uns', craft: 'Handwerk', faq: 'FAQ', contact: 'Kontakt' },
   header: { callAria: 'Anrufen' },
   hero: {
     eyebrow: 'Naturstein',
@@ -309,5 +309,23 @@ export default {
     craft: { title: 'Unser Handwerk, vom Steinbruch zum Projekt', description: 'Förderung, Zuschnitt, Veredelung, Lieferung: Die vier Schritte, die Stein vom Berg in Ihr Projekt bringen.' },
     faq: { title: 'FAQ: alles über Naturstein', description: 'Muster, Lieferung, Termine, Pflege, Oberflächen, Garantie. Antworten auf häufige Fragen.' },
     contact: { title: 'HQ Stones kontaktieren, Angebot anfordern', description: 'Erzählen Sie uns von Ihrem Projekt. Telefon, WhatsApp, E-Mail oder Formular. Antwort zeitnah.' },
+    catalog: { title: 'Stein-Katalog: Brunnen, Pflanzgefäße, Säulen, Balustraden', description: 'Durchstöbern Sie unseren vollständigen Naturstein-Katalog: Brunnen, Wandbrunnen, Pflanzgefäße, Tröge, Pools, Balustraden, Säulen, Treppen, Fensterbänke und Pflasterungen.' },
+  },
+  catalog: {
+    title: 'Produktkatalog',
+    subtitle: 'Durchstöbern Sie unseren vollständigen Katalog an Naturstein-Modellen. Jede Tafel zeigt eine Reihe von Referenzen auf Anfrage — wählen Sie eine Familie oder klicken Sie auf eine Tafel für die Großansicht.',
+    all: 'Alle',
+    families: {
+      fountains: 'Brunnen',
+      wallFountains: 'Wandbrunnen',
+      flowerpots: 'Pflanzgefäße',
+      pots: 'Tröge',
+      pools: 'Pools',
+      balustrades: 'Balustraden',
+      columns: 'Säulen',
+      stairs: 'Treppen',
+      windowSills: 'Fensterbänke',
+      paving: 'Pflasterungen',
+    },
   },
 };
