@@ -88,6 +88,7 @@ export default {
       flowerBoxes: 'Pflanzgefäße', benches: 'Bänke', bollards: 'Poller', curbs: 'Bordsteine', sculptures: 'Skulpturen',
       externalCladding: 'Außenverkleidung', interiorFlooring: 'Innenboden', interiorCladding: 'Innenverkleidung',
       kitchenCountertops: 'Arbeitsplatten', sinks: 'Becken', bathtubs: 'Badewannen', openBookSlabs: 'Open-Book-Platten', blockSlabs: 'Blockplatten',
+      stairs: 'Treppen', windowSills: 'Fensterbänke', pools: 'Pool-Einfassungen', wells: 'Brunnen (Ziehbrunnen)', vases: 'Ziervasen', wallFountains: 'Wandbrunnen', braziers: 'Feuerschalen', fireplaces: 'Kamine',
     },
   },
   productDetail: {
