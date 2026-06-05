@@ -25,7 +25,7 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import { Button } from '@/components/ui/button';
-import { getProductBySlug, getRelatedProducts } from '@/data/catalog';
+import { getProductBySlug, getProductGallery, getRelatedProducts } from '@/data/catalog';
 
 const BENEFIT_ICONS = {
   durability: Sparkles,
