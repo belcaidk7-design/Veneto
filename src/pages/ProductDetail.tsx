@@ -40,6 +40,7 @@ const ProductDetail = () => {
   const { t } = useTranslation();
   const product = getProductBySlug(slug);
   const [lightbox, setLightbox] = useState(false);
+  const [galleryLightbox, setGalleryLightbox] = useState<{ src: string; alt: string } | null>(null);
   const [quoteOpen, setQuoteOpen] = useState(false);
 
   if (!product) {
