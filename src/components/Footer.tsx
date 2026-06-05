@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Download, Facebook, Instagram, Linkedin } from 'lucide-react';
+import { Facebook, Instagram, Linkedin } from 'lucide-react';
 import LanguageSwitcher from './LanguageSwitcher';
 
 const Footer = () => {
@@ -26,15 +26,6 @@ const Footer = () => {
             HQ <span className="text-accent">Stones</span>
           </Link>
           <p className="mt-4 max-w-sm text-sm text-background/70">{t('footer.tagline')}</p>
-          <a
-            href="/catalogue.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-6 inline-flex items-center gap-2 rounded-sm border border-accent/40 bg-accent/10 px-4 py-2.5 text-xs font-medium uppercase tracking-wider text-accent transition-colors hover:bg-accent hover:text-accent-foreground"
-          >
-            <Download className="h-3.5 w-3.5" />
-            {t('footer.downloadCatalog')}
-          </a>
         </div>
 
         <div>
