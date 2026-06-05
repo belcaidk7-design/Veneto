@@ -214,6 +214,37 @@ const ProductDetail = () => {
         </Reveal>
       </article>
 
+      {/* Catalog gallery — extra references from the printed catalog */}
+      {gallery.length > 0 && (
+        <section className="container-prose pb-4 md:pb-8">
+          <Reveal>
+            <h2 className="font-serif text-2xl md:text-3xl">{t('productDetail.galleryTitle')}</h2>
+            <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+              {t('productDetail.gallerySubtitle')}
+            </p>
+          </Reveal>
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {gallery.map((src, i) => (
+              <Reveal key={src} delay={i * 70}>
+                <button
+                  onClick={() => setGalleryLightbox({ src, alt: `${name} — ${i + 1}` })}
+                  className="group block w-full overflow-hidden rounded-sm border border-border/60 bg-secondary"
+                  aria-label={t('productDetail.zoom')}
+                >
+                  <img
+                    src={src}
+                    alt={`${name} — ${i + 1}`}
+                    loading="lazy"
+                    className="aspect-[3/4] h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                  />
+                </button>
+              </Reveal>
+            ))}
+          </div>
+        </section>
+      )}
+
+
       {/* Story (E-E-A-T: experience + expertise) */}
       {story.length > 0 && (
         <section className="container-prose pb-4 md:pb-8">
