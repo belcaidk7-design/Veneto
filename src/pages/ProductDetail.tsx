@@ -474,6 +474,12 @@ const ProductDetail = () => {
       )}
 
       <Lightbox src={product.image} alt={name} open={lightbox} onClose={() => setLightbox(false)} />
+      <Lightbox
+        src={galleryLightbox?.src ?? ''}
+        alt={galleryLightbox?.alt ?? ''}
+        open={!!galleryLightbox}
+        onClose={() => setGalleryLightbox(null)}
+      />
       <QuoteModal
         open={quoteOpen}
         onOpenChange={setQuoteOpen}
