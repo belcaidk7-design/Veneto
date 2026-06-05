@@ -4,7 +4,16 @@ import { ArrowRight, Check } from 'lucide-react';
 import Layout from '@/components/Layout';
 import Seo from '@/components/Seo';
 import Reveal from '@/components/Reveal';
-import { MATERIALS, PRODUCTS, FINISHES } from '@/data/catalog';
+import { MATERIALS, PRODUCTS, FINISHES, type MaterialKey } from '@/data/catalog';
+
+// Image distincte par matériau (évite les doublons entre marbre/calcaire et granit/porphyre)
+const MATERIAL_HERO_PRODUCT: Record<MaterialKey, string> = {
+  marble: 'bathtubs',
+  limestone: 'wall-fountains',
+  granite: 'benches',
+  porfido: 'external-paving',
+  sandstone: 'flower-boxes',
+};
 
 const Materials = () => {
   const { t } = useTranslation();
