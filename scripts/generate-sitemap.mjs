@@ -2,14 +2,14 @@
 /**
  * Generates public/sitemap.xml from the app's known routes & data.
  * Run with: node scripts/generate-sitemap.mjs [base-url]
- * Default base URL: https://hqstones.example
+ * Default base URL: https://hq-stones.com
  */
 import { writeFileSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const BASE = (process.argv[2] || process.env.SITE_URL || 'https://hqstones.example').replace(/\/$/, '');
+const BASE = (process.argv[2] || process.env.SITE_URL || 'https://hq-stones.com').replace(/\/$/, '');
 const today = new Date().toISOString().split('T')[0];
 
 const PRODUCT_SLUGS = [
