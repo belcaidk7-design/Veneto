@@ -1,73 +1,45 @@
-# Admin SEO – plan d'implémentation
-
 ## Objectif
-Créer une zone admin protégée par login `/admin/seo` pour éditer tous les contenus SEO (articles, produits, pages statiques, FAQ, auteurs/E-E-A-T) en EN/IT/FR/DE, sans passer par le chat.
 
-## Stack
-- **Lovable Cloud** (auth email/password + base Postgres + RLS)
-- **Pas de signup public** : un seul compte admin, créé manuellement, identifié par un rôle `admin` (table `user_roles` séparée, jamais sur `profiles`)
-- Frontend React existant (shadcn + Tailwind + i18n)
+Supprimer l'accès au catalogue (page et téléchargement) et réutiliser les photos des planches catalogue pour enrichir les fiches produits correspondantes.
 
-## Architecture base de données
+## Changements
+
+### 1. Galerie produits enrichie avec les planches catalogue
+Dans `src/data/catalog.ts`, ajouter un champ optionnel `gallery: string[]` à `Product`. Mapper les planches de `catalogPlates.ts` par famille vers les produits correspondants :
 
 ```text
-user_roles (user_id, role)              -- rôle "admin" uniquement
-seo_pages (key, lang, ...)              -- SEO des pages statiques (home, products, contact…)
-seo_blog_posts (slug, lang, ...)        -- SEO + contenu articles (title, body, faq[], sources[])
-seo_products (product_id, lang, ...)    -- SEO par fiche produit
-seo_faq (page, lang, items[])           -- FAQ Contact / Products
-authors (id, name, bio_*, avatar, links)-- auteurs E-E-A-T (multi-langue)
+fountains       → product 'fountains'        (p7, p10, p14, p18)
+wallFountains   → product 'wall-fountains'   (p19, p20)
+flowerpots      → product 'flower-boxes'     (p21, p23)
+pots            → product 'vases'            (p25, p27)
+pools           → product 'pools'            (p28, p30)
+balustrades     → product 'balustrades'      (p31, p34)
+columns         → product 'columns'          (p38, p40)
+stairs          → product 'stairs'           (p41, p43)
+windowSills     → product 'window-sills'     (p44)
+paving          → product 'external-paving'  (p45, p47, p49)
 ```
 
-Toutes les tables : RLS activée. Lecture publique pour le contenu SEO (le site doit l'afficher), écriture réservée à `has_role(auth.uid(), 'admin')`.
+Dans `src/pages/ProductDetail.tsx`, afficher cette galerie (sous l'image principale) et brancher le `Lightbox` existant pour le zoom plein écran.
 
-## Migration du contenu existant
-Les contenus actuellement dans `src/i18n/locales/*.ts` (articles, FAQ, SEO pages) seront **seedés** en base via une migration initiale. Les locales gardent uniquement l'UI (boutons, labels, navigation).
+### 2. Suppression de la page Catalogue
+- `src/App.tsx` : retirer la route `/catalog` et l'import.
+- `src/components/Header.tsx` : retirer l'entrée nav `/catalog`.
+- Supprimer `src/pages/Catalog.tsx`.
+- `src/i18n/locales/{fr,en,it,de}.ts` : retirer `nav.catalog`, `seo.catalog`, le bloc `catalog: { … }` et la mention dans `home.categoriesTitle` si nécessaire.
+- `scripts/generate-sitemap.mjs` + `public/sitemap.xml` : retirer `/catalog`.
+- Tests SEO : retirer les assertions sur `/catalog` si présentes.
 
-## Chargement côté site
-- Hook `useSeoContent(key, lang)` qui lit la table correspondante via Supabase client
-- Cache via React Query
-- Les pages publiques (Blog, BlogPost, Products, Contact, Home) consomment ce hook au lieu de `t()` pour les champs SEO
-- Fallback automatique sur EN si la traduction manque
+### 3. Retrait du téléchargement du catalogue PDF
+- `src/pages/Index.tsx` : supprimer le bouton `Télécharger le catalogue` (et l'import `Download` devenu inutile).
+- `src/components/Footer.tsx` : retirer le lien `/catalogue.pdf`.
+- `src/i18n/locales/*` : retirer les clés `hero.downloadCta` et `footer.downloadCatalog`.
+- Garder `public/catalogue.pdf` en place (pas de suppression de fichier nécessaire), mais plus aucune référence dans l'UI.
 
-## Interface Admin
+### 4. Conserver les assets
+Les 22 fichiers `src/assets/catalog/p*.jpg.asset.json` restent — ils sont désormais utilisés via la galerie produit.
 
-Routes (toutes protégées par `<AdminGuard>`) :
-- `/admin/login` – formulaire email/password
-- `/admin` – tableau de bord (compteurs : N articles, N produits, traductions manquantes…)
-- `/admin/blog` – liste articles + bouton "Nouveau"
-- `/admin/blog/:slug` – éditeur tabs EN/IT/FR/DE (title, slug, excerpt, body markdown, image, alt, dates, FAQ, sources, seoTitle, seoDescription)
-- `/admin/pages` – éditeur pages statiques (title, meta, OG image, alt) par langue
-- `/admin/products` – idem par fiche produit
-- `/admin/faq` – éditeur des FAQ Contact / Products
-- `/admin/authors` – CRUD auteurs (nom, bio multi-langue, avatar, liens sociaux/sources)
-
-UI : shadcn `Tabs` (langues), `Form` + `Textarea`/`Input`, preview live à droite, bouton "Enregistrer" qui upsert en DB.
-
-## Sécurité
-- Pas de signup ouvert (`disable_sign_up=true` ou simplement pas de page signup)
-- Compte admin créé via SQL après première connexion (insertion dans `user_roles`)
-- Toutes les mutations vérifient `has_role` côté RLS
-- Aucun rôle stocké dans `profiles` ou `localStorage`
-
-## Étapes d'implémentation
-
-1. **Activer Lovable Cloud** + créer le schéma (enum `app_role`, tables ci-dessus, RLS, fonction `has_role`)
-2. **Seed** : migration qui copie le contenu actuel des locales TS vers la DB
-3. **Auth** : page `/admin/login`, hook `useAuth`, `<AdminGuard>`, `useIsAdmin()`
-4. **Hooks de lecture publique** (`useSeoContent`, `useBlogPost`, `useProductSeo`…)
-5. **Refactor pages publiques** pour consommer la DB au lieu des locales (champs SEO uniquement)
-6. **UI Admin** : layout + sidebar + 5 éditeurs (blog, pages, produits, FAQ, auteurs)
-7. **Tests** : maj du test sitemap pour lire depuis la DB ; ajout test RLS basique
-8. **Doc** : courte note pour expliquer comment créer le premier admin (insert SQL guidé)
-
-## Notes
-- Les **slugs** restent stables : changer un slug crée une redirection plutôt que casser l'URL (peut être ajouté en v2)
-- L'éditeur body utilise une simple `Textarea` avec syntaxe markdown `## / ###` déjà supportée par `BlogPost.tsx` ; pas de WYSIWYG en v1
-- Volume d'écriture très faible → pas besoin de cache invalidation sophistiquée, un `queryClient.invalidateQueries` après save suffit
-
-## Hors périmètre (v2 possibles)
-- Versioning / historique des modifs
-- Workflow review/publish (draft vs published)
-- Upload d'images directement dans l'admin (v1 : URL à coller)
-- Plusieurs éditeurs avec rôles différents
+## Vérification
+- Naviguer sur `/products/fountains`, `/products/balustrades`, `/products/external-paving` : la galerie additionnelle s'affiche et le lightbox s'ouvre.
+- La home n'a plus que le CTA principal "Découvrir le catalogue" → `/products`.
+- Aucun lien restant vers `/catalog` ni vers `/catalogue.pdf`.
