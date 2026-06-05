@@ -24,6 +24,47 @@ import imgWallFountains from '@/assets/products/wall-fountains.jpg';
 import imgBraziers from '@/assets/products/braziers.jpg';
 import imgFireplaces from '@/assets/products/fireplaces.jpg';
 
+// Additional catalog plates reused as product gallery imagery.
+import p7 from '@/assets/catalog/p7.jpg.asset.json';
+import p10 from '@/assets/catalog/p10.jpg.asset.json';
+import p14 from '@/assets/catalog/p14.jpg.asset.json';
+import p18 from '@/assets/catalog/p18.jpg.asset.json';
+import p19 from '@/assets/catalog/p19.jpg.asset.json';
+import p20 from '@/assets/catalog/p20.jpg.asset.json';
+import p21 from '@/assets/catalog/p21.jpg.asset.json';
+import p23 from '@/assets/catalog/p23.jpg.asset.json';
+import p25 from '@/assets/catalog/p25.jpg.asset.json';
+import p27 from '@/assets/catalog/p27.jpg.asset.json';
+import p28 from '@/assets/catalog/p28.jpg.asset.json';
+import p30 from '@/assets/catalog/p30.jpg.asset.json';
+import p31 from '@/assets/catalog/p31.jpg.asset.json';
+import p34 from '@/assets/catalog/p34.jpg.asset.json';
+import p38 from '@/assets/catalog/p38.jpg.asset.json';
+import p40 from '@/assets/catalog/p40.jpg.asset.json';
+import p41 from '@/assets/catalog/p41.jpg.asset.json';
+import p43 from '@/assets/catalog/p43.jpg.asset.json';
+import p44 from '@/assets/catalog/p44.jpg.asset.json';
+import p45 from '@/assets/catalog/p45.jpg.asset.json';
+import p47 from '@/assets/catalog/p47.jpg.asset.json';
+import p49 from '@/assets/catalog/p49.jpg.asset.json';
+
+const PRODUCT_GALLERY: Record<string, string[]> = {
+  fountains: [p7.url, p10.url, p14.url, p18.url],
+  'wall-fountains': [p19.url, p20.url],
+  'flower-boxes': [p21.url, p23.url],
+  vases: [p25.url, p27.url],
+  pools: [p28.url, p30.url],
+  balustrades: [p31.url, p34.url],
+  columns: [p38.url, p40.url],
+  stairs: [p41.url, p43.url],
+  'window-sills': [p44.url],
+  'external-paving': [p45.url, p47.url, p49.url],
+};
+
+export const getProductGallery = (productId: string): string[] =>
+  PRODUCT_GALLERY[productId] ?? [];
+
+
 export type CategoryKey = 'exterior' | 'interior' | 'slabs';
 export type MaterialKey = 'marble' | 'limestone' | 'granite' | 'porfido' | 'sandstone';
 
