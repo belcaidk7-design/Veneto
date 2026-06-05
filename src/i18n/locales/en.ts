@@ -185,6 +185,8 @@ export default {
     signatureTitle: 'Our signature',
     bestProjectsTitle: 'Signature projects',
     introTitle: 'In a few words',
+    galleryTitle: 'Model gallery',
+    gallerySubtitle: 'A selection of plates from our catalog showing references available in this family. Click to enlarge.',
   },
   projects: {
     title: 'Our projects',

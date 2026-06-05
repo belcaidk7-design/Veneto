@@ -126,6 +126,8 @@ export default {
     signatureTitle: 'Unsere Handschrift',
     bestProjectsTitle: 'Referenzprojekte',
     introTitle: 'In wenigen Worten',
+    galleryTitle: 'Modellgalerie',
+    gallerySubtitle: 'Eine Auswahl von Tafeln aus unserem Katalog mit Referenzen aus dieser Familie. Zum Vergrößern klicken.',
   },
   projects: {
     title: 'Unsere Referenzen',

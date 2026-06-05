@@ -127,6 +127,8 @@ export default {
     signatureTitle: 'La nostra firma',
     bestProjectsTitle: 'Progetti di riferimento',
     introTitle: 'In breve',
+    galleryTitle: 'Galleria modelli',
+    gallerySubtitle: 'Una selezione di tavole del nostro catalogo con le referenze disponibili in questa famiglia. Clicca per ingrandire.',
   },
   projects: {
     title: 'Le nostre realizzazioni',
