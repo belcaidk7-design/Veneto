@@ -56,7 +56,8 @@ const Materials = () => {
       <div className="container-prose space-y-24 py-16 md:py-24">
         {MATERIALS.map((m, idx) => {
           const examples = PRODUCTS.filter((p) => p.materials.includes(m)).slice(0, 4);
-          const heroImage = examples[0]?.image;
+          const heroImage =
+            PRODUCTS.find((p) => p.id === MATERIAL_HERO_PRODUCT[m])?.image ?? examples[0]?.image;
           const reverse = idx % 2 === 1;
           const uses = t(`materials.uses.${m}`, { returnObjects: true }) as string[];
           // Recommend all finishes that appear on at least one product of this material
