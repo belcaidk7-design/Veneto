@@ -58,6 +58,7 @@ const ProductDetail = () => {
   }
 
   const name = t(`products.items.${product.i18nKey}`);
+  const gallery = getProductGallery(product.id);
   const related = getRelatedProducts(product, 3);
   const categoryLabel = t(`categories.${product.category}`);
 
