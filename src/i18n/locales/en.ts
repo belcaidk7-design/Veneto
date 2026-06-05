@@ -2,7 +2,7 @@ export default {
   nav: {
     home: 'Home',
     products: 'Products',
-    catalog: 'Catalog',
+    
     materials: 'Materials',
     projects: 'Projects',
     blog: 'Journal',
@@ -17,7 +17,7 @@ export default {
     headline: 'Natural stone for projects of distinction',
     subline: 'Marble, granite, limestone, porphyry and sandstone, sourced from partner quarries around the world. Tailored advice, international delivery, fast quote.',
     cta: 'Discover our catalog',
-    downloadCta: 'Download catalog',
+    
     reassurance: 'Partner quarries worldwide · International delivery · Fast quote',
   },
   home: {
@@ -381,7 +381,7 @@ export default {
   modal: { quoteTitle: 'Request a quote', quoteSubtitle: 'Tell us about the product you\u2019re interested in.' },
   whatsapp: { aria: 'Chat with us on WhatsApp', message: 'Hello HQ Stones, I would like to discuss a project.' },
   cookie: { title: 'We use cookies.', body: 'Only essential cookies for site functionality and language preference. No tracking.', accept: 'Accept', decline: 'Decline' },
-  footer: { tagline: 'Natural stone for projects of distinction.', navigation: 'Navigation', language: 'Language', follow: 'Follow us', rights: 'All rights reserved.', downloadCatalog: 'Download catalog' },
+  footer: { tagline: 'Natural stone for projects of distinction.', navigation: 'Navigation', language: 'Language', follow: 'Follow us', rights: 'All rights reserved.' },
   language: { label: 'Language', en: 'English', it: 'Italiano', fr: 'Français', de: 'Deutsch' },
   notFound: { title: 'Page not found', body: 'The page you are looking for does not exist or has been moved.', cta: 'Back to home' },
   seo: {
@@ -394,23 +394,6 @@ export default {
     craft: { title: 'Our craft, from quarry to project', description: 'Extraction, cutting, finishing, delivery: the four steps that bring stone from the mountain to your project.' },
     faq: { title: 'FAQ: everything about natural stone', description: 'Samples, delivery, lead times, maintenance, finishes, warranty. Answers to the most common questions about natural stone.' },
     contact: { title: 'Contact HQ Stones, request a quote', description: 'Tell us about your project. Phone, WhatsApp, email or contact form. We respond quickly.' },
-    catalog: { title: 'Stone catalog: fountains, planters, columns, balustrades', description: 'Browse our full catalog of natural stone products: fountains, wall fountains, planters, troughs, pools, balustrades, columns, stairs, window sills and paving.' },
   },
-  catalog: {
-    title: 'Product Catalog',
-    subtitle: 'Browse our complete catalog of natural stone models. Each plate shows a series of references available on request — pick a family or click a plate to see it in detail.',
-    all: 'All',
-    families: {
-      fountains: 'Fountains',
-      wallFountains: 'Wall fountains',
-      flowerpots: 'Planters',
-      pots: 'Troughs',
-      pools: 'Pools',
-      balustrades: 'Balustrades',
-      columns: 'Columns',
-      stairs: 'Stairs',
-      windowSills: 'Window sills',
-      paving: 'Paving',
-    },
-  },
+
 };
