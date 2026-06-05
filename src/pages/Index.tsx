@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { ArrowRight, Download, Mountain, Hammer, Sparkles, Truck, MapPin, Hand, Compass, Boxes, Phone } from 'lucide-react';
+import { ArrowRight, Mountain, Hammer, Sparkles, Truck, MapPin, Hand, Compass, Boxes, Phone } from 'lucide-react';
 import Layout from '@/components/Layout';
 import Seo from '@/components/Seo';
 import Reveal from '@/components/Reveal';
@@ -75,17 +75,6 @@ const Index = () => {
                   {t('hero.cta')}
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="border-background/40 bg-transparent text-background hover:bg-background hover:text-foreground"
-              >
-                <a href="/catalogue.pdf" target="_blank" rel="noopener noreferrer">
-                  <Download className="mr-2 h-4 w-4" />
-                  {t('hero.downloadCta')}
-                </a>
               </Button>
             </div>
             <p className="mt-8 text-xs uppercase tracking-widest text-background/70">

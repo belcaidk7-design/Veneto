@@ -25,7 +25,7 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import { Button } from '@/components/ui/button';
-import { getProductBySlug, getRelatedProducts } from '@/data/catalog';
+import { getProductBySlug, getProductGallery, getRelatedProducts } from '@/data/catalog';
 
 const BENEFIT_ICONS = {
   durability: Sparkles,
@@ -40,6 +40,7 @@ const ProductDetail = () => {
   const { t } = useTranslation();
   const product = getProductBySlug(slug);
   const [lightbox, setLightbox] = useState(false);
+  const [galleryLightbox, setGalleryLightbox] = useState<{ src: string; alt: string } | null>(null);
   const [quoteOpen, setQuoteOpen] = useState(false);
 
   if (!product) {
@@ -57,6 +58,7 @@ const ProductDetail = () => {
   }
 
   const name = t(`products.items.${product.i18nKey}`);
+  const gallery = getProductGallery(product.id);
   const related = getRelatedProducts(product, 3);
   const categoryLabel = t(`categories.${product.category}`);
 
@@ -211,6 +213,37 @@ const ProductDetail = () => {
           </Button>
         </Reveal>
       </article>
+
+      {/* Catalog gallery — extra references from the printed catalog */}
+      {gallery.length > 0 && (
+        <section className="container-prose pb-4 md:pb-8">
+          <Reveal>
+            <h2 className="font-serif text-2xl md:text-3xl">{t('productDetail.galleryTitle')}</h2>
+            <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+              {t('productDetail.gallerySubtitle')}
+            </p>
+          </Reveal>
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {gallery.map((src, i) => (
+              <Reveal key={src} delay={i * 70}>
+                <button
+                  onClick={() => setGalleryLightbox({ src, alt: `${name} — ${i + 1}` })}
+                  className="group block w-full overflow-hidden rounded-sm border border-border/60 bg-secondary"
+                  aria-label={t('productDetail.zoom')}
+                >
+                  <img
+                    src={src}
+                    alt={`${name} — ${i + 1}`}
+                    loading="lazy"
+                    className="aspect-[3/4] h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                  />
+                </button>
+              </Reveal>
+            ))}
+          </div>
+        </section>
+      )}
+
 
       {/* Story (E-E-A-T: experience + expertise) */}
       {story.length > 0 && (
@@ -472,6 +505,12 @@ const ProductDetail = () => {
       )}
 
       <Lightbox src={product.image} alt={name} open={lightbox} onClose={() => setLightbox(false)} />
+      <Lightbox
+        src={galleryLightbox?.src ?? ''}
+        alt={galleryLightbox?.alt ?? ''}
+        open={!!galleryLightbox}
+        onClose={() => setGalleryLightbox(null)}
+      />
       <QuoteModal
         open={quoteOpen}
         onOpenChange={setQuoteOpen}

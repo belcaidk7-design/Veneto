@@ -1,11 +1,11 @@
 export default {
-  nav: { home: 'Start', products: 'Produkte', catalog: 'Katalog', materials: 'Materialien', projects: 'Referenzen', blog: 'Magazin', about: 'Über uns', craft: 'Handwerk', faq: 'FAQ', contact: 'Kontakt' },
+  nav: { home: 'Start', products: 'Produkte', materials: 'Materialien', projects: 'Referenzen', blog: 'Magazin', about: 'Über uns', craft: 'Handwerk', faq: 'FAQ', contact: 'Kontakt' },
   header: { callAria: 'Anrufen' },
   hero: {
     eyebrow: 'Naturstein',
     headline: 'Naturstein für Ihre außergewöhnlichen Projekte',
     subline: 'Marmor, Granit, Kalkstein, Porphyr und Sandstein, direkt aus unseren Partnersteinbrüchen. Maßgeschneiderte Beratung, europaweite Lieferung, Schnelles Angebot.',
-    cta: 'Katalog entdecken', downloadCta: 'Katalog herunterladen',
+    cta: 'Katalog entdecken',
     reassurance: 'Partnersteinbrüche weltweit · Internationale Lieferung · Schnelles Angebot',
   },
   home: {
@@ -126,6 +126,8 @@ export default {
     signatureTitle: 'Unsere Handschrift',
     bestProjectsTitle: 'Referenzprojekte',
     introTitle: 'In wenigen Worten',
+    galleryTitle: 'Modellgalerie',
+    gallerySubtitle: 'Eine Auswahl von Tafeln aus unserem Katalog mit Referenzen aus dieser Familie. Zum Vergrößern klicken.',
   },
   projects: {
     title: 'Unsere Referenzen',
@@ -296,7 +298,7 @@ export default {
   modal: { quoteTitle: 'Angebot anfordern', quoteSubtitle: 'Erzählen Sie uns vom Produkt, das Sie interessiert.' },
   whatsapp: { aria: 'Auf WhatsApp chatten', message: 'Hallo HQ Stones, ich möchte über ein Projekt sprechen.' },
   cookie: { title: 'Wir verwenden Cookies.', body: 'Nur essenzielle Cookies für Funktion und Spracheinstellung. Kein Tracking.', accept: 'Akzeptieren', decline: 'Ablehnen' },
-  footer: { tagline: 'Naturstein für außergewöhnliche Projekte.', navigation: 'Navigation', language: 'Sprache', follow: 'Folgen Sie uns', rights: 'Alle Rechte vorbehalten.', downloadCatalog: 'Katalog herunterladen' },
+  footer: { tagline: 'Naturstein für außergewöhnliche Projekte.', navigation: 'Navigation', language: 'Sprache', follow: 'Folgen Sie uns', rights: 'Alle Rechte vorbehalten.' },
   language: { label: 'Sprache', en: 'English', it: 'Italiano', fr: 'Français', de: 'Deutsch' },
   notFound: { title: 'Seite nicht gefunden', body: 'Die gesuchte Seite existiert nicht oder wurde verschoben.', cta: 'Zur Startseite' },
   seo: {
@@ -309,23 +311,6 @@ export default {
     craft: { title: 'Unser Handwerk, vom Steinbruch zum Projekt', description: 'Förderung, Zuschnitt, Veredelung, Lieferung: Die vier Schritte, die Stein vom Berg in Ihr Projekt bringen.' },
     faq: { title: 'FAQ: alles über Naturstein', description: 'Muster, Lieferung, Termine, Pflege, Oberflächen, Garantie. Antworten auf häufige Fragen.' },
     contact: { title: 'HQ Stones kontaktieren, Angebot anfordern', description: 'Erzählen Sie uns von Ihrem Projekt. Telefon, WhatsApp, E-Mail oder Formular. Antwort zeitnah.' },
-    catalog: { title: 'Stein-Katalog: Brunnen, Pflanzgefäße, Säulen, Balustraden', description: 'Durchstöbern Sie unseren vollständigen Naturstein-Katalog: Brunnen, Wandbrunnen, Pflanzgefäße, Tröge, Pools, Balustraden, Säulen, Treppen, Fensterbänke und Pflasterungen.' },
   },
-  catalog: {
-    title: 'Produktkatalog',
-    subtitle: 'Durchstöbern Sie unseren vollständigen Katalog an Naturstein-Modellen. Jede Tafel zeigt eine Reihe von Referenzen auf Anfrage — wählen Sie eine Familie oder klicken Sie auf eine Tafel für die Großansicht.',
-    all: 'Alle',
-    families: {
-      fountains: 'Brunnen',
-      wallFountains: 'Wandbrunnen',
-      flowerpots: 'Pflanzgefäße',
-      pots: 'Tröge',
-      pools: 'Pools',
-      balustrades: 'Balustraden',
-      columns: 'Säulen',
-      stairs: 'Treppen',
-      windowSills: 'Fensterbänke',
-      paving: 'Pflasterungen',
-    },
-  },
+
 };

@@ -1,12 +1,12 @@
 export default {
-  nav: { home: 'Home', products: 'Prodotti', catalog: 'Catalogo', materials: 'Materiali', projects: 'Realizzazioni', blog: 'Magazine', about: 'Chi siamo', craft: 'Savoir-faire', faq: 'FAQ', contact: 'Contatti' },
+  nav: { home: 'Home', products: 'Prodotti', materials: 'Materiali', projects: 'Realizzazioni', blog: 'Magazine', about: 'Chi siamo', craft: 'Savoir-faire', faq: 'FAQ', contact: 'Contatti' },
   header: { callAria: 'Chiamaci' },
   hero: {
     eyebrow: 'Pietra naturale',
     headline: 'La pietra naturale per i tuoi progetti d\u2019eccezione',
     subline: 'Marmo, granito, calcare, porfido e arenaria, da cave partner in tutto il mondo. Consulenza su misura, consegna internazionale, preventivo rapido.',
     cta: 'Scopri il catalogo',
-    downloadCta: 'Scarica il catalogo',
+    
     reassurance: 'Cave partner in tutto il mondo · Consegna internazionale · Preventivo rapido',
   },
   home: {
@@ -127,6 +127,8 @@ export default {
     signatureTitle: 'La nostra firma',
     bestProjectsTitle: 'Progetti di riferimento',
     introTitle: 'In breve',
+    galleryTitle: 'Galleria modelli',
+    gallerySubtitle: 'Una selezione di tavole del nostro catalogo con le referenze disponibili in questa famiglia. Clicca per ingrandire.',
   },
   projects: {
     title: 'Le nostre realizzazioni',
@@ -297,7 +299,7 @@ export default {
   modal: { quoteTitle: 'Richiedi un preventivo', quoteSubtitle: 'Parlaci del prodotto che ti interessa.' },
   whatsapp: { aria: 'Chatta con noi su WhatsApp', message: 'Salve HQ Stones, vorrei discutere di un progetto.' },
   cookie: { title: 'Usiamo i cookie.', body: 'Solo cookie essenziali per il funzionamento del sito e la preferenza di lingua. Nessun tracciamento.', accept: 'Accetta', decline: 'Rifiuta' },
-  footer: { tagline: 'Pietra naturale per progetti d\u2019eccezione.', navigation: 'Navigazione', language: 'Lingua', follow: 'Seguici', rights: 'Tutti i diritti riservati.', downloadCatalog: 'Scarica il catalogo' },
+  footer: { tagline: 'Pietra naturale per progetti d\u2019eccezione.', navigation: 'Navigazione', language: 'Lingua', follow: 'Seguici', rights: 'Tutti i diritti riservati.' },
   language: { label: 'Lingua', en: 'English', it: 'Italiano', fr: 'Français', de: 'Deutsch' },
   notFound: { title: 'Pagina non trovata', body: 'La pagina cercata non esiste o è stata spostata.', cta: 'Torna alla home' },
   seo: {
@@ -310,23 +312,6 @@ export default {
     craft: { title: 'Il nostro savoir-faire, dalla cava al progetto', description: 'Estrazione, taglio, finitura, consegna: le quattro tappe che portano la pietra dalla montagna al tuo progetto.' },
     faq: { title: 'FAQ: tutto sulla pietra naturale', description: 'Campioni, consegna, tempi, manutenzione, finiture, garanzia. Risposte alle domande più frequenti.' },
     contact: { title: 'Contatta HQ Stones, richiedi il tuo preventivo', description: 'Raccontaci il tuo progetto. Telefono, WhatsApp, email o modulo. Risposta in tempi brevi.' },
-    catalog: { title: 'Catalogo pietra: fontane, fioriere, colonne, balaustre', description: 'Sfoglia il catalogo completo di prodotti in pietra naturale: fontane, fontane a muro, fioriere, vasche, piscine, balaustre, colonne, scale, davanzali e pavimentazioni.' },
   },
-  catalog: {
-    title: 'Catalogo prodotti',
-    subtitle: 'Sfoglia il catalogo completo dei nostri modelli in pietra naturale. Ogni tavola mostra una serie di referenze disponibili su richiesta — scegli una famiglia o clicca per ingrandire.',
-    all: 'Tutto',
-    families: {
-      fountains: 'Fontane',
-      wallFountains: 'Fontane a muro',
-      flowerpots: 'Fioriere',
-      pots: 'Vasche',
-      pools: 'Piscine',
-      balustrades: 'Balaustre',
-      columns: 'Colonne',
-      stairs: 'Scale',
-      windowSills: 'Davanzali',
-      paving: 'Pavimentazioni',
-    },
-  },
+
 };
