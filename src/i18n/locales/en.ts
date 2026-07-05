@@ -237,7 +237,7 @@ export default {
         responseTime: { q: 'How quickly will I get a reply?', a: 'Our team responds to every enquiry within one business day, often the same day for projects in Europe.' },
         languages: { q: 'Which languages do you work in?', a: 'We handle projects in English, Italian, French and German, both written and on calls.' },
         quote: { q: 'How do I request a detailed quote?', a: 'Share your drawings, surface areas and finish preferences via the form, email or WhatsApp. We return a structured quote within 48 hours.' },
-        visit: { q: 'Can I visit your showroom or quarries?', a: 'Yes. Showroom visits are by appointment, and we organise quarry tours in Italy for confirmed projects.' },
+        visit: { q: 'How can I evaluate the stone remotely?', a: 'We are an online-only operation. We ship physical samples worldwide, share HD photos of the exact blocks/slabs before shipment, and offer video calls to walk you through selections in real time.' },
         privacy: { q: 'How is my information handled?', a: 'Your enquiry is used only to answer your project and is never shared with third parties. See our privacy practices for details.' },
       },
     },

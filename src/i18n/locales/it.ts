@@ -176,7 +176,7 @@ export default {
         responseTime: { q: 'In quanto tempo rispondete?', a: 'Il nostro team risponde a ogni richiesta entro un giorno lavorativo, spesso lo stesso giorno per i progetti in Europa.' },
         languages: { q: 'In che lingue lavorate?', a: 'Gestiamo progetti in inglese, italiano, francese e tedesco, sia scritto che in chiamata.' },
         quote: { q: 'Come richiedo un preventivo dettagliato?', a: 'Condividi disegni, superfici e finiture preferite tramite form, email o WhatsApp. Preventivo strutturato entro 48 ore.' },
-        visit: { q: 'Posso visitare lo showroom o le cave?', a: 'Sì. Lo showroom si visita su appuntamento e organizziamo tour in cava in Italia per i progetti confermati.' },
+        visit: { q: 'Come posso valutare la pietra a distanza?', a: 'Lavoriamo esclusivamente online. Spediamo campioni fisici in tutto il mondo, inviamo foto HD dei blocchi/lastre esatti prima della spedizione e organizziamo videochiamate per validare le selezioni in tempo reale.' },
         privacy: { q: 'Come vengono gestiti i miei dati?', a: 'La tua richiesta serve solo a rispondere al tuo progetto e non viene mai condivisa con terzi.' },
       },
     },

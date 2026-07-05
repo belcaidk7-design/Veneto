@@ -244,7 +244,7 @@ export default {
         responseTime: { q: 'Sous quel délai répondez-vous ?', a: 'Notre équipe répond à chaque demande sous un jour ouvré, souvent le jour même pour les projets en Europe.' },
         languages: { q: 'Dans quelles langues travaillez-vous ?', a: 'Nous gérons les projets en anglais, italien, français et allemand, à l\u2019écrit comme à l\u2019oral.' },
         quote: { q: 'Comment obtenir un devis détaillé ?', a: 'Partagez plans, surfaces et finitions souhaitées via le formulaire, par email ou WhatsApp. Devis structuré sous 48 heures.' },
-        visit: { q: 'Puis-je visiter le showroom ou les carrières ?', a: 'Oui. Le showroom se visite sur rendez-vous et nous organisons des visites de carrières en Italie pour les projets confirmés.' },
+        visit: { q: 'Comment évaluer la pierre à distance ?', a: 'Nous travaillons uniquement en ligne. Nous expédions des échantillons physiques dans le monde entier, envoyons des photos HD des blocs/dalles exacts avant expédition, et proposons des appels vidéo pour valider les sélections en direct.' },
         privacy: { q: 'Comment sont traitées mes informations ?', a: 'Votre demande sert uniquement à répondre à votre projet et n\u2019est jamais partagée avec des tiers.' },
       },
     },

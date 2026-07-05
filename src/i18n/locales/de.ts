@@ -175,7 +175,7 @@ export default {
         responseTime: { q: 'Wie schnell antworten Sie?', a: 'Unser Team antwortet auf jede Anfrage innerhalb eines Werktages, bei Projekten in Europa oft am selben Tag.' },
         languages: { q: 'In welchen Sprachen arbeiten Sie?', a: 'Wir betreuen Projekte auf Englisch, Italienisch, Französisch und Deutsch, schriftlich wie telefonisch.' },
         quote: { q: 'Wie erhalte ich ein detailliertes Angebot?', a: 'Senden Sie Pläne, Flächen und gewünschte Oberflächen per Formular, E-Mail oder WhatsApp. Strukturiertes Angebot binnen 48 Stunden.' },
-        visit: { q: 'Kann ich Showroom oder Steinbrüche besuchen?', a: 'Ja. Showroom-Besuche nach Vereinbarung, Steinbruch-Touren in Italien organisieren wir für bestätigte Projekte.' },
+        visit: { q: 'Wie kann ich den Stein aus der Ferne prüfen?', a: 'Wir arbeiten ausschließlich online. Wir versenden physische Muster weltweit, schicken HD-Fotos der genauen Blöcke/Platten vor Versand und bieten Videocalls für die Auswahl in Echtzeit.' },
         privacy: { q: 'Wie werden meine Daten verarbeitet?', a: 'Ihre Anfrage dient ausschließlich der Bearbeitung Ihres Projekts und wird nicht an Dritte weitergegeben.' },
       },
     },
