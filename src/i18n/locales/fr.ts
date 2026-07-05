@@ -441,5 +441,20 @@ export default {
     faq: { title: 'FAQ : tout savoir sur la pierre naturelle', description: 'Échantillons, livraison, délais, entretien, finitions, garantie. Réponses aux questions les plus fréquentes.' },
     contact: { title: 'Contact HQ Stones, demandez votre devis', description: 'Parlez-nous de votre projet. Téléphone, WhatsApp, email ou formulaire. Réponse rapide.' },
   },
-
+  legal: {
+    title: 'Mentions légales & confidentialité',
+    subtitle: 'Informations légales sur l\u2019éditeur du site et traitement des données personnelles.',
+    editorTitle: 'Éditeur du site',
+    hostTitle: 'Hébergement',
+    hostBody: 'Site hébergé sur l\u2019infrastructure Lovable / Supabase (Union européenne).',
+    dataTitle: 'Données personnelles (RGPD)',
+    dataCollect: 'Les données collectées via le formulaire de contact (nom, email, téléphone, message) sont utilisées uniquement pour répondre à votre demande de devis. Elles ne sont jamais partagées avec des tiers à des fins commerciales.',
+    dataRetention: 'Conservation : jusqu\u2019à 3 ans après le dernier contact, puis suppression.',
+    dataRights: 'Vous disposez d\u2019un droit d\u2019accès, de rectification, d\u2019opposition et de suppression de vos données. Pour exercer ces droits, écrivez à info@hq-stones.com.',
+    cookiesTitle: 'Cookies',
+    cookiesBody: 'Nous utilisons uniquement les cookies techniques indispensables au fonctionnement du site et à la mémorisation de votre langue. Aucun cookie de tracking publicitaire.',
+    ipTitle: 'Propriété intellectuelle',
+    ipBody: 'L\u2019ensemble du contenu de ce site (textes, photos, logo) est protégé. Toute reproduction sans autorisation est interdite.',
+  },
+  seoLegal: { title: 'Mentions légales | HQ Stones', description: 'Mentions légales, informations sur l\u2019éditeur du site HQ Stones et politique de confidentialité (RGPD).' },
 };

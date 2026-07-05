@@ -312,5 +312,20 @@ export default {
     faq: { title: 'FAQ: alles über Naturstein', description: 'Muster, Lieferung, Termine, Pflege, Oberflächen, Garantie. Antworten auf häufige Fragen.' },
     contact: { title: 'HQ Stones kontaktieren, Angebot anfordern', description: 'Erzählen Sie uns von Ihrem Projekt. Telefon, WhatsApp, E-Mail oder Formular. Antwort zeitnah.' },
   },
-
+  legal: {
+    title: 'Impressum & Datenschutz',
+    subtitle: 'Angaben zum Websitebetreiber und Verarbeitung personenbezogener Daten.',
+    editorTitle: 'Betreiber der Website',
+    hostTitle: 'Hosting',
+    hostBody: 'Website gehostet auf der Lovable- / Supabase-Infrastruktur (Europäische Union).',
+    dataTitle: 'Personenbezogene Daten (DSGVO)',
+    dataCollect: 'Die über das Kontaktformular erhobenen Daten (Name, E-Mail, Telefon, Nachricht) werden ausschließlich zur Beantwortung Ihrer Angebotsanfrage verwendet und niemals zu kommerziellen Zwecken an Dritte weitergegeben.',
+    dataRetention: 'Aufbewahrung: bis zu 3 Jahre nach dem letzten Kontakt, dann Löschung.',
+    dataRights: 'Sie haben das Recht auf Auskunft, Berichtigung, Widerspruch und Löschung Ihrer Daten. Zur Ausübung dieser Rechte schreiben Sie an info@hq-stones.com.',
+    cookiesTitle: 'Cookies',
+    cookiesBody: 'Wir verwenden ausschließlich technische Cookies, die für den Betrieb der Website und die Sprachwahl erforderlich sind. Keine Werbe- oder Tracking-Cookies.',
+    ipTitle: 'Geistiges Eigentum',
+    ipBody: 'Alle Inhalte dieser Website (Texte, Fotos, Logo) sind geschützt. Jede Vervielfältigung ohne Genehmigung ist untersagt.',
+  },
+  seoLegal: { title: 'Impressum | HQ Stones', description: 'Impressum, Angaben zum Websitebetreiber HQ Stones und Datenschutzerklärung (DSGVO).' },
 };

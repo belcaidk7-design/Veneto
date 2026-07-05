@@ -313,5 +313,20 @@ export default {
     faq: { title: 'FAQ: tutto sulla pietra naturale', description: 'Campioni, consegna, tempi, manutenzione, finiture, garanzia. Risposte alle domande più frequenti.' },
     contact: { title: 'Contatta HQ Stones, richiedi il tuo preventivo', description: 'Raccontaci il tuo progetto. Telefono, WhatsApp, email o modulo. Risposta in tempi brevi.' },
   },
-
+  legal: {
+    title: 'Note legali e privacy',
+    subtitle: 'Informazioni sull\u2019editore del sito e trattamento dei dati personali.',
+    editorTitle: 'Editore del sito',
+    hostTitle: 'Hosting',
+    hostBody: 'Sito ospitato sull\u2019infrastruttura Lovable / Supabase (Unione europea).',
+    dataTitle: 'Dati personali (GDPR)',
+    dataCollect: 'I dati raccolti tramite il modulo di contatto (nome, email, telefono, messaggio) sono utilizzati esclusivamente per rispondere alla tua richiesta di preventivo. Non vengono mai condivisi con terzi per scopi commerciali.',
+    dataRetention: 'Conservazione: fino a 3 anni dall\u2019ultimo contatto, poi cancellazione.',
+    dataRights: 'Hai diritto di accesso, rettifica, opposizione e cancellazione dei tuoi dati. Per esercitare questi diritti scrivi a info@hq-stones.com.',
+    cookiesTitle: 'Cookie',
+    cookiesBody: 'Utilizziamo solo cookie tecnici indispensabili al funzionamento del sito e alla memorizzazione della lingua. Nessun cookie pubblicitario o di tracciamento.',
+    ipTitle: 'Proprietà intellettuale',
+    ipBody: 'Tutti i contenuti di questo sito (testi, foto, logo) sono protetti. Qualsiasi riproduzione senza autorizzazione è vietata.',
+  },
+  seoLegal: { title: 'Note legali | HQ Stones', description: 'Note legali, informazioni sull\u2019editore del sito HQ Stones e informativa privacy (GDPR).' },
 };

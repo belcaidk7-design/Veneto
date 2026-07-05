@@ -397,5 +397,20 @@ export default {
     faq: { title: 'FAQ: everything about natural stone', description: 'Samples, delivery, lead times, maintenance, finishes, warranty. Answers to the most common questions about natural stone.' },
     contact: { title: 'Contact HQ Stones, request a quote', description: 'Tell us about your project. Phone, WhatsApp, email or contact form. We respond quickly.' },
   },
-
+  legal: {
+    title: 'Legal notice & privacy',
+    subtitle: 'Publisher information and personal data processing.',
+    editorTitle: 'Site publisher',
+    hostTitle: 'Hosting',
+    hostBody: 'Site hosted on Lovable / Supabase infrastructure (European Union).',
+    dataTitle: 'Personal data (GDPR)',
+    dataCollect: 'Data collected via the contact form (name, email, phone, message) is used only to answer your quote request. It is never shared with third parties for commercial purposes.',
+    dataRetention: 'Retention: up to 3 years after last contact, then deletion.',
+    dataRights: 'You have the right to access, correct, object to and delete your data. To exercise these rights, write to info@hq-stones.com.',
+    cookiesTitle: 'Cookies',
+    cookiesBody: 'We only use technical cookies essential to the site\u2019s operation and to remember your language. No advertising or tracking cookies.',
+    ipTitle: 'Intellectual property',
+    ipBody: 'All content on this site (texts, photos, logo) is protected. Any reproduction without authorization is prohibited.',
+  },
+  seoLegal: { title: 'Legal notice | HQ Stones', description: 'Legal notice, publisher information and privacy policy (GDPR) for the HQ Stones website.' },
 };
