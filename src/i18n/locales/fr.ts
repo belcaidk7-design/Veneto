@@ -383,7 +383,7 @@ export default {
     infoTitle: 'Société',
     infoCompany: 'HQ Stones',
     infoLocation: 'International',
-    infoEmail: 'info@hqstones.example',
+    infoEmail: 'info@hq-stones.com',
     findUs: 'Nous trouver',
     validation: {
       nameRequired: 'Veuillez saisir votre nom',

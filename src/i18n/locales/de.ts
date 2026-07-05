@@ -286,7 +286,7 @@ export default {
     message: 'Nachricht', submit: 'Anfrage senden', submitting: 'Senden…',
     success: 'Danke, Ihre Anfrage wurde gesendet. Wir melden uns in Kürze.',
     error: 'Es ist ein Fehler aufgetreten. Erneut versuchen oder direkt schreiben.',
-    infoTitle: 'Unternehmen', infoCompany: 'HQ Stones', infoLocation: 'International', infoEmail: 'info@hqstones.example', findUs: 'Standort',
+    infoTitle: 'Unternehmen', infoCompany: 'HQ Stones', infoLocation: 'International', infoEmail: 'info@hq-stones.com', findUs: 'Standort',
     validation: {
       nameRequired: 'Bitte Namen eingeben', nameMax: 'Name zu lang',
       emailRequired: 'Bitte E-Mail eingeben', emailInvalid: 'Bitte gültige E-Mail eingeben',

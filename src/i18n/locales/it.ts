@@ -287,7 +287,7 @@ export default {
     message: 'Messaggio', submit: 'Invia richiesta', submitting: 'Invio in corso…',
     success: 'Grazie, la tua richiesta è stata inviata. Ti risponderemo a breve.',
     error: 'Si è verificato un errore. Riprova o scrivici direttamente.',
-    infoTitle: 'Azienda', infoCompany: 'HQ Stones', infoLocation: 'Internazionale', infoEmail: 'info@hqstones.example', findUs: 'Dove siamo',
+    infoTitle: 'Azienda', infoCompany: 'HQ Stones', infoLocation: 'Internazionale', infoEmail: 'info@hq-stones.com', findUs: 'Dove siamo',
     validation: {
       nameRequired: 'Inserisci il tuo nome', nameMax: 'Nome troppo lungo',
       emailRequired: 'Inserisci la tua email', emailInvalid: 'Inserisci un\u2019email valida',

@@ -370,7 +370,7 @@ export default {
     infoTitle: 'Company',
     infoCompany: 'HQ Stones',
     infoLocation: 'International',
-    infoEmail: 'info@hqstones.example',
+    infoEmail: 'info@hq-stones.com',
     findUs: 'Find us',
     validation: {
       nameRequired: 'Please enter your name', nameMax: 'Name is too long',
