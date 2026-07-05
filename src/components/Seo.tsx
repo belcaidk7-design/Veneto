@@ -18,8 +18,7 @@ interface SeoProps {
 }
 
 const SITE_NAME = 'HQ Stones';
-const SITE_URL =
-  typeof window !== 'undefined' ? window.location.origin : 'https://hqstones.example';
+const SITE_URL = 'https://hq-stones.com';
 const SUPPORTED_LANGS = ['en', 'it', 'fr', 'de'] as const;
 const DEFAULT_LANG = 'en';
 
@@ -29,8 +28,8 @@ const ORGANIZATION = {
   '@id': `${SITE_URL}/#organization`,
   name: SITE_NAME,
   url: SITE_URL,
-  logo: `${SITE_URL}/favicon.ico`,
-  email: 'info@hqstones.example',
+  logo: `${SITE_URL}/favicon.png`,
+  email: 'info@hq-stones.com',
   areaServed: 'Worldwide',
 };
 

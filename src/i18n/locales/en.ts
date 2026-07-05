@@ -237,7 +237,7 @@ export default {
         responseTime: { q: 'How quickly will I get a reply?', a: 'Our team responds to every enquiry within one business day, often the same day for projects in Europe.' },
         languages: { q: 'Which languages do you work in?', a: 'We handle projects in English, Italian, French and German, both written and on calls.' },
         quote: { q: 'How do I request a detailed quote?', a: 'Share your drawings, surface areas and finish preferences via the form, email or WhatsApp. We return a structured quote within 48 hours.' },
-        visit: { q: 'Can I visit your showroom or quarries?', a: 'Yes. Showroom visits are by appointment, and we organise quarry tours in Italy for confirmed projects.' },
+        visit: { q: 'How can I evaluate the stone remotely?', a: 'We are an online-only operation. We ship physical samples worldwide, share HD photos of the exact blocks/slabs before shipment, and offer video calls to walk you through selections in real time.' },
         privacy: { q: 'How is my information handled?', a: 'Your enquiry is used only to answer your project and is never shared with third parties. See our privacy practices for details.' },
       },
     },
@@ -370,7 +370,7 @@ export default {
     infoTitle: 'Company',
     infoCompany: 'HQ Stones',
     infoLocation: 'International',
-    infoEmail: 'info@hqstones.example',
+    infoEmail: 'info@hq-stones.com',
     findUs: 'Find us',
     validation: {
       nameRequired: 'Please enter your name', nameMax: 'Name is too long',
@@ -383,7 +383,7 @@ export default {
   modal: { quoteTitle: 'Request a quote', quoteSubtitle: 'Tell us about the product you\u2019re interested in.' },
   whatsapp: { aria: 'Chat with us on WhatsApp', message: 'Hello HQ Stones, I would like to discuss a project.' },
   cookie: { title: 'We use cookies.', body: 'Only essential cookies for site functionality and language preference. No tracking.', accept: 'Accept', decline: 'Decline' },
-  footer: { tagline: 'Natural stone for projects of distinction.', navigation: 'Navigation', language: 'Language', follow: 'Follow us', rights: 'All rights reserved.' },
+  footer: { tagline: 'Natural stone for projects of distinction.', navigation: 'Navigation', language: 'Language', follow: 'Follow us', rights: 'All rights reserved.', legal: 'Legal notice' },
   language: { label: 'Language', en: 'English', it: 'Italiano', fr: 'Français', de: 'Deutsch' },
   notFound: { title: 'Page not found', body: 'The page you are looking for does not exist or has been moved.', cta: 'Back to home' },
   seo: {
@@ -397,5 +397,20 @@ export default {
     faq: { title: 'FAQ: everything about natural stone', description: 'Samples, delivery, lead times, maintenance, finishes, warranty. Answers to the most common questions about natural stone.' },
     contact: { title: 'Contact HQ Stones, request a quote', description: 'Tell us about your project. Phone, WhatsApp, email or contact form. We respond quickly.' },
   },
-
+  legal: {
+    title: 'Legal notice & privacy',
+    subtitle: 'Publisher information and personal data processing.',
+    editorTitle: 'Site publisher',
+    hostTitle: 'Hosting',
+    hostBody: 'Site hosted on Lovable / Supabase infrastructure (European Union).',
+    dataTitle: 'Personal data (GDPR)',
+    dataCollect: 'Data collected via the contact form (name, email, phone, message) is used only to answer your quote request. It is never shared with third parties for commercial purposes.',
+    dataRetention: 'Retention: up to 3 years after last contact, then deletion.',
+    dataRights: 'You have the right to access, correct, object to and delete your data. To exercise these rights, write to info@hq-stones.com.',
+    cookiesTitle: 'Cookies',
+    cookiesBody: 'We only use technical cookies essential to the site\u2019s operation and to remember your language. No advertising or tracking cookies.',
+    ipTitle: 'Intellectual property',
+    ipBody: 'All content on this site (texts, photos, logo) is protected. Any reproduction without authorization is prohibited.',
+  },
+  seoLegal: { title: 'Legal notice | HQ Stones', description: 'Legal notice, publisher information and privacy policy (GDPR) for the HQ Stones website.' },
 };

@@ -175,7 +175,7 @@ export default {
         responseTime: { q: 'Wie schnell antworten Sie?', a: 'Unser Team antwortet auf jede Anfrage innerhalb eines Werktages, bei Projekten in Europa oft am selben Tag.' },
         languages: { q: 'In welchen Sprachen arbeiten Sie?', a: 'Wir betreuen Projekte auf Englisch, Italienisch, Französisch und Deutsch, schriftlich wie telefonisch.' },
         quote: { q: 'Wie erhalte ich ein detailliertes Angebot?', a: 'Senden Sie Pläne, Flächen und gewünschte Oberflächen per Formular, E-Mail oder WhatsApp. Strukturiertes Angebot binnen 48 Stunden.' },
-        visit: { q: 'Kann ich Showroom oder Steinbrüche besuchen?', a: 'Ja. Showroom-Besuche nach Vereinbarung, Steinbruch-Touren in Italien organisieren wir für bestätigte Projekte.' },
+        visit: { q: 'Wie kann ich den Stein aus der Ferne prüfen?', a: 'Wir arbeiten ausschließlich online. Wir versenden physische Muster weltweit, schicken HD-Fotos der genauen Blöcke/Platten vor Versand und bieten Videocalls für die Auswahl in Echtzeit.' },
         privacy: { q: 'Wie werden meine Daten verarbeitet?', a: 'Ihre Anfrage dient ausschließlich der Bearbeitung Ihres Projekts und wird nicht an Dritte weitergegeben.' },
       },
     },
@@ -286,7 +286,7 @@ export default {
     message: 'Nachricht', submit: 'Anfrage senden', submitting: 'Senden…',
     success: 'Danke, Ihre Anfrage wurde gesendet. Wir melden uns in Kürze.',
     error: 'Es ist ein Fehler aufgetreten. Erneut versuchen oder direkt schreiben.',
-    infoTitle: 'Unternehmen', infoCompany: 'HQ Stones', infoLocation: 'International', infoEmail: 'info@hqstones.example', findUs: 'Standort',
+    infoTitle: 'Unternehmen', infoCompany: 'HQ Stones', infoLocation: 'International', infoEmail: 'info@hq-stones.com', findUs: 'Standort',
     validation: {
       nameRequired: 'Bitte Namen eingeben', nameMax: 'Name zu lang',
       emailRequired: 'Bitte E-Mail eingeben', emailInvalid: 'Bitte gültige E-Mail eingeben',
@@ -298,7 +298,7 @@ export default {
   modal: { quoteTitle: 'Angebot anfordern', quoteSubtitle: 'Erzählen Sie uns vom Produkt, das Sie interessiert.' },
   whatsapp: { aria: 'Auf WhatsApp chatten', message: 'Hallo HQ Stones, ich möchte über ein Projekt sprechen.' },
   cookie: { title: 'Wir verwenden Cookies.', body: 'Nur essenzielle Cookies für Funktion und Spracheinstellung. Kein Tracking.', accept: 'Akzeptieren', decline: 'Ablehnen' },
-  footer: { tagline: 'Naturstein für außergewöhnliche Projekte.', navigation: 'Navigation', language: 'Sprache', follow: 'Folgen Sie uns', rights: 'Alle Rechte vorbehalten.' },
+  footer: { tagline: 'Naturstein für außergewöhnliche Projekte.', navigation: 'Navigation', language: 'Sprache', follow: 'Folgen Sie uns', rights: 'Alle Rechte vorbehalten.', legal: 'Impressum' },
   language: { label: 'Sprache', en: 'English', it: 'Italiano', fr: 'Français', de: 'Deutsch' },
   notFound: { title: 'Seite nicht gefunden', body: 'Die gesuchte Seite existiert nicht oder wurde verschoben.', cta: 'Zur Startseite' },
   seo: {
@@ -312,5 +312,20 @@ export default {
     faq: { title: 'FAQ: alles über Naturstein', description: 'Muster, Lieferung, Termine, Pflege, Oberflächen, Garantie. Antworten auf häufige Fragen.' },
     contact: { title: 'HQ Stones kontaktieren, Angebot anfordern', description: 'Erzählen Sie uns von Ihrem Projekt. Telefon, WhatsApp, E-Mail oder Formular. Antwort zeitnah.' },
   },
-
+  legal: {
+    title: 'Impressum & Datenschutz',
+    subtitle: 'Angaben zum Websitebetreiber und Verarbeitung personenbezogener Daten.',
+    editorTitle: 'Betreiber der Website',
+    hostTitle: 'Hosting',
+    hostBody: 'Website gehostet auf der Lovable- / Supabase-Infrastruktur (Europäische Union).',
+    dataTitle: 'Personenbezogene Daten (DSGVO)',
+    dataCollect: 'Die über das Kontaktformular erhobenen Daten (Name, E-Mail, Telefon, Nachricht) werden ausschließlich zur Beantwortung Ihrer Angebotsanfrage verwendet und niemals zu kommerziellen Zwecken an Dritte weitergegeben.',
+    dataRetention: 'Aufbewahrung: bis zu 3 Jahre nach dem letzten Kontakt, dann Löschung.',
+    dataRights: 'Sie haben das Recht auf Auskunft, Berichtigung, Widerspruch und Löschung Ihrer Daten. Zur Ausübung dieser Rechte schreiben Sie an info@hq-stones.com.',
+    cookiesTitle: 'Cookies',
+    cookiesBody: 'Wir verwenden ausschließlich technische Cookies, die für den Betrieb der Website und die Sprachwahl erforderlich sind. Keine Werbe- oder Tracking-Cookies.',
+    ipTitle: 'Geistiges Eigentum',
+    ipBody: 'Alle Inhalte dieser Website (Texte, Fotos, Logo) sind geschützt. Jede Vervielfältigung ohne Genehmigung ist untersagt.',
+  },
+  seoLegal: { title: 'Impressum | HQ Stones', description: 'Impressum, Angaben zum Websitebetreiber HQ Stones und Datenschutzerklärung (DSGVO).' },
 };

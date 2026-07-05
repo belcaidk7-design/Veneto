@@ -1,45 +1,73 @@
-## Objectif
+## Plan minimal pour publication
 
-Supprimer l'accès au catalogue (page et téléchargement) et réutiliser les photos des planches catalogue pour enrichir les fiches produits correspondantes.
+Infos reçues :
+- **Téléphone / WhatsApp** : +39 329 443 2741
+- **Email** : info@hq-stones.com
+- **Société** : ARKYBIOX EOOD — VAT BG207398758 — Ulitsa Georgi Dimitrov 1, 3129 Darmantsi, Bulgarie
 
-## Changements
+---
 
-### 1. Galerie produits enrichie avec les planches catalogue
-Dans `src/data/catalog.ts`, ajouter un champ optionnel `gallery: string[]` à `Product`. Mapper les planches de `catalogPlates.ts` par famille vers les produits correspondants :
+### 1. Remplacer les placeholders téléphone partout
 
-```text
-fountains       → product 'fountains'        (p7, p10, p14, p18)
-wallFountains   → product 'wall-fountains'   (p19, p20)
-flowerpots      → product 'flower-boxes'     (p21, p23)
-pots            → product 'vases'            (p25, p27)
-pools           → product 'pools'            (p28, p30)
-balustrades     → product 'balustrades'      (p31, p34)
-columns         → product 'columns'          (p38, p40)
-stairs          → product 'stairs'           (p41, p43)
-windowSills     → product 'window-sills'     (p44)
-paving          → product 'external-paving'  (p45, p47, p49)
+Dans `src/components/Header.tsx`, `src/components/WhatsAppButton.tsx`, `src/pages/Contact.tsx`, `src/pages/Index.tsx` :
+- `+390000000000` → `+393294432741` (format `tel:`)
+- Affichage : `+39 329 443 2741`
+- WhatsApp : `393294432741`
+
+### 2. Corriger `public/robots.txt`
+
+Remplacer `hqstones.example` → `hq-stones.com` (lignes `Host:` et `Sitemap:`).
+
+### 3. Connecter le formulaire de contact
+
+Créer une edge function `send-contact-email` qui :
+- envoie le lead à `info@hq-stones.com`
+- envoie un accusé de réception court au visiteur
+
+Via **Lovable Emails** (zéro clé externe). Nécessite la mise en place du domaine d'envoi `notify.hq-stones.com` — l'utilisateur valide via le dialogue qui s'ouvrira.
+
+`ContactForm.tsx` modifié pour appeler `supabase.functions.invoke('send-contact-email', ...)` au lieu de Formspree.
+
+### 4. Page Mentions légales (minimum légal UE)
+
+Créer `/legal` (route unique, sobre, accessible depuis le footer) contenant :
+
+```
+Éditeur du site : ARKYBIOX EOOD
+Siège : Ulitsa Georgi Dimitrov 1, 3129 Darmantsi, Bulgarie
+TVA intracommunautaire : BG207398758
+Contact : info@hq-stones.com — +39 329 443 2741
+Hébergeur : Lovable / Supabase (UE)
+Données : voir politique de confidentialité ci-dessous
 ```
 
-Dans `src/pages/ProductDetail.tsx`, afficher cette galerie (sous l'image principale) et brancher le `Lightbox` existant pour le zoom plein écran.
++ bloc RGPD court (3 paragraphes) : données collectées via formulaire, finalité (réponse à demande de devis), conservation, droit d'accès/suppression → email à `info@hq-stones.com`.
 
-### 2. Suppression de la page Catalogue
-- `src/App.tsx` : retirer la route `/catalog` et l'import.
-- `src/components/Header.tsx` : retirer l'entrée nav `/catalog`.
-- Supprimer `src/pages/Catalog.tsx`.
-- `src/i18n/locales/{fr,en,it,de}.ts` : retirer `nav.catalog`, `seo.catalog`, le bloc `catalog: { … }` et la mention dans `home.categoriesTitle` si nécessaire.
-- `scripts/generate-sitemap.mjs` + `public/sitemap.xml` : retirer `/catalog`.
-- Tests SEO : retirer les assertions sur `/catalog` si présentes.
+Traduit FR/EN/IT/DE (clés `legal.*` dans `i18n/locales/*`).
 
-### 3. Retrait du téléchargement du catalogue PDF
-- `src/pages/Index.tsx` : supprimer le bouton `Télécharger le catalogue` (et l'import `Download` devenu inutile).
-- `src/components/Footer.tsx` : retirer le lien `/catalogue.pdf`.
-- `src/i18n/locales/*` : retirer les clés `hero.downloadCta` et `footer.downloadCatalog`.
-- Garder `public/catalogue.pdf` en place (pas de suppression de fichier nécessaire), mais plus aucune référence dans l'UI.
+Lien ajouté dans `Footer.tsx`.
 
-### 4. Conserver les assets
-Les 22 fichiers `src/assets/catalog/p*.jpg.asset.json` restent — ils sont désormais utilisés via la galerie produit.
+### 5. Favicon
 
-## Vérification
-- Naviguer sur `/products/fountains`, `/products/balustrades`, `/products/external-paving` : la galerie additionnelle s'affiche et le lightbox s'ouvre.
-- La home n'a plus que le CTA principal "Découvrir le catalogue" → `/products`.
-- Aucun lien restant vers `/catalog` ni vers `/catalogue.pdf`.
+Générer un favicon sobre "HQ" sur fond noir avec accent or (cohérent avec la marque), 512×512 → `public/favicon.ico` + référence dans `index.html`.
+
+### 6. OG image
+
+Générer 1200×630 typographique "HQ Stones — Natural Stone, Exceptional Projects" → `public/og-image.jpg` + `<meta property="og:image">` dans `index.html`.
+
+### 7. Reformuler la FAQ Contact
+
+Clé `faq.contact.visit.*` → reformulée en "Comment évaluer les produits à distance ?" (échantillons, visio, photos HD) — cohérent online-only.
+
+---
+
+### Ce qui n'est PAS fait (volontairement, pour rester minimal)
+
+- Pas de page CGV séparée (mention courte dans `/legal` suffit pour un site vitrine sans paiement en ligne)
+- Pas de schema.org LocalBusiness (pas de présence physique commerciale en Italie)
+- Pas de bannière cookies retravaillée (la `CookieConsent` actuelle suffit, aucun tracker tiers)
+- Pas de photos projets refaites (en attente de tes vraies photos)
+
+---
+
+**On lance ?** Je commencerai par les étapes 1, 2, 4, 5, 6, 7 (édits directs), puis 3 (qui demandera ta validation pour la config du domaine email).

@@ -244,7 +244,7 @@ export default {
         responseTime: { q: 'Sous quel délai répondez-vous ?', a: 'Notre équipe répond à chaque demande sous un jour ouvré, souvent le jour même pour les projets en Europe.' },
         languages: { q: 'Dans quelles langues travaillez-vous ?', a: 'Nous gérons les projets en anglais, italien, français et allemand, à l\u2019écrit comme à l\u2019oral.' },
         quote: { q: 'Comment obtenir un devis détaillé ?', a: 'Partagez plans, surfaces et finitions souhaitées via le formulaire, par email ou WhatsApp. Devis structuré sous 48 heures.' },
-        visit: { q: 'Puis-je visiter le showroom ou les carrières ?', a: 'Oui. Le showroom se visite sur rendez-vous et nous organisons des visites de carrières en Italie pour les projets confirmés.' },
+        visit: { q: 'Comment évaluer la pierre à distance ?', a: 'Nous travaillons uniquement en ligne. Nous expédions des échantillons physiques dans le monde entier, envoyons des photos HD des blocs/dalles exacts avant expédition, et proposons des appels vidéo pour valider les sélections en direct.' },
         privacy: { q: 'Comment sont traitées mes informations ?', a: 'Votre demande sert uniquement à répondre à votre projet et n\u2019est jamais partagée avec des tiers.' },
       },
     },
@@ -383,7 +383,7 @@ export default {
     infoTitle: 'Société',
     infoCompany: 'HQ Stones',
     infoLocation: 'International',
-    infoEmail: 'info@hqstones.example',
+    infoEmail: 'info@hq-stones.com',
     findUs: 'Nous trouver',
     validation: {
       nameRequired: 'Veuillez saisir votre nom',
@@ -415,7 +415,7 @@ export default {
     navigation: 'Navigation',
     language: 'Langue',
     follow: 'Nous suivre',
-    rights: 'Tous droits réservés.',
+    rights: 'Tous droits réservés.', legal: 'Mentions légales',
     
   },
   language: {
@@ -441,5 +441,20 @@ export default {
     faq: { title: 'FAQ : tout savoir sur la pierre naturelle', description: 'Échantillons, livraison, délais, entretien, finitions, garantie. Réponses aux questions les plus fréquentes.' },
     contact: { title: 'Contact HQ Stones, demandez votre devis', description: 'Parlez-nous de votre projet. Téléphone, WhatsApp, email ou formulaire. Réponse rapide.' },
   },
-
+  legal: {
+    title: 'Mentions légales & confidentialité',
+    subtitle: 'Informations légales sur l\u2019éditeur du site et traitement des données personnelles.',
+    editorTitle: 'Éditeur du site',
+    hostTitle: 'Hébergement',
+    hostBody: 'Site hébergé sur l\u2019infrastructure Lovable / Supabase (Union européenne).',
+    dataTitle: 'Données personnelles (RGPD)',
+    dataCollect: 'Les données collectées via le formulaire de contact (nom, email, téléphone, message) sont utilisées uniquement pour répondre à votre demande de devis. Elles ne sont jamais partagées avec des tiers à des fins commerciales.',
+    dataRetention: 'Conservation : jusqu\u2019à 3 ans après le dernier contact, puis suppression.',
+    dataRights: 'Vous disposez d\u2019un droit d\u2019accès, de rectification, d\u2019opposition et de suppression de vos données. Pour exercer ces droits, écrivez à info@hq-stones.com.',
+    cookiesTitle: 'Cookies',
+    cookiesBody: 'Nous utilisons uniquement les cookies techniques indispensables au fonctionnement du site et à la mémorisation de votre langue. Aucun cookie de tracking publicitaire.',
+    ipTitle: 'Propriété intellectuelle',
+    ipBody: 'L\u2019ensemble du contenu de ce site (textes, photos, logo) est protégé. Toute reproduction sans autorisation est interdite.',
+  },
+  seoLegal: { title: 'Mentions légales | HQ Stones', description: 'Mentions légales, informations sur l\u2019éditeur du site HQ Stones et politique de confidentialité (RGPD).' },
 };

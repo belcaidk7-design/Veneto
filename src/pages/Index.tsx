@@ -330,11 +330,11 @@ const Index = () => {
                 {t('home.finalCtaCall')}
               </p>
               <a
-                href="tel:+390000000000"
+                href="tel:+393294432741"
                 className="inline-flex items-center gap-2 text-background hover:text-accent"
               >
                 <Phone className="h-4 w-4" />
-                +39 000 000 0000
+                +39 329 443 2741
               </a>
             </div>
           </Reveal>

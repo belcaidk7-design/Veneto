@@ -176,7 +176,7 @@ export default {
         responseTime: { q: 'In quanto tempo rispondete?', a: 'Il nostro team risponde a ogni richiesta entro un giorno lavorativo, spesso lo stesso giorno per i progetti in Europa.' },
         languages: { q: 'In che lingue lavorate?', a: 'Gestiamo progetti in inglese, italiano, francese e tedesco, sia scritto che in chiamata.' },
         quote: { q: 'Come richiedo un preventivo dettagliato?', a: 'Condividi disegni, superfici e finiture preferite tramite form, email o WhatsApp. Preventivo strutturato entro 48 ore.' },
-        visit: { q: 'Posso visitare lo showroom o le cave?', a: 'Sì. Lo showroom si visita su appuntamento e organizziamo tour in cava in Italia per i progetti confermati.' },
+        visit: { q: 'Come posso valutare la pietra a distanza?', a: 'Lavoriamo esclusivamente online. Spediamo campioni fisici in tutto il mondo, inviamo foto HD dei blocchi/lastre esatti prima della spedizione e organizziamo videochiamate per validare le selezioni in tempo reale.' },
         privacy: { q: 'Come vengono gestiti i miei dati?', a: 'La tua richiesta serve solo a rispondere al tuo progetto e non viene mai condivisa con terzi.' },
       },
     },
@@ -287,7 +287,7 @@ export default {
     message: 'Messaggio', submit: 'Invia richiesta', submitting: 'Invio in corso…',
     success: 'Grazie, la tua richiesta è stata inviata. Ti risponderemo a breve.',
     error: 'Si è verificato un errore. Riprova o scrivici direttamente.',
-    infoTitle: 'Azienda', infoCompany: 'HQ Stones', infoLocation: 'Internazionale', infoEmail: 'info@hqstones.example', findUs: 'Dove siamo',
+    infoTitle: 'Azienda', infoCompany: 'HQ Stones', infoLocation: 'Internazionale', infoEmail: 'info@hq-stones.com', findUs: 'Dove siamo',
     validation: {
       nameRequired: 'Inserisci il tuo nome', nameMax: 'Nome troppo lungo',
       emailRequired: 'Inserisci la tua email', emailInvalid: 'Inserisci un\u2019email valida',
@@ -299,7 +299,7 @@ export default {
   modal: { quoteTitle: 'Richiedi un preventivo', quoteSubtitle: 'Parlaci del prodotto che ti interessa.' },
   whatsapp: { aria: 'Chatta con noi su WhatsApp', message: 'Salve HQ Stones, vorrei discutere di un progetto.' },
   cookie: { title: 'Usiamo i cookie.', body: 'Solo cookie essenziali per il funzionamento del sito e la preferenza di lingua. Nessun tracciamento.', accept: 'Accetta', decline: 'Rifiuta' },
-  footer: { tagline: 'Pietra naturale per progetti d\u2019eccezione.', navigation: 'Navigazione', language: 'Lingua', follow: 'Seguici', rights: 'Tutti i diritti riservati.' },
+  footer: { tagline: 'Pietra naturale per progetti d\u2019eccezione.', navigation: 'Navigazione', language: 'Lingua', follow: 'Seguici', rights: 'Tutti i diritti riservati.', legal: 'Note legali' },
   language: { label: 'Lingua', en: 'English', it: 'Italiano', fr: 'Français', de: 'Deutsch' },
   notFound: { title: 'Pagina non trovata', body: 'La pagina cercata non esiste o è stata spostata.', cta: 'Torna alla home' },
   seo: {
@@ -313,5 +313,20 @@ export default {
     faq: { title: 'FAQ: tutto sulla pietra naturale', description: 'Campioni, consegna, tempi, manutenzione, finiture, garanzia. Risposte alle domande più frequenti.' },
     contact: { title: 'Contatta HQ Stones, richiedi il tuo preventivo', description: 'Raccontaci il tuo progetto. Telefono, WhatsApp, email o modulo. Risposta in tempi brevi.' },
   },
-
+  legal: {
+    title: 'Note legali e privacy',
+    subtitle: 'Informazioni sull\u2019editore del sito e trattamento dei dati personali.',
+    editorTitle: 'Editore del sito',
+    hostTitle: 'Hosting',
+    hostBody: 'Sito ospitato sull\u2019infrastruttura Lovable / Supabase (Unione europea).',
+    dataTitle: 'Dati personali (GDPR)',
+    dataCollect: 'I dati raccolti tramite il modulo di contatto (nome, email, telefono, messaggio) sono utilizzati esclusivamente per rispondere alla tua richiesta di preventivo. Non vengono mai condivisi con terzi per scopi commerciali.',
+    dataRetention: 'Conservazione: fino a 3 anni dall\u2019ultimo contatto, poi cancellazione.',
+    dataRights: 'Hai diritto di accesso, rettifica, opposizione e cancellazione dei tuoi dati. Per esercitare questi diritti scrivi a info@hq-stones.com.',
+    cookiesTitle: 'Cookie',
+    cookiesBody: 'Utilizziamo solo cookie tecnici indispensabili al funzionamento del sito e alla memorizzazione della lingua. Nessun cookie pubblicitario o di tracciamento.',
+    ipTitle: 'Proprietà intellettuale',
+    ipBody: 'Tutti i contenuti di questo sito (testi, foto, logo) sono protetti. Qualsiasi riproduzione senza autorizzazione è vietata.',
+  },
+  seoLegal: { title: 'Note legali | HQ Stones', description: 'Note legali, informazioni sull\u2019editore del sito HQ Stones e informativa privacy (GDPR).' },
 };

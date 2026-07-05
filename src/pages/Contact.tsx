@@ -7,9 +7,9 @@ import FaqSection, { buildFaqJsonLd } from '@/components/FaqSection';
 
 const CONTACT_FAQ_KEYS = ['responseTime', 'languages', 'quote', 'visit', 'privacy'];
 
-const PHONE = '+39 000 000 0000';
-const PHONE_TEL = '+390000000000';
-const WHATSAPP = '390000000000';
+const PHONE = '+39 329 443 2741';
+const PHONE_TEL = '+393294432741';
+const WHATSAPP = '393294432741';
 
 const Contact = () => {
   const { t } = useTranslation();
@@ -34,7 +34,7 @@ const Contact = () => {
               '@type': 'Organization',
               name: 'HQ Stones',
               telephone: PHONE,
-              email: 'info@hqstones.example',
+              email: 'info@hq-stones.com',
               areaServed: 'Worldwide',
             },
           },
