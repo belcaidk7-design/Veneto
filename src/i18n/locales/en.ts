@@ -383,7 +383,7 @@ export default {
   modal: { quoteTitle: 'Request a quote', quoteSubtitle: 'Tell us about the product you\u2019re interested in.' },
   whatsapp: { aria: 'Chat with us on WhatsApp', message: 'Hello HQ Stones, I would like to discuss a project.' },
   cookie: { title: 'We use cookies.', body: 'Only essential cookies for site functionality and language preference. No tracking.', accept: 'Accept', decline: 'Decline' },
-  footer: { tagline: 'Natural stone for projects of distinction.', navigation: 'Navigation', language: 'Language', follow: 'Follow us', rights: 'All rights reserved.' },
+  footer: { tagline: 'Natural stone for projects of distinction.', navigation: 'Navigation', language: 'Language', follow: 'Follow us', rights: 'All rights reserved.', legal: 'Legal notice' },
   language: { label: 'Language', en: 'English', it: 'Italiano', fr: 'Français', de: 'Deutsch' },
   notFound: { title: 'Page not found', body: 'The page you are looking for does not exist or has been moved.', cta: 'Back to home' },
   seo: {

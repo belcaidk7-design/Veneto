@@ -35,6 +35,7 @@ const STATIC = [
   { path: '/savoir-faire', priority: '0.7', changefreq: 'monthly' },
   { path: '/faq', priority: '0.6', changefreq: 'monthly' },
   { path: '/contact', priority: '0.8', changefreq: 'monthly' },
+  { path: '/legal', priority: '0.3', changefreq: 'yearly' },
 ];
 
 const urls = [

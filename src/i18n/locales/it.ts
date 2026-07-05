@@ -299,7 +299,7 @@ export default {
   modal: { quoteTitle: 'Richiedi un preventivo', quoteSubtitle: 'Parlaci del prodotto che ti interessa.' },
   whatsapp: { aria: 'Chatta con noi su WhatsApp', message: 'Salve HQ Stones, vorrei discutere di un progetto.' },
   cookie: { title: 'Usiamo i cookie.', body: 'Solo cookie essenziali per il funzionamento del sito e la preferenza di lingua. Nessun tracciamento.', accept: 'Accetta', decline: 'Rifiuta' },
-  footer: { tagline: 'Pietra naturale per progetti d\u2019eccezione.', navigation: 'Navigazione', language: 'Lingua', follow: 'Seguici', rights: 'Tutti i diritti riservati.' },
+  footer: { tagline: 'Pietra naturale per progetti d\u2019eccezione.', navigation: 'Navigazione', language: 'Lingua', follow: 'Seguici', rights: 'Tutti i diritti riservati.', legal: 'Note legali' },
   language: { label: 'Lingua', en: 'English', it: 'Italiano', fr: 'Français', de: 'Deutsch' },
   notFound: { title: 'Pagina non trovata', body: 'La pagina cercata non esiste o è stata spostata.', cta: 'Torna alla home' },
   seo: {

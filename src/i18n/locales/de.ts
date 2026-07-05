@@ -298,7 +298,7 @@ export default {
   modal: { quoteTitle: 'Angebot anfordern', quoteSubtitle: 'Erzählen Sie uns vom Produkt, das Sie interessiert.' },
   whatsapp: { aria: 'Auf WhatsApp chatten', message: 'Hallo HQ Stones, ich möchte über ein Projekt sprechen.' },
   cookie: { title: 'Wir verwenden Cookies.', body: 'Nur essenzielle Cookies für Funktion und Spracheinstellung. Kein Tracking.', accept: 'Akzeptieren', decline: 'Ablehnen' },
-  footer: { tagline: 'Naturstein für außergewöhnliche Projekte.', navigation: 'Navigation', language: 'Sprache', follow: 'Folgen Sie uns', rights: 'Alle Rechte vorbehalten.' },
+  footer: { tagline: 'Naturstein für außergewöhnliche Projekte.', navigation: 'Navigation', language: 'Sprache', follow: 'Folgen Sie uns', rights: 'Alle Rechte vorbehalten.', legal: 'Impressum' },
   language: { label: 'Sprache', en: 'English', it: 'Italiano', fr: 'Français', de: 'Deutsch' },
   notFound: { title: 'Seite nicht gefunden', body: 'Die gesuchte Seite existiert nicht oder wurde verschoben.', cta: 'Zur Startseite' },
   seo: {

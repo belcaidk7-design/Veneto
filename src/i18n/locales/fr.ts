@@ -415,7 +415,7 @@ export default {
     navigation: 'Navigation',
     language: 'Langue',
     follow: 'Nous suivre',
-    rights: 'Tous droits réservés.',
+    rights: 'Tous droits réservés.', legal: 'Mentions légales',
     
   },
   language: {
