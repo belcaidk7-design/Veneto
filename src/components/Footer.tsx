@@ -77,8 +77,11 @@ const Footer = () => {
       </div>
 
       <div className="border-t border-background/10">
-        <div className="container-prose py-6 text-xs text-background/50">
-          © 2025 HQ Stones. {t('footer.rights')}
+        <div className="container-prose flex flex-col gap-2 py-6 text-xs text-background/50 sm:flex-row sm:items-center sm:justify-between">
+          <span>© 2025 HQ Stones. {t('footer.rights')}</span>
+          <Link to="/legal" className="hover:text-accent">
+            {t('footer.legal', { defaultValue: 'Legal notice' })}
+          </Link>
         </div>
       </div>
     </footer>

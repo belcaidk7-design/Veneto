@@ -19,6 +19,7 @@ import About from "./pages/About.tsx";
 import Craft from "./pages/Craft.tsx";
 import Faq from "./pages/Faq.tsx";
 import Contact from "./pages/Contact.tsx";
+import Legal from "./pages/Legal.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import AdminLayout from "./admin/AdminLayout";
 import AdminLogin from "./admin/AdminLogin";
@@ -52,6 +53,7 @@ const App = () => (
             <Route path="/savoir-faire" element={<Craft />} />
             <Route path="/faq" element={<Faq />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/legal" element={<Legal />} />
             <Route path="/admin/login" element={<AdminLogin />} />
             <Route path="/admin" element={<AdminLayout />}>
               <Route index element={<AdminDashboard />} />
