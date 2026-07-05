@@ -1,8 +1,7 @@
 import { MessageCircle } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
-// TODO: replace with real WhatsApp business number (international format, no spaces, no +)
-const WHATSAPP_NUMBER = '390000000000';
+const WHATSAPP_NUMBER = '393294432741';
 
 const WhatsAppButton = () => {
   const { t } = useTranslation();

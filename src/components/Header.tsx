@@ -4,8 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { Menu, Phone, X } from 'lucide-react';
 import LanguageSwitcher from './LanguageSwitcher';
 
-// TODO: replace with real phone number
-const PHONE_NUMBER = '+390000000000';
+const PHONE_NUMBER = '+393294432741';
 
 const Header = () => {
   const { t } = useTranslation();
