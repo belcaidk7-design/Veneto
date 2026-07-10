@@ -1,8 +1,12 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { ArrowRight } from 'lucide-react';
 import Layout from '@/components/Layout';
 import Seo from '@/components/Seo';
+import { Button } from '@/components/ui/button';
 import { PROJECTS, PROJECT_TYPES, ProjectType } from '@/data/projects';
+
 
 const Projects = () => {
   const { t } = useTranslation();
@@ -95,8 +99,26 @@ const Projects = () => {
           ))}
         </div>
       </div>
+
+      <section className="bg-secondary/40 py-16">
+        <div className="container-prose max-w-2xl">
+          <h2 className="font-serif text-3xl">{t('xlinks.projectsCtaTitle')}</h2>
+          <p className="mt-4 text-muted-foreground">{t('xlinks.projectsCtaBody')}</p>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90">
+              <Link to="/products">
+                {t('xlinks.seeCatalog')} <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+            <Button asChild variant="outline">
+              <Link to="/contact">{t('xlinks.contactUs')}</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
     </Layout>
   );
 };
 
 export default Projects;
+

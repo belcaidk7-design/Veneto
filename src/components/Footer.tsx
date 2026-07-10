@@ -16,7 +16,9 @@ const Footer = () => {
     { to: '/savoir-faire', label: t('nav.craft') },
     { to: '/faq', label: t('nav.faq') },
     { to: '/contact', label: t('nav.contact') },
+    { to: '/legal', label: t('xlinks.legal') },
   ];
+
 
   return (
     <footer className="mt-24 border-t border-border/60 bg-foreground text-background">

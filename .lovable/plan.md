@@ -1,73 +1,45 @@
-## Plan minimal pour publication
+# Maillage interne pour accélérer l'indexation
 
-Infos reçues :
-- **Téléphone / WhatsApp** : +39 329 443 2741
-- **Email** : info@hq-stones.com
-- **Société** : ARKYBIOX EOOD — VAT BG207398758 — Ulitsa Georgi Dimitrov 1, 3129 Darmantsi, Bulgarie
+## Contexte
 
----
+Google Search Console indique que `/products`, `/materials` et `/legal` sont **découvertes mais pas encore indexées**, et `/contact` reste **inconnue de Google**. Les liens existent déjà dans le Header et le Footer, mais Google privilégie les pages avec des liens **contextuels** dans le contenu principal (pas juste la navigation répétée sur chaque page).
 
-### 1. Remplacer les placeholders téléphone partout
+Objectif : ajouter des liens éditoriaux dans le corps des pages clés (Home, About, Projects, Blog, BlogPost, Craft) pour donner à Google plus de signaux de crawl.
 
-Dans `src/components/Header.tsx`, `src/components/WhatsAppButton.tsx`, `src/pages/Contact.tsx`, `src/pages/Index.tsx` :
-- `+390000000000` → `+393294432741` (format `tel:`)
-- Affichage : `+39 329 443 2741`
-- WhatsApp : `393294432741`
+## Modifications
 
-### 2. Corriger `public/robots.txt`
+### 1. Home (`src/pages/Index.tsx`)
+- Section "About teaser" : remplacer le bouton unique vers `/contact` par **deux boutons** : *"Découvrir nos matériaux"* → `/materials` + *"Nous contacter"* → `/contact`.
+- Section "Categories" : ajouter en dessous un lien texte *"Voir tout le catalogue"* → `/products`.
 
-Remplacer `hqstones.example` → `hq-stones.com` (lignes `Host:` et `Sitemap:`).
+### 2. About (`src/pages/About.tsx`)
+- Ajouter en fin de page un paragraphe de conclusion avec 3 liens contextuels : vers `/products`, `/materials`, `/contact`.
 
-### 3. Connecter le formulaire de contact
+### 3. Projects (`src/pages/Projects.tsx`)
+- Ajouter un bloc "CTA" en bas : *"Inspirez-vous de nos réalisations pour votre projet"* avec liens vers `/products` et `/contact`.
 
-Créer une edge function `send-contact-email` qui :
-- envoie le lead à `info@hq-stones.com`
-- envoie un accusé de réception court au visiteur
+### 4. Craft (`src/pages/Craft.tsx`)
+- Ajouter un bloc "Next steps" à la fin : liens vers `/materials` (pour approfondir) et `/contact` (pour un devis).
 
-Via **Lovable Emails** (zéro clé externe). Nécessite la mise en place du domaine d'envoi `notify.hq-stones.com` — l'utilisateur valide via le dialogue qui s'ouvrira.
+### 5. Blog + BlogPost (`src/pages/Blog.tsx`, `src/pages/BlogPost.tsx`)
+- En bas de `BlogPost` : ajouter un encart *"Voir nos produits liés"* → `/products` + *"Explorer les matériaux"* → `/materials`.
+- En bas de `Blog` : petit CTA vers `/products` et `/contact`.
 
-`ContactForm.tsx` modifié pour appeler `supabase.functions.invoke('send-contact-email', ...)` au lieu de Formspree.
+### 6. Footer (`src/components/Footer.tsx`)
+- Le lien `/legal` est déjà présent en bas. Aucun changement.
+- Ajouter le lien `/legal` **aussi** en dessous du bloc de navigation principal (colonne "Navigation") pour renforcer son signal.
 
-### 4. Page Mentions légales (minimum légal UE)
+### 7. Traductions
+- Ajouter les nouvelles clés (CTAs) dans `src/i18n/locales/fr.ts`, `en.ts`, `it.ts`, `de.ts`.
 
-Créer `/legal` (route unique, sobre, accessible depuis le footer) contenant :
+## Détails techniques
 
-```
-Éditeur du site : ARKYBIOX EOOD
-Siège : Ulitsa Georgi Dimitrov 1, 3129 Darmantsi, Bulgarie
-TVA intracommunautaire : BG207398758
-Contact : info@hq-stones.com — +39 329 443 2741
-Hébergeur : Lovable / Supabase (UE)
-Données : voir politique de confidentialité ci-dessous
-```
+- Utiliser `<Link to="...">` de `react-router-dom` (déjà utilisé partout) — rendu en `<a href>` dans le HTML statique, donc crawlable par Google.
+- Aucun changement sur le sitemap (déjà à jour) ni sur `robots.txt`.
+- Aucun impact sur le design system existant : réutiliser `Button`, `Reveal`, tokens de couleur (`text-accent`, `bg-foreground`).
+- Après déploiement : dans quelques jours, tu pourras demander une réindexation manuelle dans GSC ou relancer une inspection URL.
 
-+ bloc RGPD court (3 paragraphes) : données collectées via formulaire, finalité (réponse à demande de devis), conservation, droit d'accès/suppression → email à `info@hq-stones.com`.
-
-Traduit FR/EN/IT/DE (clés `legal.*` dans `i18n/locales/*`).
-
-Lien ajouté dans `Footer.tsx`.
-
-### 5. Favicon
-
-Générer un favicon sobre "HQ" sur fond noir avec accent or (cohérent avec la marque), 512×512 → `public/favicon.ico` + référence dans `index.html`.
-
-### 6. OG image
-
-Générer 1200×630 typographique "HQ Stones — Natural Stone, Exceptional Projects" → `public/og-image.jpg` + `<meta property="og:image">` dans `index.html`.
-
-### 7. Reformuler la FAQ Contact
-
-Clé `faq.contact.visit.*` → reformulée en "Comment évaluer les produits à distance ?" (échantillons, visio, photos HD) — cohérent online-only.
-
----
-
-### Ce qui n'est PAS fait (volontairement, pour rester minimal)
-
-- Pas de page CGV séparée (mention courte dans `/legal` suffit pour un site vitrine sans paiement en ligne)
-- Pas de schema.org LocalBusiness (pas de présence physique commerciale en Italie)
-- Pas de bannière cookies retravaillée (la `CookieConsent` actuelle suffit, aucun tracker tiers)
-- Pas de photos projets refaites (en attente de tes vraies photos)
-
----
-
-**On lance ?** Je commencerai par les étapes 1, 2, 4, 5, 6, 7 (édits directs), puis 3 (qui demandera ta validation pour la config du domaine email).
+## Ce qui n'est PAS fait
+- Pas de refonte de navigation.
+- Pas de breadcrumbs schema.org (déjà présents sur `/blog`).
+- Pas de nouvelles pages.

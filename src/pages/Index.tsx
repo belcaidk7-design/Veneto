@@ -145,8 +145,19 @@ const Index = () => {
               </Reveal>
             ))}
           </div>
+          <Reveal delay={300}>
+            <div className="mt-8">
+              <Link
+                to="/products"
+                className="inline-flex items-center gap-1.5 text-xs font-medium uppercase tracking-wider text-foreground hover:text-accent"
+              >
+                {t('xlinks.seeCatalog')} <ArrowRight className="h-3.5 w-3.5" />
+              </Link>
+            </div>
+          </Reveal>
         </div>
       </section>
+
 
       {/* Materials strip */}
       <section className="container-prose py-20 md:py-28">
@@ -283,14 +294,23 @@ const Index = () => {
           <Reveal>
             <h2 className="font-serif text-3xl md:text-4xl">{t('home.aboutTitle')}</h2>
             <p className="mt-4 leading-relaxed text-muted-foreground">{t('home.aboutBody')}</p>
-            <Button
-              asChild
-              variant="outline"
-              size="lg"
-              className="mt-8 border-foreground text-foreground hover:bg-foreground hover:text-background"
-            >
-              <Link to="/contact">{t('home.aboutCta')}</Link>
-            </Button>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="border-foreground text-foreground hover:bg-foreground hover:text-background"
+              >
+                <Link to="/materials">{t('xlinks.discoverMaterials')}</Link>
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                className="bg-accent text-accent-foreground hover:bg-accent/90"
+              >
+                <Link to="/contact">{t('home.aboutCta')}</Link>
+              </Button>
+            </div>
           </Reveal>
           <Reveal delay={120}>
             <div className="aspect-[4/3] overflow-hidden rounded-sm">
@@ -306,6 +326,7 @@ const Index = () => {
           </Reveal>
         </div>
       </section>
+
 
       {/* Final CTA */}
       <section className="bg-foreground py-20 text-background md:py-24">
