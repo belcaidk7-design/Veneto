@@ -253,8 +253,33 @@ const BlogPost = () => {
             <p className="text-sm text-muted-foreground">{authorRole}</p>
             <p className="mt-3 text-sm leading-relaxed text-foreground/85">{authorBio}</p>
           </aside>
+
+          <aside
+            className="mx-auto mt-10 max-w-2xl rounded-sm border border-border/60 bg-secondary/40 p-6"
+            aria-labelledby="post-cta-heading"
+          >
+            <h2 id="post-cta-heading" className="font-serif text-xl">
+              {t('xlinks.blogPostCtaTitle')}
+            </h2>
+            <p className="mt-2 text-sm text-muted-foreground">{t('xlinks.blogPostCtaBody')}</p>
+            <div className="mt-4 flex flex-wrap gap-3">
+              <Link
+                to="/materials"
+                className="inline-flex items-center gap-1.5 text-sm font-medium uppercase tracking-wider text-accent hover:underline"
+              >
+                {t('xlinks.discoverMaterials')} <ArrowRight className="h-3.5 w-3.5" />
+              </Link>
+              <Link
+                to="/products"
+                className="inline-flex items-center gap-1.5 text-sm font-medium uppercase tracking-wider text-foreground hover:text-accent"
+              >
+                {t('xlinks.seeCatalog')} <ArrowRight className="h-3.5 w-3.5" />
+              </Link>
+            </div>
+          </aside>
         </div>
       </article>
+
 
       {related.length > 0 && (
         <section className="border-t border-border/60 bg-secondary/40 py-16">

@@ -111,8 +111,30 @@ const Blog = () => {
           </div>
         )}
       </div>
+
+      <section className="border-t border-border/60 bg-secondary/40 py-14">
+        <div className="container-prose max-w-2xl">
+          <h2 className="font-serif text-2xl">{t('xlinks.blogCtaTitle')}</h2>
+          <p className="mt-3 text-muted-foreground">{t('xlinks.blogCtaBody')}</p>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <Link
+              to="/products"
+              className="inline-flex items-center gap-1.5 rounded-sm bg-accent px-5 py-2.5 text-sm font-medium uppercase tracking-wider text-accent-foreground hover:bg-accent/90"
+            >
+              {t('xlinks.seeCatalog')} <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-1.5 rounded-sm border border-foreground/30 px-5 py-2.5 text-sm font-medium uppercase tracking-wider text-foreground hover:border-accent hover:text-accent"
+            >
+              {t('xlinks.contactUs')}
+            </Link>
+          </div>
+        </div>
+      </section>
     </Layout>
   );
 };
 
 export default Blog;
+
