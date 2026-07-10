@@ -84,6 +84,30 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      <section className="container-prose py-16 md:py-20">
+        <div className="max-w-2xl">
+          <h2 className="font-serif text-3xl">{t('xlinks.aboutOutroTitle')}</h2>
+          <p className="mt-4 text-muted-foreground">{t('xlinks.aboutOutroBody')}</p>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Button
+              asChild
+              className="bg-accent text-accent-foreground hover:bg-accent/90"
+            >
+              <Link to="/products">
+                {t('xlinks.seeCatalog')} <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+            <Button asChild variant="outline">
+              <Link to="/materials">{t('xlinks.discoverMaterials')}</Link>
+            </Button>
+            <Button asChild variant="ghost">
+              <Link to="/contact">{t('xlinks.contactUs')}</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
     </Layout>
   );
 };

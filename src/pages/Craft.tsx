@@ -1,10 +1,14 @@
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 import Layout from '@/components/Layout';
 import Seo from '@/components/Seo';
+import { Button } from '@/components/ui/button';
 import extraction from '@/assets/craft/extraction.jpg';
 import cutting from '@/assets/craft/cutting.jpg';
 import finishing from '@/assets/craft/finishing.jpg';
 import delivery from '@/assets/craft/delivery.jpg';
+
 
 const STEPS = [
   { key: 'extraction', image: extraction },
@@ -68,8 +72,26 @@ const Craft = () => {
           );
         })}
       </div>
+
+      <section className="bg-secondary/40 py-16">
+        <div className="container-prose max-w-2xl">
+          <h2 className="font-serif text-3xl">{t('xlinks.craftNextTitle')}</h2>
+          <p className="mt-4 text-muted-foreground">{t('xlinks.craftNextBody')}</p>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90">
+              <Link to="/materials">
+                {t('xlinks.discoverMaterials')} <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+            <Button asChild variant="outline">
+              <Link to="/contact">{t('xlinks.contactUs')}</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
     </Layout>
   );
 };
 
 export default Craft;
+
