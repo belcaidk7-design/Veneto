@@ -2,14 +2,15 @@ import { createFileRoute } from "@tanstack/react-router";
 import ProductDetail from "@/pages/ProductDetail";
 import { getProductBySlug } from "@/data/catalog";
 import en from "@/i18n/locales/en";
+import productContentEn from "@/i18n/locales/productContent.en";
 import { buildSeoHead } from "@/lib/seo-head";
 
 const productNames = en.products.items as Record<string, string>;
-const productContent = (
-  en as unknown as {
-    productContent?: Record<string, { seoTitle?: string; seoDescription?: string }>;
-  }
-).productContent;
+const productContent = productContentEn as unknown as Record<
+  string,
+  { seoTitle?: string; seoDescription?: string }
+>;
+
 
 export const Route = createFileRoute("/products/$slug")({
   component: ProductDetail,
