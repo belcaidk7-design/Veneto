@@ -23,7 +23,6 @@ Allow: /*.webp$
 Allow: /*.jpg$
 Allow: /*.jpeg$
 Allow: /*.png$
-Allow: /favicon.ico
 
 # Bad bots — block scrapers / AI crawlers we do not want
 User-agent: GPTBot
