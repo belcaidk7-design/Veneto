@@ -45,6 +45,8 @@ const urls = [
 ];
 
 const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<!-- Sitemap excludes private/admin routes (/admin/*) and API endpoints (/api/*). -->
+<!-- These paths are blocked in robots.txt and set to noindex, nofollow. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls
   .map(
