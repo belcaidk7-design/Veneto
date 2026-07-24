@@ -433,8 +433,8 @@ export default {
   },
   seo: {
     home: { title: 'HQ Stones, pierre naturelle pour vos projets sur mesure', description: 'Marbre, granit, calcaire, porphyre et grès. Sourcing international, conseil sur mesure, livraison partout dans le monde. HQ Stones, votre partenaire pierre.' },
-    products: { title: 'Produits en pierre : dallage, parement, plans de travail', description: 'Catalogue complet de produits en pierre naturelle : dallage, fontaines, parements, plans de travail, vasques, baignoires et dalles brutes.' },
-    materials: { title: 'Marbre, calcaire, granit, porphyre et grès', description: 'Découvrez les pierres avec lesquelles nous travaillons : caractéristiques, usages, finitions et entretien pour chaque matériau.' },
+    products: { title: 'Produits en pierre & catalogue', description: 'Catalogue complet de produits en pierre naturelle : dallage, fontaines, parements, plans de travail, vasques, baignoires et dalles brutes.' },
+    materials: { title: 'Marbre, calcaire, granit & porphyre', description: 'Découvrez les pierres avec lesquelles nous travaillons : caractéristiques, usages, finitions et entretien pour chaque matériau.' },
     projects: { title: 'Nos réalisations en pierre naturelle', description: 'Une sélection de projets résidentiels, hôteliers et publics auxquels HQ Stones a contribué à travers le monde.' },
     blog: { title: 'Magazine HQ Stones : guides et conseils pierre', description: 'Articles, retours de chantier et conseils pratiques de nos spécialistes de la pierre naturelle.' },
     about: { title: 'À propos de HQ Stones, revendeur et consultant pierre', description: 'Notre histoire, nos valeurs et notre engagement pour la pierre naturelle. Sourcing international, intervention internationale.' },
