@@ -303,8 +303,8 @@ export default {
   notFound: { title: 'Seite nicht gefunden', body: 'Die gesuchte Seite existiert nicht oder wurde verschoben.', cta: 'Zur Startseite' },
   seo: {
     home: { title: 'HQ Stones, italienischer Naturstein für Ihre Projekte', description: 'Italienischer Marmor, Granit, Kalkstein, Porphyr und Sandstein. Maßgeschneiderte Beratung, europaweite Lieferung, Schnelles Angebot.' },
-    products: { title: 'Steinprodukte: Pflasterungen, Verkleidungen, Arbeitsplatten', description: 'Vollständiger Katalog Naturstein-Produkte: Pflasterungen, Brunnen, Verkleidungen, Arbeitsplatten, Becken, Wannen und Rohplatten.' },
-    materials: { title: 'Marmor, Kalkstein, Granit, Porphyr und Sandstein', description: 'Entdecken Sie unsere Steine: Eigenschaften, Anwendungen, Oberflächen und Pflege für jedes Material.' },
+    products: { title: 'Naturstein-Katalog & Produkte', description: 'Vollständiger Katalog Naturstein-Produkte: Pflasterungen, Brunnen, Verkleidungen, Arbeitsplatten, Becken, Wannen und Rohplatten.' },
+    materials: { title: 'Marmor, Kalkstein, Granit & Porphyr', description: 'Entdecken Sie unsere Steine: Eigenschaften, Anwendungen, Oberflächen und Pflege für jedes Material.' },
     projects: { title: 'Unsere Naturstein-Referenzen', description: 'Eine Auswahl von Wohn-, Hotel- und öffentlichen Projekten weltweit, an denen HQ Stones beteiligt war.' },
     blog: { title: 'HQ Stones Magazin: Steinleitfäden und Tipps', description: 'Artikel, Projektberichte und praktische Ratschläge unserer Naturstein-Spezialisten.' },
     about: { title: 'Über HQ Stones, Steinhändler und Berater', description: 'Unsere Geschichte, Werte und unser Engagement für Naturstein. Internationales Sourcing, internationale Tätigkeit.' },
