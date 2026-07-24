@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link } from '@/lib/router-compat';
 import { useTranslation } from 'react-i18next';
 import { ArrowRight, Mountain, Hammer, Sparkles, Truck, MapPin, Hand, Compass, Boxes, Phone } from 'lucide-react';
 import Layout from '@/components/Layout';

@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
+import { Link } from '@/lib/router-compat';
 import { ArrowRight, Check } from 'lucide-react';
 import Layout from '@/components/Layout';
 import Seo from '@/components/Seo';

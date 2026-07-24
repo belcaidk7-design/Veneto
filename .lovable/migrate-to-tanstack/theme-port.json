@@ -1,0 +1,14 @@
+{
+  "customizations": [
+    { "token": "--stone / --stone-foreground (bg-stone / text-stone)", "source": "src/index.css + tailwind.config.ts", "reappliedIn": "src/styles.css" },
+    { "token": "--gold / --gold-foreground (bg-gold / text-gold)", "source": "src/index.css + tailwind.config.ts", "reappliedIn": "src/styles.css" },
+    { "token": "--sidebar-* full palette", "source": "src/index.css + tailwind.config.ts", "reappliedIn": "src/styles.css" },
+    { "token": "brand HSL values (background/foreground/primary/accent/muted)", "source": "src/index.css", "reappliedIn": "src/styles.css" },
+    { "token": ".container-prose", "source": "src/index.css @layer components", "reappliedIn": "src/styles.css" },
+    { "token": ".gold-underline (+ ::after)", "source": "src/index.css @layer components", "reappliedIn": "src/styles.css" },
+    { "token": ".card-hover", "source": "src/index.css @layer components", "reappliedIn": "src/styles.css" },
+    { "token": "font-serif = Playfair Display, font-sans = Inter", "source": "tailwind.config.ts", "reappliedIn": "src/styles.css @theme --font-*" },
+    { "token": "keyframes fade-in / accordion-down / accordion-up + animate-*", "source": "tailwind.config.ts", "reappliedIn": "src/styles.css" },
+    { "token": "Google Fonts import (Playfair Display + Inter)", "source": "src/index.css @import url", "reappliedIn": "src/routes/__root.tsx head() links[]" }
+  ]
+}

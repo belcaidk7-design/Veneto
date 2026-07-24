@@ -1,4 +1,4 @@
-import { Navigate, NavLink, Outlet } from 'react-router-dom';
+import { Navigate, NavLink, Outlet } from '@/lib/router-compat';
 import { LogOut } from 'lucide-react';
 import { useIsAdmin } from '@/hooks/useIsAdmin';
 import { supabase } from '@/integrations/supabase/client';

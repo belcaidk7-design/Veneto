@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link, NavLink, useLocation } from 'react-router-dom';
+import { Link, NavLink, useLocation } from '@/lib/router-compat';
 import { useTranslation } from 'react-i18next';
 import { Menu, Phone, X } from 'lucide-react';
 import LanguageSwitcher from './LanguageSwitcher';
