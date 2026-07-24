@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams } from '@/lib/router-compat';
 import { useTranslation } from 'react-i18next';
 import Layout from '@/components/Layout';
 import Seo from '@/components/Seo';
