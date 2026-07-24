@@ -389,8 +389,8 @@ export default {
   notFound: { title: 'Page not found', body: 'The page you are looking for does not exist or has been moved.', cta: 'Back to home' },
   seo: {
     home: { title: 'HQ Stones, Italian natural stone for your projects', description: 'Italian marble, granite, limestone, porphyry and sandstone. Tailored advice, Europe-wide delivery, quotes quickly. HQ Stones, your stone partner.' },
-    products: { title: 'Stone products: paving, cladding, countertops & more', description: 'Full catalog of natural stone products: paving, fountains, cladding, countertops, sinks, bathtubs and raw slabs.' },
-    materials: { title: 'Marble, limestone, granite, porphyry and sandstone', description: 'Discover the stones we work with: characteristics, uses, finishes and care for each material.' },
+    products: { title: 'Natural stone products & catalog', description: 'Full catalog of natural stone products: paving, fountains, cladding, countertops, sinks, bathtubs and raw slabs.' },
+    materials: { title: 'Marble, limestone, granite & porphyry', description: 'Discover the stones we work with: characteristics, uses, finishes and care for each material.' },
     projects: { title: 'Our natural stone projects', description: 'A selection of residential, hospitality and public projects HQ Stones contributed to around the world.' },
     blog: { title: 'HQ Stones Journal: stone guides and tips', description: 'Articles, project stories and practical advice from our specialists in natural stone.' },
     about: { title: 'About HQ Stones, stone reseller and consultant', description: 'Our story, values and commitment to natural stone. International sourcing, international delivery.' },
