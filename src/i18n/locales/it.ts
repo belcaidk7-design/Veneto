@@ -304,8 +304,8 @@ export default {
   notFound: { title: 'Pagina non trovata', body: 'La pagina cercata non esiste o è stata spostata.', cta: 'Torna alla home' },
   seo: {
     home: { title: 'HQ Stones, pietra naturale per progetti d\u2019eccezione', description: 'Marmo, granito, calcare, porfido e arenaria. Sourcing internazionale, consulenza su misura, consegna in tutto il mondo.' },
-    products: { title: 'Prodotti in pietra: pavimentazioni, rivestimenti, top', description: 'Catalogo completo di prodotti in pietra naturale: pavimentazioni, fontane, rivestimenti, top, lavabi, vasche e lastre.' },
-    materials: { title: 'Marmo, calcare, granito, porfido e arenaria', description: 'Scopri le pietre con cui lavoriamo: caratteristiche, usi, finiture e manutenzione per ogni materiale.' },
+    products: { title: 'Prodotti in pietra: catalogo completo', description: 'Catalogo completo di prodotti in pietra naturale: pavimentazioni, fontane, rivestimenti, top, lavabi, vasche e lastre.' },
+    materials: { title: 'Marmo, calcare, granito e porfido', description: 'Scopri le pietre con cui lavoriamo: caratteristiche, usi, finiture e manutenzione per ogni materiale.' },
     projects: { title: 'Le nostre realizzazioni in pietra naturale', description: 'Una selezione di progetti residenziali, alberghieri e pubblici a cui HQ Stones ha contribuito in tutto il mondo.' },
     blog: { title: 'Magazine HQ Stones: guide e consigli pietra', description: 'Articoli, storie di cantiere e consigli pratici dei nostri specialisti della pietra naturale.' },
     about: { title: 'Chi siamo, rivenditore e consulente di pietra', description: 'La nostra storia, valori e impegno per la pietra naturale. Sourcing internazionale, intervento internazionale.' },
