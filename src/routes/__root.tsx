@@ -92,18 +92,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1.0" },
-      { title: "HQ Stones : Natural Stone, Exceptional Projects | Italy" },
-      {
-        name: "description",
-        content:
-          "HQ Stones : stone reseller and project consultant based in Italy. Marble, granite, limestone, porfido, sandstone for exterior, interior and raw slabs.",
-      },
       { name: "theme-color", content: "#1C1C1C" },
-      { property: "og:site_name", content: "HQ Stones" },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-      { property: "og:image", content: "https://hq-stones.com/og-image.jpg" },
-      { name: "twitter:image", content: "https://hq-stones.com/og-image.jpg" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
