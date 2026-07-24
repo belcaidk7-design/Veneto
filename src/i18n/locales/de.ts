@@ -199,7 +199,7 @@ export default {
   },
   blog: {
     title: 'Magazin', subtitle: 'Geschichten, Leitfäden und Einblicke in Naturstein.',
-    readMore: 'Weiterlesen', by: 'Von', relatedTitle: 'Ähnliche Artikel', backToBlog: 'Zurück zum Magazin',
+    readMore: 'Weiterlesen', readFullArticle: '{{title}} lesen', by: 'Von', relatedTitle: 'Ähnliche Artikel', backToBlog: 'Zurück zum Magazin',
     filterBy: 'Nach Thema filtern', allTags: 'Alle', noResults: 'Aktuell keine Artikel zu diesem Thema.',
     categories: { stoneGuide: 'Steinleitfaden', projects: 'Projekte', materials: 'Materialien', maintenance: 'Pflege', news: 'Aktuelles' },
     updatedOn: 'Aktualisiert am',

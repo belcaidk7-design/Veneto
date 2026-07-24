@@ -200,7 +200,7 @@ export default {
   },
   blog: {
     title: 'Magazine', subtitle: 'Storie, guide e sguardi sulla pietra naturale.',
-    readMore: 'Leggi tutto', by: 'Di', relatedTitle: 'Articoli correlati', backToBlog: 'Torna al magazine',
+    readMore: 'Leggi tutto', readFullArticle: 'Leggi {{title}}', by: 'Di', relatedTitle: 'Articoli correlati', backToBlog: 'Torna al magazine',
     filterBy: 'Filtra per argomento', allTags: 'Tutti', noResults: 'Nessun articolo per questo argomento al momento.',
     categories: { stoneGuide: 'Guida alla pietra', projects: 'Progetti', materials: 'Materiali', maintenance: 'Manutenzione', news: 'Novità' },
     updatedOn: 'Aggiornato il',

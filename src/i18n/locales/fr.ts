@@ -271,6 +271,7 @@ export default {
     title: 'Magazine',
     subtitle: 'Histoires, guides et regards sur la pierre naturelle.',
     readMore: 'Lire la suite',
+    readFullArticle: 'Lire {{title}}',
     by: 'Par',
     relatedTitle: 'Articles liés',
     backToBlog: 'Retour au magazine',
