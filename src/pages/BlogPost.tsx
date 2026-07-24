@@ -84,7 +84,7 @@ const BlogPost = () => {
       publisher: {
         '@type': 'Organization',
         name: 'HQ Stones',
-        logo: { '@type': 'ImageObject', url: '/favicon.ico' },
+        logo: { '@type': 'ImageObject', url: '/favicon.png' },
       },
       mainEntityOfPage: { '@type': 'WebPage', '@id': `/blog/${post.slug}` },
     },
