@@ -264,6 +264,7 @@ export default {
     title: 'Journal',
     subtitle: 'Stories, guides and insights from the world of natural stone.',
     readMore: 'Read more',
+    readFullArticle: 'Read {{title}}',
     by: 'By',
     relatedTitle: 'Related articles',
     backToBlog: 'Back to journal',

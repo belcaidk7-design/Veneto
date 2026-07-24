@@ -103,7 +103,8 @@ const Blog = () => {
                     to={`/blog/${post.slug}`}
                     className="mt-5 inline-flex items-center gap-1.5 text-xs font-medium uppercase tracking-wider text-foreground hover:text-accent"
                   >
-                    {t('blog.readMore')} <ArrowRight className="h-3.5 w-3.5" />
+                    {t('blog.readFullArticle', { title: t(`blog.posts.${post.i18nKey}.title`) })}{' '}
+                    <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
                   </Link>
                 </div>
               </article>
