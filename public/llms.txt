@@ -1,0 +1,20 @@
+# HQ Stones
+
+> Natural stone specialists — marble, limestone, granite, porphyry and sandstone for architecture, interiors and outdoor projects.
+
+HQ Stones supplies and crafts natural stone for residential, hospitality and public projects. The site presents materials, product catalog, realized projects, editorial content on stone craft, and direct contact with the workshop.
+
+## Pages
+- [Home](/): Overview of HQ Stones, featured materials, projects and products.
+- [About](/about): Company story, team and values.
+- [Materials](/materials): Marble, limestone, granite, porphyry and sandstone — characteristics, uses, finishes and care.
+- [Products](/products): Full catalog of natural stone products — paving, cladding, countertops, fountains, sinks, bathtubs and slabs.
+- [Projects](/projects): Selected residential, hospitality and public projects.
+- [Savoir-faire](/savoir-faire): Craftsmanship, techniques and quality control.
+- [Blog](/blog): Guides, project stories and practical advice on natural stone.
+- [FAQ](/faq): Answers about materials, ordering, shipping and finishes.
+- [Contact](/contact): Reach the workshop for quotes and project inquiries.
+- [Legal](/legal): Company details, terms and privacy.
+
+## Optional
+- [Sitemap](/sitemap.xml): Full list of indexable URLs.
