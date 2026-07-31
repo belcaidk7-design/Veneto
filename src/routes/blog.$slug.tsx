@@ -1,5 +1,6 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, notFound } from "@tanstack/react-router";
 import BlogPost from "@/pages/BlogPost";
+import NotFound from "@/pages/NotFound";
 import { BLOG_POSTS } from "@/data/blog";
 import en from "@/i18n/locales/en";
 import { buildSeoHead } from "@/lib/seo-head";
@@ -11,7 +12,12 @@ const postSeo = en.blog.posts as unknown as Record<
 
 export const Route = createFileRoute("/blog/$slug")({
   component: BlogPost,
-  loader: ({ params }) => ({ slug: params.slug }),
+  loader: ({ params }) => {
+    const post = BLOG_POSTS.find((p) => p.slug === params.slug);
+    if (!post) throw notFound();
+    return { slug: params.slug };
+  },
+  notFoundComponent: NotFound,
   head: ({ loaderData }) => {
     const post = BLOG_POSTS.find((p) => p.slug === loaderData?.slug);
     if (!post) {

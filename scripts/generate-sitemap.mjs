@@ -4,7 +4,7 @@
  * Run with: node scripts/generate-sitemap.mjs [base-url]
  * Default base URL: https://hq-stones.com
  */
-import { writeFileSync } from 'node:fs';
+import { writeFileSync, readFileSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -12,18 +12,23 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const BASE = (process.argv[2] || process.env.SITE_URL || 'https://hq-stones.com').replace(/\/$/, '');
 const today = new Date().toISOString().split('T')[0];
 
+const read = (p) => readFileSync(resolve(__dirname, '..', p), 'utf8');
+
+// Slugs are derived from the app data so the sitemap can never drift out of sync.
 const PRODUCT_SLUGS = [
-  'external-paving','fountains','columns','balustrades','flower-boxes','benches',
-  'bollards','curbs','sculptures','external-cladding','interior-flooring',
-  'interior-cladding','kitchen-countertops','sinks','bathtubs',
-  'open-book-slabs','block-slabs',
+  ...new Set(
+    [...read('src/data/catalog.ts').matchAll(/\{\s*id:\s*'([^']+)'\s*,\s*i18nKey:/g)].map((m) => m[1]),
+  ),
 ];
 
 const BLOG_SLUGS = [
-  'choosing-marble-kitchen',
-  'italian-quarries-heritage',
-  'caring-outdoor-limestone',
+  ...new Set([...read('src/data/blog.ts').matchAll(/slug:\s*'([^']+)'/g)].map((m) => m[1])),
 ];
+
+if (!PRODUCT_SLUGS.length || !BLOG_SLUGS.length) {
+  throw new Error('Sitemap generation failed: no product or blog slugs found.');
+}
+
 
 const STATIC = [
   { path: '/', priority: '1.0', changefreq: 'monthly' },

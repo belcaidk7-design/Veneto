@@ -1,5 +1,6 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, notFound } from "@tanstack/react-router";
 import ProductDetail from "@/pages/ProductDetail";
+import NotFound from "@/pages/NotFound";
 import { getProductBySlug } from "@/data/catalog";
 import en from "@/i18n/locales/en";
 import productContentEn from "@/i18n/locales/productContent.en";
@@ -14,7 +15,11 @@ const productContent = productContentEn as unknown as Record<
 
 export const Route = createFileRoute("/products/$slug")({
   component: ProductDetail,
-  loader: ({ params }) => ({ slug: params.slug }),
+  loader: ({ params }) => {
+    if (!getProductBySlug(params.slug)) throw notFound();
+    return { slug: params.slug };
+  },
+  notFoundComponent: NotFound,
   head: ({ loaderData }) => {
     const product = getProductBySlug(loaderData?.slug);
     if (!product) {
