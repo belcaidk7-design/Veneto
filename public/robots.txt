@@ -8,6 +8,7 @@ Allow: /
 
 # Block low-value or technical paths
 Disallow: /api/
+Disallow: /admin
 Disallow: /admin/
 Disallow: /*?*utm_
 Disallow: /*?*ref=
@@ -42,6 +43,5 @@ Crawl-delay: 10
 User-agent: MJ12bot
 Crawl-delay: 10
 
-Host: hq-stones.com
-
 Sitemap: https://hq-stones.com/sitemap.xml
+
