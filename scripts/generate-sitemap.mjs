@@ -10,7 +10,6 @@ import { fileURLToPath } from 'node:url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const BASE = (process.argv[2] || process.env.SITE_URL || 'https://hq-stones.com').replace(/\/$/, '');
-const today = new Date().toISOString().split('T')[0];
 
 const read = (p) => readFileSync(resolve(__dirname, '..', p), 'utf8');
 
@@ -21,9 +20,10 @@ const PRODUCT_SLUGS = [
   ),
 ];
 
-const BLOG_SLUGS = [
-  ...new Set([...read('src/data/blog.ts').matchAll(/slug:\s*'([^']+)'/g)].map((m) => m[1])),
-];
+const BLOG_POSTS = [...read('src/data/blog.ts').matchAll(/slug:\s*'([^']+)'[\s\S]*?updated:\s*'([^']+)'/g)].map(
+  (m) => ({ slug: m[1], updated: m[2] }),
+);
+const BLOG_SLUGS = BLOG_POSTS.map((p) => p.slug);
 
 if (!PRODUCT_SLUGS.length || !BLOG_SLUGS.length) {
   throw new Error('Sitemap generation failed: no product or blog slugs found.');
@@ -46,7 +46,12 @@ const STATIC = [
 const urls = [
   ...STATIC,
   ...PRODUCT_SLUGS.map((s) => ({ path: `/products/${s}`, priority: '0.7', changefreq: 'monthly' })),
-  ...BLOG_SLUGS.map((s) => ({ path: `/blog/${s}`, priority: '0.6', changefreq: 'monthly' })),
+  ...BLOG_POSTS.map((p) => ({
+    path: `/blog/${p.slug}`,
+    priority: '0.6',
+    changefreq: 'monthly',
+    lastmod: p.updated,
+  })),
 ];
 
 const xml = `<?xml version="1.0" encoding="UTF-8"?>
@@ -57,8 +62,7 @@ ${urls
   .map(
     (u) => `  <url>
     <loc>${BASE}${u.path}</loc>
-    <lastmod>${today}</lastmod>
-    <changefreq>${u.changefreq}</changefreq>
+${u.lastmod ? `    <lastmod>${u.lastmod}</lastmod>\n` : ''}    <changefreq>${u.changefreq}</changefreq>
     <priority>${u.priority}</priority>
   </url>`,
   )
