@@ -20,7 +20,8 @@ interface Props {
 
 const LanguageSwitcher = ({ align = 'end' }: Props) => {
   const { i18n, t } = useTranslation();
-  const current = LANGS.find((l) => l.code === i18n.language.split('-')[0]) ?? LANGS[0];
+  const current =
+    LANGS.find((l) => l.code === (i18n.language || 'en').split('-')[0]) ?? LANGS[0];
 
   return (
     <DropdownMenu>
