@@ -4,14 +4,20 @@ import NotFound from "@/pages/NotFound";
 import { getProductBySlug } from "@/data/catalog";
 import en from "@/i18n/locales/en";
 import productContentEn from "@/i18n/locales/productContent.en";
-import { buildSeoHead } from "@/lib/seo-head";
+import productContentIt from "@/i18n/locales/productContent.it";
+import productContentFr from "@/i18n/locales/productContent.fr";
+import productContentDe from "@/i18n/locales/productContent.de";
+import { getActiveLang, type Lang } from "@/lib/active-lang";
+import { activeLocale, buildSeoHead, seoText } from "@/lib/seo-head";
 
-const productNames = en.products.items as Record<string, string>;
-const productContent = productContentEn as unknown as Record<
-  string,
-  { seoTitle?: string; seoDescription?: string }
->;
+type ProductSeo = { seoTitle?: string; seoDescription?: string };
 
+const PRODUCT_CONTENT: Record<Lang, Record<string, ProductSeo>> = {
+  en: productContentEn as unknown as Record<string, ProductSeo>,
+  it: productContentIt as unknown as Record<string, ProductSeo>,
+  fr: productContentFr as unknown as Record<string, ProductSeo>,
+  de: productContentDe as unknown as Record<string, ProductSeo>,
+};
 
 export const Route = createFileRoute("/products/$slug")({
   component: ProductDetail,
@@ -22,21 +28,22 @@ export const Route = createFileRoute("/products/$slug")({
   notFoundComponent: NotFound,
   head: ({ loaderData }) => {
     const product = getProductBySlug(loaderData?.slug);
+    const productsSeo = seoText("products");
     if (!product) {
       return buildSeoHead({
-        title: en.notFound?.title ?? "Page not found",
-        description: en.seo.products.description,
+        title: activeLocale().notFound?.title ?? en.notFound?.title ?? "Page not found",
+        description: productsSeo.description,
         path: `/products/${loaderData?.slug ?? ""}`,
         noindex: true,
       });
     }
-    const name = productNames[product.i18nKey] ?? product.i18nKey;
-    const content = productContent?.[product.i18nKey];
+    const lang = getActiveLang();
+    const names = (activeLocale().products?.items ?? en.products.items) as Record<string, string>;
+    const name = names[product.i18nKey] ?? (en.products.items as Record<string, string>)[product.i18nKey] ?? product.i18nKey;
+    const content = PRODUCT_CONTENT[lang]?.[product.i18nKey] ?? PRODUCT_CONTENT.en[product.i18nKey];
     return buildSeoHead({
-      title: content?.seoTitle ?? `${name} in natural stone`,
-      description:
-        content?.seoDescription ??
-        `${name} by HQ Stones — Italian natural stone, tailored formats and finishes, Europe-wide delivery.`,
+      title: content?.seoTitle ?? name,
+      description: content?.seoDescription ?? `${name} — HQ Stones.`,
       path: `/products/${product.id}`,
       image: product.image,
     });

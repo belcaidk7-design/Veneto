@@ -21,10 +21,18 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import CookieConsent from "@/components/CookieConsent";
 import NotFound from "@/pages/NotFound";
 import { reportLovableError } from "@/lib/lovable-error-reporting";
+import { getActiveLang } from "@/lib/active-lang";
+import i18n from "../i18n";
 
 function RootShell({ children }: { children: ReactNode }) {
+  const lang = getActiveLang();
+  if (i18n.language !== lang) {
+    // Keep SSR output and first client render in the same language so the
+    // title/meta and page copy match (no English flash, no hydration diff).
+    void i18n.changeLanguage(lang);
+  }
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={lang} suppressHydrationWarning>
       <head>
         <HeadContent />
       </head>

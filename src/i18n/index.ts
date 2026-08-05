@@ -24,9 +24,12 @@ i18n
     supportedLngs: ['en', 'it', 'fr', 'de'],
     interpolation: { escapeValue: false },
     detection: {
-      order: ['localStorage', 'navigator'],
-      caches: ['localStorage'],
+      order: ['cookie', 'localStorage', 'navigator'],
+      caches: ['cookie', 'localStorage'],
+      lookupCookie: 'hqs-lang',
       lookupLocalStorage: 'hqs-lang',
+      cookieMinutes: 525600,
+      cookieOptions: { path: '/', sameSite: 'lax' },
     },
   });
 
