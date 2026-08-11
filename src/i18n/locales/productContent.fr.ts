@@ -14,7 +14,7 @@ export type ProductContentEntry = {
 
 const productContent: Record<string, ProductContentEntry> = {
   externalPaving: {
-    seoTitle: 'Dallage extérieur en pierre naturelle | Porphyre, granit, grès',
+    seoTitle: 'Dallage extérieur pierre naturelle | Porphyre, granit, grès',
     seoDescription: 'Dallages extérieurs en porphyre du Trentin, granit sarde et grès de Vérone. Antidérapant R11 à R13, résistants au gel. Devis rapide.',
     intro: 'Le dallage extérieur est la première chose que l\u2019on touche en arrivant chez vous. Notre rôle est de choisir la pierre qui résistera trente ans aux passages, au gel et au sel, sans rien perdre de son cachet.',
     story: [
@@ -40,7 +40,7 @@ const productContent: Record<string, ProductContentEntry> = {
     bestProjects: [],
   },
   columns: {
-    seoTitle: 'Colonnes en pierre naturelle sur mesure | Marbre, calcaire, granit',
+    seoTitle: 'Colonnes sur mesure en pierre | Marbre, calcaire, granit',
     seoDescription: 'Colonnes en marbre, calcaire et granit, tournées CNC et finies à la main. Diamètres 20 à 60 cm, hauteurs jusqu\u2019à 4 m. Devis rapide.',
     intro: 'Une colonne porte un toit ou une intention. Dans les deux cas, ses proportions, son chapiteau et sa finition décident de tout.',
     story: [
@@ -118,7 +118,7 @@ const productContent: Record<string, ProductContentEntry> = {
     bestProjects: [],
   },
   sculptures: {
-    seoTitle: 'Sculptures en pierre naturelle | Marbre de Carrare et calcaire',
+    seoTitle: 'Sculptures en pierre | Marbre de Carrare et calcaire',
     seoDescription: 'Sculptures sur mesure en marbre de Carrare et calcaire, taillées à la main à Pietrasanta. Copies, créations, restaurations. Devis rapide.',
     intro: 'Une sculpture sur mesure est un dialogue entre votre intention, le sculpteur et la pierre. Nous facilitons ce dialogue depuis longtemps.',
     story: [
@@ -131,7 +131,7 @@ const productContent: Record<string, ProductContentEntry> = {
     bestProjects: [],
   },
   externalCladding: {
-    seoTitle: 'Parement extérieur en pierre naturelle | Calcaire, grès, porphyre',
+    seoTitle: 'Parement extérieur en pierre | Calcaire, grès, porphyre',
     seoDescription: 'Parements de façade en calcaire de Trani, grès de Vérone et porphyre. Pose collée ou agrafée, conforme DTU 55.2. Devis rapide.',
     intro: 'Une façade en pierre naturelle, ce n\u2019est pas qu\u2019un revêtement : c\u2019est l\u2019identité d\u2019un bâtiment pour cinquante ans. Le choix de la pierre, du format et du système de pose conditionne tout le reste.',
     story: [
@@ -157,7 +157,7 @@ const productContent: Record<string, ProductContentEntry> = {
     bestProjects: [],
   },
   interiorCladding: {
-    seoTitle: 'Parement mural intérieur en pierre naturelle | Marbre & calcaire',
+    seoTitle: 'Parement mural en pierre naturelle | Marbre & calcaire',
     seoDescription: 'Parements muraux intérieurs en marbre de Carrare et calcaire italien. Bookmatch, grandes dalles, formats sur mesure. Devis rapide.',
     intro: 'Un mur en pierre naturelle change la perception entière d\u2019une pièce. Lumière, acoustique, sensation de matière : aucun autre matériau ne produit cet effet.',
     story: [
@@ -222,7 +222,7 @@ const productContent: Record<string, ProductContentEntry> = {
     bestProjects: [],
   },
   blockSlabs: {
-    seoTitle: 'Dalles de bloc en pierre naturelle | Vente aux professionnels',
+    seoTitle: 'Dalles de bloc en pierre | Vente aux professionnels',
     seoDescription: 'Dalles brutes en marbre, granit, calcaire et grès. Plusieurs épaisseurs, vente à la pièce ou container. Pour pros. Devis rapide.',
     intro: 'Pour les marbreries et agenceurs, accéder à une matière première fiable et tracée fait toute la différence. Nous sommes votre relais direct avec les carrières italiennes.',
     story: [

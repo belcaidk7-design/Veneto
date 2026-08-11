@@ -54,7 +54,7 @@ const productContent: Record<string, ProductContentEntry> = {
     bestProjects: [],
   },
   flowerBoxes: {
-    seoTitle: 'Naturstein-Pflanzgefäße | Italienischer Kalkstein und Sandstein',
+    seoTitle: 'Naturstein-Pflanzgefäße | Kalkstein & Sandstein',
     seoDescription: 'Pflanzgefäße aus Trani-Kalkstein und Veroneser Sandstein, aus dem Block gehauen. Frostbeständig, integrierte Drainage. Schnelles Angebot.',
     intro: 'Ein Naturstein-Pflanzgefäß ist eine 30-Jahre-Investition. Der richtige Stein und die richtige Drainage verhindern die Risse des ersten Winters.',
     story: [
@@ -119,7 +119,7 @@ const productContent: Record<string, ProductContentEntry> = {
     bestProjects: [],
   },
   externalCladding: {
-    seoTitle: 'Naturstein-Fassadenverkleidung | Kalkstein, Sandstein, Porphyr',
+    seoTitle: 'Naturstein-Fassadenverkleidung | Kalkstein, Sandstein',
     seoDescription: 'Fassadenverkleidungen aus Trani-Kalkstein, Veroneser Sandstein und Porphyr. Geklebte oder verankerte Verlegung, normgerecht. Schnelles Angebot.',
     intro: 'Eine Naturstein-Fassade ist mehr als eine Verkleidung: sie ist die Identität eines Gebäudes für fünfzig Jahre.',
     story: [
