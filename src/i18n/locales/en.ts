@@ -1,4 +1,101 @@
 export default {
+  plus: {
+    "form": {
+      "mailtoNote": "Pressing the button opens your email application with this request pre-filled — send the email to complete your request.",
+      "emailFallbackLabel": "Or write to us directly:",
+      "opened": "Your email application should now open with your request.",
+      "subject": "Quote request",
+      "labels": {
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone",
+        "product": "Product of interest",
+        "message": "Message"
+      }
+    },
+    "craft": {
+      "labels": {
+        "coordinate": "What we coordinate",
+        "receive": "What you receive",
+        "decisions": "Key decisions"
+      },
+      "steps": {
+        "extraction": {
+          "coordinate": "We work with partner quarries to select blocks by grain, colour and structure, and to reserve material from a single batch when a project needs visual consistency.",
+          "receive": "Block or batch references, and photographs of the selected material when a project calls for it.",
+          "decisions": "Choice of stone family, acceptable natural variation, and whether the whole quantity must come from one batch."
+        },
+        "cutting": {
+          "coordinate": "We pass your drawings and dimensions to the workshop, agree cutting plans, thicknesses and tolerances, and confirm quantities before production starts.",
+          "receive": "A cutting plan or piece list to validate before cutting begins.",
+          "decisions": "Thickness, piece sizes, joint widths and edge profiles."
+        },
+        "finishing": {
+          "coordinate": "We arrange the requested surface treatment — polished, honed, flamed, brushed or aged — together with edge work such as bullnose or chamfer.",
+          "receive": "Finish samples on request, so the surface can be approved before the full order is processed.",
+          "decisions": "Finish per area (slip resistance outdoors, appearance and maintenance indoors) and edge details."
+        },
+        "delivery": {
+          "coordinate": "We organise protective crating, documents and transport, and coordinate dates with your site or forwarder.",
+          "receive": "Packing details, shipping documents and a delivery schedule.",
+          "decisions": "Delivery address and access, unloading means available on site, and delivery phasing."
+        }
+      },
+      "prepTitle": "What we need to prepare a quote",
+      "prepIntro": "The more precise the information, the faster and more accurate the quotation.",
+      "prep": {
+        "drawings": {
+          "title": "Drawings and dimensions",
+          "body": "Plans, sections or dimensioned sketches, plus thickness if already defined."
+        },
+        "use": {
+          "title": "Intended use",
+          "body": "Interior or exterior, flooring, cladding, stairs, countertop or bespoke element, and the expected traffic or exposure."
+        },
+        "delivery": {
+          "title": "Delivery location",
+          "body": "Delivery address, country and site access, so transport can be estimated."
+        },
+        "material": {
+          "title": "Preferred material and finish",
+          "body": "Stone family or a specific stone and the desired finish — or describe the effect you want and we suggest options."
+        },
+        "quantities": {
+          "title": "Quantities and timing",
+          "body": "Surfaces or piece counts, and your target dates for validation and delivery."
+        }
+      },
+      "checksTitle": "Checks and logistics",
+      "checksIntro": "Every project is different, so checks are agreed case by case.",
+      "checks": {
+        "dimensions": {
+          "title": "Project-specific checks",
+          "body": "Dimensional and finish checks are defined with you according to the pieces ordered."
+        },
+        "photos": {
+          "title": "Photos before dispatch",
+          "body": "On request, we can send photographs of the pieces before they leave the workshop."
+        },
+        "crating": {
+          "title": "Protective crating",
+          "body": "Pieces are crated according to their format and weight so they travel protected."
+        },
+        "documents": {
+          "title": "Documents and shipment",
+          "body": "We prepare the shipping documents and coordinate dates with your site or forwarder."
+        }
+      }
+    },
+    "projects": {
+      "badge": "Illustrative image — project photography coming soon",
+      "note": "The references below are completed projects. The images currently shown are illustrative: archive photography of these projects is being prepared.",
+      "alt": "Illustrative natural stone image — not a photograph of the {{title}} project"
+    },
+    "legal": {
+      "entityTitle": "Brand and operating entity",
+      "entityBody": "HQ Stones is a brand. ARKYBIOX EOOD is the legal entity that operates and manages the HQ Stones activity and issues all invoices; the details above apply to any contractual or billing matter."
+    }
+  },
   nav: {
     home: 'Home',
     products: 'Products',
@@ -7,7 +104,7 @@ export default {
     projects: 'Projects',
     blog: 'Journal',
     about: 'About',
-    craft: 'Craft',
+    craft: 'Know-how',
     faq: 'FAQ',
     contact: 'Contact',
   },

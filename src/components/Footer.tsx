@@ -1,6 +1,5 @@
 import { Link } from '@/lib/router-compat';
 import { useTranslation } from 'react-i18next';
-import { Facebook, Instagram, Linkedin } from 'lucide-react';
 import LanguageSwitcher from './LanguageSwitcher';
 
 const Footer = () => {
@@ -52,35 +51,12 @@ const Footer = () => {
             </h4>
             <LanguageSwitcher align="start" />
           </div>
-          <div>
-            <h4 className="mb-4 font-serif text-sm uppercase tracking-widest text-accent">
-              {t('footer.follow')}
-            </h4>
-            <div className="flex gap-3">
-              {[
-                { Icon: Instagram, href: 'https://instagram.com', label: 'Instagram' },
-                { Icon: Facebook, href: 'https://facebook.com', label: 'Facebook' },
-                { Icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-              ].map(({ Icon, href, label }) => (
-                <a
-                  key={label}
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={label}
-                  className="inline-flex h-9 w-9 items-center justify-center rounded-sm border border-background/20 text-background/70 transition-colors hover:border-accent hover:text-accent"
-                >
-                  <Icon className="h-4 w-4" />
-                </a>
-              ))}
-            </div>
-          </div>
         </div>
       </div>
 
       <div className="border-t border-background/10">
         <div className="container-prose flex flex-col gap-2 py-6 text-xs text-background/50 sm:flex-row sm:items-center sm:justify-between">
-          <span>© 2025 HQ Stones. {t('footer.rights')}</span>
+          <span>© {new Date().getFullYear()} HQ Stones. {t('footer.rights')}</span>
           <Link to="/legal" className="hover:text-accent">
             {t('footer.legal', { defaultValue: 'Legal notice' })}
           </Link>

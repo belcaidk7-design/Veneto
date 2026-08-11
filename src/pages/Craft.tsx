@@ -67,11 +67,53 @@ const Craft = () => {
                 <p className="mt-5 text-foreground/85">
                   {t(`craft.steps.${step.key}.body`)}
                 </p>
+                <dl className="mt-6 space-y-4 border-t border-border/60 pt-6 text-sm">
+                  {(['coordinate', 'receive', 'decisions'] as const).map((f) => (
+                    <div key={f}>
+                      <dt className="text-xs font-medium uppercase tracking-[0.2em] text-accent">
+                        {t(`plus.craft.labels.${f}`)}
+                      </dt>
+                      <dd className="mt-1.5 text-muted-foreground">
+                        {t(`plus.craft.steps.${step.key}.${f}`)}
+                      </dd>
+                    </div>
+                  ))}
+                </dl>
               </div>
             </article>
           );
         })}
       </div>
+
+      <section className="border-t border-border/60 bg-secondary/30 py-16 md:py-20">
+        <div className="container-prose">
+          <h2 className="font-serif text-3xl md:text-4xl">{t('plus.craft.prepTitle')}</h2>
+          <p className="mt-4 max-w-2xl text-muted-foreground">{t('plus.craft.prepIntro')}</p>
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {(['drawings', 'use', 'delivery', 'material', 'quantities'] as const).map((k) => (
+              <div key={k} className="rounded-sm border border-border/60 bg-background p-6">
+                <h3 className="font-serif text-lg">{t(`plus.craft.prep.${k}.title`)}</h3>
+                <p className="mt-2 text-sm text-muted-foreground">{t(`plus.craft.prep.${k}.body`)}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-20">
+        <div className="container-prose">
+          <h2 className="font-serif text-3xl md:text-4xl">{t('plus.craft.checksTitle')}</h2>
+          <p className="mt-4 max-w-2xl text-muted-foreground">{t('plus.craft.checksIntro')}</p>
+          <div className="mt-10 grid gap-6 sm:grid-cols-2">
+            {(['dimensions', 'photos', 'crating', 'documents'] as const).map((k) => (
+              <div key={k} className="border-l-2 border-accent/50 pl-5">
+                <h3 className="font-serif text-lg">{t(`plus.craft.checks.${k}.title`)}</h3>
+                <p className="mt-2 text-sm text-muted-foreground">{t(`plus.craft.checks.${k}.body`)}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <section className="bg-secondary/40 py-16">
         <div className="container-prose max-w-2xl">

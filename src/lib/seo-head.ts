@@ -95,11 +95,9 @@ export function buildSeoHead({
     meta.push({ name: "robots", content: "noindex, nofollow" });
   }
 
-  const links: LinkEntry[] = [
-    { rel: "canonical", href: url },
-    ...SUPPORTED_LANGS.map((l) => ({ rel: "alternate", hrefLang: l, href: url })),
-    { rel: "alternate", hrefLang: "x-default", href: url },
-  ];
+  // Single canonical URL per route. The language switcher is client-side only,
+  // so no hreflang/alternate tags are emitted.
+  const links: LinkEntry[] = [{ rel: "canonical", href: url }];
 
   return { meta, links };
 }

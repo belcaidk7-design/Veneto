@@ -119,8 +119,8 @@ const Seo = ({
     document.title = fullTitle;
     upsertMeta('name', 'description', description);
     upsertLink('canonical', url);
-    for (const l of SUPPORTED_LANGS) upsertLink('alternate', url, l);
-    upsertLink('alternate', url, 'x-default');
+    // One canonical URL per route: remove any legacy hreflang alternates.
+    document.head.querySelectorAll('link[rel="alternate"][hreflang]').forEach((el) => el.remove());
     upsertMeta('property', 'og:site_name', SITE_NAME);
     upsertMeta('property', 'og:title', fullTitle);
     upsertMeta('property', 'og:description', description);

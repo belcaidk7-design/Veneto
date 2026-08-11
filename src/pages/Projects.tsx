@@ -29,6 +29,9 @@ const Projects = () => {
         <div className="container-prose py-16 md:py-20">
           <h1 className="font-serif text-4xl md:text-5xl">{t('projects.title')}</h1>
           <p className="mt-4 max-w-2xl text-muted-foreground">{t('projects.subtitle')}</p>
+          <p className="mt-6 max-w-2xl border-l-2 border-accent/60 pl-4 text-sm text-muted-foreground">
+            {t('plus.projects.note')}
+          </p>
         </div>
       </section>
 
@@ -63,15 +66,18 @@ const Projects = () => {
               key={p.id}
               className="card-hover group flex flex-col overflow-hidden rounded-sm border border-border/60 bg-card"
             >
-              <div className="aspect-[4/3] overflow-hidden bg-secondary">
+              <div className="relative aspect-[4/3] overflow-hidden bg-secondary">
                 <img
                   src={p.image}
-                  alt={t(`projects.items.${p.i18nKey}.title`)}
+                  alt={t('plus.projects.alt', { title: t(`projects.items.${p.i18nKey}.title`) })}
                   loading="lazy"
                   width={1280}
                   height={896}
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
+                <span className="absolute inset-x-0 bottom-0 bg-foreground/70 px-3 py-1.5 text-[10px] uppercase tracking-wider text-background">
+                  {t('plus.projects.badge')}
+                </span>
               </div>
               <div className="flex flex-1 flex-col gap-3 p-6">
                 <p className="text-xs font-medium uppercase tracking-[0.3em] text-accent">

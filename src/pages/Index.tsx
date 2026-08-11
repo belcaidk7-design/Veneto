@@ -223,7 +223,7 @@ const Index = () => {
                 variant="outline"
                 className="border-background/40 bg-transparent text-background hover:bg-background hover:text-foreground"
               >
-                <Link to="/craft">
+                <Link to="/savoir-faire">
                   {t('home.craftTeaserCta')}
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
@@ -258,13 +258,16 @@ const Index = () => {
                 to="/projects"
                 className="card-hover group block overflow-hidden rounded-sm border border-border/60 bg-card"
               >
-                <div className="aspect-[4/3] overflow-hidden bg-secondary">
+                <div className="relative aspect-[4/3] overflow-hidden bg-secondary">
                   <img
                     src={p.image}
-                    alt={t(`projects.items.${p.i18nKey}.title`)}
+                    alt={t('plus.projects.alt', { title: t(`projects.items.${p.i18nKey}.title`) })}
                     loading="lazy"
                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
+                  <span className="absolute inset-x-0 bottom-0 bg-foreground/70 px-3 py-1.5 text-[10px] uppercase tracking-wider text-background">
+                    {t('plus.projects.badge')}
+                  </span>
                 </div>
                 <div className="p-5">
                   <p className="text-xs uppercase tracking-widest text-accent">

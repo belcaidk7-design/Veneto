@@ -149,4 +149,3 @@ export const PRODUCTS: Product[] = [
   { id: 'block-slabs', i18nKey: 'blockSlabs', category: 'slabs', materials: ['marble', 'granite', 'limestone', 'sandstone'], image: imgBlockSlabs, recommendedFinishes: ['polished', 'honed', 'brushed', 'flamed'], formats: ['Blocs bruts', 'Dalles 180×280 cm', 'Épaisseur 2–8 cm'], origin: 'Réseau international de carrières partenaires', technical: { density: '2 400–2 750 kg/m³', thickness: '2–8 cm' } },
 ];
 
-export const FORMSPREE_ENDPOINT = 'https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID';
