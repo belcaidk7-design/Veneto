@@ -13,7 +13,9 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import { CATEGORIES, CategoryKey, FORMSPREE_ENDPOINT } from '@/data/catalog';
+import { CATEGORIES, CategoryKey } from '@/data/catalog';
+
+const CONTACT_EMAIL = 'info@hq-stones.com';
 
 interface Props {
   initialMessage?: string;
@@ -53,7 +55,7 @@ const ContactForm = ({ initialMessage = '', initialCategory, onSuccess }: Props)
     if (errors[k]) setErrors((e) => ({ ...e, [k]: '' }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const parsed = schema.safeParse(values);
     if (!parsed.success) {
@@ -65,26 +67,24 @@ const ContactForm = ({ initialMessage = '', initialCategory, onSuccess }: Props)
       return;
     }
 
+    const d = parsed.data;
+    const L = (k: string) => t(`plus.form.labels.${k}`);
+    const subject = `${t('plus.form.subject')} — ${d.name}`;
+    const body = [
+      `${L('name')}: ${d.name}`,
+      `${L('email')}: ${d.email}`,
+      `${L('phone')}: ${d.phone || '—'}`,
+      `${L('product')}: ${t(`categories.${d.productInterest}`)}`,
+      '',
+      `${L('message')}:`,
+      d.message,
+    ].join('\n');
+
     setSubmitting(true);
-    try {
-      const res = await fetch(FORMSPREE_ENDPOINT, {
-        method: 'POST',
-        headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
-        body: JSON.stringify(parsed.data),
-      });
-      // Treat unreplaced placeholder endpoint as success in preview
-      if (res.ok || FORMSPREE_ENDPOINT.includes('REPLACE_WITH_YOUR_FORM_ID')) {
-        toast.success(t('contact.success'));
-        setValues({ name: '', email: '', phone: '', productInterest: '', message: '' });
-        onSuccess?.();
-      } else {
-        toast.error(t('contact.error'));
-      }
-    } catch {
-      toast.error(t('contact.error'));
-    } finally {
-      setSubmitting(false);
-    }
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    toast.info(t('plus.form.opened'));
+    setSubmitting(false);
+    onSuccess?.();
   };
 
   return (
@@ -162,14 +162,25 @@ const ContactForm = ({ initialMessage = '', initialCategory, onSuccess }: Props)
         {errors.message && <p className="text-xs text-destructive">{errors.message}</p>}
       </div>
 
-      <Button
-        type="submit"
-        disabled={submitting}
-        className="w-full bg-accent text-accent-foreground hover:bg-accent/90 sm:w-auto"
-        size="lg"
-      >
-        {submitting ? t('contact.submitting') : t('contact.submit')}
-      </Button>
+      <div className="space-y-3">
+        <Button
+          type="submit"
+          disabled={submitting}
+          className="w-full bg-accent text-accent-foreground hover:bg-accent/90 sm:w-auto"
+          size="lg"
+        >
+          {t('contact.submit')}
+        </Button>
+        <p className="text-xs text-muted-foreground">
+          {t('plus.form.mailtoNote')}{' '}
+          <span className="block sm:inline">
+            {t('plus.form.emailFallbackLabel')}{' '}
+            <a href={`mailto:${CONTACT_EMAIL}`} className="text-accent hover:underline">
+              {CONTACT_EMAIL}
+            </a>
+          </span>
+        </p>
+      </div>
     </form>
   );
 };

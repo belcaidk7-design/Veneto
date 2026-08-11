@@ -1,4 +1,101 @@
 export default {
+  plus: {
+    "form": {
+      "mailtoNote": "Die Schaltfläche öffnet Ihr E-Mail-Programm mit der vorausgefüllten Anfrage — senden Sie die E-Mail, um die Anfrage abzuschließen.",
+      "emailFallbackLabel": "Oder schreiben Sie uns direkt:",
+      "opened": "Ihr E-Mail-Programm sollte sich jetzt mit Ihrer Anfrage öffnen.",
+      "subject": "Angebotsanfrage",
+      "labels": {
+        "name": "Name",
+        "email": "E-Mail",
+        "phone": "Telefon",
+        "product": "Produktinteresse",
+        "message": "Nachricht"
+      }
+    },
+    "craft": {
+      "labels": {
+        "coordinate": "Was wir koordinieren",
+        "receive": "Was Sie erhalten",
+        "decisions": "Wichtige Entscheidungen"
+      },
+      "steps": {
+        "extraction": {
+          "coordinate": "Wir arbeiten mit Partnersteinbrüchen zusammen, um Blöcke nach Korn, Farbe und Struktur auszuwählen und Material aus einer Charge zu reservieren, wenn ein Projekt visuelle Einheitlichkeit verlangt.",
+          "receive": "Block- oder Chargenreferenzen sowie Fotos des ausgewählten Materials, wenn das Projekt es erfordert.",
+          "decisions": "Wahl der Steinfamilie, akzeptable natürliche Varianz und ob die gesamte Menge aus einer Charge stammen muss."
+        },
+        "cutting": {
+          "coordinate": "Wir übergeben Ihre Pläne und Maße an die Werkstatt, stimmen Schnittpläne, Stärken und Toleranzen ab und bestätigen die Mengen vor Produktionsbeginn.",
+          "receive": "Einen Schnittplan oder eine Stückliste zur Freigabe vor dem Zuschnitt.",
+          "decisions": "Stärke, Stückmaße, Fugenbreiten und Kantenprofile."
+        },
+        "finishing": {
+          "coordinate": "Wir organisieren die gewünschte Oberflächenbearbeitung — poliert, geschliffen, geflammt, gebürstet oder antik — sowie Kantenbearbeitungen wie Rundung oder Fase.",
+          "receive": "Auf Wunsch Oberflächenmuster, damit die Oberfläche vor der kompletten Bearbeitung freigegeben werden kann.",
+          "decisions": "Oberfläche je Bereich (Rutschhemmung außen, Optik und Pflege innen) und Kantendetails."
+        },
+        "delivery": {
+          "coordinate": "Wir organisieren Schutzverpackung, Dokumente und Transport und stimmen Termine mit Ihrer Baustelle oder Spedition ab.",
+          "receive": "Verpackungsangaben, Versanddokumente und einen Lieferplan.",
+          "decisions": "Lieferadresse und Zufahrt, verfügbare Entlademittel vor Ort und Aufteilung der Lieferungen."
+        }
+      },
+      "prepTitle": "Was wir für ein Angebot benötigen",
+      "prepIntro": "Je genauer die Angaben, desto schneller und präziser das Angebot.",
+      "prep": {
+        "drawings": {
+          "title": "Pläne und Maße",
+          "body": "Grundrisse, Schnitte oder bemaßte Skizzen sowie die Stärke, falls bereits festgelegt."
+        },
+        "use": {
+          "title": "Vorgesehene Nutzung",
+          "body": "Innen oder außen, Boden, Verkleidung, Treppe, Arbeitsplatte oder Sonderanfertigung, mit erwarteter Belastung oder Bewitterung."
+        },
+        "delivery": {
+          "title": "Lieferort",
+          "body": "Lieferadresse, Land und Baustellenzufahrt, damit der Transport kalkuliert werden kann."
+        },
+        "material": {
+          "title": "Gewünschtes Material und Oberfläche",
+          "body": "Steinfamilie oder konkreter Stein und gewünschte Oberfläche — oder beschreiben Sie die gewünschte Wirkung, wir schlagen Optionen vor."
+        },
+        "quantities": {
+          "title": "Mengen und Termine",
+          "body": "Flächen oder Stückzahlen sowie Ihre Zieltermine für Freigabe und Lieferung."
+        }
+      },
+      "checksTitle": "Kontrollen und Logistik",
+      "checksIntro": "Jedes Projekt ist anders — die Kontrollen werden im Einzelfall vereinbart.",
+      "checks": {
+        "dimensions": {
+          "title": "Projektbezogene Kontrollen",
+          "body": "Maß- und Oberflächenkontrollen werden gemeinsam mit Ihnen entsprechend den bestellten Teilen festgelegt."
+        },
+        "photos": {
+          "title": "Fotos vor Versand",
+          "body": "Auf Wunsch senden wir Fotos der Teile, bevor sie die Werkstatt verlassen."
+        },
+        "crating": {
+          "title": "Schutzverpackung",
+          "body": "Die Teile werden je nach Format und Gewicht verkistet, damit sie geschützt transportiert werden."
+        },
+        "documents": {
+          "title": "Dokumente und Versand",
+          "body": "Wir erstellen die Versanddokumente und stimmen die Termine mit Ihrer Baustelle oder Spedition ab."
+        }
+      }
+    },
+    "projects": {
+      "badge": "Illustrationsbild — Projektfotografie folgt",
+      "note": "Die unten aufgeführten Referenzen sind realisierte Projekte. Die aktuell gezeigten Bilder sind illustrativ: Die Archivfotografie dieser Projekte wird derzeit vorbereitet.",
+      "alt": "Illustrationsbild aus Naturstein — keine Fotografie des Projekts {{title}}"
+    },
+    "legal": {
+      "entityTitle": "Marke und Betreibergesellschaft",
+      "entityBody": "HQ Stones ist eine Marke. ARKYBIOX EOOD ist die Gesellschaft, die die Tätigkeit von HQ Stones betreibt und verwaltet und sämtliche Rechnungen ausstellt; die oben genannten Angaben gelten für alle vertraglichen und Abrechnungsfragen."
+    }
+  },
   nav: { home: 'Start', products: 'Produkte', materials: 'Materialien', projects: 'Referenzen', blog: 'Magazin', about: 'Über uns', craft: 'Handwerk', faq: 'FAQ', contact: 'Kontakt' },
   header: { callAria: 'Anrufen' },
   hero: {

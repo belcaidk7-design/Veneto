@@ -1,4 +1,101 @@
 export default {
+  plus: {
+    "form": {
+      "mailtoNote": "Le bouton ouvre votre application de messagerie avec la demande pré-remplie — envoyez l’e-mail pour finaliser votre demande.",
+      "emailFallbackLabel": "Ou écrivez-nous directement :",
+      "opened": "Votre application de messagerie devrait s’ouvrir avec votre demande.",
+      "subject": "Demande de devis",
+      "labels": {
+        "name": "Nom",
+        "email": "E-mail",
+        "phone": "Téléphone",
+        "product": "Produit concerné",
+        "message": "Message"
+      }
+    },
+    "craft": {
+      "labels": {
+        "coordinate": "Ce que nous coordonnons",
+        "receive": "Ce que vous recevez",
+        "decisions": "Décisions clés"
+      },
+      "steps": {
+        "extraction": {
+          "coordinate": "Nous travaillons avec des carrières partenaires pour sélectionner les blocs selon le grain, la couleur et la structure, et réserver la matière d’un même lot lorsque le projet exige une homogénéité visuelle.",
+          "receive": "Les références du bloc ou du lot, et des photographies de la matière sélectionnée lorsque le projet le demande.",
+          "decisions": "Choix de la famille de pierre, variation naturelle acceptable et nécessité ou non d’un lot unique."
+        },
+        "cutting": {
+          "coordinate": "Nous transmettons vos plans et dimensions à l’atelier, validons les plans de débit, épaisseurs et tolérances, et confirmons les quantités avant production.",
+          "receive": "Un plan de débit ou une liste de pièces à valider avant la découpe.",
+          "decisions": "Épaisseur, dimensions des pièces, largeur des joints et profils de chants."
+        },
+        "finishing": {
+          "coordinate": "Nous organisons le traitement de surface demandé — poli, adouci, flammé, brossé ou vieilli — ainsi que les façons de chants (arrondi, chanfrein).",
+          "receive": "Des échantillons de finition sur demande, pour valider la surface avant le traitement de la commande complète.",
+          "decisions": "Finition par zone (adhérence en extérieur, aspect et entretien en intérieur) et détails de chants."
+        },
+        "delivery": {
+          "coordinate": "Nous organisons le caissage de protection, les documents et le transport, et coordonnons les dates avec votre chantier ou votre transitaire.",
+          "receive": "Le détail du conditionnement, les documents d’expédition et un calendrier de livraison.",
+          "decisions": "Adresse et accès de livraison, moyens de déchargement disponibles sur site et phasage des livraisons."
+        }
+      },
+      "prepTitle": "Ce dont nous avons besoin pour établir un devis",
+      "prepIntro": "Plus les informations sont précises, plus le devis est rapide et juste.",
+      "prep": {
+        "drawings": {
+          "title": "Plans et dimensions",
+          "body": "Plans, coupes ou croquis cotés, ainsi que l’épaisseur si elle est déjà définie."
+        },
+        "use": {
+          "title": "Usage prévu",
+          "body": "Intérieur ou extérieur, sol, parement, escalier, plan de travail ou pièce sur mesure, avec le passage ou l’exposition attendus."
+        },
+        "delivery": {
+          "title": "Lieu de livraison",
+          "body": "Adresse de livraison, pays et accès au chantier, afin d’estimer le transport."
+        },
+        "material": {
+          "title": "Matériau et finition souhaités",
+          "body": "Famille de pierre ou pierre précise et finition voulue — ou décrivez l’effet recherché et nous vous proposons des options."
+        },
+        "quantities": {
+          "title": "Quantités et délais",
+          "body": "Surfaces ou nombre de pièces, et vos dates cibles de validation et de livraison."
+        }
+      },
+      "checksTitle": "Contrôles et logistique",
+      "checksIntro": "Chaque projet est différent : les contrôles sont convenus au cas par cas.",
+      "checks": {
+        "dimensions": {
+          "title": "Contrôles propres au projet",
+          "body": "Les contrôles dimensionnels et de finition sont définis avec vous selon les pièces commandées."
+        },
+        "photos": {
+          "title": "Photos avant expédition",
+          "body": "Sur demande, nous pouvons envoyer des photographies des pièces avant leur départ de l’atelier."
+        },
+        "crating": {
+          "title": "Caissage de protection",
+          "body": "Les pièces sont caissées selon leur format et leur poids afin de voyager protégées."
+        },
+        "documents": {
+          "title": "Documents et expédition",
+          "body": "Nous préparons les documents d’expédition et coordonnons les dates avec votre chantier ou votre transitaire."
+        }
+      }
+    },
+    "projects": {
+      "badge": "Image d’illustration — photographies du projet à venir",
+      "note": "Les références ci-dessous sont des projets réalisés. Les images actuellement affichées sont illustratives : la photographie d’archive de ces projets est en cours de préparation.",
+      "alt": "Image d’illustration en pierre naturelle — ce n’est pas une photographie du projet {{title}}"
+    },
+    "legal": {
+      "entityTitle": "Marque et société exploitante",
+      "entityBody": "HQ Stones est une marque. ARKYBIOX EOOD est la société qui exploite et gère l’activité HQ Stones et qui émet l’ensemble des factures ; les coordonnées ci-dessus s’appliquent à toute question contractuelle ou de facturation."
+    }
+  },
   nav: {
     home: 'Accueil',
     products: 'Produits',

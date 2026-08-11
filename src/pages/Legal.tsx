@@ -41,6 +41,11 @@ const Legal = () => {
           </div>
 
           <div>
+            <h2 className="font-serif text-2xl">{t('plus.legal.entityTitle')}</h2>
+            <p className="mt-4 text-muted-foreground">{t('plus.legal.entityBody')}</p>
+          </div>
+
+          <div>
             <h2 className="font-serif text-2xl">{t('legal.hostTitle')}</h2>
             <p className="mt-4 text-muted-foreground">{t('legal.hostBody')}</p>
           </div>

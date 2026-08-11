@@ -1,4 +1,101 @@
 export default {
+  plus: {
+    "form": {
+      "mailtoNote": "Il pulsante apre la tua applicazione di posta con la richiesta già compilata — invia l’email per completare la richiesta.",
+      "emailFallbackLabel": "Oppure scrivici direttamente:",
+      "opened": "La tua applicazione di posta dovrebbe ora aprirsi con la richiesta.",
+      "subject": "Richiesta di preventivo",
+      "labels": {
+        "name": "Nome",
+        "email": "Email",
+        "phone": "Telefono",
+        "product": "Prodotto di interesse",
+        "message": "Messaggio"
+      }
+    },
+    "craft": {
+      "labels": {
+        "coordinate": "Cosa coordiniamo",
+        "receive": "Cosa ricevi",
+        "decisions": "Decisioni chiave"
+      },
+      "steps": {
+        "extraction": {
+          "coordinate": "Lavoriamo con cave partner per selezionare i blocchi in base a grana, colore e struttura e per riservare materiale di un unico lotto quando il progetto richiede uniformità visiva.",
+          "receive": "Riferimenti del blocco o del lotto e fotografie del materiale selezionato quando il progetto lo richiede.",
+          "decisions": "Scelta della famiglia di pietra, variazione naturale accettabile e necessità o meno di un unico lotto."
+        },
+        "cutting": {
+          "coordinate": "Trasmettiamo disegni e dimensioni al laboratorio, concordiamo piani di taglio, spessori e tolleranze e confermiamo le quantità prima della produzione.",
+          "receive": "Un piano di taglio o una distinta dei pezzi da validare prima dell’inizio del taglio.",
+          "decisions": "Spessore, dimensioni dei pezzi, larghezza dei giunti e profili dei bordi."
+        },
+        "finishing": {
+          "coordinate": "Organizziamo il trattamento superficiale richiesto — lucidato, levigato, fiammato, spazzolato o anticato — e le lavorazioni dei bordi come toro o smusso.",
+          "receive": "Campioni di finitura su richiesta, per approvare la superficie prima della lavorazione completa.",
+          "decisions": "Finitura per ambiente (antiscivolo all’esterno, aspetto e manutenzione all’interno) e dettagli dei bordi."
+        },
+        "delivery": {
+          "coordinate": "Organizziamo imballaggio protettivo, documenti e trasporto e coordiniamo le date con il cantiere o lo spedizioniere.",
+          "receive": "Dettagli dell’imballaggio, documenti di spedizione e programma di consegna.",
+          "decisions": "Indirizzo e accessibilità della consegna, mezzi di scarico disponibili in cantiere e suddivisione delle consegne."
+        }
+      },
+      "prepTitle": "Cosa ci serve per preparare un preventivo",
+      "prepIntro": "Più le informazioni sono precise, più il preventivo è rapido e accurato.",
+      "prep": {
+        "drawings": {
+          "title": "Disegni e dimensioni",
+          "body": "Piante, sezioni o schizzi quotati e lo spessore se già definito."
+        },
+        "use": {
+          "title": "Destinazione d’uso",
+          "body": "Interno o esterno, pavimento, rivestimento, scale, piano di lavoro o elemento su misura, con il traffico o l’esposizione previsti."
+        },
+        "delivery": {
+          "title": "Luogo di consegna",
+          "body": "Indirizzo di consegna, Paese e accessibilità del cantiere, per stimare il trasporto."
+        },
+        "material": {
+          "title": "Materiale e finitura preferiti",
+          "body": "Famiglia di pietra o pietra specifica e finitura desiderata — oppure descrivi l’effetto voluto e ti proponiamo delle opzioni."
+        },
+        "quantities": {
+          "title": "Quantità e tempistiche",
+          "body": "Superfici o numero di pezzi e le date obiettivo per validazione e consegna."
+        }
+      },
+      "checksTitle": "Controlli e logistica",
+      "checksIntro": "Ogni progetto è diverso: i controlli si concordano caso per caso.",
+      "checks": {
+        "dimensions": {
+          "title": "Controlli specifici di progetto",
+          "body": "I controlli dimensionali e di finitura vengono definiti con te in base ai pezzi ordinati."
+        },
+        "photos": {
+          "title": "Foto prima della spedizione",
+          "body": "Su richiesta possiamo inviare fotografie dei pezzi prima che lascino il laboratorio."
+        },
+        "crating": {
+          "title": "Imballaggio protettivo",
+          "body": "I pezzi vengono imballati in casse adatte a formato e peso per viaggiare protetti."
+        },
+        "documents": {
+          "title": "Documenti e spedizione",
+          "body": "Prepariamo i documenti di spedizione e coordiniamo le date con il cantiere o lo spedizioniere."
+        }
+      }
+    },
+    "projects": {
+      "badge": "Immagine illustrativa — fotografie del progetto in arrivo",
+      "note": "Le referenze qui sotto sono progetti realizzati. Le immagini attualmente mostrate sono illustrative: la documentazione fotografica d’archivio di questi progetti è in preparazione.",
+      "alt": "Immagine illustrativa in pietra naturale — non è una fotografia del progetto {{title}}"
+    },
+    "legal": {
+      "entityTitle": "Marchio e società operativa",
+      "entityBody": "HQ Stones è un marchio. ARKYBIOX EOOD è la società che gestisce e amministra l’attività HQ Stones ed emette tutte le fatture; i dati sopra indicati valgono per ogni questione contrattuale o di fatturazione."
+    }
+  },
   nav: { home: 'Home', products: 'Prodotti', materials: 'Materiali', projects: 'Realizzazioni', blog: 'Magazine', about: 'Chi siamo', craft: 'Savoir-faire', faq: 'FAQ', contact: 'Contatti' },
   header: { callAria: 'Chiamaci' },
   hero: {
