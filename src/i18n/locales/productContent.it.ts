@@ -2,7 +2,7 @@ import type { ProductContentEntry } from './productContent.fr';
 
 const productContent: Record<string, ProductContentEntry> = {
   externalPaving: {
-    seoTitle: 'Pavimentazione esterna in pietra | Porfido, granito, arenaria',
+    seoTitle: 'Pavimentazione esterna pietra | Porfido, granito, arenaria',
     seoDescription: 'Pavimentazioni esterne in porfido del Trentino, granito sardo e arenaria di Verona. Antiscivolo R11–R13, resistenti al gelo. Preventivo rapido.',
     intro: 'La pavimentazione esterna è la prima cosa che si calpesta entrando in casa vostra. Il nostro ruolo è scegliere la pietra che resisterà trent\u2019anni a passaggi, gelo e sale, senza perdere carattere.',
     story: [
@@ -28,7 +28,7 @@ const productContent: Record<string, ProductContentEntry> = {
     bestProjects: [],
   },
   columns: {
-    seoTitle: 'Colonne in pietra naturale su misura | Marmo, calcare, granito',
+    seoTitle: 'Colonne su misura in pietra | Marmo, calcare, granito',
     seoDescription: 'Colonne in marmo, calcare e granito, tornite CNC e rifinite a mano. Diametri 20–60 cm, altezze fino a 4 m. Preventivo rapido.',
     intro: 'Una colonna sostiene un tetto o un\u2019intenzione. In entrambi i casi, proporzioni, capitello e finitura decidono tutto.',
     story: [
@@ -119,7 +119,7 @@ const productContent: Record<string, ProductContentEntry> = {
     bestProjects: [],
   },
   externalCladding: {
-    seoTitle: 'Rivestimento esterno in pietra naturale | Calcare, arenaria, porfido',
+    seoTitle: 'Rivestimento esterno pietra | Calcare, arenaria, porfido',
     seoDescription: 'Rivestimenti di facciata in calcare di Trani, arenaria di Verona e porfido. Posa incollata o ancorata, conforme alle norme. Preventivo rapido.',
     intro: 'Una facciata in pietra naturale non è solo rivestimento: è l\u2019identità di un edificio per cinquant\u2019anni. Pietra, formato e sistema di posa condizionano tutto il resto.',
     story: [
@@ -132,7 +132,7 @@ const productContent: Record<string, ProductContentEntry> = {
     bestProjects: [],
   },
   interiorFlooring: {
-    seoTitle: 'Pavimento interno in pietra naturale | Marmo, calcare, granito',
+    seoTitle: 'Pavimento interno pietra naturale | Marmo, calcare, granito',
     seoDescription: 'Pavimenti interni in marmo di Carrara, calcare di Trani e granito. Grandi formati fino a 60×120 cm. Posa a colla. Preventivo rapido.',
     intro: 'Un pavimento in pietra naturale è ciò che si tocca per primo al mattino e si guarda di continuo. La sua riuscita dipende da tre cose: materiale, calepinio e qualità della posa.',
     story: [
@@ -197,7 +197,7 @@ const productContent: Record<string, ProductContentEntry> = {
     bestProjects: [],
   },
   openBookSlabs: {
-    seoTitle: 'Lastre open book bookmatch | Marmo e granito per professionisti',
+    seoTitle: 'Lastre open book | Marmo e granito per professionisti',
     seoDescription: 'Lastre open book bookmatch in marmo di Carrara e granito. Coppie selezionate in cava. Vendita ai professionisti. Preventivo rapido.',
     intro: 'L\u2019open book è l\u2019espressione più spettacolare della pietra naturale. Due lastre aperte come un libro, due venature a specchio, un effetto quasi architettonico.',
     story: [
@@ -210,7 +210,7 @@ const productContent: Record<string, ProductContentEntry> = {
     bestProjects: [],
   },
   blockSlabs: {
-    seoTitle: 'Lastre da blocco in pietra naturale | Vendita a professionisti',
+    seoTitle: 'Lastre grezze in pietra naturale | Vendita a professionisti',
     seoDescription: 'Lastre grezze in marmo, granito, calcare e arenaria. Vari spessori, vendita al pezzo o container. Per professionisti. Preventivo rapido.',
     intro: 'Per marmisti e falegnami, accedere a una materia prima affidabile e tracciata fa tutta la differenza. Siamo il vostro relais diretto con le cave italiane.',
     story: [

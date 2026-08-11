@@ -119,7 +119,7 @@ const productContent: Record<string, ProductContentEntry> = {
     bestProjects: [],
   },
   externalCladding: {
-    seoTitle: 'Natural stone façade cladding | Limestone, sandstone, porfido',
+    seoTitle: 'Stone façade cladding | Limestone, sandstone, porfido',
     seoDescription: 'Façade cladding in Trani limestone, Verona sandstone and porfido. Glued or anchored installation, code-compliant. Fast quote.',
     intro: 'A natural stone façade is more than a coating: it is a building\u2019s identity for fifty years. Stone, format and installation system condition everything else.',
     story: [
