@@ -1,7 +1,9 @@
 import { createFileRoute, notFound } from "@tanstack/react-router";
 import BlogPost from "@/pages/BlogPost";
 import NotFound from "@/pages/NotFound";
+import DbBlogPostView from "@/components/DbBlogPostView";
 import { BLOG_POSTS } from "@/data/blog";
+import { getDbPost } from "@/lib/blog-db.functions";
 import en from "@/i18n/locales/en";
 import { activeLocale, buildSeoHead, seoText } from "@/lib/seo-head";
 
@@ -20,16 +22,31 @@ const postSeoFor = (key: string): PostSeo => {
 };
 
 export const Route = createFileRoute("/blog/$slug")({
-  component: BlogPost,
-  loader: ({ params }) => {
+  component: BlogPostRoute,
+  loader: async ({ params }) => {
     const post = BLOG_POSTS.find((p) => p.slug === params.slug);
-    if (!post) throw notFound();
-    return { slug: params.slug };
+    if (post) return { slug: params.slug, dbPost: null };
+    // Static articles take precedence; otherwise look up a published DB post.
+    const dbPost = await getDbPost({ data: { slug: params.slug } });
+    if (!dbPost) throw notFound();
+    return { slug: params.slug, dbPost };
   },
   notFoundComponent: NotFound,
+  errorComponent: NotFound,
   head: ({ loaderData }) => {
-    const post = BLOG_POSTS.find((p) => p.slug === loaderData?.slug);
     const blogSeo = seoText("blog");
+    const db = loaderData?.dbPost;
+    if (db) {
+      return buildSeoHead({
+        title: db.meta_title || db.title,
+        description: db.meta_description || db.excerpt || blogSeo.description,
+        path: `/blog/${db.slug}`,
+        image: db.hero_image_url ?? undefined,
+        imageAlt: db.image_alt ?? db.title,
+        type: "article",
+      });
+    }
+    const post = BLOG_POSTS.find((p) => p.slug === loaderData?.slug);
     if (!post) {
       return buildSeoHead({
         title: activeLocale().notFound?.title ?? en.notFound?.title ?? "Page not found",
@@ -49,3 +66,9 @@ export const Route = createFileRoute("/blog/$slug")({
     });
   },
 });
+
+function BlogPostRoute() {
+  const { dbPost } = Route.useLoaderData();
+  if (dbPost) return <DbBlogPostView post={dbPost} />;
+  return <BlogPost />;
+}

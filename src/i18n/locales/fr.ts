@@ -388,6 +388,7 @@ export default {
     aboutAuthor: 'À propos de l’auteur',
     faqTitle: 'Questions fréquentes',
     sourcesTitle: 'Sources et lectures complémentaires',
+    internalLinksTitle: 'Pages associées',
     lastReviewed: 'Dernière mise à jour le',
     authors: {
       marco: { role: 'Responsable Sourcing — 18 ans dans les carrières italiennes', bio: 'Marco supervise le sourcing de pierre dans tout le bassin méditerranéen. Formé comme géologue à Carrare, il sélectionne et inspecte marbres, granits et calcaires pour des projets résidentiels et hôteliers depuis 2007.' },

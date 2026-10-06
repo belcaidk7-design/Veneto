@@ -306,6 +306,7 @@ export default {
     aboutAuthor: 'Sull’autore',
     faqTitle: 'Domande frequenti',
     sourcesTitle: 'Fonti e approfondimenti',
+    internalLinksTitle: 'Pagine correlate',
     lastReviewed: 'Ultima revisione il',
     authors: {
       marco: { role: 'Responsabile Sourcing — 18 anni nelle cave italiane', bio: 'Marco supervisiona il sourcing della pietra nel bacino mediterraneo. Geologo formato a Carrara, seleziona e ispeziona marmi, graniti e calcari per progetti residenziali e alberghieri dal 2007.' },
