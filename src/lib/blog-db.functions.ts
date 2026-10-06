@@ -48,11 +48,18 @@ const asArray = <T,>(v: unknown, check: (x: Record<string, unknown>) => T | null
     ? v.flatMap((x) => (x && typeof x === "object" ? [check(x as Record<string, unknown>)].filter(Boolean) as T[] : []))
     : [];
 
-const toFaq = (x: Record<string, unknown>): DbFaq | null =>
-  typeof x.q === "string" && typeof x.a === "string" ? { q: x.q, a: x.a } : null;
+const str = (...vals: unknown[]) => vals.find((v): v is string => typeof v === "string" && v.trim() !== "");
+
+// Canonical: { question, answer }. Legacy: { q, a }.
+const toFaq = (x: Record<string, unknown>): DbFaq | null => {
+  const q = str(x.question, x.q);
+  const a = str(x.answer, x.a);
+  return q && a ? { q, a } : null;
+};
 const toLink = (x: Record<string, unknown>): DbLink | null => {
-  const url = typeof x.url === "string" ? x.url : typeof x.href === "string" ? x.href : null;
-  const label = typeof x.label === "string" ? x.label : typeof x.title === "string" ? x.title : url;
+  // Canonical: { label, url }. Legacy: { title, url } / { href, ... } / { text, ... }.
+  const url = str(x.url, x.href);
+  const label = str(x.label, x.title, x.text, x.name) ?? url;
   return url && label ? { label, url } : null;
 };
 
@@ -82,19 +89,20 @@ export const listDbPosts = createServerFn({ method: "GET" }).handler(async (): P
 
 export const getDbPost = createServerFn({ method: "GET" })
   .inputValidator((d: unknown) => z.object({ slug: z.string().min(1).max(200) }).parse(d))
-  .handler(async ({ data }): Promise<DbBlogPost | null> => {
+  .handler(async ({ data }): Promise<DbBlogPost[]> => {
     try {
       const sb = publicClient();
-      if (!sb) return null;
+      if (!sb) return [];
       const { data: rows, error } = await sb
         .from("blog_posts")
         .select("*")
         .eq("slug", data.slug)
         .eq("status", "published")
         .order("updated_at", { ascending: false })
-        .limit(1);
-      if (error || !rows?.[0]) return null;
-      const r = rows[0] as Record<string, unknown>;
+        .limit(20);
+      if (error || !rows?.length) return [];
+      return rows.map((row) => {
+      const r = row as Record<string, unknown>;
       return {
         slug: r.slug as string,
         lang: (r.lang as string) || "en",
@@ -114,8 +122,16 @@ export const getDbPost = createServerFn({ method: "GET" })
         published_at: (r.published_at as string) ?? null,
         updated_at: r.updated_at as string,
       };
+      });
     } catch (e) {
       console.error("getDbPost", e);
-      return null;
+      return [];
     }
   });
+
+/** Pick the version matching `lang`, falling back to English, then the newest row. */
+export function pickDbVersion(versions: DbBlogPost[] | null | undefined, lang: string): DbBlogPost | null {
+  if (!versions?.length) return null;
+  const l = (lang || "en").toLowerCase().split("-")[0];
+  return versions.find((v) => v.lang === l) ?? versions.find((v) => v.lang === "en") ?? versions[0];
+}

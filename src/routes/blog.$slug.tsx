@@ -3,7 +3,9 @@ import BlogPost from "@/pages/BlogPost";
 import NotFound from "@/pages/NotFound";
 import DbBlogPostView from "@/components/DbBlogPostView";
 import { BLOG_POSTS } from "@/data/blog";
-import { getDbPost } from "@/lib/blog-db.functions";
+import { getDbPost, pickDbVersion } from "@/lib/blog-db.functions";
+import { getActiveLang } from "@/lib/active-lang";
+import { useTranslation } from "react-i18next";
 import en from "@/i18n/locales/en";
 import { activeLocale, buildSeoHead, seoText } from "@/lib/seo-head";
 
@@ -25,17 +27,17 @@ export const Route = createFileRoute("/blog/$slug")({
   component: BlogPostRoute,
   loader: async ({ params }) => {
     const post = BLOG_POSTS.find((p) => p.slug === params.slug);
-    if (post) return { slug: params.slug, dbPost: null };
+    if (post) return { slug: params.slug, dbVersions: null };
     // Static articles take precedence; otherwise look up a published DB post.
-    const dbPost = await getDbPost({ data: { slug: params.slug } });
-    if (!dbPost) throw notFound();
-    return { slug: params.slug, dbPost };
+    const dbVersions = await getDbPost({ data: { slug: params.slug } });
+    if (!dbVersions.length) throw notFound();
+    return { slug: params.slug, dbVersions };
   },
   notFoundComponent: NotFound,
   errorComponent: NotFound,
   head: ({ loaderData }) => {
     const blogSeo = seoText("blog");
-    const db = loaderData?.dbPost;
+    const db = pickDbVersion(loaderData?.dbVersions, getActiveLang());
     if (db) {
       return buildSeoHead({
         title: db.meta_title || db.title,
@@ -68,7 +70,9 @@ export const Route = createFileRoute("/blog/$slug")({
 });
 
 function BlogPostRoute() {
-  const { dbPost } = Route.useLoaderData();
+  const { dbVersions } = Route.useLoaderData();
+  const { i18n } = useTranslation();
+  const dbPost = pickDbVersion(dbVersions, i18n.language);
   if (dbPost) return <DbBlogPostView post={dbPost} />;
   return <BlogPost />;
 }
