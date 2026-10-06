@@ -14,6 +14,75 @@ export type Database = {
   }
   public: {
     Tables: {
+      blog_posts: {
+        Row: {
+          author: string | null
+          body_md: string
+          category: string | null
+          created_at: string
+          excerpt: string | null
+          faq: Json
+          hero_image_url: string | null
+          id: string
+          image_alt: string | null
+          internal_links: Json
+          lang: string
+          meta_description: string | null
+          meta_title: string | null
+          publish_at: string | null
+          published_at: string | null
+          slug: string
+          sources: Json
+          status: string
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          author?: string | null
+          body_md?: string
+          category?: string | null
+          created_at?: string
+          excerpt?: string | null
+          faq?: Json
+          hero_image_url?: string | null
+          id?: string
+          image_alt?: string | null
+          internal_links?: Json
+          lang?: string
+          meta_description?: string | null
+          meta_title?: string | null
+          publish_at?: string | null
+          published_at?: string | null
+          slug: string
+          sources?: Json
+          status?: string
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          author?: string | null
+          body_md?: string
+          category?: string | null
+          created_at?: string
+          excerpt?: string | null
+          faq?: Json
+          hero_image_url?: string | null
+          id?: string
+          image_alt?: string | null
+          internal_links?: Json
+          lang?: string
+          meta_description?: string | null
+          meta_title?: string | null
+          publish_at?: string | null
+          published_at?: string | null
+          slug?: string
+          sources?: Json
+          status?: string
+          title?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       seo_content: {
         Row: {
           created_at: string

@@ -43,6 +43,35 @@ const STATIC = [
   { path: '/legal', priority: '0.3', changefreq: 'yearly' },
 ];
 
+// Published database posts (optional, public anon read; RLS limits to published/due).
+// Fails gracefully: without credentials or network, only static posts are listed.
+async function fetchDbPosts() {
+  let env = {};
+  try {
+    env = Object.fromEntries(
+      read('.env').split('\n').map((l) => l.match(/^([A-Z_]+)\s*=\s*"?([^"]*)"?$/)).filter(Boolean).map((m) => [m[1], m[2]]),
+    );
+  } catch {}
+  const url = process.env.VITE_SUPABASE_URL || env.VITE_SUPABASE_URL;
+  const key = process.env.VITE_SUPABASE_PUBLISHABLE_KEY || env.VITE_SUPABASE_PUBLISHABLE_KEY;
+  if (!url || !key) return [];
+  try {
+    const res = await fetch(`${url}/rest/v1/blog_posts?select=slug,updated_at&status=eq.published`, {
+      headers: { apikey: key, Authorization: `Bearer ${key}` },
+    });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const rows = await res.json();
+    const seen = new Set(BLOG_SLUGS);
+    return rows
+      .filter((r) => r.slug && !seen.has(r.slug) && seen.add(r.slug))
+      .map((r) => ({ path: `/blog/${r.slug}`, priority: '0.6', changefreq: 'monthly', lastmod: String(r.updated_at).slice(0, 10) }));
+  } catch (e) {
+    console.warn('Skipping database posts in sitemap:', e.message);
+    return [];
+  }
+}
+const DB_URLS = await fetchDbPosts();
+
 const urls = [
   ...STATIC,
   ...PRODUCT_SLUGS.map((s) => ({ path: `/products/${s}`, priority: '0.7', changefreq: 'monthly' })),
@@ -52,6 +81,7 @@ const urls = [
     changefreq: 'monthly',
     lastmod: p.updated,
   })),
+  ...DB_URLS,
 ];
 
 const xml = `<?xml version="1.0" encoding="UTF-8"?>

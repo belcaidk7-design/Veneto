@@ -305,6 +305,7 @@ export default {
     aboutAuthor: 'Über den Autor',
     faqTitle: 'Häufige Fragen',
     sourcesTitle: 'Quellen & weiterführende Lektüre',
+    internalLinksTitle: 'Verwandte Seiten',
     lastReviewed: 'Zuletzt geprüft am',
     authors: {
       marco: { role: 'Leitung Sourcing — 18 Jahre in italienischen Steinbrüchen', bio: 'Marco verantwortet das Stein-Sourcing im gesamten Mittelmeerraum. Als in Carrara ausgebildeter Geologe wählt und prüft er seit 2007 Marmor, Granit und Kalkstein für Wohn- und Hotelprojekte.' },

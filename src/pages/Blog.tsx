@@ -5,8 +5,10 @@ import { ArrowRight } from 'lucide-react';
 import Layout from '@/components/Layout';
 import Seo from '@/components/Seo';
 import { BLOG_CATEGORIES, BLOG_POSTS, BlogCategoryKey } from '@/data/blog';
+import type { DbBlogSummary } from '@/lib/blog-db.functions';
+import placeholder from '@/assets/placeholder-stone.jpg';
 
-const Blog = () => {
+const Blog = ({ dbPosts = [] }: { dbPosts?: DbBlogSummary[] }) => {
   const { t, i18n } = useTranslation();
   const [tag, setTag] = useState<BlogCategoryKey | 'all'>('all');
 
@@ -14,6 +16,12 @@ const Blog = () => {
     new Date(date).toLocaleDateString(i18n.language, { year: 'numeric', month: 'long', day: 'numeric' });
 
   const filtered = tag === 'all' ? BLOG_POSTS : BLOG_POSTS.filter((p) => p.tags.includes(tag));
+  // Database posts: only the active language, de-duplicated against static slugs.
+  const lang = (i18n.language || 'en').split('-')[0];
+  const staticSlugs = new Set(BLOG_POSTS.map((p) => p.slug));
+  const dbFiltered = dbPosts.filter(
+    (p) => p.lang === lang && !staticSlugs.has(p.slug) && (tag === 'all' || p.category === tag),
+  );
 
   return (
     <Layout>
@@ -66,7 +74,7 @@ const Blog = () => {
       </section>
 
       <div className="container-prose py-16 md:py-20">
-        {filtered.length === 0 ? (
+        {filtered.length + dbFiltered.length === 0 ? (
           <p className="py-20 text-center text-muted-foreground">{t('blog.noResults')}</p>
         ) : (
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -109,6 +117,52 @@ const Blog = () => {
                 </div>
               </article>
             ))}
+            {dbFiltered.map((post) => {
+              const date = post.published_at ?? post.publish_at ?? post.updated_at;
+              return (
+                <article
+                  key={`db-${post.slug}`}
+                  className="card-hover group flex flex-col overflow-hidden rounded-sm border border-border/60 bg-card"
+                >
+                  <Link to={`/blog/${post.slug}`} className="block aspect-[4/3] overflow-hidden">
+                    <img
+                      src={post.hero_image_url || placeholder}
+                      alt={post.image_alt || post.title}
+                      loading="lazy"
+                      width={1280}
+                      height={832}
+                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                  </Link>
+                  <div className="flex flex-1 flex-col p-6">
+                    <div className="flex items-center gap-3 text-xs uppercase tracking-widest text-muted-foreground">
+                      {post.category && (
+                        <>
+                          <span className="text-accent">
+                            {t(`blog.categories.${post.category}`, { defaultValue: post.category })}
+                          </span>
+                          <span>·</span>
+                        </>
+                      )}
+                      <span>{fmt(date)}</span>
+                    </div>
+                    <h2 className="mt-3 font-serif text-xl leading-snug">
+                      <Link to={`/blog/${post.slug}`} className="gold-underline">
+                        {post.title}
+                      </Link>
+                    </h2>
+                    {post.excerpt && <p className="mt-3 flex-1 text-sm text-muted-foreground">{post.excerpt}</p>}
+                    <Link
+                      to={`/blog/${post.slug}`}
+                      className="mt-5 inline-flex items-center gap-1.5 text-xs font-medium uppercase tracking-wider text-foreground hover:text-accent"
+                    >
+                      {t('blog.readFullArticle', { title: post.title })}{' '}
+                      <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
+                    </Link>
+                  </div>
+                </article>
+              );
+            })}
           </div>
         )}
       </div>

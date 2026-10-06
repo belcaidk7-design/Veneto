@@ -375,6 +375,7 @@ export default {
     aboutAuthor: 'About the author',
     faqTitle: 'Frequently asked questions',
     sourcesTitle: 'Sources & further reading',
+    internalLinksTitle: 'Related pages',
     lastReviewed: 'Last reviewed on',
     authors: {
       marco: { role: 'Head of Sourcing — 18 years in Italian quarries', bio: 'Marco oversees stone sourcing across the Mediterranean basin. Trained as a geologist in Carrara, he has selected and inspected marble, granite and limestone for residential and hospitality projects since 2007.' },
